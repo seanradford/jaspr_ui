@@ -31,7 +31,7 @@ class HomeState extends State<Home> {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(classes: "", [
+    yield BannerCenter(children: [
       //
     ]);
   }
