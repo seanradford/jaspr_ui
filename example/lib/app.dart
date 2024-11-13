@@ -1,7 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_router/jaspr_router.dart';
-
-import 'pages/about.dart';
+ 
 import 'pages/home.dart';
 
 // The main component of your application.
@@ -27,10 +26,6 @@ class App extends StatelessComponent {
             path: '/',
             title: 'Home',
             builder: (context, state) => const Home()),
-        Route(
-            path: '/about',
-            title: 'About',
-            builder: (context, state) => const About()),
       ]),
     ]);
   }

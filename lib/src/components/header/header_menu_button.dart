@@ -1,7 +1,7 @@
 import 'package:jaspr/jaspr.dart';
 
 class HeaderMenuButton extends StatelessComponent {
-  const HeaderMenuButton({super.key, required this.children});
+  const HeaderMenuButton(this.children, {super.key });
 
   final List<Component> children;
 

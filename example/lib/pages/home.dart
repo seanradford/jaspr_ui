@@ -33,6 +33,7 @@ class HomeState extends State<Home> {
   Iterable<Component> build(BuildContext context) sync* {
     yield BannerCenter(children: [
       //
+      Card([])
     ]);
   }
 }
