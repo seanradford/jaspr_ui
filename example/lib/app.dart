@@ -1,6 +1,5 @@
 import 'package:jaspr/jaspr.dart';
-import 'package:jaspr_router/jaspr_router.dart';
- 
+import 'package:jaspr_router/jaspr_router.dart'; 
 import 'pages/home.dart';
 
 // The main component of your application.
@@ -18,7 +17,7 @@ class App extends StatelessComponent {
     // is using the [sync* / yield] syntax for a streamlined control flow, but its also possible to simply
     // create and return a [List] here.
 
-    // Renders a <div class="main"> html element with children.
+    // Renders a <div class="main"> html element with children. 
     yield div(classes: 'main', [
       // const Header(),
       Router(routes: [
@@ -34,18 +33,18 @@ class App extends StatelessComponent {
   //
   // By using the @css annotation, these will be rendered automatically to css inside the <head> of your page.
   // Must be a variable or getter of type [List<StyleRule>].
-  @css
-  static final styles = [
-    css('.main', [
-      // The '&' refers to the parent selector of a nested style rules.
-      css('&')
-          .box(height: 100.vh)
-          .flexbox(direction: FlexDirection.column, wrap: FlexWrap.wrap),
-      css('section').flexItem(flex: Flex(grow: 1)).flexbox(
-            direction: FlexDirection.column,
-            justifyContent: JustifyContent.center,
-            alignItems: AlignItems.center,
-          ),
-    ]),
-  ];
+  // @css
+  // static final styles = [
+  //   css('.main', [
+  //     // The '&' refers to the parent selector of a nested style rules.
+  //     css('&')
+  //         .box(height: 100.vh)
+  //         .flexbox(direction: FlexDirection.column, wrap: FlexWrap.wrap),
+  //     css('section').flexItem(flex: Flex(grow: 1)).flexbox(
+  //           direction: FlexDirection.column,
+  //           justifyContent: JustifyContent.center,
+  //           alignItems: AlignItems.center,
+  //         ),
+  //   ]),
+  // ];
 }

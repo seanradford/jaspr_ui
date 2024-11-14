@@ -6,7 +6,6 @@ import 'package:jaspr_ui/jaspr_ui.dart';
 // - this file and any imported file must be compilable for both server and client environments.
 // - this component and any child components will be built once on the server during pre-rendering and then
 //   again on the client during normal rendering.
-@client
 class Home extends StatefulComponent {
   const Home({super.key});
 
@@ -31,9 +30,93 @@ class HomeState extends State<Home> {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield BannerCenter(children: [
-      //
-      Card([])
-    ]);
+    //  yield button(
+    //       classes: "group btn btn-primary px-8",
+    //       onClick: () {}, [
+    //         text("Let's talk"),
+    //         i(
+    //             classes:
+    //                 "fa-solid fa-arrow-right ml-2 ease-in-out duration-300 group-hover:translate-x-1",
+    //             [])
+    //       ]);
+
+    // yield Button(
+    //   title: 'Button',
+    //   onClick: () {
+    //     print('Click');
+    //   },
+    // );
+
+    // yield OutLineButton(
+    //   title: 'OutLine Button',
+    //   onClick: () {
+    //     print('Click');
+    //   },
+    // );
+
+    // yield GlassButton(
+    //   title: 'Glass Button',
+    //   onClick: () {
+    //     print('Click');
+    //   },
+    // );
+
+    // yield Dropdown(title: 'Dropdown Button', items: [
+    //   DropdownItem(title: 'item 1'),
+    //   DropdownItem(title: 'item 2'),
+    //   DropdownItem(title: 'item 3'),
+    // ]);
+
+    // yield DropdownHover(title: 'Dropdown Hover Button', items: [
+    //   DropdownItem(title: 'item 1'),
+    //   DropdownItem(title: 'item 2'),
+    //   DropdownItem(title: 'item 3'),
+    // ]);
+
+    // yield DropdownCard(
+    //   title: 'Dropdown Card Button',
+    //   cardTitle: 'Card Title',
+    //   cardBody: 'Aliqua occaecat nostrud ipsum aliquip laborum.',
+    // );
+
+    // yield Button(
+    //   title: 'Open Dialog',
+    //   attributes: {"onclick": "my_modal_1.showModal()"},
+    // );
+    // yield Dialog(
+    //   id: "my_modal_1",
+    //   title: 'Title',
+    //   message:
+    //       'Aute commodo est deserunt est laboris consectetur dolor reprehenderit.',
+    //   buttonTitle: 'Close',
+    // );
+
+    // yield Divider(title: 'Title');
+
+    // yield Avatar(
+    //   imgUrl:
+    //       'https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp',
+    // );
+
+    // yield div(classes: "flex flex-col grow h-screen w-screen justify-center	", [
+    // ]);
+
+    // yield div(classes: "flex flex-col grow h-screen w-screen justify-center", [
+    //   SwapFlip(
+    //     front: '😈',
+    //     back: '😇',
+    //   ),
+    // ]);
+
+    
+
+    // yield ButtonWithBadge(
+    //   total: '+123',
+    //   title: 'Inbox',
+    // );
+
+    // yield section([
+    //   ThemeSwitch(),
+    // ]);
   }
 }

@@ -3,33 +3,37 @@
 /// More dartdocs go here.
 library;
 
-// badge
-export 'src/components/badge/badge.dart';
+import 'package:jaspr/jaspr.dart';
 
-// alert
-export 'src/components/alert/alert.dart';
+export 'src/components/button.dart';
+export 'src/components/dropdown.dart';
+export 'src/components/dialog.dart';
+export 'src/components/theme_switch.dart';
+export 'src/components/avatar.dart';
+export 'src/components/divider.dart';
+export 'src/components/swap.dart';
+export 'src/components/badge.dart';
 
-// button
-export 'src/components/button/button_group.dart';
-export 'src/components/button/text_button.dart';
-export 'src/components/button/icon_button.dart';
-export 'src/components/button/text_icon_button.dart';
-export 'src/components/button/outline_button.dart';
+List<Component> daisyUiStyles = [
+  // tailwindcss
+  script(
+    src: 'https://cdn.tailwindcss.com',
+    [],
+  ),
 
-// error
-export 'src/components/error_page/center_error_code.dart';
+  // daisy ui
+  link(
+    href: "https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css",
+    rel: "stylesheet",
+    type: "text/css",
+  ),
 
-// divider
-export 'src/components/divider/divider_middle.dart';
-export 'src/components/divider/divider_left.dart';
-export 'src/components/divider/divider_right.dart';
+  // fontawesome
+  link(
+    rel: 'stylesheet',
+    href:
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css',
+  ),
+];
 
-// card
-export 'src/components/card/blog_card.dart';
-export 'src/components/card/card.dart';
-
-// banner
-export 'src/components/banner/banner_center.dart';
-
-// title
-export 'src/components/title/title_gradient.dart';
+ 
