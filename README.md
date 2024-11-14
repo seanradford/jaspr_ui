@@ -16,7 +16,9 @@ Or using git repository
 ```yaml
 dependencies:
   jaspr_ui:
-    git: https://github.com/anoochit/jaspr_ui.git
+    git:
+      url: https://github.com/anoochit/jaspr_ui.git
+      ref: main # branch name
 ```
 
 Add Tailwindcss and Font Awesome Icon, you might use `jaspr_tailwind`.
