@@ -18,10 +18,7 @@ void main() {
     options: defaultJasprOptions,
   );
 
-  // Starts the app.
-  //
-  // [Document] renders the root document structure (<html>, <head> and <body>)
-  // with the provided parameters and components.
+  // Starts the app. 
   runApp(Document(
     lang: 'en',
     title: 'example',
