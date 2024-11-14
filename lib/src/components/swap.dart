@@ -2,12 +2,12 @@ import 'package:jaspr/jaspr.dart';
 
 class SwapFlip extends StatelessComponent {
   const SwapFlip({
-    required this.front,
-    required this.back,
+      this.front = '😈',
+      this.back = '😇',
   });
 
-  final String front;
-  final String back;
+  final String? front;
+  final String? back;
 
   @override
   Iterable<Component> build(BuildContext context) sync* {

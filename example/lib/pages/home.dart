@@ -108,7 +108,9 @@ class HomeState extends State<Home> {
     //   ),
     // ]);
 
-    
+    yield div(classes: "flex flex-col grow h-screen w-screen justify-center", [
+      SwapFlip(),
+    ]);
 
     // yield ButtonWithBadge(
     //   total: '+123',
