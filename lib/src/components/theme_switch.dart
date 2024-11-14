@@ -9,6 +9,7 @@ class ThemeSwitch extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
+
     yield raw('''
 <label class="swap swap-rotate">
   <!-- this hidden checkbox controls the state -->

@@ -1,5 +1,7 @@
 import 'package:jaspr/jaspr.dart';
-import 'package:jaspr_router/jaspr_router.dart'; 
+import 'package:jaspr_router/jaspr_router.dart';
+import 'package:jaspr_ui/jaspr_ui.dart';
+
 import 'pages/home.dart';
 
 // The main component of your application.
@@ -17,16 +19,27 @@ class App extends StatelessComponent {
     // is using the [sync* / yield] syntax for a streamlined control flow, but its also possible to simply
     // create and return a [List] here.
 
-    // Renders a <div class="main"> html element with children. 
-    yield div(classes: 'main', [
-      // const Header(),
-      Router(routes: [
-        Route(
-            path: '/',
-            title: 'Home',
-            builder: (context, state) => const Home()),
-      ]),
-    ]);
+    // Renders a <div class="main"> html element with children.
+    // yield div(classes: 'main', [
+    //   //const Header(),
+    //   Router(routes: [
+    //     Route(
+    //         path: '/',
+    //         title: 'Home',
+    //         builder: (context, state) => const Home()),
+    //   ]),
+    // ]);
+    yield DaisyUI(
+      theme: 'dacular',
+      [
+        Router(routes: [
+          Route(
+              path: '/',
+              title: 'Home',
+              builder: (context, state) => const Home()),
+        ]),
+      ],
+    );
   }
 
   // Defines the css styles for elements of this component.
