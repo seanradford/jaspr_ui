@@ -1,5 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 
+// FIXME : change to component
 class ThemeSwitch extends StatelessComponent {
   final String theme;
 

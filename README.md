@@ -21,7 +21,7 @@ dependencies:
       ref: daisyui # branch name
 ```
 
-Add Tailwindcss and Font Awesome Icon, you might use `jaspr_tailwind`.
+Add Tailwindcss and Font Awesome Icon from CDN, you might use `jaspr_tailwind` package instate.
 
 ```dart
 runApp(Document(
@@ -30,4 +30,34 @@ runApp(Document(
   head: daisyUiStyles,
   body: App(),
 ));
+```
+
+Edit App componet to return DaisyUI to insert `data-theme` attribute in html document.
+
+```dart
+import 'package:jaspr/jaspr.dart';
+import 'package:jaspr_router/jaspr_router.dart';
+import 'package:jaspr_ui/jaspr_ui.dart';
+
+import 'pages/home.dart'; 
+
+class App extends StatelessComponent {
+  const App({super.key});
+
+  @override
+  Iterable<Component> build(BuildContext context) sync* { 
+    yield DaisyUI(
+      theme: 'dacular',
+      [
+        Router(routes: [
+          Route(
+              path: '/',
+              title: 'Home',
+              builder: (context, state) => const Home()),
+        ]),
+      ],
+    );
+  }
+ 
+}
 ```
