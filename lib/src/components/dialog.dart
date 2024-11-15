@@ -2,7 +2,7 @@
 
 import 'package:jaspr/jaspr.dart';
 
-class Dialog extends StatelessComponent { 
+class Dialog extends StatelessComponent {
   final String? id;
   final String title;
   final String message;
@@ -19,13 +19,27 @@ class Dialog extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield dialog(id: id, classes: "modal", [
       div(classes: "modal-box", [
-        h3(classes: "text-lg font-bold", [text(title)]),
-        p([text(message)]),
+        h3(
+          classes: "text-lg font-bold",
+          [
+            text(title),
+          ],
+        ),
+        p(
+          [
+            text(message),
+          ],
+        ),
         div(
           classes: "modal-action",
           [
             form(method: FormMethod.dialog, [
-              button(classes: "btn", [text(buttonTitle)])
+              button(
+                classes: "btn",
+                [
+                  text(buttonTitle),
+                ],
+              )
             ]),
           ],
         )

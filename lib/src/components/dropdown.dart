@@ -1,7 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:jaspr/jaspr.dart';
 
-class Dropdown extends StatelessComponent { 
+class Dropdown extends StatelessComponent {
   final String title;
   final List<DropdownItem> items;
 
@@ -29,7 +29,7 @@ class Dropdown extends StatelessComponent {
   }
 }
 
-class DropdownItem extends StatelessComponent { 
+class DropdownItem extends StatelessComponent {
   final String title;
 
   const DropdownItem({
@@ -39,12 +39,14 @@ class DropdownItem extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield li([
-      a([text(title)], href: '')
+      a([
+        text(title),
+      ], href: '')
     ]);
   }
 }
 
-class DropdownHover extends StatelessComponent { 
+class DropdownHover extends StatelessComponent {
   final String title;
   final List<DropdownItem> items;
 
@@ -73,12 +75,12 @@ class DropdownHover extends StatelessComponent {
   }
 }
 
-class DropdownCard extends StatelessComponent { 
+class DropdownCard extends StatelessComponent {
   final String title;
   final String cardTitle;
   final String cardBody;
 
-  const DropdownCard({ 
+  const DropdownCard({
     required this.title,
     required this.cardTitle,
     required this.cardBody,
@@ -99,8 +101,17 @@ class DropdownCard extends StatelessComponent {
             "dropdown-content card card-compact bg-primary text-primary-content z-[1] w-64 p-2 shadow",
         [
           div(classes: "card-body", [
-            h3(classes: "card-title", [text(cardTitle)]),
-            p([text(cardBody)]),
+            h3(
+              classes: "card-title",
+              [
+                text(cardTitle),
+              ],
+            ),
+            p(
+              [
+                text(cardBody),
+              ],
+            ),
           ])
         ],
       )

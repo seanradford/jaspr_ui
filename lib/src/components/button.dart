@@ -2,7 +2,6 @@
 import 'package:jaspr/jaspr.dart';
 
 class Button extends StatelessComponent {
-  
   final String title;
   final VoidCallback? onClick;
   final Map<String, String>? attributes;
@@ -17,7 +16,9 @@ class Button extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield button(
       classes: "btn",
-      [text(title)],
+      [
+        text(title),
+      ],
       onClick: () => onClick?.call(),
       attributes: attributes,
     );
@@ -25,7 +26,6 @@ class Button extends StatelessComponent {
 }
 
 class OutLineButton extends StatelessComponent {
-  
   final String title;
   final VoidCallback? onClick;
   final Map<String, String>? attributes;
@@ -40,14 +40,16 @@ class OutLineButton extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield button(
       classes: "btn btn-outline",
-      [text(title)],
+      [
+        text(title),
+      ],
       onClick: () => onClick?.call(),
       attributes: attributes,
     );
   }
 }
 
-class GlassButton extends StatelessComponent { 
+class GlassButton extends StatelessComponent {
   final String title;
   final VoidCallback? onClick;
   final Map<String, String>? attributes;
@@ -62,7 +64,9 @@ class GlassButton extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield button(
       classes: "btn glass",
-      [text(title)],
+      [
+        text(title),
+      ],
       onClick: () => onClick?.call(),
       attributes: attributes,
     );

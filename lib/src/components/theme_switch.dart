@@ -9,12 +9,10 @@ class ThemeSwitch extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-
     yield raw('''
 <label class="swap swap-rotate">
   <!-- this hidden checkbox controls the state -->
   <input type="checkbox" class="theme-controller" value="$theme" />
-
   <!-- moon icon -->
   <svg
     class="swap-on h-10 w-10 fill-current"

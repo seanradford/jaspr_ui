@@ -11,7 +11,12 @@ class DaisyUI extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield Document.html(attributes: {"data-theme": theme});
-    yield div(classes: 'main', children);
+    yield Document.html(
+      attributes: {"data-theme": theme},
+    );
+    yield div(
+      classes: 'main',
+      children,
+    );
   }
 }

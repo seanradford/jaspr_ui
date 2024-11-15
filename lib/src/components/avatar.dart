@@ -11,8 +11,12 @@ class Avatar extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield div(classes: "avatar", [
-      div(classes: "w-24 rounded-full", [img(src: url)]),
+      div(
+        classes: "w-24 rounded-full",
+        [
+          img(src: url),
+        ],
+      ),
     ]);
- 
   }
 }

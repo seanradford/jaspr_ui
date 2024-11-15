@@ -13,11 +13,14 @@ class ButtonWithBadge extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield raw('''
-<button class="btn">
-  $title
-  <div class="badge badge-secondary">$total</div>
-</button>
-''');
+    yield button(classes: "btn", [
+      text(title),
+      div(
+        classes: "badge",
+        [
+          text(total),
+        ],
+      ),
+    ]);
   }
 }

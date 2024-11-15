@@ -2,19 +2,21 @@
 import 'package:jaspr/jaspr.dart';
 
 class Divider extends StatelessComponent {
-  
-    final String title;
+  final String title;
 
-  const Divider({ 
+  const Divider({
     required this.title,
   });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield raw('''
-<div class="flex w-full flex-col"> 
-  <div class="divider">$title</div> 
-</div>
-''');
+    yield div(classes: "flex w-full flex-col", [
+      div(
+        classes: "divider",
+        [
+          text(title),
+        ],
+      )
+    ]);
   }
 }
