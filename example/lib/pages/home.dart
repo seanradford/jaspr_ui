@@ -40,16 +40,31 @@ class HomeState extends State<Home> {
     //             [])
     //       ]);
 
+    // yield BlockButton(title: 'title');
+
+    // yield IconButton(title: 'title', icon: 'image');
+
     // yield Button(
     //   title: 'Button',
-    //   onClick: () {
+    //   color: DsColor.secondary,
+    //   onPressed: () {
+    //     print('Click');
+    //   },
+    // );
+
+    // yield ButtonWithBadge(
+    //   title: 'Button',
+    //   color: DsColor.secondary,
+    //   total: '99',
+    //   onPressed: () {
     //     print('Click');
     //   },
     // );
 
     // yield OutLineButton(
     //   title: 'OutLine Button',
-    //   onClick: () {
+    //   color: DsColor.secondary,
+    //   onPressed: () {
     //     print('Click');
     //   },
     // );
@@ -108,9 +123,9 @@ class HomeState extends State<Home> {
     //   ),
     // ]);
 
-    yield div(classes: "flex flex-col grow h-screen w-screen justify-center", [
-      SwapFlip(),
-    ]);
+    // yield div(classes: "flex flex-col grow h-screen w-screen justify-center", [
+    //   SwapFlip(),
+    // ]);
 
     // yield ButtonWithBadge(
     //   total: '+123',
@@ -120,5 +135,7 @@ class HomeState extends State<Home> {
     // yield section([
     //   ThemeSwitch(),
     // ]);
+
+    
   }
 }

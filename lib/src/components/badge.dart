@@ -1,26 +1,61 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-
 import 'package:jaspr/jaspr.dart';
 
-class ButtonWithBadge extends StatelessComponent {
+import 'package:jaspr_ui/jaspr_ui.dart';
+
+class Badge extends StatelessComponent {
   final String total;
   final String title;
+  final DsColor? color;
 
-  const ButtonWithBadge({
+  const Badge({
     required this.total,
     required this.title,
+    this.color,
   });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield button(classes: "btn", [
+    yield button(classes: 'btn', [
       text(title),
       div(
-        classes: "badge",
+        classes: 'badge '
+            '${color != null ? ' badge-${color!.name}' : ''}',
         [
           text(total),
         ],
       ),
     ]);
+  }
+}
+
+class ButtonWithBadge extends StatelessComponent {
+  final String total;
+  final String title;
+  final DsColor? color;
+  final VoidCallback onPressed;
+
+  const ButtonWithBadge({
+    required this.total,
+    required this.title,
+    this.color,
+    required this.onPressed,
+  });
+
+  @override
+  Iterable<Component> build(BuildContext context) sync* {
+    yield button(
+      classes: 'btn',
+      [
+        text(title),
+        div(
+          classes: 'badge '
+              '${color != null ? ' badge-${color!.name}' : ''}',
+          [
+            text(total),
+          ],
+        ),
+      ],
+      onClick: () => onPressed,
+    );
   }
 }
