@@ -1,5 +1,4 @@
 import 'package:jaspr/jaspr.dart';
-import 'package:jaspr_ui/jaspr_ui.dart';
 
 // By using the @client annotation this component will be automatically compiled to javascript and mounted
 // on the client. Therefore:
@@ -135,7 +134,5 @@ class HomeState extends State<Home> {
     // yield section([
     //   ThemeSwitch(),
     // ]);
-
-    
   }
 }

@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr_ui/src/colors/text_colors.dart';
 
 import '../../jaspr_ui.dart';
 import '../sizes/sizes.dart';
@@ -8,7 +9,7 @@ import '../sizes/sizes.dart';
 /// These components provide different button styles while maintaining a consistent API.
 
 /// A standard button component that renders a basic button with customizable styling.
-/// 
+///
 /// Example usage:
 /// ```dart
 /// Button(
@@ -35,7 +36,7 @@ class Button extends StatelessComponent {
   final Map<String, String>? attributes;
 
   /// Creates a new [Button] instance.
-  /// 
+  ///
   /// The [title] parameter is required and specifies the button's text.
   /// All other parameters are optional.
   const Button({
@@ -60,9 +61,8 @@ class Button extends StatelessComponent {
   }
 }
 
-
 /// An outline-styled button component with a transparent background.
-/// 
+///
 /// Example usage:
 /// ```dart
 /// OutLineButton(
@@ -97,6 +97,7 @@ class OutLineButton extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
+ 
     yield button(
       classes: 'btn btn-outline ${size.className}'
           '${color != null ? ' ${color!.className}' : ''}',
@@ -108,7 +109,6 @@ class OutLineButton extends StatelessComponent {
     );
   }
 }
-
 
 class GlassButton extends StatelessComponent {
   /// The text to display on the button
@@ -142,10 +142,9 @@ class GlassButton extends StatelessComponent {
     );
   }
 }
- 
 
 /// A full-width block button component.
-/// 
+///
 /// This button variant spans the full width of its container,
 /// making it ideal for mobile interfaces or prominent calls-to-action.
 ///
@@ -170,7 +169,7 @@ class BlockButton extends StatelessComponent {
   final Map<String, String>? attributes;
 
   /// Creates a new [BlockButton] instance.
-  /// 
+  ///
   /// The [title] parameter is required and specifies the button's text.
   /// All other parameters are optional.
   const BlockButton({
@@ -194,7 +193,7 @@ class BlockButton extends StatelessComponent {
 }
 
 /// A button component that includes an icon alongside text.
-/// 
+///
 /// This button variant combines an icon with text, using Font Awesome icons
 /// for consistent and scalable icon rendering.
 ///

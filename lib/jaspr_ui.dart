@@ -12,5 +12,6 @@ export 'src/components/avatar.dart';
 export 'src/components/divider.dart';
 export 'src/components/swap.dart';
 export 'src/components/badge.dart';
+export 'src/components/title.dart';
 export 'src/styles/daisyui.dart';
 export 'src/colors/colors.dart';
