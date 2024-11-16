@@ -1,6 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:jaspr/jaspr.dart';
-import 'package:jaspr_ui/src/colors/text_colors.dart';
+import 'package:jaspr/jaspr.dart'; 
 
 import '../../jaspr_ui.dart';
 import '../sizes/sizes.dart';

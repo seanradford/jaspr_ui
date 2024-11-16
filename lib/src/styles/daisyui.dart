@@ -1,7 +1,7 @@
 
 import 'package:jaspr/jaspr.dart';
 
-List<Component> daisyUiStyles = [
+List<Component> daisyUiStyles =  [
   // tailwindcss
   script(
     src: 'https://cdn.tailwindcss.com',
