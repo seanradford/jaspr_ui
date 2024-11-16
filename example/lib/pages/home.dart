@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr_ui/jaspr_ui.dart';
 
 // By using the @client annotation this component will be automatically compiled to javascript and mounted
 // on the client. Therefore:
@@ -29,110 +30,10 @@ class HomeState extends State<Home> {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    //  yield button(
-    //       classes: "group btn btn-primary px-8",
-    //       onClick: () {}, [
-    //         text("Let's talk"),
-    //         i(
-    //             classes:
-    //                 "fa-solid fa-arrow-right ml-2 ease-in-out duration-300 group-hover:translate-x-1",
-    //             [])
-    //       ]);
+    
 
-    // yield BlockButton(title: 'title');
-
-    // yield OutLineButton(title: 'title', color: DsColor.secondary);
-
-    // yield Button(
-    //   title: 'Button',
-    //   color: DsColor.secondary,
-    //   onPressed: () {
-    //     print('Click');
-    //   },
-    // );
-
-    // yield ButtonWithBadge(
-    //   title: 'Button',
-    //   color: DsColor.secondary,
-    //   total: '99',
-    //   onPressed: () {
-    //     print('Click');
-    //   },
-    // );
-
-    // yield OutLineButton(
-    //   title: 'OutLine Button',
-    //   color: DsColor.secondary,
-    //   onPressed: () {
-    //     print('Click');
-    //   },
-    // );
-
-    // yield GlassButton(
-    //   title: 'Glass Button',
-    //   onClick: () {
-    //     print('Click');
-    //   },
-    // );
-
-    // yield Dropdown(title: 'Dropdown Button', items: [
-    //   DropdownItem(title: 'item 1'),
-    //   DropdownItem(title: 'item 2'),
-    //   DropdownItem(title: 'item 3'),
-    // ]);
-
-    // yield DropdownHover(title: 'Dropdown Hover Button', items: [
-    //   DropdownItem(title: 'item 1'),
-    //   DropdownItem(title: 'item 2'),
-    //   DropdownItem(title: 'item 3'),
-    // ]);
-
-    // yield DropdownCard(
-    //   title: 'Dropdown Card Button',
-    //   cardTitle: 'Card Title',
-    //   cardBody: 'Aliqua occaecat nostrud ipsum aliquip laborum.',
-    // );
-
-    // yield Button(
-    //   title: 'Open Dialog',
-    //   attributes: {"onclick": "my_modal_1.showModal()"},
-    // );
-    // yield Dialog(
-    //   id: "my_modal_1",
-    //   title: 'Title',
-    //   message:
-    //       'Aute commodo est deserunt est laboris consectetur dolor reprehenderit.',
-    //   buttonTitle: 'Close',
-    // );
-
-    // yield Divider(title: 'Title');
-
-    // yield Avatar(
-    //   imgUrl:
-    //       'https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp',
-    // );
-
-    // yield div(classes: "flex flex-col grow h-screen w-screen justify-center	", [
-    // ]);
-
-    // yield div(classes: "flex flex-col grow h-screen w-screen justify-center", [
-    //   SwapFlip(
-    //     front: '😈',
-    //     back: '😇',
-    //   ),
-    // ]);
-
-    // yield div(classes: "flex flex-col grow h-screen w-screen justify-center", [
-    //   SwapFlip(),
-    // ]);
-
-    // yield ButtonWithBadge(
-    //   total: '+123',
-    //   title: 'Inbox',
-    // );
-
-    // yield section([
-    //   ThemeSwitch(),
-    // ]);
+    yield Container([
+      TitleGradient(title: 'Labore ipsum ut ut veniam cillum. Amet in est sit nostrud minim et anim adipisicing sunt culpa veniam pariatur culpa. Pariatur ea eiusmod aliquip fugiat ex aliquip irure culpa adipisicing laboris veniam dolore. Excepteur mollit culpa Lorem excepteur ad mollit deserunt labore aliqua veniam minim ullamco et incididunt. Et minim sunt est reprehenderit nostrud dolor. Minim do commodo excepteur veniam in anim proident sit consectetur elit cillum deserunt amet incididunt.')
+    ]);
   }
 }

@@ -5,7 +5,7 @@
 
 // Server-specific jaspr import.
 import 'package:jaspr/server.dart';
-import 'package:jaspr_ui/jaspr_ui.dart'; 
+import 'package:jaspr_ui/jaspr_ui.dart';
 // Imports the [App] component.
 import 'app.dart';
 
@@ -18,7 +18,7 @@ void main() {
     options: defaultJasprOptions,
   );
 
-  // Starts the app. 
+  // Starts the app.
   runApp(Document(
     lang: 'en',
     title: 'example',
