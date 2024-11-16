@@ -1,32 +1,27 @@
+// ignore_for_file: constant_identifier_names
+
 enum BadgeColor {
-  /// Primary brand color, used for main call-to-action buttons
   primary,
-
-  /// Secondary brand color, used for alternative actions
+  primary_content,
   secondary,
-
-  /// Accent color for emphasis or highlight actions
+  secondary_content,
   accent,
-
-  /// Neutral/gray color for less prominent actions
+  accent_content,
   neutral,
-
-  /// Information blue color for informational actions
+  neutral_content,
+  base_100,
+  base_200,
+  base_300,
+  base_content,
   info,
-
-  /// Success/green color for positive actions or confirmations
+  info_content,
   success,
-
-  /// Warning/yellow color for cautionary actions
+  success_content,
   warning,
+  warning_content,
+  error,
+  error_content;
 
-  /// Error/red color for destructive or critical actions
-  error;
-
-  /// Returns the CSS class name for the button color.
-  /// 
-  /// This getter is used internally to generate the appropriate CSS class name
-  /// for the button's color styling.
   String get className {
     switch (this) {
       case BadgeColor.primary:
@@ -45,6 +40,30 @@ enum BadgeColor {
         return 'badge-warning';
       case BadgeColor.error:
         return 'badge-error';
+      case BadgeColor.primary_content:
+        return 'badge-primary-content';
+      case BadgeColor.secondary_content:
+        return 'badge-secondary-content';
+      case BadgeColor.accent_content:
+        return 'badge-accent-content';
+      case BadgeColor.neutral_content:
+        return 'badge-neutral-content';
+      case BadgeColor.base_100:
+        return 'badge-base-100';
+      case BadgeColor.base_200:
+        return 'badge-base-200';
+      case BadgeColor.base_300:
+        return 'badge-base-300';
+      case BadgeColor.base_content:
+        return 'badge-base-content';
+      case BadgeColor.info_content:
+        return 'badge-info-content';
+      case BadgeColor.success_content:
+        return 'badge-success-content';
+      case BadgeColor.warning_content:
+        return 'badge-warning-content';
+      case BadgeColor.error_content:
+        return 'badge-error-content';
     }
   }
 }

@@ -30,10 +30,6 @@ class HomeState extends State<Home> {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    
-
-    yield Container([
-      TitleGradient(title: 'Labore ipsum ut ut veniam cillum. Amet in est sit nostrud minim et anim adipisicing sunt culpa veniam pariatur culpa. Pariatur ea eiusmod aliquip fugiat ex aliquip irure culpa adipisicing laboris veniam dolore. Excepteur mollit culpa Lorem excepteur ad mollit deserunt labore aliqua veniam minim ullamco et incididunt. Et minim sunt est reprehenderit nostrud dolor. Minim do commodo excepteur veniam in anim proident sit consectetur elit cillum deserunt amet incididunt.')
-    ]);
+    yield Badge(total: '122', title: 'title', color: BadgeColor.accent);
   }
 }

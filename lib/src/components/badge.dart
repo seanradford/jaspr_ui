@@ -41,7 +41,7 @@ class Badge extends StatelessComponent {
       text(title),
       div(
         classes: 'badge '
-            '${color != null ? ' ${color!.name}' : ''}',
+            '${color != null ? ' ${color!.className}' : ''}',
         [
           text(total),
         ],
@@ -97,7 +97,7 @@ class ButtonWithBadge extends StatelessComponent {
         text(title),
         div(
           classes: 'badge '
-              '${color != null ? ' ${color!.name}' : ''}',
+              '${color != null ? ' ${color!.className}' : ''}',
           [
             text(total),
           ],

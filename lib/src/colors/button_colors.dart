@@ -1,33 +1,27 @@
+// ignore_for_file: constant_identifier_names
 
 enum ButtonColor {
-  /// Primary brand color, used for main call-to-action buttons
   primary,
-
-  /// Secondary brand color, used for alternative actions
+  primary_content,
   secondary,
-
-  /// Accent color for emphasis or highlight actions
+  secondary_content,
   accent,
-
-  /// Neutral/gray color for less prominent actions
+  accent_content,
   neutral,
-
-  /// Information blue color for informational actions
+  neutral_content,
+  base_100,
+  base_200,
+  base_300,
+  base_content,
   info,
-
-  /// Success/green color for positive actions or confirmations
+  info_content,
   success,
-
-  /// Warning/yellow color for cautionary actions
+  success_content,
   warning,
+  warning_content,
+  error,
+  error_content;
 
-  /// Error/red color for destructive or critical actions
-  error;
-
-  /// Returns the CSS class name for the button color.
-  /// 
-  /// This getter is used internally to generate the appropriate CSS class name
-  /// for the button's color styling.
   String get className {
     switch (this) {
       case ButtonColor.primary:
@@ -46,6 +40,30 @@ enum ButtonColor {
         return 'btn-warning';
       case ButtonColor.error:
         return 'btn-error';
+      case ButtonColor.primary_content:
+        return 'btn-primary-content';
+      case ButtonColor.secondary_content:
+        return 'btn-secondary-content';
+      case ButtonColor.accent_content:
+        return 'btn-accent-content';
+      case ButtonColor.neutral_content:
+        return 'btn-neutral-content';
+      case ButtonColor.base_100:
+        return 'btn-base-100';
+      case ButtonColor.base_200:
+        return 'btn-base-200';
+      case ButtonColor.base_300:
+        return 'btn-base-300';
+      case ButtonColor.base_content:
+        return 'btn-base-content';
+      case ButtonColor.info_content:
+        return 'btn-info-content';
+      case ButtonColor.success_content:
+        return 'btn-success-content';
+      case ButtonColor.warning_content:
+        return 'btn-warning-content';
+      case ButtonColor.error_content:
+        return 'btn-error-content';
     }
   }
 }
