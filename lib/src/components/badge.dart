@@ -1,12 +1,34 @@
 import 'package:jaspr/jaspr.dart';
-
 import 'package:jaspr_ui/jaspr_ui.dart';
 
+/// A badge component that displays a label with a count/total.
+///
+/// The badge consists of a button containing a title and a colored badge element
+/// showing a total/count value.
+///
+/// Example usage:
+/// ```dart
+/// Badge(
+///   total: '5',
+///   title: 'Messages',
+///   color: BadgeColor.primary,
+/// )
+/// ```
 class Badge extends StatelessComponent {
+  /// The numeric value or total to display in the badge
   final String total;
-  final String title;
-  final DsColor? color;
 
+  /// The text label/title for the badge
+  final String title;
+
+  /// Optional color variant for the badge
+  /// If not specified, uses the default badge styling
+  final BadgeColor? color;
+
+  /// Creates a new badge instance.
+  ///
+  /// [total] and [title] are required parameters.
+  /// [color] is optional and determines the badge's color scheme.
   const Badge({
     required this.total,
     required this.title,
@@ -19,7 +41,7 @@ class Badge extends StatelessComponent {
       text(title),
       div(
         classes: 'badge '
-            '${color != null ? ' badge-${color!.name}' : ''}',
+            '${color != null ? ' ${color!.name}' : ''}',
         [
           text(total),
         ],
@@ -28,12 +50,38 @@ class Badge extends StatelessComponent {
   }
 }
 
+/// A clickable button with an embedded badge component.
+///
+/// Similar to [Badge] but includes an [onPressed] callback for handling click events.
+/// The badge appears within the button and can be colored using [BadgeColor].
+///
+/// Example usage:
+/// ```dart
+/// ButtonWithBadge(
+///   total: '3',
+///   title: 'Notifications',
+///   color: BadgeColor.secondary,
+///   onPressed: () => print('Badge clicked'),
+/// )
+/// ```
 class ButtonWithBadge extends StatelessComponent {
+  /// The numeric value or total to display in the badge
   final String total;
+
+  /// The text label/title for the button
   final String title;
-  final DsColor? color;
+
+  /// Optional color variant for the badge
+  /// If not specified, uses the default badge styling
+  final BadgeColor? color;
+
+  /// Callback function that is called when the button is pressed
   final VoidCallback onPressed;
 
+  /// Creates a new button with badge instance.
+  ///
+  /// [total], [title], and [onPressed] are required parameters.
+  /// [color] is optional and determines the badge's color scheme.
   const ButtonWithBadge({
     required this.total,
     required this.title,
@@ -49,7 +97,7 @@ class ButtonWithBadge extends StatelessComponent {
         text(title),
         div(
           classes: 'badge '
-              '${color != null ? ' badge-${color!.name}' : ''}',
+              '${color != null ? ' ${color!.name}' : ''}',
           [
             text(total),
           ],

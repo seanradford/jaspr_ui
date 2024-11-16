@@ -2,37 +2,46 @@
 import 'package:jaspr/jaspr.dart';
 
 import '../../jaspr_ui.dart';
+import '../sizes/sizes.dart';
 
 /// A collection of button components for building user interfaces with Jaspr.
 /// These components provide different button styles while maintaining a consistent API.
 
 /// A standard button component that renders a basic button with customizable styling.
-///
-/// The [Button] component creates a standard button with optional color styling.
-///
+/// 
 /// Example usage:
 /// ```dart
 /// Button(
-///   title: 'Click me',
-///   color: DsColor.primary,
-///   onPressed: () => print('Button pressed'),
+///   title: 'Submit',
+///   color: ButtonColor.primary,
+///   size: ButtonSize.large,
+///   onPressed: () => handleSubmit(),
 /// )
 /// ```
-///
-/// Parameters:
-/// * [title] - The text to display on the button
-/// * [color] - Optional [DsColor] to specify the button's color theme
-/// * [onPressed] - Optional callback function triggered when the button is clicked
-/// * [attributes] - Optional map of HTML attributes to apply to the button element
 class Button extends StatelessComponent {
+  /// The text to display on the button
   final String title;
-  final DsColor? color;
+
+  /// Optional color theme for the button from [ButtonColor]
+  final ButtonColor? color;
+
+  /// The size of the button from [ButtonSize], defaults to [ButtonSize.normal]
+  final ButtonSize size;
+
+  /// Optional callback function triggered when the button is clicked
   final VoidCallback? onPressed;
+
+  /// Optional map of additional HTML attributes to apply to the button element
   final Map<String, String>? attributes;
 
+  /// Creates a new [Button] instance.
+  /// 
+  /// The [title] parameter is required and specifies the button's text.
+  /// All other parameters are optional.
   const Button({
     required this.title,
     this.color,
+    this.size = ButtonSize.normal,
     this.onPressed,
     this.attributes,
   });
@@ -40,8 +49,8 @@ class Button extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield button(
-      classes: 'btn '
-          '${color != null ? ' btn-${color!.name}' : ''}',
+      classes: 'btn ${size.className}'
+          '${color != null ? ' ${color!.className}' : ''}',
       [
         text(title),
       ],
@@ -51,34 +60,37 @@ class Button extends StatelessComponent {
   }
 }
 
+
 /// An outline-styled button component with a transparent background.
-///
-/// The [OutLineButton] component creates a button with an outline style,
-/// where the border is colored but the background remains transparent.
-///
+/// 
 /// Example usage:
 /// ```dart
 /// OutLineButton(
-///   title: 'Outline Button',
-///   color: DsColor.secondary,
-///   onPressed: () => print('Outline button pressed'),
+///   title: 'Cancel',
+///   color: ButtonColor.secondary,
+///   onPressed: () => handleCancel(),
 /// )
 /// ```
-///
-/// Parameters:
-/// * [title] - The text to display on the button
-/// * [color] - Optional [DsColor] to specify the button's outline color
-/// * [onPressed] - Optional callback function triggered when the button is clicked
-/// * [attributes] - Optional map of HTML attributes to apply to the button element
 class OutLineButton extends StatelessComponent {
+  /// The text to display on the button
   final String title;
-  final DsColor? color;
+
+  /// Optional color theme for the button's outline from [ButtonColor]
+  final ButtonColor? color;
+
+  /// The size of the button from [ButtonSize], defaults to [ButtonSize.normal]
+  final ButtonSize size;
+
+  /// Optional callback function triggered when the button is clicked
   final VoidCallback? onPressed;
+
+  /// Optional map of additional HTML attributes to apply to the button element
   final Map<String, String>? attributes;
 
   const OutLineButton({
     required this.title,
     this.color,
+    this.size = ButtonSize.normal,
     this.onPressed,
     this.attributes,
   });
@@ -86,8 +98,8 @@ class OutLineButton extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield button(
-      classes: 'btn btn-outline '
-          '${color != null ? ' btn-${color!.name}' : ''}',
+      classes: 'btn btn-outline ${size.className}'
+          '${color != null ? ' ${color!.className}' : ''}',
       [
         text(title),
       ],
@@ -97,30 +109,23 @@ class OutLineButton extends StatelessComponent {
   }
 }
 
-/// A button component with a glass-morphism effect.
-///
-/// The [GlassButton] component creates a button with a translucent, glass-like
-/// appearance that follows the glass-morphism design trend.
-///
-/// Example usage:
-/// ```dart
-/// GlassButton(
-///   title: 'Glass Effect',
-///   onPressed: () => print('Glass button pressed'),
-/// )
-/// ```
-///
-/// Parameters:
-/// * [title] - The text to display on the button
-/// * [onPressed] - Optional callback function triggered when the button is clicked
-/// * [attributes] - Optional map of HTML attributes to apply to the button element
+
 class GlassButton extends StatelessComponent {
+  /// The text to display on the button
   final String title;
+
+  /// The size of the button from [ButtonSize], defaults to [ButtonSize.normal]
+  final ButtonSize size;
+
+  /// Optional callback function triggered when the button is clicked
   final VoidCallback? onPressed;
+
+  /// Optional map of additional HTML attributes to apply to the button element
   final Map<String, String>? attributes;
 
   const GlassButton({
     required this.title,
+    this.size = ButtonSize.normal,
     this.onPressed,
     this.attributes,
   });
@@ -128,7 +133,7 @@ class GlassButton extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield button(
-      classes: "btn glass",
+      classes: "btn glass ${size.className}",
       [
         text(title),
       ],
@@ -137,31 +142,40 @@ class GlassButton extends StatelessComponent {
     );
   }
 }
+ 
 
 /// A full-width block button component.
-///
-/// The [BlockButton] component creates a button that spans the full width of its
-/// container, useful for creating prominent call-to-action buttons.
+/// 
+/// This button variant spans the full width of its container,
+/// making it ideal for mobile interfaces or prominent calls-to-action.
 ///
 /// Example usage:
 /// ```dart
 /// BlockButton(
-///   title: 'Full Width Button',
-///   onPressed: () => print('Block button pressed'),
+///   title: 'Full Width Action',
+///   onPressed: () => handleAction(),
 /// )
 /// ```
-///
-/// Parameters:
-/// * [title] - The text to display on the button
-/// * [onPressed] - Optional callback function triggered when the button is clicked
-/// * [attributes] - Optional map of HTML attributes to apply to the button element
 class BlockButton extends StatelessComponent {
+  /// The text to display on the button
   final String title;
+
+  /// The size of the button from [ButtonSize], defaults to [ButtonSize.normal]
+  final ButtonSize size;
+
+  /// Optional callback function triggered when the button is clicked
   final VoidCallback? onPressed;
+
+  /// Optional map of additional HTML attributes to apply to the button element
   final Map<String, String>? attributes;
 
+  /// Creates a new [BlockButton] instance.
+  /// 
+  /// The [title] parameter is required and specifies the button's text.
+  /// All other parameters are optional.
   const BlockButton({
     required this.title,
+    this.size = ButtonSize.normal,
     this.onPressed,
     this.attributes,
   });
@@ -169,7 +183,7 @@ class BlockButton extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield button(
-      classes: "btn btn-block",
+      classes: "btn btn-block ${size.className}",
       [
         text(title),
       ],
@@ -180,32 +194,37 @@ class BlockButton extends StatelessComponent {
 }
 
 /// A button component that includes an icon alongside text.
-///
-/// The [IconButton] component creates a button with a Font Awesome icon
-/// displayed before the button text.
+/// 
+/// This button variant combines an icon with text, using Font Awesome icons
+/// for consistent and scalable icon rendering.
 ///
 /// Example usage:
 /// ```dart
 /// IconButton(
 ///   title: 'Settings',
 ///   icon: 'cog',
-///   onPressed: () => print('Icon button pressed'),
+///   onPressed: () => openSettings(),
 /// )
 /// ```
-///
-/// Parameters:
-/// * [title] - The text to display on the button
-/// * [icon] - The Font Awesome icon name (without the 'fa-' prefix)
-/// * [onPressed] - Optional callback function triggered when the button is clicked
-/// * [attributes] - Optional map of HTML attributes to apply to the button element
 class IconButton extends StatelessComponent {
+  /// The text to display on the button
   final String title;
+
+  /// The size of the button from [ButtonSize], defaults to [ButtonSize.normal]
+  final ButtonSize size;
+
+  /// Optional callback function triggered when the button is clicked
   final VoidCallback? onPressed;
+
+  /// Optional map of additional HTML attributes to apply to the button element
   final Map<String, String>? attributes;
+
+  /// The name of the Font Awesome icon to display (without the 'fa-' prefix)
   final String icon;
 
   const IconButton({
     required this.title,
+    this.size = ButtonSize.normal,
     this.onPressed,
     this.attributes,
     required this.icon,
@@ -214,7 +233,7 @@ class IconButton extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield button(
-      classes: "btn",
+      classes: "btn ${size.className}",
       [
         span(classes: 'icon', [i(classes: 'fas fa-$icon', [])]),
         text(title),

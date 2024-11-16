@@ -42,7 +42,7 @@ class HomeState extends State<Home> {
 
     // yield BlockButton(title: 'title');
 
-    yield OutLineButton(title: 'title', color: DsColor.secondary);
+    // yield OutLineButton(title: 'title', color: DsColor.secondary);
 
     // yield Button(
     //   title: 'Button',
