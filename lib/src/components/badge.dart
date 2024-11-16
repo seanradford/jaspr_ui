@@ -15,9 +15,6 @@ import 'package:jaspr_ui/jaspr_ui.dart';
 /// )
 /// ```
 class Badge extends StatelessComponent {
-  /// The numeric value or total to display in the badge
-  final String total;
-
   /// The text label/title for the badge
   final String title;
 
@@ -27,26 +24,22 @@ class Badge extends StatelessComponent {
 
   /// Creates a new badge instance.
   ///
-  /// [total] and [title] are required parameters.
+  /// [title] are required parameters.
   /// [color] is optional and determines the badge's color scheme.
   const Badge({
-    required this.total,
     required this.title,
-    this.color,
+    this.color = BadgeColor.primary,
   });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield button(classes: 'btn', [
-      text(title),
-      div(
-        classes: 'badge '
-            '${color != null ? ' ${color!.className}' : ''}',
-        [
-          text(total),
-        ],
-      ),
-    ]);
+    yield span(
+      classes: 'badge '
+          '${color != null ? ' ${color!.className}' : ''}',
+      [
+        text(title),
+      ],
+    );
   }
 }
 

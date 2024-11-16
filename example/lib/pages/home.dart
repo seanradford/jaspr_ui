@@ -30,6 +30,6 @@ class HomeState extends State<Home> {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield Badge(total: '122', title: 'title', color: BadgeColor.accent);
+    yield Badge( title: 'title', color: BadgeColor.accent);
   }
 }
