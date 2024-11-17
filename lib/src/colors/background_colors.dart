@@ -1,3 +1,4 @@
+/// Background colors
 enum BackgroundColor {
   inherit,
   current,

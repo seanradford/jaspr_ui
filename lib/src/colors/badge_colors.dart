@@ -1,4 +1,4 @@
-// ignore_for_file: constant_identifier_names
+/// Badge colors
 enum BadgeColor {
   primary,
   secondary,

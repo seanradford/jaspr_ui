@@ -1,3 +1,4 @@
+/// Link colors
 enum LinkColor {
   /// Primary brand color, used for main call-to-action buttons
   primary,
@@ -24,7 +25,7 @@ enum LinkColor {
   error;
 
   /// Returns the CSS class name for the button color.
-  /// 
+  ///
   /// This getter is used internally to generate the appropriate CSS class name
   /// for the button's color styling.
   String get className {

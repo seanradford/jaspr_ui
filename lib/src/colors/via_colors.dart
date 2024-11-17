@@ -1,3 +1,4 @@
+/// Via colors
 enum ViaColor {
   inherit,
   current,

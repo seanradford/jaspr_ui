@@ -1,7 +1,8 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:jaspr/jaspr.dart';
 
 import 'package:jaspr_ui/src/sizes/sizes.dart';
+
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 
 /// A Container component that wraps child components with customizable padding.
 ///

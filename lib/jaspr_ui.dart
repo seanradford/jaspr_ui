@@ -3,18 +3,20 @@
 /// More dartdocs go here.
 library;
 
+export 'src/colors/colors.dart';
 export 'src/components/app.dart';
-export 'src/components/button.dart';
-export 'src/components/dropdown.dart';
-export 'src/components/dialog.dart';
-export 'src/components/theme_switch.dart';
 export 'src/components/avatar.dart';
-export 'src/components/divider.dart';
-export 'src/components/swap.dart';
 export 'src/components/badge.dart';
-export 'src/components/title.dart';
+export 'src/components/button.dart';
 export 'src/components/container.dart';
+export 'src/components/dialog.dart';
+export 'src/components/divider.dart';
+export 'src/components/dropdown.dart';
 export 'src/components/grid.dart';
 export 'src/components/link.dart';
+export 'src/components/swap.dart';
+export 'src/components/taps.dart';
+export 'src/components/theme_switch.dart';
+export 'src/components/title.dart';
 export 'src/styles/daisyui.dart';
-export 'src/colors/colors.dart';
+

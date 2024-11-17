@@ -1,10 +1,32 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:jaspr/jaspr.dart';
 
+/// A collection of dropdown components that provide different ways to display
+/// dropdown menus and content. These components use Tailwind CSS and DaisyUI
+/// for styling.
+
+/// Base dropdown component that displays a clickable button with a dropdown menu.
+///
+/// The dropdown menu appears when the button is clicked and contains a list of
+/// [DropdownItem]s.
+///
+/// Example usage:
+/// ```dart
+/// Dropdown(
+///   title: 'Options',
+///   items: [
+///     DropdownItem(title: 'Option 1'),
+///     DropdownItem(title: 'Option 2'),
+///   ],
+/// )
+/// ```
 class Dropdown extends StatelessComponent {
+  /// The text displayed on the dropdown button
   final String title;
+
+  /// List of items to be displayed in the dropdown menu
   final List<DropdownItem> items;
 
+  /// Creates a new [Dropdown] with the specified [title] and [items].
   const Dropdown({
     required this.title,
     required this.items,
@@ -29,9 +51,14 @@ class Dropdown extends StatelessComponent {
   }
 }
 
+/// Represents a single item within a dropdown menu.
+///
+/// Each [DropdownItem] is rendered as a clickable link within the dropdown menu.
 class DropdownItem extends StatelessComponent {
+  /// The text to display for this dropdown item
   final String title;
 
+  /// Creates a new [DropdownItem] with the specified [title].
   const DropdownItem({
     required this.title,
   });
@@ -46,10 +73,29 @@ class DropdownItem extends StatelessComponent {
   }
 }
 
+/// A variant of the dropdown that opens on hover instead of click.
+///
+/// This component behaves similarly to [Dropdown] but triggers when the user
+/// hovers over the button instead of clicking it.
+///
+/// Example usage:
+/// ```dart
+/// DropdownHover(
+///   title: 'Hover Menu',
+///   items: [
+///     DropdownItem(title: 'Option 1'),
+///     DropdownItem(title: 'Option 2'),
+///   ],
+/// )
+/// ```
 class DropdownHover extends StatelessComponent {
+  /// The text displayed on the dropdown button
   final String title;
+
+  /// List of items to be displayed in the dropdown menu
   final List<DropdownItem> items;
 
+  /// Creates a new [DropdownHover] with the specified [title] and [items].
   const DropdownHover({
     required this.title,
     required this.items,
@@ -75,11 +121,31 @@ class DropdownHover extends StatelessComponent {
   }
 }
 
+/// A dropdown component that displays a card with a title and body text.
+///
+/// Instead of showing a list of items, this dropdown displays a card with
+/// a header and content when activated.
+///
+/// Example usage:
+/// ```dart
+/// DropdownCard(
+///   title: 'Info',
+///   cardTitle: 'Important Information',
+///   cardBody: 'This is some important content in the card.',
+/// )
+/// ```
 class DropdownCard extends StatelessComponent {
+  /// The text displayed on the dropdown button
   final String title;
+
+  /// The title text displayed at the top of the card
   final String cardTitle;
+
+  /// The main content text displayed in the card body
   final String cardBody;
 
+  /// Creates a new [DropdownCard] with the specified [title], [cardTitle],
+  /// and [cardBody].
   const DropdownCard({
     required this.title,
     required this.cardTitle,

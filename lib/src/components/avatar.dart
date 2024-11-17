@@ -1,5 +1,6 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:jaspr/jaspr.dart';
+
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 
 /// A component that displays a circular avatar image.
 ///
@@ -20,6 +21,7 @@ class Avatar extends StatelessComponent {
   /// This URL should point to a valid image resource that will be displayed
   /// within the circular avatar container.
   final String url;
+
   /// Creates an [Avatar] component.
   ///
   /// Requires a [url] parameter which specifies the image source.
@@ -28,6 +30,7 @@ class Avatar extends StatelessComponent {
   });
 
   @override
+
   /// Builds the avatar component structure.
   ///
   /// Returns an iterable of components that create a nested div structure:

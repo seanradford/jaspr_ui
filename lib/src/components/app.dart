@@ -1,5 +1,6 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:jaspr/jaspr.dart';
+
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 
 /// A component that wraps content with DaisyUI theming capabilities.
 ///

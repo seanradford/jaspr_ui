@@ -9,14 +9,17 @@ class App extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield DaisyUI(theme: 'dark', [
-      Router(routes: [
-        Route(
-          path: '/',
-          title: 'Home',
-          builder: (context, state) => const Home(),
-        )
-      ])
-    ]);
+    yield DaisyUI(
+      theme: 'dark',
+      [
+        Router(routes: [
+          Route(
+            path: '/',
+            title: 'Home',
+            builder: (context, state) => const Home(),
+          )
+        ])
+      ],
+    );
   }
 }

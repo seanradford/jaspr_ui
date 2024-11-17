@@ -1,4 +1,5 @@
- enum TextColor {
+/// Text colors
+enum TextColor {
   inherit,
   current,
   transparent,
@@ -746,4 +747,3 @@
     }
   }
 }
- 

@@ -1,3 +1,4 @@
+/// Ring colors
 enum RingColor {
   inherit,
   current,

@@ -1,3 +1,4 @@
+/// From colors
 enum FromColor {
   inherit,
   current,

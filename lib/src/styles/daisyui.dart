@@ -1,7 +1,6 @@
-
 import 'package:jaspr/jaspr.dart';
 
-List<Component> daisyUiStyles =  [
+List<Component> daisyUiStyles = [
   // tailwindcss
   script(
     src: 'https://cdn.tailwindcss.com',
@@ -22,5 +21,3 @@ List<Component> daisyUiStyles =  [
         'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css',
   ),
 ];
-
- 

@@ -1,8 +1,9 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:jaspr/jaspr.dart'; 
+import 'package:jaspr/jaspr.dart';
 
 import '../../jaspr_ui.dart';
 import '../sizes/sizes.dart';
+
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 
 /// A collection of button components for building user interfaces with Jaspr.
 /// These components provide different button styles while maintaining a consistent API.
@@ -96,7 +97,6 @@ class OutLineButton extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
- 
     yield button(
       classes: 'btn btn-outline ${size.className}'
           '${color != null ? ' ${color!.className}' : ''}',
@@ -233,7 +233,7 @@ class IconButton extends StatelessComponent {
     yield button(
       classes: "btn ${size.className}",
       [
-        span(classes: 'icon', [i(classes: 'fas fa-$icon', [])]),
+        span(classes: 'icon', [i(classes: 'far fa-$icon', [])]),
         text(title),
       ],
       onClick: () => onPressed?.call(),
