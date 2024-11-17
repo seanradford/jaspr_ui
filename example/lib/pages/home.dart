@@ -29,8 +29,6 @@ class HomeState extends State<Home> {
     }
   }
 
-  int tabIndex = 0;
-
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield GridView( [
