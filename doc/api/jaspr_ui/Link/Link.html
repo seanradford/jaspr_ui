@@ -64,13 +64,24 @@
       const
       <span class="name ">Link</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="-param-key"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span></li>
 <li><span class="parameter" id="-param-color"><span class="type-annotation"><a href="../../jaspr_ui/LinkColor.html">LinkColor</a>?</span> <span class="parameter-name">color</span>, </span></li>
-<li><span class="parameter" id="-param-url"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">url</span>, </span></li>
-<li><span class="parameter" id="-param-title"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">title</span>, </span></li>
+<li><span class="parameter" id="-param-url"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">url</span>, </span></li>
+<li><span class="parameter" id="-param-title"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">title</span>, </span></li>
 <li><span class="parameter" id="-param-target"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Target.html">Target</a></span> <span class="parameter-name">target</span> = <span class="default-value">Target.self</span>, </span></li>
 </ol>})
     </section>
 
     
+<section class="desc markdown">
+  <p>Creates a Link component with the specified configuration.</p>
+<p>Parameters:</p>
+<ul>
+<li><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component/key.html">key</a>: Optional widget key for identification</li>
+<li><a href="../../jaspr_ui/Link/color.html">color</a>: Optional <a href="../../jaspr_ui/LinkColor.html">LinkColor</a> to style the link (defaults to theme default if null)</li>
+<li><a href="../../jaspr_ui/Link/url.html">url</a>: The URL that the link points to</li>
+<li><a href="../../jaspr_ui/Link/title.html">title</a>: The text content displayed for the link</li>
+<li><a href="../../jaspr_ui/Link/target.html">target</a>: Specifies where to open the link (defaults to <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Target.html">Target.self</a>)</li>
+</ul>
+</section>
 
 
     
@@ -81,7 +92,7 @@
   this.color,
   required this.url,
   required this.title,
-    this.target = Target.self,
+  this.target = Target.self,
 });</code></pre>
 </section>
 

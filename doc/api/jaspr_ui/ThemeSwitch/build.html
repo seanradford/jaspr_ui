@@ -64,11 +64,11 @@
       
   <div>
     <ol class="annotation-list">
-        <li>@<a href="https://api.dart.dev/stable/3.5.4/dart-core/override-constant.html">override</a></li>
+        <li>@<a href="https://api.dart.dev/stable/3.5.3/dart-core/override-constant.html">override</a></li>
     </ol>
   </div>
 
-<span class="returntype"><a href="https://api.dart.dev/stable/3.5.4/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span>&gt;</span></span>
 <span class="name ">build</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span></li>
 </ol>)
 
@@ -118,31 +118,15 @@ and</li>
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
-
-  yield raw(&#39;&#39;&#39;
-&lt;label class=&quot;swap swap-rotate&quot;&gt;
-&lt;!-- this hidden checkbox controls the state --&gt;
-&lt;input type=&quot;checkbox&quot; class=&quot;theme-controller&quot; value=&quot;$theme&quot; &#47;&gt;
-&lt;!-- moon icon --&gt;
-&lt;svg
-  class=&quot;swap-on h-10 w-10 fill-current&quot;
-  xmlns=&quot;http:&#47;&#47;www.w3.org&#47;2000&#47;svg&quot;
-  viewBox=&quot;0 0 24 24&quot;&gt;
-  &lt;path
-    d=&quot;M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z&quot; &#47;&gt;
-&lt;&#47;svg&gt;
-
-&lt;!-- sun icon --&gt;
-&lt;svg
-  class=&quot;swap-off h-10 w-10 fill-current&quot;
-  xmlns=&quot;http:&#47;&#47;www.w3.org&#47;2000&#47;svg&quot;
-  viewBox=&quot;0 0 24 24&quot;&gt;
-  &lt;path
-    d=&quot;M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z&quot; &#47;&gt;
-&lt;&#47;svg&gt;
-
-&lt;&#47;label&gt;
-&#39;&#39;&#39;);
+  yield label(classes: &#39;swap swap-rotate h-10 w-10 text-2xl&#39;, [
+    input(
+        type: InputType.checkbox,
+        classes: &#39;theme-controller&#39;,
+        attributes: {&#39;value&#39;: theme},
+        []),
+    div(classes: &#39;far fa-moon swap-on fill-current&#39;, []),
+    div(classes: &#39;far fa-sun swap-off fill-current&#39;, []),
+  ]);
 }</code></pre>
 </section>
 

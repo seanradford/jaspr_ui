@@ -62,16 +62,15 @@
 
     <section class="multi-line-signature">
       const
-      <span class="name ">Badge</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="-param-total"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">total</span>, </span></li>
-<li><span class="parameter" id="-param-title"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.4/dart-core/String-class.html">String</a></span> <span class="parameter-name">title</span>, </span></li>
-<li><span class="parameter" id="-param-color"><span class="type-annotation"><a href="../../jaspr_ui/BadgeColor.html">BadgeColor</a>?</span> <span class="parameter-name">color</span>, </span></li>
+      <span class="name ">Badge</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="-param-title"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">title</span>, </span></li>
+<li><span class="parameter" id="-param-color"><span class="type-annotation"><a href="../../jaspr_ui/BadgeColor.html">BadgeColor</a>?</span> <span class="parameter-name">color</span> = <span class="default-value">BadgeColor.primary</span>, </span></li>
 </ol>})
     </section>
 
     
 <section class="desc markdown">
   <p>Creates a new badge instance.</p>
-<p><a href="../../jaspr_ui/Badge/total.html">total</a> and <a href="../../jaspr_ui/Badge/title.html">title</a> are required parameters.
+<p><a href="../../jaspr_ui/Badge/title.html">title</a> are required parameters.
 <a href="../../jaspr_ui/Badge/color.html">color</a> is optional and determines the badge's color scheme.</p>
 </section>
 
@@ -80,9 +79,8 @@
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">const Badge({
-  required this.total,
   required this.title,
-  this.color,
+  this.color = BadgeColor.primary,
 });</code></pre>
 </section>
 
