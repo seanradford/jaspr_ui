@@ -36,6 +36,7 @@ export 'src/components/app.dart';
 export 'src/components/avatar.dart';
 export 'src/components/badge.dart';
 export 'src/components/button.dart';
+export 'src/components/card.dart';
 export 'src/components/chat.dart';
 export 'src/components/container.dart';
 export 'src/components/dialog.dart';

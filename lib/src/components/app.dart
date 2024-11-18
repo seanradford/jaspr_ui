@@ -50,9 +50,6 @@ class DaisyUI extends StatelessComponent {
     yield Document.html(
       attributes: {"data-theme": theme},
     );
-    yield div(
-      classes: 'main',
-      children,
-    );
+    yield div(children);
   }
 }

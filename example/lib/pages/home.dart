@@ -31,6 +31,6 @@ class HomeState extends State<Home> {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield ChatBubble(start: false, message: 'message', avatarUrl: 'https://avatars.githubusercontent.com/u/1182518?v=4');
+    yield text('Nulla ea mollit officia et ut irure nisi minim qui culpa.');
   }
 }

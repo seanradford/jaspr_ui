@@ -91,6 +91,14 @@ class ThemeSwitchOptions extends StatelessComponent {
         aria-label="Retro"
         value="retro" />
     </li>
+     <li>
+      <input
+        type="radio"
+        name="theme-dropdown"
+        class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+        aria-label="Corporate"
+        value="corporate" />
+    </li>
     <li>
       <input
         type="radio"
