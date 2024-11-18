@@ -1,6 +1,6 @@
-// ignore_for_file: constant_identifier_names
-
 import 'package:jaspr/jaspr.dart';
+
+// ignore_for_file: constant_identifier_names
 
 /// A customizable tab component that displays a list of selectable tabs.
 ///
@@ -23,6 +23,7 @@ import 'package:jaspr/jaspr.dart';
 class Tab extends StatelessComponent {
   /// The list of tab items to display.
   final List<TabItem> children;
+
   /// The index of the currently selected tab.
   final int currentIndex;
 
@@ -74,6 +75,7 @@ class Tab extends StatelessComponent {
 class TabItem {
   /// The text to display for this tab.
   final String title;
+
   /// Creates a new [TabItem] with the specified [title].
   TabItem({required this.title});
 }
@@ -87,8 +89,10 @@ class TabItem {
 enum TabType {
   /// Lifted style with elevated appearance
   tabs_lifted,
+
   /// Style with visible borders
   tabs_bordered,
+
   /// Contained box style
   tabs_boxed;
 
