@@ -1,749 +1,257 @@
 /// Ring colors
 enum RingColor {
-  inherit,
-  current,
-  transparent,
-  black,
-  white,
-  slate_50,
-  slate_100,
-  slate_200,
-  slate_300,
-  slate_400,
-  slate_500,
-  slate_600,
-  slate_700,
-  slate_800,
-  slate_900,
-  slate_950,
-  gray_50,
-  gray_100,
-  gray_200,
-  gray_300,
-  gray_400,
-  gray_500,
-  gray_600,
-  gray_700,
-  gray_800,
-  gray_900,
-  gray_950,
-  zinc_50,
-  zinc_100,
-  zinc_200,
-  zinc_300,
-  zinc_400,
-  zinc_500,
-  zinc_600,
-  zinc_700,
-  zinc_800,
-  zinc_900,
-  zinc_950,
-  neutral_50,
-  neutral_100,
-  neutral_200,
-  neutral_300,
-  neutral_400,
-  neutral_500,
-  neutral_600,
-  neutral_700,
-  neutral_800,
-  neutral_900,
-  neutral_950,
-  stone_50,
-  stone_100,
-  stone_200,
-  stone_300,
-  stone_400,
-  stone_500,
-  stone_600,
-  stone_700,
-  stone_800,
-  stone_900,
-  stone_950,
-  red_50,
-  red_100,
-  red_200,
-  red_300,
-  red_400,
-  red_500,
-  red_600,
-  red_700,
-  red_800,
-  red_900,
-  red_950,
-  orange_50,
-  orange_100,
-  orange_200,
-  orange_300,
-  orange_400,
-  orange_500,
-  orange_600,
-  orange_700,
-  orange_800,
-  orange_900,
-  orange_950,
-  amber_50,
-  amber_100,
-  amber_200,
-  amber_300,
-  amber_400,
-  amber_500,
-  amber_600,
-  amber_700,
-  amber_800,
-  amber_900,
-  amber_950,
-  yellow_50,
-  yellow_100,
-  yellow_200,
-  yellow_300,
-  yellow_400,
-  yellow_500,
-  yellow_600,
-  yellow_700,
-  yellow_800,
-  yellow_900,
-  yellow_950,
-  lime_50,
-  lime_100,
-  lime_200,
-  lime_300,
-  lime_400,
-  lime_500,
-  lime_600,
-  lime_700,
-  lime_800,
-  lime_900,
-  lime_950,
-  green_50,
-  green_100,
-  green_200,
-  green_300,
-  green_400,
-  green_500,
-  green_600,
-  green_700,
-  green_800,
-  green_900,
-  green_950,
-  emerald_50,
-  emerald_100,
-  emerald_200,
-  emerald_300,
-  emerald_400,
-  emerald_500,
-  emerald_600,
-  emerald_700,
-  emerald_800,
-  emerald_900,
-  emerald_950,
-  teal_50,
-  teal_100,
-  teal_200,
-  teal_300,
-  teal_400,
-  teal_500,
-  teal_600,
-  teal_700,
-  teal_800,
-  teal_900,
-  teal_950,
-  cyan_50,
-  cyan_100,
-  cyan_200,
-  cyan_300,
-  cyan_400,
-  cyan_500,
-  cyan_600,
-  cyan_700,
-  cyan_800,
-  cyan_900,
-  cyan_950,
-  sky_50,
-  sky_100,
-  sky_200,
-  sky_300,
-  sky_400,
-  sky_500,
-  sky_600,
-  sky_700,
-  sky_800,
-  sky_900,
-  sky_950,
-  blue_50,
-  blue_100,
-  blue_200,
-  blue_300,
-  blue_400,
-  blue_500,
-  blue_600,
-  blue_700,
-  blue_800,
-  blue_900,
-  blue_950,
-  indigo_50,
-  indigo_100,
-  indigo_200,
-  indigo_300,
-  indigo_400,
-  indigo_500,
-  indigo_600,
-  indigo_700,
-  indigo_800,
-  indigo_900,
-  indigo_950,
-  violet_50,
-  violet_100,
-  violet_200,
-  violet_300,
-  violet_400,
-  violet_500,
-  violet_600,
-  violet_700,
-  violet_800,
-  violet_900,
-  violet_950,
-  purple_50,
-  purple_100,
-  purple_200,
-  purple_300,
-  purple_400,
-  purple_500,
-  purple_600,
-  purple_700,
-  purple_800,
-  purple_900,
-  purple_950,
-  fuchsia_50,
-  fuchsia_100,
-  fuchsia_200,
-  fuchsia_300,
-  fuchsia_400,
-  fuchsia_500,
-  fuchsia_600,
-  fuchsia_700,
-  fuchsia_800,
-  fuchsia_900,
-  fuchsia_950,
-  pink_50,
-  pink_100,
-  pink_200,
-  pink_300,
-  pink_400,
-  pink_500,
-  pink_600,
-  pink_700,
-  pink_800,
-  pink_900,
-  pink_950,
-  rose_50,
-  rose_100,
-  rose_200,
-  rose_300,
-  rose_400,
-  rose_500,
-  rose_600,
-  rose_700,
-  rose_800,
-  rose_900,
-  rose_950;
+  inherit('ring-inherit'),
+  current('ring-current'),
+  transparent('ring-transparent'),
+  black('ring-black'),
+  white('ring-white'),
+  slate50('ring-slate-50'),
+  slate100('ring-slate-100'),
+  slate200('ring-slate-200'),
+  slate300('ring-slate-300'),
+  slate400('ring-slate-400'),
+  slate500('ring-slate-500'),
+  slate600('ring-slate-600'),
+  slate700('ring-slate-700'),
+  slate800('ring-slate-800'),
+  slate900('ring-slate-900'),
+  slate950('ring-slate-950'),
+  gray50('ring-gray-50'),
+  gray100('ring-gray-100'),
+  gray200('ring-gray-200'),
+  gray300('ring-gray-300'),
+  gray400('ring-gray-400'),
+  gray500('ring-gray-500'),
+  gray600('ring-gray-600'),
+  gray700('ring-gray-700'),
+  gray800('ring-gray-800'),
+  gray900('ring-gray-900'),
+  gray950('ring-gray-950'),
+  zinc50('ring-zinc-50'),
+  zinc100('ring-zinc-100'),
+  zinc200('ring-zinc-200'),
+  zinc300('ring-zinc-300'),
+  zinc400('ring-zinc-400'),
+  zinc500('ring-zinc-500'),
+  zinc600('ring-zinc-600'),
+  zinc700('ring-zinc-700'),
+  zinc800('ring-zinc-800'),
+  zinc900('ring-zinc-900'),
+  zinc950('ring-zinc-950'),
+  neutral50('ring-neutral-50'),
+  neutral100('ring-neutral-100'),
+  neutral200('ring-neutral-200'),
+  neutral300('ring-neutral-300'),
+  neutral400('ring-neutral-400'),
+  neutral500('ring-neutral-500'),
+  neutral600('ring-neutral-600'),
+  neutral700('ring-neutral-700'),
+  neutral800('ring-neutral-800'),
+  neutral900('ring-neutral-900'),
+  neutral950('ring-neutral-950'),
+  stone50('ring-stone-50'),
+  stone100('ring-stone-100'),
+  stone200('ring-stone-200'),
+  stone300('ring-stone-300'),
+  stone400('ring-stone-400'),
+  stone500('ring-stone-500'),
+  stone600('ring-stone-600'),
+  stone700('ring-stone-700'),
+  stone800('ring-stone-800'),
+  stone900('ring-stone-900'),
+  stone950('ring-stone-950'),
+  red50('ring-red-50'),
+  red100('ring-red-100'),
+  red200('ring-red-200'),
+  red300('ring-red-300'),
+  red400('ring-red-400'),
+  red500('ring-red-500'),
+  red600('ring-red-600'),
+  red700('ring-red-700'),
+  red800('ring-red-800'),
+  red900('ring-red-900'),
+  red950('ring-red-950'),
+  orange50('ring-orange-50'),
+  orange100('ring-orange-100'),
+  orange200('ring-orange-200'),
+  orange300('ring-orange-300'),
+  orange400('ring-orange-400'),
+  orange500('ring-orange-500'),
+  orange600('ring-orange-600'),
+  orange700('ring-orange-700'),
+  orange800('ring-orange-800'),
+  orange900('ring-orange-900'),
+  orange950('ring-orange-950'),
+  amber50('ring-amber-50'),
+  amber100('ring-amber-100'),
+  amber200('ring-amber-200'),
+  amber300('ring-amber-300'),
+  amber400('ring-amber-400'),
+  amber500('ring-amber-500'),
+  amber600('ring-amber-600'),
+  amber700('ring-amber-700'),
+  amber800('ring-amber-800'),
+  amber900('ring-amber-900'),
+  amber950('ring-amber-950'),
+  yellow50('ring-yellow-50'),
+  yellow100('ring-yellow-100'),
+  yellow200('ring-yellow-200'),
+  yellow300('ring-yellow-300'),
+  yellow400('ring-yellow-400'),
+  yellow500('ring-yellow-500'),
+  yellow600('ring-yellow-600'),
+  yellow700('ring-yellow-700'),
+  yellow800('ring-yellow-800'),
+  yellow900('ring-yellow-900'),
+  yellow950('ring-yellow-950'),
+  lime50('ring-lime-50'),
+  lime100('ring-lime-100'),
+  lime200('ring-lime-200'),
+  lime300('ring-lime-300'),
+  lime400('ring-lime-400'),
+  lime500('ring-lime-500'),
+  lime600('ring-lime-600'),
+  lime700('ring-lime-700'),
+  lime800('ring-lime-800'),
+  lime900('ring-lime-900'),
+  lime950('ring-lime-950'),
+  green50('ring-green-50'),
+  green100('ring-green-100'),
+  green200('ring-green-200'),
+  green300('ring-green-300'),
+  green400('ring-green-400'),
+  green500('ring-green-500'),
+  green600('ring-green-600'),
+  green700('ring-green-700'),
+  green800('ring-green-800'),
+  green900('ring-green-900'),
+  green950('ring-green-950'),
+  emerald50('ring-emerald-50'),
+  emerald100('ring-emerald-100'),
+  emerald200('ring-emerald-200'),
+  emerald300('ring-emerald-300'),
+  emerald400('ring-emerald-400'),
+  emerald500('ring-emerald-500'),
+  emerald600('ring-emerald-600'),
+  emerald700('ring-emerald-700'),
+  emerald800('ring-emerald-800'),
+  emerald900('ring-emerald-900'),
+  emerald950('ring-emerald-950'),
+  teal50('ring-teal-50'),
+  teal100('ring-teal-100'),
+  teal200('ring-teal-200'),
+  teal300('ring-teal-300'),
+  teal400('ring-teal-400'),
+  teal500('ring-teal-500'),
+  teal600('ring-teal-600'),
+  teal700('ring-teal-700'),
+  teal800('ring-teal-800'),
+  teal900('ring-teal-900'),
+  teal950('ring-teal-950'),
+  cyan50('ring-cyan-50'),
+  cyan100('ring-cyan-100'),
+  cyan200('ring-cyan-200'),
+  cyan300('ring-cyan-300'),
+  cyan400('ring-cyan-400'),
+  cyan500('ring-cyan-500'),
+  cyan600('ring-cyan-600'),
+  cyan700('ring-cyan-700'),
+  cyan800('ring-cyan-800'),
+  cyan900('ring-cyan-900'),
+  cyan950('ring-cyan-950'),
+  sky50('ring-sky-50'),
+  sky100('ring-sky-100'),
+  sky200('ring-sky-200'),
+  sky300('ring-sky-300'),
+  sky400('ring-sky-400'),
+  sky500('ring-sky-500'),
+  sky600('ring-sky-600'),
+  sky700('ring-sky-700'),
+  sky800('ring-sky-800'),
+  sky900('ring-sky-900'),
+  sky950('ring-sky-950'),
+  blue50('ring-blue-50'),
+  blue100('ring-blue-100'),
+  blue200('ring-blue-200'),
+  blue300('ring-blue-300'),
+  blue400('ring-blue-400'),
+  blue500('ring-blue-500'),
+  blue600('ring-blue-600'),
+  blue700('ring-blue-700'),
+  blue800('ring-blue-800'),
+  blue900('ring-blue-900'),
+  blue950('ring-blue-950'),
+  indigo50('ring-indigo-50'),
+  indigo100('ring-indigo-100'),
+  indigo200('ring-indigo-200'),
+  indigo300('ring-indigo-300'),
+  indigo400('ring-indigo-400'),
+  indigo500('ring-indigo-500'),
+  indigo600('ring-indigo-600'),
+  indigo700('ring-indigo-700'),
+  indigo800('ring-indigo-800'),
+  indigo900('ring-indigo-900'),
+  indigo950('ring-indigo-950'),
+  violet50('ring-violet-50'),
+  violet100('ring-violet-100'),
+  violet200('ring-violet-200'),
+  violet300('ring-violet-300'),
+  violet400('ring-violet-400'),
+  violet500('ring-violet-500'),
+  violet600('ring-violet-600'),
+  violet700('ring-violet-700'),
+  violet800('ring-violet-800'),
+  violet900('ring-violet-900'),
+  violet950('ring-violet-950'),
+  purple50('ring-purple-50'),
+  purple100('ring-purple-100'),
+  purple200('ring-purple-200'),
+  purple300('ring-purple-300'),
+  purple400('ring-purple-400'),
+  purple500('ring-purple-500'),
+  purple600('ring-purple-600'),
+  purple700('ring-purple-700'),
+  purple800('ring-purple-800'),
+  purple900('ring-purple-900'),
+  purple950('ring-purple-950'),
+  fuchsia50('ring-fuchsia-50'),
+  fuchsia100('ring-fuchsia-100'),
+  fuchsia200('ring-fuchsia-200'),
+  fuchsia300('ring-fuchsia-300'),
+  fuchsia400('ring-fuchsia-400'),
+  fuchsia500('ring-fuchsia-500'),
+  fuchsia600('ring-fuchsia-600'),
+  fuchsia700('ring-fuchsia-700'),
+  fuchsia800('ring-fuchsia-800'),
+  fuchsia900('ring-fuchsia-900'),
+  fuchsia950('ring-fuchsia-950'),
+  pink50('ring-pink-50'),
+  pink100('ring-pink-100'),
+  pink200('ring-pink-200'),
+  pink300('ring-pink-300'),
+  pink400('ring-pink-400'),
+  pink500('ring-pink-500'),
+  pink600('ring-pink-600'),
+  pink700('ring-pink-700'),
+  pink800('ring-pink-800'),
+  pink900('ring-pink-900'),
+  pink950('ring-pink-950'),
+  rose50('ring-rose-50'),
+  rose100('ring-rose-100'),
+  rose200('ring-rose-200'),
+  rose300('ring-rose-300'),
+  rose400('ring-rose-400'),
+  rose500('ring-rose-500'),
+  rose600('ring-rose-600'),
+  rose700('ring-rose-700'),
+  rose800('ring-rose-800'),
+  rose900('ring-rose-900'),
+  rose950('ring-rose-950');
 
-  String get className {
-    switch (this) {
-      case RingColor.inherit:
-        return 'ring-inherit';
-      case RingColor.current:
-        return 'ring-current';
-      case RingColor.transparent:
-        return 'ring-transparent';
-      case RingColor.black:
-        return 'ring-black';
-      case RingColor.white:
-        return 'ring-white';
-      case RingColor.slate_50:
-        return 'ring-slate-50';
-      case RingColor.slate_100:
-        return 'ring-slate-100';
-      case RingColor.slate_200:
-        return 'ring-slate-200';
-      case RingColor.slate_300:
-        return 'ring-slate-300';
-      case RingColor.slate_400:
-        return 'ring-slate-400';
-      case RingColor.slate_500:
-        return 'ring-slate-500';
-      case RingColor.slate_600:
-        return 'ring-slate-600';
-      case RingColor.slate_700:
-        return 'ring-slate-700';
-      case RingColor.slate_800:
-        return 'ring-slate-800';
-      case RingColor.slate_900:
-        return 'ring-slate-900';
-      case RingColor.slate_950:
-        return 'ring-slate-950';
-      case RingColor.gray_50:
-        return 'ring-gray-50';
-      case RingColor.gray_100:
-        return 'ring-gray-100';
-      case RingColor.gray_200:
-        return 'ring-gray-200';
-      case RingColor.gray_300:
-        return 'ring-gray-300';
-      case RingColor.gray_400:
-        return 'ring-gray-400';
-      case RingColor.gray_500:
-        return 'ring-gray-500';
-      case RingColor.gray_600:
-        return 'ring-gray-600';
-      case RingColor.gray_700:
-        return 'ring-gray-700';
-      case RingColor.gray_800:
-        return 'ring-gray-800';
-      case RingColor.gray_900:
-        return 'ring-gray-900';
-      case RingColor.gray_950:
-        return 'ring-gray-950';
-      case RingColor.zinc_50:
-        return 'ring-zinc-50';
-      case RingColor.zinc_100:
-        return 'ring-zinc-100';
-      case RingColor.zinc_200:
-        return 'ring-zinc-200';
-      case RingColor.zinc_300:
-        return 'ring-zinc-300';
-      case RingColor.zinc_400:
-        return 'ring-zinc-400';
-      case RingColor.zinc_500:
-        return 'ring-zinc-500';
-      case RingColor.zinc_600:
-        return 'ring-zinc-600';
-      case RingColor.zinc_700:
-        return 'ring-zinc-700';
-      case RingColor.zinc_800:
-        return 'ring-zinc-800';
-      case RingColor.zinc_900:
-        return 'ring-zinc-900';
-      case RingColor.zinc_950:
-        return 'ring-zinc-950';
-      case RingColor.neutral_50:
-        return 'ring-neutral-50';
-      case RingColor.neutral_100:
-        return 'ring-neutral-100';
-      case RingColor.neutral_200:
-        return 'ring-neutral-200';
-      case RingColor.neutral_300:
-        return 'ring-neutral-300';
-      case RingColor.neutral_400:
-        return 'ring-neutral-400';
-      case RingColor.neutral_500:
-        return 'ring-neutral-500';
-      case RingColor.neutral_600:
-        return 'ring-neutral-600';
-      case RingColor.neutral_700:
-        return 'ring-neutral-700';
-      case RingColor.neutral_800:
-        return 'ring-neutral-800';
-      case RingColor.neutral_900:
-        return 'ring-neutral-900';
-      case RingColor.neutral_950:
-        return 'ring-neutral-950';
-      case RingColor.stone_50:
-        return 'ring-stone-50';
-      case RingColor.stone_100:
-        return 'ring-stone-100';
-      case RingColor.stone_200:
-        return 'ring-stone-200';
-      case RingColor.stone_300:
-        return 'ring-stone-300';
-      case RingColor.stone_400:
-        return 'ring-stone-400';
-      case RingColor.stone_500:
-        return 'ring-stone-500';
-      case RingColor.stone_600:
-        return 'ring-stone-600';
-      case RingColor.stone_700:
-        return 'ring-stone-700';
-      case RingColor.stone_800:
-        return 'ring-stone-800';
-      case RingColor.stone_900:
-        return 'ring-stone-900';
-      case RingColor.stone_950:
-        return 'ring-stone-950';
-      case RingColor.red_50:
-        return 'ring-red-50';
-      case RingColor.red_100:
-        return 'ring-red-100';
-      case RingColor.red_200:
-        return 'ring-red-200';
-      case RingColor.red_300:
-        return 'ring-red-300';
-      case RingColor.red_400:
-        return 'ring-red-400';
-      case RingColor.red_500:
-        return 'ring-red-500';
-      case RingColor.red_600:
-        return 'ring-red-600';
-      case RingColor.red_700:
-        return 'ring-red-700';
-      case RingColor.red_800:
-        return 'ring-red-800';
-      case RingColor.red_900:
-        return 'ring-red-900';
-      case RingColor.red_950:
-        return 'ring-red-950';
-      case RingColor.orange_50:
-        return 'ring-orange-50';
-      case RingColor.orange_100:
-        return 'ring-orange-100';
-      case RingColor.orange_200:
-        return 'ring-orange-200';
-      case RingColor.orange_300:
-        return 'ring-orange-300';
-      case RingColor.orange_400:
-        return 'ring-orange-400';
-      case RingColor.orange_500:
-        return 'ring-orange-500';
-      case RingColor.orange_600:
-        return 'ring-orange-600';
-      case RingColor.orange_700:
-        return 'ring-orange-700';
-      case RingColor.orange_800:
-        return 'ring-orange-800';
-      case RingColor.orange_900:
-        return 'ring-orange-900';
-      case RingColor.orange_950:
-        return 'ring-orange-950';
-      case RingColor.amber_50:
-        return 'ring-amber-50';
-      case RingColor.amber_100:
-        return 'ring-amber-100';
-      case RingColor.amber_200:
-        return 'ring-amber-200';
-      case RingColor.amber_300:
-        return 'ring-amber-300';
-      case RingColor.amber_400:
-        return 'ring-amber-400';
-      case RingColor.amber_500:
-        return 'ring-amber-500';
-      case RingColor.amber_600:
-        return 'ring-amber-600';
-      case RingColor.amber_700:
-        return 'ring-amber-700';
-      case RingColor.amber_800:
-        return 'ring-amber-800';
-      case RingColor.amber_900:
-        return 'ring-amber-900';
-      case RingColor.amber_950:
-        return 'ring-amber-950';
-      case RingColor.yellow_50:
-        return 'ring-yellow-50';
-      case RingColor.yellow_100:
-        return 'ring-yellow-100';
-      case RingColor.yellow_200:
-        return 'ring-yellow-200';
-      case RingColor.yellow_300:
-        return 'ring-yellow-300';
-      case RingColor.yellow_400:
-        return 'ring-yellow-400';
-      case RingColor.yellow_500:
-        return 'ring-yellow-500';
-      case RingColor.yellow_600:
-        return 'ring-yellow-600';
-      case RingColor.yellow_700:
-        return 'ring-yellow-700';
-      case RingColor.yellow_800:
-        return 'ring-yellow-800';
-      case RingColor.yellow_900:
-        return 'ring-yellow-900';
-      case RingColor.yellow_950:
-        return 'ring-yellow-950';
-      case RingColor.lime_50:
-        return 'ring-lime-50';
-      case RingColor.lime_100:
-        return 'ring-lime-100';
-      case RingColor.lime_200:
-        return 'ring-lime-200';
-      case RingColor.lime_300:
-        return 'ring-lime-300';
-      case RingColor.lime_400:
-        return 'ring-lime-400';
-      case RingColor.lime_500:
-        return 'ring-lime-500';
-      case RingColor.lime_600:
-        return 'ring-lime-600';
-      case RingColor.lime_700:
-        return 'ring-lime-700';
-      case RingColor.lime_800:
-        return 'ring-lime-800';
-      case RingColor.lime_900:
-        return 'ring-lime-900';
-      case RingColor.lime_950:
-        return 'ring-lime-950';
-      case RingColor.green_50:
-        return 'ring-green-50';
-      case RingColor.green_100:
-        return 'ring-green-100';
-      case RingColor.green_200:
-        return 'ring-green-200';
-      case RingColor.green_300:
-        return 'ring-green-300';
-      case RingColor.green_400:
-        return 'ring-green-400';
-      case RingColor.green_500:
-        return 'ring-green-500';
-      case RingColor.green_600:
-        return 'ring-green-600';
-      case RingColor.green_700:
-        return 'ring-green-700';
-      case RingColor.green_800:
-        return 'ring-green-800';
-      case RingColor.green_900:
-        return 'ring-green-900';
-      case RingColor.green_950:
-        return 'ring-green-950';
-      case RingColor.emerald_50:
-        return 'ring-emerald-50';
-      case RingColor.emerald_100:
-        return 'ring-emerald-100';
-      case RingColor.emerald_200:
-        return 'ring-emerald-200';
-      case RingColor.emerald_300:
-        return 'ring-emerald-300';
-      case RingColor.emerald_400:
-        return 'ring-emerald-400';
-      case RingColor.emerald_500:
-        return 'ring-emerald-500';
-      case RingColor.emerald_600:
-        return 'ring-emerald-600';
-      case RingColor.emerald_700:
-        return 'ring-emerald-700';
-      case RingColor.emerald_800:
-        return 'ring-emerald-800';
-      case RingColor.emerald_900:
-        return 'ring-emerald-900';
-      case RingColor.emerald_950:
-        return 'ring-emerald-950';
-      case RingColor.teal_50:
-        return 'ring-teal-50';
-      case RingColor.teal_100:
-        return 'ring-teal-100';
-      case RingColor.teal_200:
-        return 'ring-teal-200';
-      case RingColor.teal_300:
-        return 'ring-teal-300';
-      case RingColor.teal_400:
-        return 'ring-teal-400';
-      case RingColor.teal_500:
-        return 'ring-teal-500';
-      case RingColor.teal_600:
-        return 'ring-teal-600';
-      case RingColor.teal_700:
-        return 'ring-teal-700';
-      case RingColor.teal_800:
-        return 'ring-teal-800';
-      case RingColor.teal_900:
-        return 'ring-teal-900';
-      case RingColor.teal_950:
-        return 'ring-teal-950';
-      case RingColor.cyan_50:
-        return 'ring-cyan-50';
-      case RingColor.cyan_100:
-        return 'ring-cyan-100';
-      case RingColor.cyan_200:
-        return 'ring-cyan-200';
-      case RingColor.cyan_300:
-        return 'ring-cyan-300';
-      case RingColor.cyan_400:
-        return 'ring-cyan-400';
-      case RingColor.cyan_500:
-        return 'ring-cyan-500';
-      case RingColor.cyan_600:
-        return 'ring-cyan-600';
-      case RingColor.cyan_700:
-        return 'ring-cyan-700';
-      case RingColor.cyan_800:
-        return 'ring-cyan-800';
-      case RingColor.cyan_900:
-        return 'ring-cyan-900';
-      case RingColor.cyan_950:
-        return 'ring-cyan-950';
-      case RingColor.sky_50:
-        return 'ring-sky-50';
-      case RingColor.sky_100:
-        return 'ring-sky-100';
-      case RingColor.sky_200:
-        return 'ring-sky-200';
-      case RingColor.sky_300:
-        return 'ring-sky-300';
-      case RingColor.sky_400:
-        return 'ring-sky-400';
-      case RingColor.sky_500:
-        return 'ring-sky-500';
-      case RingColor.sky_600:
-        return 'ring-sky-600';
-      case RingColor.sky_700:
-        return 'ring-sky-700';
-      case RingColor.sky_800:
-        return 'ring-sky-800';
-      case RingColor.sky_900:
-        return 'ring-sky-900';
-      case RingColor.sky_950:
-        return 'ring-sky-950';
-      case RingColor.blue_50:
-        return 'ring-blue-50';
-      case RingColor.blue_100:
-        return 'ring-blue-100';
-      case RingColor.blue_200:
-        return 'ring-blue-200';
-      case RingColor.blue_300:
-        return 'ring-blue-300';
-      case RingColor.blue_400:
-        return 'ring-blue-400';
-      case RingColor.blue_500:
-        return 'ring-blue-500';
-      case RingColor.blue_600:
-        return 'ring-blue-600';
-      case RingColor.blue_700:
-        return 'ring-blue-700';
-      case RingColor.blue_800:
-        return 'ring-blue-800';
-      case RingColor.blue_900:
-        return 'ring-blue-900';
-      case RingColor.blue_950:
-        return 'ring-blue-950';
-      case RingColor.indigo_50:
-        return 'ring-indigo-50';
-      case RingColor.indigo_100:
-        return 'ring-indigo-100';
-      case RingColor.indigo_200:
-        return 'ring-indigo-200';
-      case RingColor.indigo_300:
-        return 'ring-indigo-300';
-      case RingColor.indigo_400:
-        return 'ring-indigo-400';
-      case RingColor.indigo_500:
-        return 'ring-indigo-500';
-      case RingColor.indigo_600:
-        return 'ring-indigo-600';
-      case RingColor.indigo_700:
-        return 'ring-indigo-700';
-      case RingColor.indigo_800:
-        return 'ring-indigo-800';
-      case RingColor.indigo_900:
-        return 'ring-indigo-900';
-      case RingColor.indigo_950:
-        return 'ring-indigo-950';
-      case RingColor.violet_50:
-        return 'ring-violet-50';
-      case RingColor.violet_100:
-        return 'ring-violet-100';
-      case RingColor.violet_200:
-        return 'ring-violet-200';
-      case RingColor.violet_300:
-        return 'ring-violet-300';
-      case RingColor.violet_400:
-        return 'ring-violet-400';
-      case RingColor.violet_500:
-        return 'ring-violet-500';
-      case RingColor.violet_600:
-        return 'ring-violet-600';
-      case RingColor.violet_700:
-        return 'ring-violet-700';
-      case RingColor.violet_800:
-        return 'ring-violet-800';
-      case RingColor.violet_900:
-        return 'ring-violet-900';
-      case RingColor.violet_950:
-        return 'ring-violet-950';
-      case RingColor.purple_50:
-        return 'ring-purple-50';
-      case RingColor.purple_100:
-        return 'ring-purple-100';
-      case RingColor.purple_200:
-        return 'ring-purple-200';
-      case RingColor.purple_300:
-        return 'ring-purple-300';
-      case RingColor.purple_400:
-        return 'ring-purple-400';
-      case RingColor.purple_500:
-        return 'ring-purple-500';
-      case RingColor.purple_600:
-        return 'ring-purple-600';
-      case RingColor.purple_700:
-        return 'ring-purple-700';
-      case RingColor.purple_800:
-        return 'ring-purple-800';
-      case RingColor.purple_900:
-        return 'ring-purple-900';
-      case RingColor.purple_950:
-        return 'ring-purple-950';
-      case RingColor.fuchsia_50:
-        return 'ring-fuchsia-50';
-      case RingColor.fuchsia_100:
-        return 'ring-fuchsia-100';
-      case RingColor.fuchsia_200:
-        return 'ring-fuchsia-200';
-      case RingColor.fuchsia_300:
-        return 'ring-fuchsia-300';
-      case RingColor.fuchsia_400:
-        return 'ring-fuchsia-400';
-      case RingColor.fuchsia_500:
-        return 'ring-fuchsia-500';
-      case RingColor.fuchsia_600:
-        return 'ring-fuchsia-600';
-      case RingColor.fuchsia_700:
-        return 'ring-fuchsia-700';
-      case RingColor.fuchsia_800:
-        return 'ring-fuchsia-800';
-      case RingColor.fuchsia_900:
-        return 'ring-fuchsia-900';
-      case RingColor.fuchsia_950:
-        return 'ring-fuchsia-950';
-      case RingColor.pink_50:
-        return 'ring-pink-50';
-      case RingColor.pink_100:
-        return 'ring-pink-100';
-      case RingColor.pink_200:
-        return 'ring-pink-200';
-      case RingColor.pink_300:
-        return 'ring-pink-300';
-      case RingColor.pink_400:
-        return 'ring-pink-400';
-      case RingColor.pink_500:
-        return 'ring-pink-500';
-      case RingColor.pink_600:
-        return 'ring-pink-600';
-      case RingColor.pink_700:
-        return 'ring-pink-700';
-      case RingColor.pink_800:
-        return 'ring-pink-800';
-      case RingColor.pink_900:
-        return 'ring-pink-900';
-      case RingColor.pink_950:
-        return 'ring-pink-950';
-      case RingColor.rose_50:
-        return 'ring-rose-50';
-      case RingColor.rose_100:
-        return 'ring-rose-100';
-      case RingColor.rose_200:
-        return 'ring-rose-200';
-      case RingColor.rose_300:
-        return 'ring-rose-300';
-      case RingColor.rose_400:
-        return 'ring-rose-400';
-      case RingColor.rose_500:
-        return 'ring-rose-500';
-      case RingColor.rose_600:
-        return 'ring-rose-600';
-      case RingColor.rose_700:
-        return 'ring-rose-700';
-      case RingColor.rose_800:
-        return 'ring-rose-800';
-      case RingColor.rose_900:
-        return 'ring-rose-900';
-      case RingColor.rose_950:
-        return 'ring-rose-950';
-    }
-  }
+  const RingColor(this._className);
+
+  final String _className;
+
+  String get className => _className;
 }
+

@@ -1,32 +1,14 @@
-/// Badge colors
+/// Badge colors for styling components
 enum BadgeColor {
-  primary,
-  secondary,
-  accent,
-  neutral,
-  info,
-  success,
-  warning,
-  error;
+  primary('badge-primary'),
+  secondary('badge-secondary'),
+  accent('badge-accent'),
+  neutral('badge-neutral'),
+  info('badge-info'),
+  success('badge-success'),
+  warning('badge-warning'),
+  error('badge-error');
 
-  String get className {
-    switch (this) {
-      case BadgeColor.primary:
-        return 'badge-primary';
-      case BadgeColor.secondary:
-        return 'badge-secondary';
-      case BadgeColor.accent:
-        return 'badge-accent';
-      case BadgeColor.neutral:
-        return 'badge-neutral';
-      case BadgeColor.info:
-        return 'badge-info';
-      case BadgeColor.success:
-        return 'badge-success';
-      case BadgeColor.warning:
-        return 'badge-warning';
-      case BadgeColor.error:
-        return 'badge-error';
-    }
-  }
+  const BadgeColor(this.className);
+  final String className;
 }

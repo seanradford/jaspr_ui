@@ -1,749 +1,257 @@
 /// Via colors
 enum ViaColor {
-  inherit,
-  current,
-  transparent,
-  black,
-  white,
-  slate_50,
-  slate_100,
-  slate_200,
-  slate_300,
-  slate_400,
-  slate_500,
-  slate_600,
-  slate_700,
-  slate_800,
-  slate_900,
-  slate_950,
-  gray_50,
-  gray_100,
-  gray_200,
-  gray_300,
-  gray_400,
-  gray_500,
-  gray_600,
-  gray_700,
-  gray_800,
-  gray_900,
-  gray_950,
-  zinc_50,
-  zinc_100,
-  zinc_200,
-  zinc_300,
-  zinc_400,
-  zinc_500,
-  zinc_600,
-  zinc_700,
-  zinc_800,
-  zinc_900,
-  zinc_950,
-  neutral_50,
-  neutral_100,
-  neutral_200,
-  neutral_300,
-  neutral_400,
-  neutral_500,
-  neutral_600,
-  neutral_700,
-  neutral_800,
-  neutral_900,
-  neutral_950,
-  stone_50,
-  stone_100,
-  stone_200,
-  stone_300,
-  stone_400,
-  stone_500,
-  stone_600,
-  stone_700,
-  stone_800,
-  stone_900,
-  stone_950,
-  red_50,
-  red_100,
-  red_200,
-  red_300,
-  red_400,
-  red_500,
-  red_600,
-  red_700,
-  red_800,
-  red_900,
-  red_950,
-  orange_50,
-  orange_100,
-  orange_200,
-  orange_300,
-  orange_400,
-  orange_500,
-  orange_600,
-  orange_700,
-  orange_800,
-  orange_900,
-  orange_950,
-  amber_50,
-  amber_100,
-  amber_200,
-  amber_300,
-  amber_400,
-  amber_500,
-  amber_600,
-  amber_700,
-  amber_800,
-  amber_900,
-  amber_950,
-  yellow_50,
-  yellow_100,
-  yellow_200,
-  yellow_300,
-  yellow_400,
-  yellow_500,
-  yellow_600,
-  yellow_700,
-  yellow_800,
-  yellow_900,
-  yellow_950,
-  lime_50,
-  lime_100,
-  lime_200,
-  lime_300,
-  lime_400,
-  lime_500,
-  lime_600,
-  lime_700,
-  lime_800,
-  lime_900,
-  lime_950,
-  green_50,
-  green_100,
-  green_200,
-  green_300,
-  green_400,
-  green_500,
-  green_600,
-  green_700,
-  green_800,
-  green_900,
-  green_950,
-  emerald_50,
-  emerald_100,
-  emerald_200,
-  emerald_300,
-  emerald_400,
-  emerald_500,
-  emerald_600,
-  emerald_700,
-  emerald_800,
-  emerald_900,
-  emerald_950,
-  teal_50,
-  teal_100,
-  teal_200,
-  teal_300,
-  teal_400,
-  teal_500,
-  teal_600,
-  teal_700,
-  teal_800,
-  teal_900,
-  teal_950,
-  cyan_50,
-  cyan_100,
-  cyan_200,
-  cyan_300,
-  cyan_400,
-  cyan_500,
-  cyan_600,
-  cyan_700,
-  cyan_800,
-  cyan_900,
-  cyan_950,
-  sky_50,
-  sky_100,
-  sky_200,
-  sky_300,
-  sky_400,
-  sky_500,
-  sky_600,
-  sky_700,
-  sky_800,
-  sky_900,
-  sky_950,
-  blue_50,
-  blue_100,
-  blue_200,
-  blue_300,
-  blue_400,
-  blue_500,
-  blue_600,
-  blue_700,
-  blue_800,
-  blue_900,
-  blue_950,
-  indigo_50,
-  indigo_100,
-  indigo_200,
-  indigo_300,
-  indigo_400,
-  indigo_500,
-  indigo_600,
-  indigo_700,
-  indigo_800,
-  indigo_900,
-  indigo_950,
-  violet_50,
-  violet_100,
-  violet_200,
-  violet_300,
-  violet_400,
-  violet_500,
-  violet_600,
-  violet_700,
-  violet_800,
-  violet_900,
-  violet_950,
-  purple_50,
-  purple_100,
-  purple_200,
-  purple_300,
-  purple_400,
-  purple_500,
-  purple_600,
-  purple_700,
-  purple_800,
-  purple_900,
-  purple_950,
-  fuchsia_50,
-  fuchsia_100,
-  fuchsia_200,
-  fuchsia_300,
-  fuchsia_400,
-  fuchsia_500,
-  fuchsia_600,
-  fuchsia_700,
-  fuchsia_800,
-  fuchsia_900,
-  fuchsia_950,
-  pink_50,
-  pink_100,
-  pink_200,
-  pink_300,
-  pink_400,
-  pink_500,
-  pink_600,
-  pink_700,
-  pink_800,
-  pink_900,
-  pink_950,
-  rose_50,
-  rose_100,
-  rose_200,
-  rose_300,
-  rose_400,
-  rose_500,
-  rose_600,
-  rose_700,
-  rose_800,
-  rose_900,
-  rose_950;
+  inherit('via-inherit'),
+  current('via-current'),
+  transparent('via-transparent'),
+  black('via-black'),
+  white('via-white'),
+  slate50('via-slate-50'),
+  slate100('via-slate-100'),
+  slate200('via-slate-200'),
+  slate300('via-slate-300'),
+  slate400('via-slate-400'),
+  slate500('via-slate-500'),
+  slate600('via-slate-600'),
+  slate700('via-slate-700'),
+  slate800('via-slate-800'),
+  slate900('via-slate-900'),
+  slate950('via-slate-950'),
+  gray50('via-gray-50'),
+  gray100('via-gray-100'),
+  gray200('via-gray-200'),
+  gray300('via-gray-300'),
+  gray400('via-gray-400'),
+  gray500('via-gray-500'),
+  gray600('via-gray-600'),
+  gray700('via-gray-700'),
+  gray800('via-gray-800'),
+  gray900('via-gray-900'),
+  gray950('via-gray-950'),
+  zinc50('via-zinc-50'),
+  zinc100('via-zinc-100'),
+  zinc200('via-zinc-200'),
+  zinc300('via-zinc-300'),
+  zinc400('via-zinc-400'),
+  zinc500('via-zinc-500'),
+  zinc600('via-zinc-600'),
+  zinc700('via-zinc-700'),
+  zinc800('via-zinc-800'),
+  zinc900('via-zinc-900'),
+  zinc950('via-zinc-950'),
+  neutral50('via-neutral-50'),
+  neutral100('via-neutral-100'),
+  neutral200('via-neutral-200'),
+  neutral300('via-neutral-300'),
+  neutral400('via-neutral-400'),
+  neutral500('via-neutral-500'),
+  neutral600('via-neutral-600'),
+  neutral700('via-neutral-700'),
+  neutral800('via-neutral-800'),
+  neutral900('via-neutral-900'),
+  neutral950('via-neutral-950'),
+  stone50('via-stone-50'),
+  stone100('via-stone-100'),
+  stone200('via-stone-200'),
+  stone300('via-stone-300'),
+  stone400('via-stone-400'),
+  stone500('via-stone-500'),
+  stone600('via-stone-600'),
+  stone700('via-stone-700'),
+  stone800('via-stone-800'),
+  stone900('via-stone-900'),
+  stone950('via-stone-950'),
+  red50('via-red-50'),
+  red100('via-red-100'),
+  red200('via-red-200'),
+  red300('via-red-300'),
+  red400('via-red-400'),
+  red500('via-red-500'),
+  red600('via-red-600'),
+  red700('via-red-700'),
+  red800('via-red-800'),
+  red900('via-red-900'),
+  red950('via-red-950'),
+  orange50('via-orange-50'),
+  orange100('via-orange-100'),
+  orange200('via-orange-200'),
+  orange300('via-orange-300'),
+  orange400('via-orange-400'),
+  orange500('via-orange-500'),
+  orange600('via-orange-600'),
+  orange700('via-orange-700'),
+  orange800('via-orange-800'),
+  orange900('via-orange-900'),
+  orange950('via-orange-950'),
+  amber50('via-amber-50'),
+  amber100('via-amber-100'),
+  amber200('via-amber-200'),
+  amber300('via-amber-300'),
+  amber400('via-amber-400'),
+  amber500('via-amber-500'),
+  amber600('via-amber-600'),
+  amber700('via-amber-700'),
+  amber800('via-amber-800'),
+  amber900('via-amber-900'),
+  amber950('via-amber-950'),
+  yellow50('via-yellow-50'),
+  yellow100('via-yellow-100'),
+  yellow200('via-yellow-200'),
+  yellow300('via-yellow-300'),
+  yellow400('via-yellow-400'),
+  yellow500('via-yellow-500'),
+  yellow600('via-yellow-600'),
+  yellow700('via-yellow-700'),
+  yellow800('via-yellow-800'),
+  yellow900('via-yellow-900'),
+  yellow950('via-yellow-950'),
+  lime50('via-lime-50'),
+  lime100('via-lime-100'),
+  lime200('via-lime-200'),
+  lime300('via-lime-300'),
+  lime400('via-lime-400'),
+  lime500('via-lime-500'),
+  lime600('via-lime-600'),
+  lime700('via-lime-700'),
+  lime800('via-lime-800'),
+  lime900('via-lime-900'),
+  lime950('via-lime-950'),
+  green50('via-green-50'),
+  green100('via-green-100'),
+  green200('via-green-200'),
+  green300('via-green-300'),
+  green400('via-green-400'),
+  green500('via-green-500'),
+  green600('via-green-600'),
+  green700('via-green-700'),
+  green800('via-green-800'),
+  green900('via-green-900'),
+  green950('via-green-950'),
+  emerald50('via-emerald-50'),
+  emerald100('via-emerald-100'),
+  emerald200('via-emerald-200'),
+  emerald300('via-emerald-300'),
+  emerald400('via-emerald-400'),
+  emerald500('via-emerald-500'),
+  emerald600('via-emerald-600'),
+  emerald700('via-emerald-700'),
+  emerald800('via-emerald-800'),
+  emerald900('via-emerald-900'),
+  emerald950('via-emerald-950'),
+  teal50('via-teal-50'),
+  teal100('via-teal-100'),
+  teal200('via-teal-200'),
+  teal300('via-teal-300'),
+  teal400('via-teal-400'),
+  teal500('via-teal-500'),
+  teal600('via-teal-600'),
+  teal700('via-teal-700'),
+  teal800('via-teal-800'),
+  teal900('via-teal-900'),
+  teal950('via-teal-950'),
+  cyan50('via-cyan-50'),
+  cyan100('via-cyan-100'),
+  cyan200('via-cyan-200'),
+  cyan300('via-cyan-300'),
+  cyan400('via-cyan-400'),
+  cyan500('via-cyan-500'),
+  cyan600('via-cyan-600'),
+  cyan700('via-cyan-700'),
+  cyan800('via-cyan-800'),
+  cyan900('via-cyan-900'),
+  cyan950('via-cyan-950'),
+  sky50('via-sky-50'),
+  sky100('via-sky-100'),
+  sky200('via-sky-200'),
+  sky300('via-sky-300'),
+  sky400('via-sky-400'),
+  sky500('via-sky-500'),
+  sky600('via-sky-600'),
+  sky700('via-sky-700'),
+  sky800('via-sky-800'),
+  sky900('via-sky-900'),
+  sky950('via-sky-950'),
+  blue50('via-blue-50'),
+  blue100('via-blue-100'),
+  blue200('via-blue-200'),
+  blue300('via-blue-300'),
+  blue400('via-blue-400'),
+  blue500('via-blue-500'),
+  blue600('via-blue-600'),
+  blue700('via-blue-700'),
+  blue800('via-blue-800'),
+  blue900('via-blue-900'),
+  blue950('via-blue-950'),
+  indigo50('via-indigo-50'),
+  indigo100('via-indigo-100'),
+  indigo200('via-indigo-200'),
+  indigo300('via-indigo-300'),
+  indigo400('via-indigo-400'),
+  indigo500('via-indigo-500'),
+  indigo600('via-indigo-600'),
+  indigo700('via-indigo-700'),
+  indigo800('via-indigo-800'),
+  indigo900('via-indigo-900'),
+  indigo950('via-indigo-950'),
+  violet50('via-violet-50'),
+  violet100('via-violet-100'),
+  violet200('via-violet-200'),
+  violet300('via-violet-300'),
+  violet400('via-violet-400'),
+  violet500('via-violet-500'),
+  violet600('via-violet-600'),
+  violet700('via-violet-700'),
+  violet800('via-violet-800'),
+  violet900('via-violet-900'),
+  violet950('via-violet-950'),
+  purple50('via-purple-50'),
+  purple100('via-purple-100'),
+  purple200('via-purple-200'),
+  purple300('via-purple-300'),
+  purple400('via-purple-400'),
+  purple500('via-purple-500'),
+  purple600('via-purple-600'),
+  purple700('via-purple-700'),
+  purple800('via-purple-800'),
+  purple900('via-purple-900'),
+  purple950('via-purple-950'),
+  fuchsia50('via-fuchsia-50'),
+  fuchsia100('via-fuchsia-100'),
+  fuchsia200('via-fuchsia-200'),
+  fuchsia300('via-fuchsia-300'),
+  fuchsia400('via-fuchsia-400'),
+  fuchsia500('via-fuchsia-500'),
+  fuchsia600('via-fuchsia-600'),
+  fuchsia700('via-fuchsia-700'),
+  fuchsia800('via-fuchsia-800'),
+  fuchsia900('via-fuchsia-900'),
+  fuchsia950('via-fuchsia-950'),
+  pink50('via-pink-50'),
+  pink100('via-pink-100'),
+  pink200('via-pink-200'),
+  pink300('via-pink-300'),
+  pink400('via-pink-400'),
+  pink500('via-pink-500'),
+  pink600('via-pink-600'),
+  pink700('via-pink-700'),
+  pink800('via-pink-800'),
+  pink900('via-pink-900'),
+  pink950('via-pink-950'),
+  rose50('via-rose-50'),
+  rose100('via-rose-100'),
+  rose200('via-rose-200'),
+  rose300('via-rose-300'),
+  rose400('via-rose-400'),
+  rose500('via-rose-500'),
+  rose600('via-rose-600'),
+  rose700('via-rose-700'),
+  rose800('via-rose-800'),
+  rose900('via-rose-900'),
+  rose950('via-rose-950');
 
-  String get className {
-    switch (this) {
-      case ViaColor.inherit:
-        return 'via-inherit';
-      case ViaColor.current:
-        return 'via-current';
-      case ViaColor.transparent:
-        return 'via-transparent';
-      case ViaColor.black:
-        return 'via-black';
-      case ViaColor.white:
-        return 'via-white';
-      case ViaColor.slate_50:
-        return 'via-slate-50';
-      case ViaColor.slate_100:
-        return 'via-slate-100';
-      case ViaColor.slate_200:
-        return 'via-slate-200';
-      case ViaColor.slate_300:
-        return 'via-slate-300';
-      case ViaColor.slate_400:
-        return 'via-slate-400';
-      case ViaColor.slate_500:
-        return 'via-slate-500';
-      case ViaColor.slate_600:
-        return 'via-slate-600';
-      case ViaColor.slate_700:
-        return 'via-slate-700';
-      case ViaColor.slate_800:
-        return 'via-slate-800';
-      case ViaColor.slate_900:
-        return 'via-slate-900';
-      case ViaColor.slate_950:
-        return 'via-slate-950';
-      case ViaColor.gray_50:
-        return 'via-gray-50';
-      case ViaColor.gray_100:
-        return 'via-gray-100';
-      case ViaColor.gray_200:
-        return 'via-gray-200';
-      case ViaColor.gray_300:
-        return 'via-gray-300';
-      case ViaColor.gray_400:
-        return 'via-gray-400';
-      case ViaColor.gray_500:
-        return 'via-gray-500';
-      case ViaColor.gray_600:
-        return 'via-gray-600';
-      case ViaColor.gray_700:
-        return 'via-gray-700';
-      case ViaColor.gray_800:
-        return 'via-gray-800';
-      case ViaColor.gray_900:
-        return 'via-gray-900';
-      case ViaColor.gray_950:
-        return 'via-gray-950';
-      case ViaColor.zinc_50:
-        return 'via-zinc-50';
-      case ViaColor.zinc_100:
-        return 'via-zinc-100';
-      case ViaColor.zinc_200:
-        return 'via-zinc-200';
-      case ViaColor.zinc_300:
-        return 'via-zinc-300';
-      case ViaColor.zinc_400:
-        return 'via-zinc-400';
-      case ViaColor.zinc_500:
-        return 'via-zinc-500';
-      case ViaColor.zinc_600:
-        return 'via-zinc-600';
-      case ViaColor.zinc_700:
-        return 'via-zinc-700';
-      case ViaColor.zinc_800:
-        return 'via-zinc-800';
-      case ViaColor.zinc_900:
-        return 'via-zinc-900';
-      case ViaColor.zinc_950:
-        return 'via-zinc-950';
-      case ViaColor.neutral_50:
-        return 'via-neutral-50';
-      case ViaColor.neutral_100:
-        return 'via-neutral-100';
-      case ViaColor.neutral_200:
-        return 'via-neutral-200';
-      case ViaColor.neutral_300:
-        return 'via-neutral-300';
-      case ViaColor.neutral_400:
-        return 'via-neutral-400';
-      case ViaColor.neutral_500:
-        return 'via-neutral-500';
-      case ViaColor.neutral_600:
-        return 'via-neutral-600';
-      case ViaColor.neutral_700:
-        return 'via-neutral-700';
-      case ViaColor.neutral_800:
-        return 'via-neutral-800';
-      case ViaColor.neutral_900:
-        return 'via-neutral-900';
-      case ViaColor.neutral_950:
-        return 'via-neutral-950';
-      case ViaColor.stone_50:
-        return 'via-stone-50';
-      case ViaColor.stone_100:
-        return 'via-stone-100';
-      case ViaColor.stone_200:
-        return 'via-stone-200';
-      case ViaColor.stone_300:
-        return 'via-stone-300';
-      case ViaColor.stone_400:
-        return 'via-stone-400';
-      case ViaColor.stone_500:
-        return 'via-stone-500';
-      case ViaColor.stone_600:
-        return 'via-stone-600';
-      case ViaColor.stone_700:
-        return 'via-stone-700';
-      case ViaColor.stone_800:
-        return 'via-stone-800';
-      case ViaColor.stone_900:
-        return 'via-stone-900';
-      case ViaColor.stone_950:
-        return 'via-stone-950';
-      case ViaColor.red_50:
-        return 'via-red-50';
-      case ViaColor.red_100:
-        return 'via-red-100';
-      case ViaColor.red_200:
-        return 'via-red-200';
-      case ViaColor.red_300:
-        return 'via-red-300';
-      case ViaColor.red_400:
-        return 'via-red-400';
-      case ViaColor.red_500:
-        return 'via-red-500';
-      case ViaColor.red_600:
-        return 'via-red-600';
-      case ViaColor.red_700:
-        return 'via-red-700';
-      case ViaColor.red_800:
-        return 'via-red-800';
-      case ViaColor.red_900:
-        return 'via-red-900';
-      case ViaColor.red_950:
-        return 'via-red-950';
-      case ViaColor.orange_50:
-        return 'via-orange-50';
-      case ViaColor.orange_100:
-        return 'via-orange-100';
-      case ViaColor.orange_200:
-        return 'via-orange-200';
-      case ViaColor.orange_300:
-        return 'via-orange-300';
-      case ViaColor.orange_400:
-        return 'via-orange-400';
-      case ViaColor.orange_500:
-        return 'via-orange-500';
-      case ViaColor.orange_600:
-        return 'via-orange-600';
-      case ViaColor.orange_700:
-        return 'via-orange-700';
-      case ViaColor.orange_800:
-        return 'via-orange-800';
-      case ViaColor.orange_900:
-        return 'via-orange-900';
-      case ViaColor.orange_950:
-        return 'via-orange-950';
-      case ViaColor.amber_50:
-        return 'via-amber-50';
-      case ViaColor.amber_100:
-        return 'via-amber-100';
-      case ViaColor.amber_200:
-        return 'via-amber-200';
-      case ViaColor.amber_300:
-        return 'via-amber-300';
-      case ViaColor.amber_400:
-        return 'via-amber-400';
-      case ViaColor.amber_500:
-        return 'via-amber-500';
-      case ViaColor.amber_600:
-        return 'via-amber-600';
-      case ViaColor.amber_700:
-        return 'via-amber-700';
-      case ViaColor.amber_800:
-        return 'via-amber-800';
-      case ViaColor.amber_900:
-        return 'via-amber-900';
-      case ViaColor.amber_950:
-        return 'via-amber-950';
-      case ViaColor.yellow_50:
-        return 'via-yellow-50';
-      case ViaColor.yellow_100:
-        return 'via-yellow-100';
-      case ViaColor.yellow_200:
-        return 'via-yellow-200';
-      case ViaColor.yellow_300:
-        return 'via-yellow-300';
-      case ViaColor.yellow_400:
-        return 'via-yellow-400';
-      case ViaColor.yellow_500:
-        return 'via-yellow-500';
-      case ViaColor.yellow_600:
-        return 'via-yellow-600';
-      case ViaColor.yellow_700:
-        return 'via-yellow-700';
-      case ViaColor.yellow_800:
-        return 'via-yellow-800';
-      case ViaColor.yellow_900:
-        return 'via-yellow-900';
-      case ViaColor.yellow_950:
-        return 'via-yellow-950';
-      case ViaColor.lime_50:
-        return 'via-lime-50';
-      case ViaColor.lime_100:
-        return 'via-lime-100';
-      case ViaColor.lime_200:
-        return 'via-lime-200';
-      case ViaColor.lime_300:
-        return 'via-lime-300';
-      case ViaColor.lime_400:
-        return 'via-lime-400';
-      case ViaColor.lime_500:
-        return 'via-lime-500';
-      case ViaColor.lime_600:
-        return 'via-lime-600';
-      case ViaColor.lime_700:
-        return 'via-lime-700';
-      case ViaColor.lime_800:
-        return 'via-lime-800';
-      case ViaColor.lime_900:
-        return 'via-lime-900';
-      case ViaColor.lime_950:
-        return 'via-lime-950';
-      case ViaColor.green_50:
-        return 'via-green-50';
-      case ViaColor.green_100:
-        return 'via-green-100';
-      case ViaColor.green_200:
-        return 'via-green-200';
-      case ViaColor.green_300:
-        return 'via-green-300';
-      case ViaColor.green_400:
-        return 'via-green-400';
-      case ViaColor.green_500:
-        return 'via-green-500';
-      case ViaColor.green_600:
-        return 'via-green-600';
-      case ViaColor.green_700:
-        return 'via-green-700';
-      case ViaColor.green_800:
-        return 'via-green-800';
-      case ViaColor.green_900:
-        return 'via-green-900';
-      case ViaColor.green_950:
-        return 'via-green-950';
-      case ViaColor.emerald_50:
-        return 'via-emerald-50';
-      case ViaColor.emerald_100:
-        return 'via-emerald-100';
-      case ViaColor.emerald_200:
-        return 'via-emerald-200';
-      case ViaColor.emerald_300:
-        return 'via-emerald-300';
-      case ViaColor.emerald_400:
-        return 'via-emerald-400';
-      case ViaColor.emerald_500:
-        return 'via-emerald-500';
-      case ViaColor.emerald_600:
-        return 'via-emerald-600';
-      case ViaColor.emerald_700:
-        return 'via-emerald-700';
-      case ViaColor.emerald_800:
-        return 'via-emerald-800';
-      case ViaColor.emerald_900:
-        return 'via-emerald-900';
-      case ViaColor.emerald_950:
-        return 'via-emerald-950';
-      case ViaColor.teal_50:
-        return 'via-teal-50';
-      case ViaColor.teal_100:
-        return 'via-teal-100';
-      case ViaColor.teal_200:
-        return 'via-teal-200';
-      case ViaColor.teal_300:
-        return 'via-teal-300';
-      case ViaColor.teal_400:
-        return 'via-teal-400';
-      case ViaColor.teal_500:
-        return 'via-teal-500';
-      case ViaColor.teal_600:
-        return 'via-teal-600';
-      case ViaColor.teal_700:
-        return 'via-teal-700';
-      case ViaColor.teal_800:
-        return 'via-teal-800';
-      case ViaColor.teal_900:
-        return 'via-teal-900';
-      case ViaColor.teal_950:
-        return 'via-teal-950';
-      case ViaColor.cyan_50:
-        return 'via-cyan-50';
-      case ViaColor.cyan_100:
-        return 'via-cyan-100';
-      case ViaColor.cyan_200:
-        return 'via-cyan-200';
-      case ViaColor.cyan_300:
-        return 'via-cyan-300';
-      case ViaColor.cyan_400:
-        return 'via-cyan-400';
-      case ViaColor.cyan_500:
-        return 'via-cyan-500';
-      case ViaColor.cyan_600:
-        return 'via-cyan-600';
-      case ViaColor.cyan_700:
-        return 'via-cyan-700';
-      case ViaColor.cyan_800:
-        return 'via-cyan-800';
-      case ViaColor.cyan_900:
-        return 'via-cyan-900';
-      case ViaColor.cyan_950:
-        return 'via-cyan-950';
-      case ViaColor.sky_50:
-        return 'via-sky-50';
-      case ViaColor.sky_100:
-        return 'via-sky-100';
-      case ViaColor.sky_200:
-        return 'via-sky-200';
-      case ViaColor.sky_300:
-        return 'via-sky-300';
-      case ViaColor.sky_400:
-        return 'via-sky-400';
-      case ViaColor.sky_500:
-        return 'via-sky-500';
-      case ViaColor.sky_600:
-        return 'via-sky-600';
-      case ViaColor.sky_700:
-        return 'via-sky-700';
-      case ViaColor.sky_800:
-        return 'via-sky-800';
-      case ViaColor.sky_900:
-        return 'via-sky-900';
-      case ViaColor.sky_950:
-        return 'via-sky-950';
-      case ViaColor.blue_50:
-        return 'via-blue-50';
-      case ViaColor.blue_100:
-        return 'via-blue-100';
-      case ViaColor.blue_200:
-        return 'via-blue-200';
-      case ViaColor.blue_300:
-        return 'via-blue-300';
-      case ViaColor.blue_400:
-        return 'via-blue-400';
-      case ViaColor.blue_500:
-        return 'via-blue-500';
-      case ViaColor.blue_600:
-        return 'via-blue-600';
-      case ViaColor.blue_700:
-        return 'via-blue-700';
-      case ViaColor.blue_800:
-        return 'via-blue-800';
-      case ViaColor.blue_900:
-        return 'via-blue-900';
-      case ViaColor.blue_950:
-        return 'via-blue-950';
-      case ViaColor.indigo_50:
-        return 'via-indigo-50';
-      case ViaColor.indigo_100:
-        return 'via-indigo-100';
-      case ViaColor.indigo_200:
-        return 'via-indigo-200';
-      case ViaColor.indigo_300:
-        return 'via-indigo-300';
-      case ViaColor.indigo_400:
-        return 'via-indigo-400';
-      case ViaColor.indigo_500:
-        return 'via-indigo-500';
-      case ViaColor.indigo_600:
-        return 'via-indigo-600';
-      case ViaColor.indigo_700:
-        return 'via-indigo-700';
-      case ViaColor.indigo_800:
-        return 'via-indigo-800';
-      case ViaColor.indigo_900:
-        return 'via-indigo-900';
-      case ViaColor.indigo_950:
-        return 'via-indigo-950';
-      case ViaColor.violet_50:
-        return 'via-violet-50';
-      case ViaColor.violet_100:
-        return 'via-violet-100';
-      case ViaColor.violet_200:
-        return 'via-violet-200';
-      case ViaColor.violet_300:
-        return 'via-violet-300';
-      case ViaColor.violet_400:
-        return 'via-violet-400';
-      case ViaColor.violet_500:
-        return 'via-violet-500';
-      case ViaColor.violet_600:
-        return 'via-violet-600';
-      case ViaColor.violet_700:
-        return 'via-violet-700';
-      case ViaColor.violet_800:
-        return 'via-violet-800';
-      case ViaColor.violet_900:
-        return 'via-violet-900';
-      case ViaColor.violet_950:
-        return 'via-violet-950';
-      case ViaColor.purple_50:
-        return 'via-purple-50';
-      case ViaColor.purple_100:
-        return 'via-purple-100';
-      case ViaColor.purple_200:
-        return 'via-purple-200';
-      case ViaColor.purple_300:
-        return 'via-purple-300';
-      case ViaColor.purple_400:
-        return 'via-purple-400';
-      case ViaColor.purple_500:
-        return 'via-purple-500';
-      case ViaColor.purple_600:
-        return 'via-purple-600';
-      case ViaColor.purple_700:
-        return 'via-purple-700';
-      case ViaColor.purple_800:
-        return 'via-purple-800';
-      case ViaColor.purple_900:
-        return 'via-purple-900';
-      case ViaColor.purple_950:
-        return 'via-purple-950';
-      case ViaColor.fuchsia_50:
-        return 'via-fuchsia-50';
-      case ViaColor.fuchsia_100:
-        return 'via-fuchsia-100';
-      case ViaColor.fuchsia_200:
-        return 'via-fuchsia-200';
-      case ViaColor.fuchsia_300:
-        return 'via-fuchsia-300';
-      case ViaColor.fuchsia_400:
-        return 'via-fuchsia-400';
-      case ViaColor.fuchsia_500:
-        return 'via-fuchsia-500';
-      case ViaColor.fuchsia_600:
-        return 'via-fuchsia-600';
-      case ViaColor.fuchsia_700:
-        return 'via-fuchsia-700';
-      case ViaColor.fuchsia_800:
-        return 'via-fuchsia-800';
-      case ViaColor.fuchsia_900:
-        return 'via-fuchsia-900';
-      case ViaColor.fuchsia_950:
-        return 'via-fuchsia-950';
-      case ViaColor.pink_50:
-        return 'via-pink-50';
-      case ViaColor.pink_100:
-        return 'via-pink-100';
-      case ViaColor.pink_200:
-        return 'via-pink-200';
-      case ViaColor.pink_300:
-        return 'via-pink-300';
-      case ViaColor.pink_400:
-        return 'via-pink-400';
-      case ViaColor.pink_500:
-        return 'via-pink-500';
-      case ViaColor.pink_600:
-        return 'via-pink-600';
-      case ViaColor.pink_700:
-        return 'via-pink-700';
-      case ViaColor.pink_800:
-        return 'via-pink-800';
-      case ViaColor.pink_900:
-        return 'via-pink-900';
-      case ViaColor.pink_950:
-        return 'via-pink-950';
-      case ViaColor.rose_50:
-        return 'via-rose-50';
-      case ViaColor.rose_100:
-        return 'via-rose-100';
-      case ViaColor.rose_200:
-        return 'via-rose-200';
-      case ViaColor.rose_300:
-        return 'via-rose-300';
-      case ViaColor.rose_400:
-        return 'via-rose-400';
-      case ViaColor.rose_500:
-        return 'via-rose-500';
-      case ViaColor.rose_600:
-        return 'via-rose-600';
-      case ViaColor.rose_700:
-        return 'via-rose-700';
-      case ViaColor.rose_800:
-        return 'via-rose-800';
-      case ViaColor.rose_900:
-        return 'via-rose-900';
-      case ViaColor.rose_950:
-        return 'via-rose-950';
-    }
-  }
+  const ViaColor(this._className);
+
+  final String _className;
+
+  String get className => _className;
 }
+

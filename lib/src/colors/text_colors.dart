@@ -1,749 +1,257 @@
 /// Text colors
 enum TextColor {
-  inherit,
-  current,
-  transparent,
-  black,
-  white,
-  slate_50,
-  slate_100,
-  slate_200,
-  slate_300,
-  slate_400,
-  slate_500,
-  slate_600,
-  slate_700,
-  slate_800,
-  slate_900,
-  slate_950,
-  gray_50,
-  gray_100,
-  gray_200,
-  gray_300,
-  gray_400,
-  gray_500,
-  gray_600,
-  gray_700,
-  gray_800,
-  gray_900,
-  gray_950,
-  zinc_50,
-  zinc_100,
-  zinc_200,
-  zinc_300,
-  zinc_400,
-  zinc_500,
-  zinc_600,
-  zinc_700,
-  zinc_800,
-  zinc_900,
-  zinc_950,
-  neutral_50,
-  neutral_100,
-  neutral_200,
-  neutral_300,
-  neutral_400,
-  neutral_500,
-  neutral_600,
-  neutral_700,
-  neutral_800,
-  neutral_900,
-  neutral_950,
-  stone_50,
-  stone_100,
-  stone_200,
-  stone_300,
-  stone_400,
-  stone_500,
-  stone_600,
-  stone_700,
-  stone_800,
-  stone_900,
-  stone_950,
-  red_50,
-  red_100,
-  red_200,
-  red_300,
-  red_400,
-  red_500,
-  red_600,
-  red_700,
-  red_800,
-  red_900,
-  red_950,
-  orange_50,
-  orange_100,
-  orange_200,
-  orange_300,
-  orange_400,
-  orange_500,
-  orange_600,
-  orange_700,
-  orange_800,
-  orange_900,
-  orange_950,
-  amber_50,
-  amber_100,
-  amber_200,
-  amber_300,
-  amber_400,
-  amber_500,
-  amber_600,
-  amber_700,
-  amber_800,
-  amber_900,
-  amber_950,
-  yellow_50,
-  yellow_100,
-  yellow_200,
-  yellow_300,
-  yellow_400,
-  yellow_500,
-  yellow_600,
-  yellow_700,
-  yellow_800,
-  yellow_900,
-  yellow_950,
-  lime_50,
-  lime_100,
-  lime_200,
-  lime_300,
-  lime_400,
-  lime_500,
-  lime_600,
-  lime_700,
-  lime_800,
-  lime_900,
-  lime_950,
-  green_50,
-  green_100,
-  green_200,
-  green_300,
-  green_400,
-  green_500,
-  green_600,
-  green_700,
-  green_800,
-  green_900,
-  green_950,
-  emerald_50,
-  emerald_100,
-  emerald_200,
-  emerald_300,
-  emerald_400,
-  emerald_500,
-  emerald_600,
-  emerald_700,
-  emerald_800,
-  emerald_900,
-  emerald_950,
-  teal_50,
-  teal_100,
-  teal_200,
-  teal_300,
-  teal_400,
-  teal_500,
-  teal_600,
-  teal_700,
-  teal_800,
-  teal_900,
-  teal_950,
-  cyan_50,
-  cyan_100,
-  cyan_200,
-  cyan_300,
-  cyan_400,
-  cyan_500,
-  cyan_600,
-  cyan_700,
-  cyan_800,
-  cyan_900,
-  cyan_950,
-  sky_50,
-  sky_100,
-  sky_200,
-  sky_300,
-  sky_400,
-  sky_500,
-  sky_600,
-  sky_700,
-  sky_800,
-  sky_900,
-  sky_950,
-  blue_50,
-  blue_100,
-  blue_200,
-  blue_300,
-  blue_400,
-  blue_500,
-  blue_600,
-  blue_700,
-  blue_800,
-  blue_900,
-  blue_950,
-  indigo_50,
-  indigo_100,
-  indigo_200,
-  indigo_300,
-  indigo_400,
-  indigo_500,
-  indigo_600,
-  indigo_700,
-  indigo_800,
-  indigo_900,
-  indigo_950,
-  violet_50,
-  violet_100,
-  violet_200,
-  violet_300,
-  violet_400,
-  violet_500,
-  violet_600,
-  violet_700,
-  violet_800,
-  violet_900,
-  violet_950,
-  purple_50,
-  purple_100,
-  purple_200,
-  purple_300,
-  purple_400,
-  purple_500,
-  purple_600,
-  purple_700,
-  purple_800,
-  purple_900,
-  purple_950,
-  fuchsia_50,
-  fuchsia_100,
-  fuchsia_200,
-  fuchsia_300,
-  fuchsia_400,
-  fuchsia_500,
-  fuchsia_600,
-  fuchsia_700,
-  fuchsia_800,
-  fuchsia_900,
-  fuchsia_950,
-  pink_50,
-  pink_100,
-  pink_200,
-  pink_300,
-  pink_400,
-  pink_500,
-  pink_600,
-  pink_700,
-  pink_800,
-  pink_900,
-  pink_950,
-  rose_50,
-  rose_100,
-  rose_200,
-  rose_300,
-  rose_400,
-  rose_500,
-  rose_600,
-  rose_700,
-  rose_800,
-  rose_900,
-  rose_950;
+  inherit('text-inherit'),
+  current('text-current'),
+  transparent('text-transparent'),
+  black('text-black'),
+  white('text-white'),
+  slate50('text-slate-50'),
+  slate100('text-slate-100'),
+  slate200('text-slate-200'),
+  slate300('text-slate-300'),
+  slate400('text-slate-400'),
+  slate500('text-slate-500'),
+  slate600('text-slate-600'),
+  slate700('text-slate-700'),
+  slate800('text-slate-800'),
+  slate900('text-slate-900'),
+  slate950('text-slate-950'),
+  gray50('text-gray-50'),
+  gray100('text-gray-100'),
+  gray200('text-gray-200'),
+  gray300('text-gray-300'),
+  gray400('text-gray-400'),
+  gray500('text-gray-500'),
+  gray600('text-gray-600'),
+  gray700('text-gray-700'),
+  gray800('text-gray-800'),
+  gray900('text-gray-900'),
+  gray950('text-gray-950'),
+  zinc50('text-zinc-50'),
+  zinc100('text-zinc-100'),
+  zinc200('text-zinc-200'),
+  zinc300('text-zinc-300'),
+  zinc400('text-zinc-400'),
+  zinc500('text-zinc-500'),
+  zinc600('text-zinc-600'),
+  zinc700('text-zinc-700'),
+  zinc800('text-zinc-800'),
+  zinc900('text-zinc-900'),
+  zinc950('text-zinc-950'),
+  neutral50('text-neutral-50'),
+  neutral100('text-neutral-100'),
+  neutral200('text-neutral-200'),
+  neutral300('text-neutral-300'),
+  neutral400('text-neutral-400'),
+  neutral500('text-neutral-500'),
+  neutral600('text-neutral-600'),
+  neutral700('text-neutral-700'),
+  neutral800('text-neutral-800'),
+  neutral900('text-neutral-900'),
+  neutral950('text-neutral-950'),
+  stone50('text-stone-50'),
+  stone100('text-stone-100'),
+  stone200('text-stone-200'),
+  stone300('text-stone-300'),
+  stone400('text-stone-400'),
+  stone500('text-stone-500'),
+  stone600('text-stone-600'),
+  stone700('text-stone-700'),
+  stone800('text-stone-800'),
+  stone900('text-stone-900'),
+  stone950('text-stone-950'),
+  red50('text-red-50'),
+  red100('text-red-100'),
+  red200('text-red-200'),
+  red300('text-red-300'),
+  red400('text-red-400'),
+  red500('text-red-500'),
+  red600('text-red-600'),
+  red700('text-red-700'),
+  red800('text-red-800'),
+  red900('text-red-900'),
+  red950('text-red-950'),
+  orange50('text-orange-50'),
+  orange100('text-orange-100'),
+  orange200('text-orange-200'),
+  orange300('text-orange-300'),
+  orange400('text-orange-400'),
+  orange500('text-orange-500'),
+  orange600('text-orange-600'),
+  orange700('text-orange-700'),
+  orange800('text-orange-800'),
+  orange900('text-orange-900'),
+  orange950('text-orange-950'),
+  amber50('text-amber-50'),
+  amber100('text-amber-100'),
+  amber200('text-amber-200'),
+  amber300('text-amber-300'),
+  amber400('text-amber-400'),
+  amber500('text-amber-500'),
+  amber600('text-amber-600'),
+  amber700('text-amber-700'),
+  amber800('text-amber-800'),
+  amber900('text-amber-900'),
+  amber950('text-amber-950'),
+  yellow50('text-yellow-50'),
+  yellow100('text-yellow-100'),
+  yellow200('text-yellow-200'),
+  yellow300('text-yellow-300'),
+  yellow400('text-yellow-400'),
+  yellow500('text-yellow-500'),
+  yellow600('text-yellow-600'),
+  yellow700('text-yellow-700'),
+  yellow800('text-yellow-800'),
+  yellow900('text-yellow-900'),
+  yellow950('text-yellow-950'),
+  lime50('text-lime-50'),
+  lime100('text-lime-100'),
+  lime200('text-lime-200'),
+  lime300('text-lime-300'),
+  lime400('text-lime-400'),
+  lime500('text-lime-500'),
+  lime600('text-lime-600'),
+  lime700('text-lime-700'),
+  lime800('text-lime-800'),
+  lime900('text-lime-900'),
+  lime950('text-lime-950'),
+  green50('text-green-50'),
+  green100('text-green-100'),
+  green200('text-green-200'),
+  green300('text-green-300'),
+  green400('text-green-400'),
+  green500('text-green-500'),
+  green600('text-green-600'),
+  green700('text-green-700'),
+  green800('text-green-800'),
+  green900('text-green-900'),
+  green950('text-green-950'),
+  emerald50('text-emerald-50'),
+  emerald100('text-emerald-100'),
+  emerald200('text-emerald-200'),
+  emerald300('text-emerald-300'),
+  emerald400('text-emerald-400'),
+  emerald500('text-emerald-500'),
+  emerald600('text-emerald-600'),
+  emerald700('text-emerald-700'),
+  emerald800('text-emerald-800'),
+  emerald900('text-emerald-900'),
+  emerald950('text-emerald-950'),
+  teal50('text-teal-50'),
+  teal100('text-teal-100'),
+  teal200('text-teal-200'),
+  teal300('text-teal-300'),
+  teal400('text-teal-400'),
+  teal500('text-teal-500'),
+  teal600('text-teal-600'),
+  teal700('text-teal-700'),
+  teal800('text-teal-800'),
+  teal900('text-teal-900'),
+  teal950('text-teal-950'),
+  cyan50('text-cyan-50'),
+  cyan100('text-cyan-100'),
+  cyan200('text-cyan-200'),
+  cyan300('text-cyan-300'),
+  cyan400('text-cyan-400'),
+  cyan500('text-cyan-500'),
+  cyan600('text-cyan-600'),
+  cyan700('text-cyan-700'),
+  cyan800('text-cyan-800'),
+  cyan900('text-cyan-900'),
+  cyan950('text-cyan-950'),
+  sky50('text-sky-50'),
+  sky100('text-sky-100'),
+  sky200('text-sky-200'),
+  sky300('text-sky-300'),
+  sky400('text-sky-400'),
+  sky500('text-sky-500'),
+  sky600('text-sky-600'),
+  sky700('text-sky-700'),
+  sky800('text-sky-800'),
+  sky900('text-sky-900'),
+  sky950('text-sky-950'),
+  blue50('text-blue-50'),
+  blue100('text-blue-100'),
+  blue200('text-blue-200'),
+  blue300('text-blue-300'),
+  blue400('text-blue-400'),
+  blue500('text-blue-500'),
+  blue600('text-blue-600'),
+  blue700('text-blue-700'),
+  blue800('text-blue-800'),
+  blue900('text-blue-900'),
+  blue950('text-blue-950'),
+  indigo50('text-indigo-50'),
+  indigo100('text-indigo-100'),
+  indigo200('text-indigo-200'),
+  indigo300('text-indigo-300'),
+  indigo400('text-indigo-400'),
+  indigo500('text-indigo-500'),
+  indigo600('text-indigo-600'),
+  indigo700('text-indigo-700'),
+  indigo800('text-indigo-800'),
+  indigo900('text-indigo-900'),
+  indigo950('text-indigo-950'),
+  violet50('text-violet-50'),
+  violet100('text-violet-100'),
+  violet200('text-violet-200'),
+  violet300('text-violet-300'),
+  violet400('text-violet-400'),
+  violet500('text-violet-500'),
+  violet600('text-violet-600'),
+  violet700('text-violet-700'),
+  violet800('text-violet-800'),
+  violet900('text-violet-900'),
+  violet950('text-violet-950'),
+  purple50('text-purple-50'),
+  purple100('text-purple-100'),
+  purple200('text-purple-200'),
+  purple300('text-purple-300'),
+  purple400('text-purple-400'),
+  purple500('text-purple-500'),
+  purple600('text-purple-600'),
+  purple700('text-purple-700'),
+  purple800('text-purple-800'),
+  purple900('text-purple-900'),
+  purple950('text-purple-950'),
+  fuchsia50('text-fuchsia-50'),
+  fuchsia100('text-fuchsia-100'),
+  fuchsia200('text-fuchsia-200'),
+  fuchsia300('text-fuchsia-300'),
+  fuchsia400('text-fuchsia-400'),
+  fuchsia500('text-fuchsia-500'),
+  fuchsia600('text-fuchsia-600'),
+  fuchsia700('text-fuchsia-700'),
+  fuchsia800('text-fuchsia-800'),
+  fuchsia900('text-fuchsia-900'),
+  fuchsia950('text-fuchsia-950'),
+  pink50('text-pink-50'),
+  pink100('text-pink-100'),
+  pink200('text-pink-200'),
+  pink300('text-pink-300'),
+  pink400('text-pink-400'),
+  pink500('text-pink-500'),
+  pink600('text-pink-600'),
+  pink700('text-pink-700'),
+  pink800('text-pink-800'),
+  pink900('text-pink-900'),
+  pink950('text-pink-950'),
+  rose50('text-rose-50'),
+  rose100('text-rose-100'),
+  rose200('text-rose-200'),
+  rose300('text-rose-300'),
+  rose400('text-rose-400'),
+  rose500('text-rose-500'),
+  rose600('text-rose-600'),
+  rose700('text-rose-700'),
+  rose800('text-rose-800'),
+  rose900('text-rose-900'),
+  rose950('text-rose-950');
 
-  String get className {
-    switch (this) {
-      case TextColor.inherit:
-        return 'text-inherit';
-      case TextColor.current:
-        return 'text-current';
-      case TextColor.transparent:
-        return 'text-transparent';
-      case TextColor.black:
-        return 'text-black';
-      case TextColor.white:
-        return 'text-white';
-      case TextColor.slate_50:
-        return 'text-slate-50';
-      case TextColor.slate_100:
-        return 'text-slate-100';
-      case TextColor.slate_200:
-        return 'text-slate-200';
-      case TextColor.slate_300:
-        return 'text-slate-300';
-      case TextColor.slate_400:
-        return 'text-slate-400';
-      case TextColor.slate_500:
-        return 'text-slate-500';
-      case TextColor.slate_600:
-        return 'text-slate-600';
-      case TextColor.slate_700:
-        return 'text-slate-700';
-      case TextColor.slate_800:
-        return 'text-slate-800';
-      case TextColor.slate_900:
-        return 'text-slate-900';
-      case TextColor.slate_950:
-        return 'text-slate-950';
-      case TextColor.gray_50:
-        return 'text-gray-50';
-      case TextColor.gray_100:
-        return 'text-gray-100';
-      case TextColor.gray_200:
-        return 'text-gray-200';
-      case TextColor.gray_300:
-        return 'text-gray-300';
-      case TextColor.gray_400:
-        return 'text-gray-400';
-      case TextColor.gray_500:
-        return 'text-gray-500';
-      case TextColor.gray_600:
-        return 'text-gray-600';
-      case TextColor.gray_700:
-        return 'text-gray-700';
-      case TextColor.gray_800:
-        return 'text-gray-800';
-      case TextColor.gray_900:
-        return 'text-gray-900';
-      case TextColor.gray_950:
-        return 'text-gray-950';
-      case TextColor.zinc_50:
-        return 'text-zinc-50';
-      case TextColor.zinc_100:
-        return 'text-zinc-100';
-      case TextColor.zinc_200:
-        return 'text-zinc-200';
-      case TextColor.zinc_300:
-        return 'text-zinc-300';
-      case TextColor.zinc_400:
-        return 'text-zinc-400';
-      case TextColor.zinc_500:
-        return 'text-zinc-500';
-      case TextColor.zinc_600:
-        return 'text-zinc-600';
-      case TextColor.zinc_700:
-        return 'text-zinc-700';
-      case TextColor.zinc_800:
-        return 'text-zinc-800';
-      case TextColor.zinc_900:
-        return 'text-zinc-900';
-      case TextColor.zinc_950:
-        return 'text-zinc-950';
-      case TextColor.neutral_50:
-        return 'text-neutral-50';
-      case TextColor.neutral_100:
-        return 'text-neutral-100';
-      case TextColor.neutral_200:
-        return 'text-neutral-200';
-      case TextColor.neutral_300:
-        return 'text-neutral-300';
-      case TextColor.neutral_400:
-        return 'text-neutral-400';
-      case TextColor.neutral_500:
-        return 'text-neutral-500';
-      case TextColor.neutral_600:
-        return 'text-neutral-600';
-      case TextColor.neutral_700:
-        return 'text-neutral-700';
-      case TextColor.neutral_800:
-        return 'text-neutral-800';
-      case TextColor.neutral_900:
-        return 'text-neutral-900';
-      case TextColor.neutral_950:
-        return 'text-neutral-950';
-      case TextColor.stone_50:
-        return 'text-stone-50';
-      case TextColor.stone_100:
-        return 'text-stone-100';
-      case TextColor.stone_200:
-        return 'text-stone-200';
-      case TextColor.stone_300:
-        return 'text-stone-300';
-      case TextColor.stone_400:
-        return 'text-stone-400';
-      case TextColor.stone_500:
-        return 'text-stone-500';
-      case TextColor.stone_600:
-        return 'text-stone-600';
-      case TextColor.stone_700:
-        return 'text-stone-700';
-      case TextColor.stone_800:
-        return 'text-stone-800';
-      case TextColor.stone_900:
-        return 'text-stone-900';
-      case TextColor.stone_950:
-        return 'text-stone-950';
-      case TextColor.red_50:
-        return 'text-red-50';
-      case TextColor.red_100:
-        return 'text-red-100';
-      case TextColor.red_200:
-        return 'text-red-200';
-      case TextColor.red_300:
-        return 'text-red-300';
-      case TextColor.red_400:
-        return 'text-red-400';
-      case TextColor.red_500:
-        return 'text-red-500';
-      case TextColor.red_600:
-        return 'text-red-600';
-      case TextColor.red_700:
-        return 'text-red-700';
-      case TextColor.red_800:
-        return 'text-red-800';
-      case TextColor.red_900:
-        return 'text-red-900';
-      case TextColor.red_950:
-        return 'text-red-950';
-      case TextColor.orange_50:
-        return 'text-orange-50';
-      case TextColor.orange_100:
-        return 'text-orange-100';
-      case TextColor.orange_200:
-        return 'text-orange-200';
-      case TextColor.orange_300:
-        return 'text-orange-300';
-      case TextColor.orange_400:
-        return 'text-orange-400';
-      case TextColor.orange_500:
-        return 'text-orange-500';
-      case TextColor.orange_600:
-        return 'text-orange-600';
-      case TextColor.orange_700:
-        return 'text-orange-700';
-      case TextColor.orange_800:
-        return 'text-orange-800';
-      case TextColor.orange_900:
-        return 'text-orange-900';
-      case TextColor.orange_950:
-        return 'text-orange-950';
-      case TextColor.amber_50:
-        return 'text-amber-50';
-      case TextColor.amber_100:
-        return 'text-amber-100';
-      case TextColor.amber_200:
-        return 'text-amber-200';
-      case TextColor.amber_300:
-        return 'text-amber-300';
-      case TextColor.amber_400:
-        return 'text-amber-400';
-      case TextColor.amber_500:
-        return 'text-amber-500';
-      case TextColor.amber_600:
-        return 'text-amber-600';
-      case TextColor.amber_700:
-        return 'text-amber-700';
-      case TextColor.amber_800:
-        return 'text-amber-800';
-      case TextColor.amber_900:
-        return 'text-amber-900';
-      case TextColor.amber_950:
-        return 'text-amber-950';
-      case TextColor.yellow_50:
-        return 'text-yellow-50';
-      case TextColor.yellow_100:
-        return 'text-yellow-100';
-      case TextColor.yellow_200:
-        return 'text-yellow-200';
-      case TextColor.yellow_300:
-        return 'text-yellow-300';
-      case TextColor.yellow_400:
-        return 'text-yellow-400';
-      case TextColor.yellow_500:
-        return 'text-yellow-500';
-      case TextColor.yellow_600:
-        return 'text-yellow-600';
-      case TextColor.yellow_700:
-        return 'text-yellow-700';
-      case TextColor.yellow_800:
-        return 'text-yellow-800';
-      case TextColor.yellow_900:
-        return 'text-yellow-900';
-      case TextColor.yellow_950:
-        return 'text-yellow-950';
-      case TextColor.lime_50:
-        return 'text-lime-50';
-      case TextColor.lime_100:
-        return 'text-lime-100';
-      case TextColor.lime_200:
-        return 'text-lime-200';
-      case TextColor.lime_300:
-        return 'text-lime-300';
-      case TextColor.lime_400:
-        return 'text-lime-400';
-      case TextColor.lime_500:
-        return 'text-lime-500';
-      case TextColor.lime_600:
-        return 'text-lime-600';
-      case TextColor.lime_700:
-        return 'text-lime-700';
-      case TextColor.lime_800:
-        return 'text-lime-800';
-      case TextColor.lime_900:
-        return 'text-lime-900';
-      case TextColor.lime_950:
-        return 'text-lime-950';
-      case TextColor.green_50:
-        return 'text-green-50';
-      case TextColor.green_100:
-        return 'text-green-100';
-      case TextColor.green_200:
-        return 'text-green-200';
-      case TextColor.green_300:
-        return 'text-green-300';
-      case TextColor.green_400:
-        return 'text-green-400';
-      case TextColor.green_500:
-        return 'text-green-500';
-      case TextColor.green_600:
-        return 'text-green-600';
-      case TextColor.green_700:
-        return 'text-green-700';
-      case TextColor.green_800:
-        return 'text-green-800';
-      case TextColor.green_900:
-        return 'text-green-900';
-      case TextColor.green_950:
-        return 'text-green-950';
-      case TextColor.emerald_50:
-        return 'text-emerald-50';
-      case TextColor.emerald_100:
-        return 'text-emerald-100';
-      case TextColor.emerald_200:
-        return 'text-emerald-200';
-      case TextColor.emerald_300:
-        return 'text-emerald-300';
-      case TextColor.emerald_400:
-        return 'text-emerald-400';
-      case TextColor.emerald_500:
-        return 'text-emerald-500';
-      case TextColor.emerald_600:
-        return 'text-emerald-600';
-      case TextColor.emerald_700:
-        return 'text-emerald-700';
-      case TextColor.emerald_800:
-        return 'text-emerald-800';
-      case TextColor.emerald_900:
-        return 'text-emerald-900';
-      case TextColor.emerald_950:
-        return 'text-emerald-950';
-      case TextColor.teal_50:
-        return 'text-teal-50';
-      case TextColor.teal_100:
-        return 'text-teal-100';
-      case TextColor.teal_200:
-        return 'text-teal-200';
-      case TextColor.teal_300:
-        return 'text-teal-300';
-      case TextColor.teal_400:
-        return 'text-teal-400';
-      case TextColor.teal_500:
-        return 'text-teal-500';
-      case TextColor.teal_600:
-        return 'text-teal-600';
-      case TextColor.teal_700:
-        return 'text-teal-700';
-      case TextColor.teal_800:
-        return 'text-teal-800';
-      case TextColor.teal_900:
-        return 'text-teal-900';
-      case TextColor.teal_950:
-        return 'text-teal-950';
-      case TextColor.cyan_50:
-        return 'text-cyan-50';
-      case TextColor.cyan_100:
-        return 'text-cyan-100';
-      case TextColor.cyan_200:
-        return 'text-cyan-200';
-      case TextColor.cyan_300:
-        return 'text-cyan-300';
-      case TextColor.cyan_400:
-        return 'text-cyan-400';
-      case TextColor.cyan_500:
-        return 'text-cyan-500';
-      case TextColor.cyan_600:
-        return 'text-cyan-600';
-      case TextColor.cyan_700:
-        return 'text-cyan-700';
-      case TextColor.cyan_800:
-        return 'text-cyan-800';
-      case TextColor.cyan_900:
-        return 'text-cyan-900';
-      case TextColor.cyan_950:
-        return 'text-cyan-950';
-      case TextColor.sky_50:
-        return 'text-sky-50';
-      case TextColor.sky_100:
-        return 'text-sky-100';
-      case TextColor.sky_200:
-        return 'text-sky-200';
-      case TextColor.sky_300:
-        return 'text-sky-300';
-      case TextColor.sky_400:
-        return 'text-sky-400';
-      case TextColor.sky_500:
-        return 'text-sky-500';
-      case TextColor.sky_600:
-        return 'text-sky-600';
-      case TextColor.sky_700:
-        return 'text-sky-700';
-      case TextColor.sky_800:
-        return 'text-sky-800';
-      case TextColor.sky_900:
-        return 'text-sky-900';
-      case TextColor.sky_950:
-        return 'text-sky-950';
-      case TextColor.blue_50:
-        return 'text-blue-50';
-      case TextColor.blue_100:
-        return 'text-blue-100';
-      case TextColor.blue_200:
-        return 'text-blue-200';
-      case TextColor.blue_300:
-        return 'text-blue-300';
-      case TextColor.blue_400:
-        return 'text-blue-400';
-      case TextColor.blue_500:
-        return 'text-blue-500';
-      case TextColor.blue_600:
-        return 'text-blue-600';
-      case TextColor.blue_700:
-        return 'text-blue-700';
-      case TextColor.blue_800:
-        return 'text-blue-800';
-      case TextColor.blue_900:
-        return 'text-blue-900';
-      case TextColor.blue_950:
-        return 'text-blue-950';
-      case TextColor.indigo_50:
-        return 'text-indigo-50';
-      case TextColor.indigo_100:
-        return 'text-indigo-100';
-      case TextColor.indigo_200:
-        return 'text-indigo-200';
-      case TextColor.indigo_300:
-        return 'text-indigo-300';
-      case TextColor.indigo_400:
-        return 'text-indigo-400';
-      case TextColor.indigo_500:
-        return 'text-indigo-500';
-      case TextColor.indigo_600:
-        return 'text-indigo-600';
-      case TextColor.indigo_700:
-        return 'text-indigo-700';
-      case TextColor.indigo_800:
-        return 'text-indigo-800';
-      case TextColor.indigo_900:
-        return 'text-indigo-900';
-      case TextColor.indigo_950:
-        return 'text-indigo-950';
-      case TextColor.violet_50:
-        return 'text-violet-50';
-      case TextColor.violet_100:
-        return 'text-violet-100';
-      case TextColor.violet_200:
-        return 'text-violet-200';
-      case TextColor.violet_300:
-        return 'text-violet-300';
-      case TextColor.violet_400:
-        return 'text-violet-400';
-      case TextColor.violet_500:
-        return 'text-violet-500';
-      case TextColor.violet_600:
-        return 'text-violet-600';
-      case TextColor.violet_700:
-        return 'text-violet-700';
-      case TextColor.violet_800:
-        return 'text-violet-800';
-      case TextColor.violet_900:
-        return 'text-violet-900';
-      case TextColor.violet_950:
-        return 'text-violet-950';
-      case TextColor.purple_50:
-        return 'text-purple-50';
-      case TextColor.purple_100:
-        return 'text-purple-100';
-      case TextColor.purple_200:
-        return 'text-purple-200';
-      case TextColor.purple_300:
-        return 'text-purple-300';
-      case TextColor.purple_400:
-        return 'text-purple-400';
-      case TextColor.purple_500:
-        return 'text-purple-500';
-      case TextColor.purple_600:
-        return 'text-purple-600';
-      case TextColor.purple_700:
-        return 'text-purple-700';
-      case TextColor.purple_800:
-        return 'text-purple-800';
-      case TextColor.purple_900:
-        return 'text-purple-900';
-      case TextColor.purple_950:
-        return 'text-purple-950';
-      case TextColor.fuchsia_50:
-        return 'text-fuchsia-50';
-      case TextColor.fuchsia_100:
-        return 'text-fuchsia-100';
-      case TextColor.fuchsia_200:
-        return 'text-fuchsia-200';
-      case TextColor.fuchsia_300:
-        return 'text-fuchsia-300';
-      case TextColor.fuchsia_400:
-        return 'text-fuchsia-400';
-      case TextColor.fuchsia_500:
-        return 'text-fuchsia-500';
-      case TextColor.fuchsia_600:
-        return 'text-fuchsia-600';
-      case TextColor.fuchsia_700:
-        return 'text-fuchsia-700';
-      case TextColor.fuchsia_800:
-        return 'text-fuchsia-800';
-      case TextColor.fuchsia_900:
-        return 'text-fuchsia-900';
-      case TextColor.fuchsia_950:
-        return 'text-fuchsia-950';
-      case TextColor.pink_50:
-        return 'text-pink-50';
-      case TextColor.pink_100:
-        return 'text-pink-100';
-      case TextColor.pink_200:
-        return 'text-pink-200';
-      case TextColor.pink_300:
-        return 'text-pink-300';
-      case TextColor.pink_400:
-        return 'text-pink-400';
-      case TextColor.pink_500:
-        return 'text-pink-500';
-      case TextColor.pink_600:
-        return 'text-pink-600';
-      case TextColor.pink_700:
-        return 'text-pink-700';
-      case TextColor.pink_800:
-        return 'text-pink-800';
-      case TextColor.pink_900:
-        return 'text-pink-900';
-      case TextColor.pink_950:
-        return 'text-pink-950';
-      case TextColor.rose_50:
-        return 'text-rose-50';
-      case TextColor.rose_100:
-        return 'text-rose-100';
-      case TextColor.rose_200:
-        return 'text-rose-200';
-      case TextColor.rose_300:
-        return 'text-rose-300';
-      case TextColor.rose_400:
-        return 'text-rose-400';
-      case TextColor.rose_500:
-        return 'text-rose-500';
-      case TextColor.rose_600:
-        return 'text-rose-600';
-      case TextColor.rose_700:
-        return 'text-rose-700';
-      case TextColor.rose_800:
-        return 'text-rose-800';
-      case TextColor.rose_900:
-        return 'text-rose-900';
-      case TextColor.rose_950:
-        return 'text-rose-950';
-    }
-  }
+  const TextColor(this._className);
+
+  final String _className;
+
+  String get className => _className;
 }
+

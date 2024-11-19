@@ -11,9 +11,9 @@ import 'package:jaspr_ui/jaspr_ui.dart';
 /// Example usage:
 /// ```dart
 /// TitleGradient(
-///   fromColor: FromColor.green_300,
-///   viaColor: ViaColor.blue_500,
-///   toColor: ToColor.purple_600,
+///   fromColor: FromColor.green300,
+///   viaColor: ViaColor.blue500,
+///   toColor: ToColor.purple600,
 ///   title: 'Welcome to My App',
 /// )
 /// ```
@@ -28,9 +28,9 @@ class TitleGradient extends StatelessComponent {
   /// - [title]: The text content to be displayed with the gradient effect
   const TitleGradient({
     super.key,
-    this.fromColor = FromColor.green_300,
-    this.viaColor = ViaColor.blue_500,
-    this.toColor = ToColor.purple_600,
+    this.fromColor = FromColor.green300,
+    this.viaColor = ViaColor.blue500,
+    this.toColor = ToColor.purple600,
     required this.title,
   });
 

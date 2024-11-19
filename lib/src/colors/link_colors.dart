@@ -1,51 +1,38 @@
-/// Link colors
+/// Defines the available color variants for link styling
 enum LinkColor {
   /// Primary brand color, used for main call-to-action buttons
-  primary,
+  primary('link-primary'),
 
   /// Secondary brand color, used for alternative actions
-  secondary,
+  secondary('link-secondary'),
 
   /// Accent color for emphasis or highlight actions
-  accent,
+  accent('link-accent'),
 
   /// Neutral/gray color for less prominent actions
-  neutral,
+  neutral('link-neutral'),
 
   /// Information blue color for informational actions
-  info,
+  info('link-info'),
 
   /// Success/green color for positive actions or confirmations
-  success,
+  success('link-success'),
 
   /// Warning/yellow color for cautionary actions
-  warning,
+  warning('link-warning'),
 
   /// Error/red color for destructive or critical actions
-  error;
+  error('link-error');
 
-  /// Returns the CSS class name for the button color.
+  /// Creates a new LinkColor with the associated CSS class name.
+  const LinkColor(this._className);
+
+  /// The CSS class name associated with this link color.
+  final String _className;
+
+  /// Returns the CSS class name for the link color.
   ///
-  /// This getter is used internally to generate the appropriate CSS class name
-  /// for the button's color styling.
-  String get className {
-    switch (this) {
-      case LinkColor.primary:
-        return 'link-primary';
-      case LinkColor.secondary:
-        return 'link-secondary';
-      case LinkColor.accent:
-        return 'link-accent';
-      case LinkColor.neutral:
-        return 'link-neutral';
-      case LinkColor.info:
-        return 'link-info';
-      case LinkColor.success:
-        return 'link-success';
-      case LinkColor.warning:
-        return 'link-warning';
-      case LinkColor.error:
-        return 'link-error';
-    }
-  }
+  /// This getter is used to generate the appropriate CSS class name
+  /// for the link's color styling in the UI.
+  String get className => _className;
 }
