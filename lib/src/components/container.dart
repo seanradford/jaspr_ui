@@ -22,15 +22,15 @@ class Container extends StatelessComponent {
 
   /// The padding size to be applied to the container.
   ///
-  /// Defaults to [PaddingSize.p_4] if not specified.
+  /// Defaults to [PaddingSize.p4] if not specified.
   /// Use different [PaddingSize] values to adjust the spacing around the content.
   final PaddingSize? padding;
 
   /// Creates a new [Container] instance.
   ///
   /// [children] is a required list of components to be rendered inside the container.
-  /// [padding] is optional and defaults to [PaddingSize.p_4].
-  Container(this.children, {this.padding = PaddingSize.p_4});
+  /// [padding] is optional and defaults to [PaddingSize.p4].
+  Container(this.children, {this.padding = PaddingSize.p4});
 
   /// Builds the container component with the specified padding and children.
   ///

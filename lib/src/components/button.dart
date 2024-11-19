@@ -27,7 +27,7 @@ class Button extends StatelessComponent {
   final ButtonColor? color;
 
   /// The size of the button from [ButtonSize], defaults to [ButtonSize.normal]
-  final ButtonSize size;
+  final ButtonSize? size;
 
   /// Optional callback function triggered when the button is clicked
   final VoidCallback? onPressed;
@@ -42,7 +42,7 @@ class Button extends StatelessComponent {
   const Button({
     required this.title,
     this.color,
-    this.size = ButtonSize.normal,
+    this.size,
     this.onPressed,
     this.attributes,
   });
@@ -50,8 +50,9 @@ class Button extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield button(
-      classes: 'btn ${size.className}'
-          '${color != null ? ' ${color!.className}' : ''}',
+      classes: 'btn '
+          '${size != null ? ' ${size!.className} ' : ''}'
+          '${color != null ? ' ${color!.className} ' : ''}',
       [
         text(title),
       ],
@@ -79,7 +80,7 @@ class OutLineButton extends StatelessComponent {
   final ButtonColor? color;
 
   /// The size of the button from [ButtonSize], defaults to [ButtonSize.normal]
-  final ButtonSize size;
+  final ButtonSize? size;
 
   /// Optional callback function triggered when the button is clicked
   final VoidCallback? onPressed;
@@ -90,7 +91,7 @@ class OutLineButton extends StatelessComponent {
   const OutLineButton({
     required this.title,
     this.color,
-    this.size = ButtonSize.normal,
+    this.size,
     this.onPressed,
     this.attributes,
   });
@@ -98,8 +99,9 @@ class OutLineButton extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield button(
-      classes: 'btn btn-outline ${size.className}'
-          '${color != null ? ' ${color!.className}' : ''}',
+      classes: 'btn btn-outline '
+          '${size != null ? ' ${size!.className} ' : ''}'
+          '${color != null ? ' ${color!.className} ' : ''}',
       [
         text(title),
       ],
@@ -114,7 +116,7 @@ class GlassButton extends StatelessComponent {
   final String title;
 
   /// The size of the button from [ButtonSize], defaults to [ButtonSize.normal]
-  final ButtonSize size;
+  final ButtonSize? size;
 
   /// Optional callback function triggered when the button is clicked
   final VoidCallback? onPressed;
@@ -124,7 +126,7 @@ class GlassButton extends StatelessComponent {
 
   const GlassButton({
     required this.title,
-    this.size = ButtonSize.normal,
+    this.size,
     this.onPressed,
     this.attributes,
   });
@@ -132,56 +134,8 @@ class GlassButton extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield button(
-      classes: "btn glass ${size.className}",
-      [
-        text(title),
-      ],
-      onClick: () => onPressed?.call(),
-      attributes: attributes,
-    );
-  }
-}
-
-/// A full-width block button component.
-///
-/// This button variant spans the full width of its container,
-/// making it ideal for mobile interfaces or prominent calls-to-action.
-///
-/// Example usage:
-/// ```dart
-/// BlockButton(
-///   title: 'Full Width Action',
-///   onPressed: () => handleAction(),
-/// )
-/// ```
-class BlockButton extends StatelessComponent {
-  /// The text to display on the button
-  final String title;
-
-  /// The size of the button from [ButtonSize], defaults to [ButtonSize.normal]
-  final ButtonSize size;
-
-  /// Optional callback function triggered when the button is clicked
-  final VoidCallback? onPressed;
-
-  /// Optional map of additional HTML attributes to apply to the button element
-  final Map<String, String>? attributes;
-
-  /// Creates a new [BlockButton] instance.
-  ///
-  /// The [title] parameter is required and specifies the button's text.
-  /// All other parameters are optional.
-  const BlockButton({
-    required this.title,
-    this.size = ButtonSize.normal,
-    this.onPressed,
-    this.attributes,
-  });
-
-  @override
-  Iterable<Component> build(BuildContext context) sync* {
-    yield button(
-      classes: "btn btn-block ${size.className}",
+      classes: "btn glass "
+          '${size != null ? ' ${size!.className} ' : ''}',
       [
         text(title),
       ],
@@ -209,7 +163,7 @@ class IconButton extends StatelessComponent {
   final String title;
 
   /// The size of the button from [ButtonSize], defaults to [ButtonSize.normal]
-  final ButtonSize size;
+  final ButtonSize? size;
 
   /// Optional callback function triggered when the button is clicked
   final VoidCallback? onPressed;
@@ -222,7 +176,7 @@ class IconButton extends StatelessComponent {
 
   const IconButton({
     required this.title,
-    this.size = ButtonSize.normal,
+    this.size,
     this.onPressed,
     this.attributes,
     required this.icon,
@@ -231,7 +185,8 @@ class IconButton extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield button(
-      classes: "btn ${size.className}",
+      classes: 'btn '
+          '${size != null ? ' ${size!.className} ' : ''}',
       [
         span(classes: 'icon', [i(classes: 'far fa-$icon', [])]),
         text(title),

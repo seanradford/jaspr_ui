@@ -1,35 +1,32 @@
-/// An enum representing different button sizes.
+/// Represents the size variants for buttons in the application.
 ///
-/// Each button size has a corresponding CSS class name that can be used to style the button.
+/// Each [ButtonSize] corresponds to a specific CSS class that defines
+/// the button's dimensions and layout behavior.
+///
+/// The available sizes are:
+/// - [small]: A small-sized button with minimal padding
+/// - [large]: A large-sized button with increased padding
+/// - [wide]: A button with extended horizontal width
+/// - [block]: A full-width button that spans its container
 enum ButtonSize {
-  /// A small-sized button.
-  small,
+  /// A small button with reduced dimensions
+  small('btn-sm'),
 
-  /// A normal-sized button (default).
-  normal,
+  /// A normal button with reduced dimensions
+  normal(''),
 
-  /// A large-sized button.
-  large,
+  /// A large button with increased dimensions
+  large('btn-lg'),
 
-  /// A wide button that spans multiple columns.
-  wide,
+  /// A button with extended horizontal width
+  wide('btn-wide'),
 
-  /// A block-level button that spans the full width of its parent.
-  block;
+  /// A full-width button that occupies the entire container
+  block('btn-block');
 
-  /// Returns the CSS class name associated with the button size.
-  String get className {
-    switch (this) {
-      case ButtonSize.small:
-        return 'btn-sm';
-      case ButtonSize.normal:
-        return '';
-      case ButtonSize.large:
-        return 'btn-lg';
-      case ButtonSize.wide:
-        return 'btn-wide';
-      case ButtonSize.block:
-        return 'btn-block';
-    }
-  }
+  /// Creates a const constructor with an associated CSS class name
+  const ButtonSize(this.className);
+
+  /// The CSS class name associated with this button size
+  final String className;
 }

@@ -119,7 +119,8 @@ and</li>
   <pre class="language-dart"><code class="language-dart">@override
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
   yield button(
-    classes: &quot;btn ${size.className}&quot;,
+    classes: &#39;btn &#39;
+        &#39;${size != null ? &#39; ${size!.className} &#39; : &#39;&#39;}&#39;,
     [
       span(classes: &#39;icon&#39;, [i(classes: &#39;far fa-$icon&#39;, [])]),
       text(title),
