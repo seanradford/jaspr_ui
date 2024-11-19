@@ -74,34 +74,15 @@
 
     
 <section class="desc markdown">
-  <p>Returns the CSS class name for the button color.</p>
-<p>This getter is used internally to generate the appropriate CSS class name
-for the button's color styling.</p>
+  <p>Returns the CSS class name for the link color.</p>
+<p>This getter is used to generate the appropriate CSS class name
+for the link's color styling in the UI.</p>
 </section>
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">String get className {
-  switch (this) {
-    case LinkColor.primary:
-      return &#39;link-primary&#39;;
-    case LinkColor.secondary:
-      return &#39;link-secondary&#39;;
-    case LinkColor.accent:
-      return &#39;link-accent&#39;;
-    case LinkColor.neutral:
-      return &#39;link-neutral&#39;;
-    case LinkColor.info:
-      return &#39;link-info&#39;;
-    case LinkColor.success:
-      return &#39;link-success&#39;;
-    case LinkColor.warning:
-      return &#39;link-warning&#39;;
-    case LinkColor.error:
-      return &#39;link-error&#39;;
-  }
-}</code></pre>
+  <pre class="language-dart"><code class="language-dart">String get className =&gt; _className;</code></pre>
 </section>
 
   </section>

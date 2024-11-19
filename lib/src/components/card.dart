@@ -9,7 +9,7 @@ import 'package:jaspr/jaspr.dart';
 /// Example usage:
 /// ```dart
 /// Card(
-///   content: Text('Hello World'),
+///   children: Text('Hello World'),
 /// )
 /// ```
 ///
@@ -26,7 +26,7 @@ class Card extends StatelessComponent {
 
   /// Creates a new [Card] instance.
   ///
-  /// Requires [content] to be provided, which will be displayed inside the card body.
+  /// Requires [children] to be provided, which will be displayed inside the card body.
   Card({
     required this.children,
   });

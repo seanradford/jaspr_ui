@@ -101,7 +101,9 @@
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
   yield div(classes: &quot;avatar&quot;, [
     div(
-      classes: &quot;w-24 rounded-full&quot;,
+      classes: &#39;w-$size &#39;
+          &#39;${rounded.className} &#39;
+          &#39;${mask != null ? &#39; ${mask!.className}&#39; : &#39;&#39;} &#39;,
       [
         img(src: url),
       ],
