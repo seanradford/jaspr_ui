@@ -21,12 +21,18 @@ class Avatar extends StatelessComponent {
   /// This URL should point to a valid image resource that will be displayed
   /// within the circular avatar container.
   final String url;
+  final int size;
+  final Mask? mask;
+  final Rounded rounded;
 
   /// Creates an [Avatar] component.
   ///
   /// Requires a [url] parameter which specifies the image source.
   const Avatar({
     required this.url,
+    this.size = 24,
+    this.mask,
+    this.rounded = Rounded.full,
   });
 
   @override
@@ -40,11 +46,43 @@ class Avatar extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield div(classes: "avatar", [
       div(
-        classes: "w-24 rounded-full",
+        classes: 'w-$size '
+            '${rounded.className} '
+            '${mask != null ? ' ${mask!.className}' : ''} ',
         [
           img(src: url),
         ],
       ),
     ]);
   }
+}
+
+class AvatarGroup extends StatelessComponent {
+  final List<Avatar> children;
+
+  AvatarGroup({super.key, required this.children});
+
+  @override
+  Iterable<Component> build(BuildContext context) sync* {
+    yield div(classes: 'avatar-group -space-x-6 rtl:space-x-reverse', children);
+  }
+  //
+}
+
+enum Rounded {
+  full('rounded-full'),
+  xl('rounded-xl'),
+  rounded('rounded');
+
+  const Rounded(this.className);
+  final String className;
+}
+
+enum Mask {
+  squircle('mask mask-squircle'),
+  hexagon('mask mask-hexagon'),
+  triangle('mask mask-triangle');
+
+  const Mask(this.className);
+  final String className;
 }
