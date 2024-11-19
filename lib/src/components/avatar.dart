@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr_ui/jaspr_ui.dart';
 
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
@@ -69,20 +70,3 @@ class AvatarGroup extends StatelessComponent {
   //
 }
 
-enum Rounded {
-  full('rounded-full'),
-  xl('rounded-xl'),
-  rounded('rounded');
-
-  const Rounded(this.className);
-  final String className;
-}
-
-enum Mask {
-  squircle('mask mask-squircle'),
-  hexagon('mask mask-hexagon'),
-  triangle('mask mask-triangle');
-
-  const Mask(this.className);
-  final String className;
-}
