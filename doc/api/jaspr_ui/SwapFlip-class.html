@@ -63,15 +63,31 @@
     
 <section class="desc markdown">
   <p>A component that creates a flip animation effect between two different views.</p>
-<p><a href="../jaspr_ui/SwapFlip-class.html">SwapFlip</a> provides a checkbox-based flip animation that toggles between
-two components: a front view and a back view. When the checkbox is clicked,
-the component performs a flip animation to show the other side.</p>
+<p>The <a href="../jaspr_ui/SwapFlip-class.html">SwapFlip</a> component provides an interactive animation that transitions between
+two different components using a flip or rotate effect. It uses a checkbox-based
+mechanism to trigger the animation, making it both performant and accessible.</p>
+<p>The component consists of:</p>
+<ul>
+<li>A front view - initially visible component</li>
+<li>A back view - component shown after the flip animation</li>
+<li>Optional animation effect - can be either flip or rotate</li>
+</ul>
+<p>Features:</p>
+<ul>
+<li>Smooth CSS-based animations</li>
+<li>Accessible through checkbox interaction</li>
+<li>Multiple animation effect options</li>
+<li>Stateless implementation for better performance</li>
+</ul>
 <p>Example usage:</p>
 <pre class="language-dart"><code class="language-dart">SwapFlip(
   front: div([text('Front content')]),
   back: div([text('Back content')]),
+  effect: SwapEffect.flip,
 )
 </code></pre>
+<p>The animation can be triggered by clicking anywhere on the component, which
+toggles the underlying checkbox state and initiates the transition effect.</p>
 </section>
 
 
@@ -105,7 +121,7 @@ the component performs a flip animation to show the other side.</p>
 
     <dl class="constructor-summary-list">
         <dt id="SwapFlip" class="callable">
-          <span class="name"><a href="../jaspr_ui/SwapFlip/SwapFlip.html">SwapFlip</a></span><span class="signature">({<span class="parameter" id="-param-front"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span> <span class="parameter-name">front</span>, </span><span class="parameter" id="-param-back"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span> <span class="parameter-name">back</span></span>})</span>
+          <span class="name"><a href="../jaspr_ui/SwapFlip/SwapFlip.html">SwapFlip</a></span><span class="signature">({<span class="parameter" id="-param-front"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span> <span class="parameter-name">front</span>, </span><span class="parameter" id="-param-back"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span> <span class="parameter-name">back</span>, </span><span class="parameter" id="-param-effect"><span class="type-annotation"><a href="../jaspr_ui/SwapEffect.html">SwapEffect</a>?</span> <span class="parameter-name">effect</span></span>})</span>
         </dt>
         <dd>
           Creates a new <a href="../jaspr_ui/SwapFlip-class.html">SwapFlip</a> component.
@@ -126,7 +142,19 @@ the component performs a flip animation to show the other side.</p>
 
 </dt>
 <dd>
-  The component to display on the back side of the flip animation.
+  The component to display on the back side.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="effect" class="property">
+  <span class="name"><a href="../jaspr_ui/SwapFlip/effect.html">effect</a></span>
+  <span class="signature">&#8594; <a href="../jaspr_ui/SwapEffect.html">SwapEffect</a>?</span>
+  
+
+</dt>
+<dd>
+  The animation effect to apply during the transition.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -138,7 +166,7 @@ the component performs a flip animation to show the other side.</p>
 
 </dt>
 <dd>
-  The component to display on the front side of the flip animation.
+  The component to display on the front side.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>

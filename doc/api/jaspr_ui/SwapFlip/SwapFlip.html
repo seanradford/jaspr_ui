@@ -64,14 +64,21 @@
       const
       <span class="name ">SwapFlip</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="-param-front"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span> <span class="parameter-name">front</span>, </span></li>
 <li><span class="parameter" id="-param-back"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span> <span class="parameter-name">back</span>, </span></li>
+<li><span class="parameter" id="-param-effect"><span class="type-annotation"><a href="../../jaspr_ui/SwapEffect.html">SwapEffect</a>?</span> <span class="parameter-name">effect</span>, </span></li>
 </ol>})
     </section>
 
     
 <section class="desc markdown">
   <p>Creates a new <a href="../../jaspr_ui/SwapFlip-class.html">SwapFlip</a> component.</p>
-<p>Both <a href="../../jaspr_ui/SwapFlip/front.html">front</a> and <a href="../../jaspr_ui/SwapFlip/back.html">back</a> parameters are required and represent
-the two sides of the flippable component.</p>
+<p>Requires <a href="../../jaspr_ui/SwapFlip/front.html">front</a> and <a href="../../jaspr_ui/SwapFlip/back.html">back</a> components to be provided. The <a href="../../jaspr_ui/SwapFlip/effect.html">effect</a> parameter
+is optional and defaults to a simple swap if not specified.</p>
+<p>Parameters:</p>
+<ul>
+<li><a href="../../jaspr_ui/SwapFlip/front.html">front</a> - The component to display on the front side</li>
+<li><a href="../../jaspr_ui/SwapFlip/back.html">back</a> - The component to display on the back side</li>
+<li><a href="../../jaspr_ui/SwapFlip/effect.html">effect</a> - Optional animation effect to use during transition</li>
+</ul>
 </section>
 
 
@@ -81,6 +88,7 @@ the two sides of the flippable component.</p>
   <pre class="language-dart"><code class="language-dart">const SwapFlip({
   required this.front,
   required this.back,
+  this.effect,
 });</code></pre>
 </section>
 

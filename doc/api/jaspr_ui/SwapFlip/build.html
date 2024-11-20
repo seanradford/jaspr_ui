@@ -118,23 +118,26 @@ and</li>
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
-  yield label(classes: &quot;swap swap-flip&quot;, [
-    &#47;&#47; Checkbox input that controls the flip state
-    input(
-      [],
-      type: InputType.checkbox,
-    ),
-    &#47;&#47; The component shown when the checkbox is checked (flipped state)
-    div(
-      classes: &quot;swap-on&quot;,
-      [front],
-    ),
-    &#47;&#47; The component shown when the checkbox is unchecked (initial state)
-    div(
-      classes: &quot;swap-off&quot;,
-      [back],
-    ),
-  ]);
+  yield label(
+      classes: &#39;swap &#39;
+          &#39;${effect != null ? &#39;${effect!.className} &#39; : &#39;&#39;}&#39;,
+      [
+        &#47;&#47; Checkbox input that controls the flip state
+        input(
+          [],
+          type: InputType.checkbox,
+        ),
+        &#47;&#47; The component shown when the checkbox is checked (flipped state)
+        div(
+          classes: &#39;swap-on&#39;,
+          [front],
+        ),
+        &#47;&#47; The component shown when the checkbox is unchecked (initial state)
+        div(
+          classes: &#39;swap-off&#39;,
+          [back],
+        ),
+      ]);
 }</code></pre>
 </section>
 
