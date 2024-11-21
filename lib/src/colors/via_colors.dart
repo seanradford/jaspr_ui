@@ -254,4 +254,3 @@ enum ViaColor {
 
   String get className => _className;
 }
-

@@ -254,4 +254,3 @@ enum BorderColor {
 
   String get className => _className;
 }
-

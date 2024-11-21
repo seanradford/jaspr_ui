@@ -254,4 +254,3 @@ enum FromColor {
 
   String get className => _className;
 }
-

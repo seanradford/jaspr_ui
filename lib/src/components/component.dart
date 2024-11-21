@@ -1,3 +1,4 @@
+export 'accordion.dart';
 export 'app.dart';
 export 'avatar.dart';
 export 'badge.dart';

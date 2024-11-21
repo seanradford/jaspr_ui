@@ -32,7 +32,7 @@ class HomeState extends State<Home> {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield TitleGradient(
-      title: 'Pariatur veniam reprehenderit tempor fugiat ullamco ea sunt sunt ex anim deserunt exercitation.',
-    );
+        title:
+            'Pariatur veniam reprehenderit tempor fugiat ullamco ea sunt sunt ex anim deserunt exercitation.');
   }
 }

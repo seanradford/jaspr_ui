@@ -254,4 +254,3 @@ enum RingColor {
 
   String get className => _className;
 }
-

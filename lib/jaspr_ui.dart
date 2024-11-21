@@ -7,12 +7,11 @@
 /// - Components
 /// - Styles
 /// - Colors
-/// 
-library;
+///
+// library;
 
 // Colors
 export 'src/colors/colors.dart';
-
 // Components
 export 'src/components/component.dart';
 // Styles

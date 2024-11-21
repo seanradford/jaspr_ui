@@ -254,4 +254,3 @@ enum TextColor {
 
   String get className => _className;
 }
-

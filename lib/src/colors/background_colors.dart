@@ -1,5 +1,16 @@
 /// Background colors
 enum BackgroundColor {
+  primary('bg-primary'),
+  secondary('bg-secondary'),
+  accent('bg-accent'),
+  neutral('bg-neutral'),
+  base100('bg-base-100'),
+  base200('bg-base-200'),
+  base300('bg-base-300'),
+  info('bg-info'),
+  success('bg-success'),
+  warning('bg-warning'),
+  error('bg-error'),
   inherit('bg-inherit'),
   current('bg-current'),
   transparent('bg-transparent'),
@@ -254,4 +265,3 @@ enum BackgroundColor {
 
   String get className => _className;
 }
-
