@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the Avatar class from the jaspr_ui library, for the Dart programming language.">
-  <title>Avatar class - jaspr_ui library - Dart API</title>
+  <meta name="description" content="API docs for the Carousel class from the jaspr_ui library, for the Dart programming language.">
+  <title>Carousel class - jaspr_ui library - Dart API</title>
 
 
   
@@ -30,9 +30,9 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">jaspr_ui</a></li>
     <li><a href="../jaspr_ui/jaspr_ui-library.html">jaspr_ui.dart</a></li>
-    <li class="self-crumb">Avatar class</li>
+    <li class="self-crumb">Carousel class</li>
   </ol>
-  <div class="self-name">Avatar</div>
+  <div class="self-name">Carousel</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -54,25 +54,28 @@
     id="dartdoc-main-content"
     class="main-content"
     data-above-sidebar="jaspr_ui&#47;jaspr_ui-library-sidebar.html"
-    data-below-sidebar="jaspr_ui&#47;Avatar-class-sidebar.html">
+    data-below-sidebar="jaspr_ui&#47;Carousel-class-sidebar.html">
     <div>
-<h1><span class="kind-class">Avatar</span> class 
+<h1><span class="kind-class">Carousel</span> class 
  
 </h1></div>
 
     
 <section class="desc markdown">
-  <p>A component that displays a circular avatar image.</p>
-<p>The <a href="../jaspr_ui/Avatar-class.html">Avatar</a> component creates a circular container with an image inside it.
-It uses CSS classes for styling, including a fixed width and rounded borders.</p>
+  <p>A responsive and customizable carousel component for displaying a series of images.</p>
+<p>The <a href="../jaspr_ui/Carousel-class.html">Carousel</a> allows configuration of width, rounded corners, and indicator visibility.
+It generates a carousel with image items and optional navigation indicators.</p>
 <p>Example usage:</p>
-<pre class="language-dart"><code class="language-dart">Avatar(url: 'https://example.com/avatar.jpg')
+<pre class="language-dart"><code class="language-dart">Carousel(
+  children: [
+    CarouselItem(imageUrl: 'path/to/image1.jpg'),
+    CarouselItem(imageUrl: 'path/to/image2.jpg'),
+  ],
+  widthFull: true,
+  roundedBox: true,
+  showIndicator: true,
+)
 </code></pre>
-<p>Parameters:</p>
-<ul>
-<li><a href="../jaspr_ui/Avatar/url.html">url</a> - The URL of the image to be displayed as the avatar.
-        This should be a valid image URL that can be loaded by the browser.</li>
-</ul>
 </section>
 
 
@@ -85,7 +88,7 @@ It uses CSS classes for styling, including a fixed width and rounded borders.</p
       <li><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object-class.html">Object</a></li>
         <li><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></li>
         <li><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/StatelessComponent-class.html">StatelessComponent</a></li>
-      <li>Avatar</li>
+      <li>Carousel</li>
     </ul>
   </dd>
 
@@ -105,12 +108,11 @@ It uses CSS classes for styling, including a fixed width and rounded borders.</p
     <h2>Constructors</h2>
 
     <dl class="constructor-summary-list">
-        <dt id="Avatar" class="callable">
-          <span class="name"><a href="../jaspr_ui/Avatar/Avatar.html">Avatar</a></span><span class="signature">({<span class="parameter" id="-param-url"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">url</span>, </span><span class="parameter" id="-param-size"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span> <span class="parameter-name">size</span> = <span class="default-value">24</span>, </span><span class="parameter" id="-param-mask"><span class="type-annotation"><a href="../jaspr_ui/Mask.html">Mask</a>?</span> <span class="parameter-name">mask</span>, </span><span class="parameter" id="-param-rounded"><span class="type-annotation"><a href="../jaspr_ui/Rounded.html">Rounded</a></span> <span class="parameter-name">rounded</span> = <span class="default-value">Rounded.full</span>, </span><span class="parameter" id="-param-online"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">online</span>, </span><span class="parameter" id="-param-placeholder"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">placeholder</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-title"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">title</span></span>})</span>
+        <dt id="Carousel" class="callable">
+          <span class="name"><a href="../jaspr_ui/Carousel/Carousel.html">Carousel</a></span><span class="signature">({<span class="parameter" id="-param-children"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../jaspr_ui/CarouselItem-class.html">CarouselItem</a></span>&gt;</span></span> <span class="parameter-name">children</span>, </span><span class="parameter" id="-param-widthFull"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">widthFull</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-roundedBox"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">roundedBox</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-showIndicator"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">showIndicator</span> = <span class="default-value">true</span></span>})</span>
         </dt>
         <dd>
-          Creates an <a href="../jaspr_ui/Avatar-class.html">Avatar</a> component.
-            <div class="constructor-modifier features">const</div>
+          Constructs a <a href="../jaspr_ui/Carousel-class.html">Carousel</a> with the given configuration.
         </dd>
     </dl>
   </section>
@@ -120,6 +122,18 @@ It uses CSS classes for styling, including a fixed width and rounded borders.</p
       id="instance-properties">
     <h2>Properties</h2>
     <dl class="properties">
+        <dt id="children" class="property">
+  <span class="name"><a href="../jaspr_ui/Carousel/children.html">children</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../jaspr_ui/CarouselItem-class.html">CarouselItem</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  List of <code>CarouselItem</code> to be displayed in the carousel.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
         <dt id="hashCode" class="property inherited">
   <span class="name"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object/hashCode.html">hashCode</a></span>
   <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span>
@@ -144,50 +158,14 @@ It uses CSS classes for styling, including a fixed width and rounded borders.</p
 
 </dd>
 
-        <dt id="mask" class="property">
-  <span class="name"><a href="../jaspr_ui/Avatar/mask.html">mask</a></span>
-  <span class="signature">&#8594; <a href="../jaspr_ui/Mask.html">Mask</a>?</span>
-  
-
-</dt>
-<dd>
-  
-  <div class="features"><span class="feature">final</span></div>
-
-</dd>
-
-        <dt id="online" class="property">
-  <span class="name"><a href="../jaspr_ui/Avatar/online.html">online</a></span>
-  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a>?</span>
-  
-
-</dt>
-<dd>
-  
-  <div class="features"><span class="feature">final</span></div>
-
-</dd>
-
-        <dt id="placeholder" class="property">
-  <span class="name"><a href="../jaspr_ui/Avatar/placeholder.html">placeholder</a></span>
+        <dt id="roundedBox" class="property">
+  <span class="name"><a href="../jaspr_ui/Carousel/roundedBox.html">roundedBox</a></span>
   <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a></span>
   
 
 </dt>
 <dd>
-  
-  <div class="features"><span class="feature">final</span></div>
-
-</dd>
-
-        <dt id="rounded" class="property">
-  <span class="name"><a href="../jaspr_ui/Avatar/rounded.html">rounded</a></span>
-  <span class="signature">&#8594; <a href="../jaspr_ui/Rounded.html">Rounded</a></span>
-  
-
-</dt>
-<dd>
-  
+  Applies rounded corners to the carousel container.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -204,38 +182,26 @@ It uses CSS classes for styling, including a fixed width and rounded borders.</p
 
 </dd>
 
-        <dt id="size" class="property">
-  <span class="name"><a href="../jaspr_ui/Avatar/size.html">size</a></span>
-  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span>
+        <dt id="showIndicator" class="property">
+  <span class="name"><a href="../jaspr_ui/Carousel/showIndicator.html">showIndicator</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a></span>
   
 
 </dt>
 <dd>
-  
+  Controls the visibility of navigation indicators.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
-        <dt id="title" class="property">
-  <span class="name"><a href="../jaspr_ui/Avatar/title.html">title</a></span>
-  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a>?</span>
+        <dt id="widthFull" class="property">
+  <span class="name"><a href="../jaspr_ui/Carousel/widthFull.html">widthFull</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a></span>
   
 
 </dt>
 <dd>
-  
-  <div class="features"><span class="feature">final</span></div>
-
-</dd>
-
-        <dt id="url" class="property">
-  <span class="name"><a href="../jaspr_ui/Avatar/url.html">url</a></span>
-  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span>
-  
-
-</dt>
-<dd>
-  The URL of the avatar image.
+  Determines if the carousel should take full width of its container.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -249,14 +215,14 @@ It uses CSS classes for styling, including a fixed width and rounded borders.</p
     <h2>Methods</h2>
     <dl class="callables">
         <dt id="build" class="callable">
-  <span class="name"><a href="../jaspr_ui/Avatar/build.html">build</a></span><span class="signature">(<wbr><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span>)
+  <span class="name"><a href="../jaspr_ui/Carousel/build.html">build</a></span><span class="signature">(<wbr><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span>)
     <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  Builds the avatar component structure.
+  Describes the part of the user interface represented by this component.
   <div class="features"><span class="feature">override</span></div>
 
 </dd>
@@ -354,7 +320,7 @@ It uses CSS classes for styling, including a fixed width and rounded borders.</p
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">jaspr_ui</a></li>
     <li><a href="../jaspr_ui/jaspr_ui-library.html">jaspr_ui</a></li>
-    <li class="self-crumb">Avatar class</li>
+    <li class="self-crumb">Carousel class</li>
 </ol>
 
 

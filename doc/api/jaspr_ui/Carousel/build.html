@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the build method from the Avatar class, for the Dart programming language.">
-  <title>build method - Avatar class - jaspr_ui library - Dart API</title>
+  <meta name="description" content="API docs for the build method from the Carousel class, for the Dart programming language.">
+  <title>build method - Carousel class - jaspr_ui library - Dart API</title>
 
 
   
@@ -30,7 +30,7 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">jaspr_ui</a></li>
     <li><a href="../../jaspr_ui/jaspr_ui-library.html">jaspr_ui.dart</a></li>
-    <li><a href="../../jaspr_ui/Avatar-class.html">Avatar</a></li>
+    <li><a href="../../jaspr_ui/Carousel-class.html">Carousel</a></li>
     <li class="self-crumb">build method</li>
   </ol>
   <div class="self-name">build</div>
@@ -54,7 +54,7 @@
 <div
     id="dartdoc-main-content"
     class="main-content"
-    data-above-sidebar="jaspr_ui&#47;Avatar-class-sidebar.html"
+    data-above-sidebar="jaspr_ui&#47;Carousel-class-sidebar.html"
     data-below-sidebar="">
     <div>
 <h1><span class="kind-method">build</span> method 
@@ -77,12 +77,38 @@
     </section>
     
 <section class="desc markdown">
-  <p>Builds the avatar component structure.</p>
-<p>Returns an iterable of components that create a nested div structure:</p>
+  <p>Describes the part of the user interface represented by this component.</p>
+<p>The framework calls this method when this component is inserted into the tree
+in a given <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a> and when the dependencies of this component change
+(e.g., an <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/InheritedComponent-class.html">InheritedComponent</a> referenced by this component changes). This
+method can potentially be called in every frame and should not have any side
+effects beyond building a component.</p>
+<p>The framework replaces the subtree below this component with the component
+returned by this method, either by updating the existing subtree or by
+removing the subtree and inflating a new subtree, depending on whether the
+component returned by this method can update the root of the existing
+subtree, as determined by calling <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component/canUpdate.html">Component.canUpdate</a>.</p>
+<p>Typically implementations return a newly created constellation of components
+that are configured with information from this component's constructor and
+from the given <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a>.</p>
+<p>The given <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a> contains information about the location in the
+tree at which this component is being built. For example, the context
+provides the set of inherited components for this location in the tree. A
+given component might be built with multiple different <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a>
+arguments over time if the component is moved around the tree or if the
+component is inserted into the tree in multiple places at once.</p>
+<p>The implementation of this method must only depend on:</p>
 <ul>
-<li>Outer div with 'avatar' class</li>
-<li>Inner div with 'w-24 rounded-full' classes</li>
-<li>Image element with the provided <a href="../../jaspr_ui/Avatar/url.html">url</a></li>
+<li>the fields of the component, which themselves must not change over time,
+and</li>
+<li>any ambient state obtained from the <code>context</code> using
+<a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext/dependOnInheritedComponentOfExactType.html">BuildContext.dependOnInheritedComponentOfExactType</a>.</li>
+</ul>
+<p>If a component's <a href="../../jaspr_ui/Carousel/build.html">build</a> method is to depend on anything else, use a
+<a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/StatefulComponent-class.html">StatefulComponent</a> instead.</p>
+<p>See also:</p>
+<ul>
+<li><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/StatelessComponent-class.html">StatelessComponent</a>, which contains the discussion on performance considerations.</li>
 </ul>
 </section>
 
@@ -91,35 +117,36 @@
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
-
-&#47;&#47;&#47; Builds the avatar component structure.
-&#47;&#47;&#47;
-&#47;&#47;&#47; Returns an iterable of components that create a nested div structure:
-&#47;&#47;&#47; - Outer div with &#39;avatar&#39; class
-&#47;&#47;&#47; - Inner div with &#39;w-24 rounded-full&#39; classes
-&#47;&#47;&#47; - Image element with the provided [url]
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
   yield div(
-      classes: &#39;avatar &#39;
-          &#39;${online != null ? (online!) ? &#39;online &#39; : &#39;offline &#39; : &#39; &#39;}&#39;
-          &#39;${placeholder ? &#39;placeholder &#39; : &#39; &#39;}&#39;,
-      [
-        (placeholder)
-            ? div(
-                classes: &#39;bg-neutral text-neutral-content w-24 rounded-full&#39;,
-                [
-                  span(classes: &#39;text-xl&#39;, [text(&#39;$title&#39;)]),
-                ],
-              )
-            : div(
-                classes: &#39;w-$size &#39;
-                    &#39;${rounded.className} &#39;
-                    &#39;${mask != null ? &#39;${mask!.className} &#39; : &#39;&#39;} &#39;,
-                [
-                  img(src: url),
-                ],
-              )
-      ]);
+      classes: &#39;carousel &#39;
+          &#39;${roundedBox ? &#39;rounded-box &#39; : &#39;&#39;}&#39;
+          &#39;${widthFull ? &#39;w-full &#39; : &#39;&#39;}&#39;,
+      List.generate(children.length, (index) {
+        final item = children[index];
+
+        return div(
+          id: &#39;item${(index + 1)}&#39;,
+          classes: &#39;carousel-item &#39;
+              &#39;${widthFull ? &#39;w-full&#39; : &#39;&#39;}&#39;,
+          [
+            img(
+              classes: widthFull ? &#39;w-full&#39; : &#39;&#39;,
+              src: &#39;${item.imageUrl}&#39;,
+              alt: &#39;${item.alt}&#39;,
+            ),
+          ],
+        );
+      }));
+
+  yield div(
+      classes: &#39;flex w-full justify-center gap-2 py-2&#39;,
+      List.generate(children.length, (index) {
+        return a(
+            href: &#39;#item${(index + 1)}&#39;,
+            classes: &#39;btn btn-xs&#39;,
+            [text(&#39;${(index + 1)}&#39;)]);
+      }));
 }</code></pre>
 </section>
 
@@ -137,12 +164,12 @@ Iterable&lt;Component&gt; build(BuildContext context) sync* {
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">jaspr_ui</a></li>
     <li><a href="../../jaspr_ui/jaspr_ui-library.html">jaspr_ui</a></li>
-    <li><a href="../../jaspr_ui/Avatar-class.html">Avatar</a></li>
+    <li><a href="../../jaspr_ui/Carousel-class.html">Carousel</a></li>
     <li class="self-crumb">build method</li>
 </ol>
 
 
-    <h5>Avatar class</h5>
+    <h5>Carousel class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
 
