@@ -47,7 +47,7 @@ class AccordionItem extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield div(
         classes: 'collapse '
-            '${style != null ? '${style!.className} ' : ' '}'
+            '${style != null ? '${style!.className} ' : ''}'
             '${backgroundColor != null ? '${backgroundColor!.className} ' : BackgroundColor.base200.className}',
         [
           //
