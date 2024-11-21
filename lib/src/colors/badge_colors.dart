@@ -9,6 +9,9 @@ enum BadgeColor {
   warning('badge-warning'),
   error('badge-error');
 
-  const BadgeColor(this.className);
-  final String className;
+  const BadgeColor(this._className);
+
+  final String _className;
+
+  String get className => _className;
 }

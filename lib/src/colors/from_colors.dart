@@ -1,4 +1,4 @@
-/// Via colors
+/// Defines the available color variants for From styling
 enum FromColor {
   inherit('from-inherit'),
   current('from-current'),
