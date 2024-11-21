@@ -4,7 +4,7 @@ A simple component for Jaspr.
 
 `This work under development, feel free to contribute.`
 
-Add dependency in pubspec.yaml 
+Add dependency in pubspec.yaml
 
 ```yaml
 dependencies:
@@ -21,7 +21,7 @@ dependencies:
       ref: daisyui # branch name
 ```
 
-Add Tailwindcss and Font Awesome Icon from CDN, you might use `jaspr_tailwind` package instate.
+Add Tailwindcss and Font Awesome Icon from CDN. If you want to build custom css file, you should use [jaspr_tailwind](https://pub.dev/packages/jaspr_tailwind) .
 
 ```dart
 runApp(Document(
@@ -39,13 +39,13 @@ import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_router/jaspr_router.dart';
 import 'package:jaspr_ui/jaspr_ui.dart';
 
-import 'pages/home.dart'; 
+import 'pages/home.dart';
 
 class App extends StatelessComponent {
   const App({super.key});
 
   @override
-  Iterable<Component> build(BuildContext context) sync* { 
+  Iterable<Component> build(BuildContext context) sync* {
     yield DaisyUI(
       theme: 'dracular',
       [
@@ -58,6 +58,30 @@ class App extends StatelessComponent {
       ],
     );
   }
- 
+
 }
+```
+
+Update home page to use a component.
+
+```dart
+import 'package:jaspr/jaspr.dart';
+import 'package:jaspr_ui/jaspr_ui.dart';
+
+@client
+class Home extends StatefulComponent {
+  const Home({super.key});
+  @override
+  State<Home> createState() => HomeState();
+}
+
+class HomeState extends State<Home> {
+  @override
+  Iterable<Component> build(BuildContext context) sync* {
+    yield TitleGradient(
+      title: 'Pariatur veniam reprehenderit tempor fugiat.',
+    );
+  }
+}
+
 ```
