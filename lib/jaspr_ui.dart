@@ -8,7 +8,7 @@
 /// - Styles
 /// - Colors
 ///
-// library;
+library;
 
 // Colors
 export 'src/colors/colors.dart';

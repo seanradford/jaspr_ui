@@ -15,3 +15,4 @@ export 'swap.dart';
 export 'taps.dart';
 export 'theme_switch.dart';
 export 'title.dart';
+export 'carousel.dart';

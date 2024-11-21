@@ -26,6 +26,9 @@ class Avatar extends StatelessComponent {
   final int size;
   final Mask? mask;
   final Rounded rounded;
+  final bool? online;
+  final bool placeholder;
+  final String? title;
 
   /// Creates an [Avatar] component.
   ///
@@ -35,6 +38,9 @@ class Avatar extends StatelessComponent {
     this.size = 24,
     this.mask,
     this.rounded = Rounded.full,
+    this.online,
+    this.placeholder = false,
+    this.title,
   });
 
   @override
@@ -46,16 +52,27 @@ class Avatar extends StatelessComponent {
   /// - Inner div with 'w-24 rounded-full' classes
   /// - Image element with the provided [url]
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(classes: "avatar", [
-      div(
-        classes: 'w-$size '
-            '${rounded.className} '
-            '${mask != null ? ' ${mask!.className}' : ''} ',
+    yield div(
+        classes: 'avatar '
+            '${online != null ? (online!) ? 'online ' : 'offline ' : ' '}'
+            '${placeholder ? 'placeholder ' : ' '}',
         [
-          img(src: url),
-        ],
-      ),
-    ]);
+          (placeholder)
+              ? div(
+                  classes: 'bg-neutral text-neutral-content w-24 rounded-full',
+                  [
+                    span(classes: 'text-xl', [text('$title')]),
+                  ],
+                )
+              : div(
+                  classes: 'w-$size '
+                      '${rounded.className} '
+                      '${mask != null ? '${mask!.className} ' : ''} ',
+                  [
+                    img(src: url),
+                  ],
+                )
+        ]);
   }
 }
 

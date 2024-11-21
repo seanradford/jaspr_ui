@@ -2,6 +2,7 @@
 // Generated with jaspr_builder
 
 import 'package:jaspr/jaspr.dart';
+import 'package:example/pages/home.dart' as prefix0;
 
 /// Default [JasprOptions] for use with your jaspr project.
 ///
@@ -19,4 +20,8 @@ import 'package:jaspr/jaspr.dart';
 ///   runApp(...);
 /// }
 /// ```
-final defaultJasprOptions = JasprOptions();
+final defaultJasprOptions = JasprOptions(
+  clients: {
+    prefix0.Home: ClientTarget<prefix0.Home>('pages/home'),
+  },
+);
