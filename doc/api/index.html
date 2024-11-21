@@ -65,7 +65,7 @@
       url: https://github.com/anoochit/jaspr_ui.git
       ref: daisyui # branch name
 </code></pre>
-<p>Add Tailwindcss and Font Awesome Icon from CDN, you might use <code>jaspr_tailwind</code> package instate.</p>
+<p>Add Tailwindcss and Font Awesome Icon from CDN. If you want to build custom css file, you should use <a href="https://pub.dev/packages/jaspr_tailwind">jaspr_tailwind</a> .</p>
 <pre class="language-dart"><code class="language-dart">runApp(Document(
   lang: 'en',
   title: 'example',
@@ -78,13 +78,13 @@
 import 'package:jaspr_router/jaspr_router.dart';
 import 'package:jaspr_ui/jaspr_ui.dart';
 
-import 'pages/home.dart'; 
+import 'pages/home.dart';
 
 class App extends StatelessComponent {
   const App({super.key});
 
   @override
-  Iterable&lt;Component&gt; build(BuildContext context) sync* { 
+  Iterable&lt;Component&gt; build(BuildContext context) sync* {
     yield DaisyUI(
       theme: 'dracular',
       [
@@ -97,8 +97,29 @@ class App extends StatelessComponent {
       ],
     );
   }
- 
+
 }
+</code></pre>
+<p>Update home page to use a component.</p>
+<pre class="language-dart"><code class="language-dart">import 'package:jaspr/jaspr.dart';
+import 'package:jaspr_ui/jaspr_ui.dart';
+
+@client
+class Home extends StatefulComponent {
+  const Home({super.key});
+  @override
+  State&lt;Home&gt; createState() =&gt; HomeState();
+}
+
+class HomeState extends State&lt;Home&gt; {
+  @override
+  Iterable&lt;Component&gt; build(BuildContext context) sync* {
+    yield TitleGradient(
+      title: 'Pariatur veniam reprehenderit tempor fugiat.',
+    );
+  }
+}
+
 </code></pre>
 </section>
 
