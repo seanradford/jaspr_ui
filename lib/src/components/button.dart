@@ -9,7 +9,6 @@ import '../sizes/sizes.dart';
 /// These components provide different button styles while maintaining a consistent API.
 
 /// A standard button component that renders a basic button with customizable styling.
-///
 /// Example usage:
 /// ```dart
 /// Button(
@@ -36,7 +35,6 @@ class Button extends StatelessComponent {
   final Map<String, String>? attributes;
 
   /// Creates a new [Button] instance.
-  ///
   /// The [title] parameter is required and specifies the button's text.
   /// All other parameters are optional.
   const Button({
@@ -49,21 +47,23 @@ class Button extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
+    // Build the button element with appropriate CSS classes and attributes
     yield button(
+      // Define the CSS classes dynamically based on the button's properties
       classes: 'btn '
-          '${size != null ? ' ${size!.className} ' : ''}'
-          '${color != null ? ' ${color!.className} ' : ''}',
+          '${size != null ? ' ${size!.className} ' : ''}' // Add size class if provided
+          '${color != null ? ' ${color!.className} ' : ''}', // Add color class if provided
       [
-        text(title),
+        text(title), // Add the button text as the child component
       ],
+      // Bind the onClick event to the onPressed callback if provided
       onClick: () => onPressed?.call(),
-      attributes: attributes,
+      attributes: attributes, // Include any additional HTML attributes
     );
   }
 }
 
 /// An outline-styled button component with a transparent background.
-///
 /// Example usage:
 /// ```dart
 /// OutLineButton(
@@ -98,19 +98,21 @@ class OutLineButton extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
+    // Build the button with outline-specific CSS class
     yield button(
       classes: 'btn btn-outline '
-          '${size != null ? ' ${size!.className} ' : ''}'
-          '${color != null ? ' ${color!.className} ' : ''}',
+          '${size != null ? ' ${size!.className} ' : ''}' // Add size class if provided
+          '${color != null ? ' ${color!.className} ' : ''}', // Add color class if provided
       [
-        text(title),
+        text(title), // Add the button text
       ],
-      onClick: () => onPressed?.call(),
-      attributes: attributes,
+      onClick: () => onPressed?.call(), // Trigger the callback on click
+      attributes: attributes, // Include additional HTML attributes
     );
   }
 }
 
+/// A glass-styled button component with a semi-transparent look.
 class GlassButton extends StatelessComponent {
   /// The text to display on the button
   final String title;
@@ -133,31 +135,21 @@ class GlassButton extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
+    // Build the button with a glass effect style
     yield button(
       classes: "btn glass "
-          '${size != null ? ' ${size!.className} ' : ''}',
+          '${size != null ? ' ${size!.className} ' : ''}', // Add size class if provided
       [
-        text(title),
+        text(title), // Add the button text
       ],
-      onClick: () => onPressed?.call(),
-      attributes: attributes,
+      onClick: () => onPressed?.call(), // Trigger the callback on click
+      attributes: attributes, // Include additional HTML attributes
     );
   }
 }
 
 /// A button component that includes an icon alongside text.
-///
-/// This button variant combines an icon with text, using Font Awesome icons
-/// for consistent and scalable icon rendering.
-///
-/// Example usage:
-/// ```dart
-/// IconButton(
-///   title: 'Settings',
-///   icon: 'cog',
-///   onPressed: () => openSettings(),
-/// )
-/// ```
+/// This button variant combines an icon with text, using Font Awesome icons.
 class IconButton extends StatelessComponent {
   /// The text to display on the button
   final String title;
@@ -184,15 +176,17 @@ class IconButton extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
+    // Build the button with an icon element and text
     yield button(
       classes: 'btn '
-          '${size != null ? ' ${size!.className} ' : ''}',
+          '${size != null ? ' ${size!.className} ' : ''}', // Add size class if provided
       [
+        // Create an icon element with the Font Awesome class
         span(classes: 'icon', [i(classes: 'far fa-$icon', [])]),
-        text(title),
+        text(title), // Add the button text
       ],
-      onClick: () => onPressed?.call(),
-      attributes: attributes,
+      onClick: () => onPressed?.call(), // Trigger the callback on click
+      attributes: attributes, // Include additional HTML attributes
     );
   }
 }

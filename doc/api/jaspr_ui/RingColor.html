@@ -67,7 +67,14 @@
 
     
 <section class="desc markdown">
-  <p>Ring colors</p>
+  <p>Represents ring (outline) color values for element styling in a design system.</p>
+<p>Each enum value corresponds to a CSS class name for ring/outline styling.
+Ring colors are commonly used for focus states, borders, and outlines
+around elements.</p>
+<p>Example usage:</p>
+<pre class="language-dart"><code class="language-dart">final ringColor = RingColor.current;
+print(ringColor.className); // Outputs: 'ring-current'
+</code></pre>
 </section>
 
 
@@ -100,7 +107,7 @@
           <span class="name"><a href="../jaspr_ui/RingColor/RingColor.html">RingColor</a></span><span class="signature">(<span class="parameter" id="-param-_className"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">_className</span></span>)</span>
         </dt>
         <dd>
-          
+          Creates a new <a href="../jaspr_ui/RingColor.html">RingColor</a> with the associated CSS class name
             <div class="constructor-modifier features">const</div>
         </dd>
     </dl>
@@ -3831,7 +3838,7 @@
 
 </dt>
 <dd>
-  
+  Returns the CSS class name for this ring color
   <div class="features"><span class="feature">no setter</span></div>
 
 </dd>

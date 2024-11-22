@@ -1,4 +1,14 @@
-/// Border colors
+/// Border colors for styling component borders.
+///
+/// Provides a set of predefined border color classes that can be used
+/// throughout the application for consistent border styling. Each enum value
+/// maps to a specific CSS border color class.
+///
+/// Example usage:
+/// ```dart
+/// final borderColor = BorderColor.inherit;
+/// print(borderColor.className); // Outputs: 'border-inherit'
+/// ```
 enum BorderColor {
   inherit('border-inherit'),
   current('border-current'),
@@ -248,9 +258,15 @@ enum BorderColor {
   rose900('border-rose-900'),
   rose950('border-rose-950');
 
-  const BorderColor(this._className);
+ /// Creates a [BorderColor] with the specified CSS class name.
+ const BorderColor(this._className);
 
-  final String _className;
+ /// The CSS class name associated with this border color.
+ final String _className;
 
-  String get className => _className;
+ /// Returns the CSS class name for this border color.
+ /// 
+ /// This getter provides access to the private [_className] field
+ /// that contains the actual CSS class name.
+ String get className => _className;
 }

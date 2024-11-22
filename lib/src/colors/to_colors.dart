@@ -1,4 +1,13 @@
-/// To colors
+/// Represents the end color values for gradients in a design system.
+/// 
+/// Each enum value corresponds to a CSS class name for styling gradients.
+/// The "to" color represents the final color stop in a gradient transition.
+/// 
+/// Example usage:
+/// ```dart
+/// final endColor = ToColor.black;
+/// print(endColor.className); // Outputs: 'to-black'
+/// ```
 enum ToColor {
   inherit('to-inherit'),
   current('to-current'),
@@ -248,9 +257,12 @@ enum ToColor {
   rose900('to-rose-900'),
   rose950('to-rose-950');
 
+  /// Creates a new [ToColor] with the associated CSS class name
   const ToColor(this._className);
 
+  /// The CSS class name for this end color
   final String _className;
 
+  /// Returns the CSS class name for this end color
   String get className => _className;
 }

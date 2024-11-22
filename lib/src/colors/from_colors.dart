@@ -1,4 +1,14 @@
-/// Defines the available color variants for From styling
+/// Defines the available color variants for From styling.
+///
+/// This enum provides color options for gradient starting points ('from' colors)
+/// in CSS gradient definitions. Each value corresponds to a specific CSS class
+/// that defines the starting color of a gradient.
+///
+/// Example usage:
+/// ```dart
+/// final fromColor = FromColor.inherit;
+/// print(fromColor.className); // Outputs: 'from-inherit'
+/// ```
 enum FromColor {
   inherit('from-inherit'),
   current('from-current'),
@@ -248,9 +258,15 @@ enum FromColor {
   rose900('from-rose-900'),
   rose950('from-rose-950');
 
-  const FromColor(this._className);
+ /// Creates a [FromColor] with the specified CSS class name.
+ const FromColor(this._className);
 
-  final String _className;
+ /// The CSS class name associated with this gradient starting color.
+ final String _className;
 
-  String get className => _className;
+ /// Returns the CSS class name for this gradient starting color.
+ /// 
+ /// This getter provides access to the private [_className] field
+ /// that contains the actual CSS class name.
+ String get className => _className;
 }

@@ -66,6 +66,16 @@
     </div>
 
     
+<section class="desc markdown">
+  <p>Defines mask shapes for applying CSS mask effects to elements.</p>
+<p>This enum provides a collection of predefined mask shapes that can be used
+to clip or shape elements using CSS mask properties. Each value represents
+a different geometric shape that can be applied as a mask.</p>
+<p>Example usage:</p>
+<pre class="language-dart"><code class="language-dart">final maskShape = Mask.squircle;
+print(maskShape.className); // Outputs: 'mask mask-squircle'
+</code></pre>
+</section>
 
 
       <section>
@@ -97,7 +107,7 @@
           <span class="name"><a href="../jaspr_ui/Mask/Mask.html">Mask</a></span><span class="signature">(<span class="parameter" id="-param-className"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">className</span></span>)</span>
         </dt>
         <dd>
-          
+          Creates a <a href="../jaspr_ui/Mask.html">Mask</a> with the specified CSS class name.
             <div class="constructor-modifier features">const</div>
         </dd>
     </dl>
@@ -114,7 +124,9 @@
 
 </dt>
 <dd>
-  
+  <p>A squircle-shaped mask.</p>
+<p>Creates a shape that's a blend between a square and circle,
+using the CSS classes 'mask mask-squircle'.</p>
   
 
     <div>
@@ -129,7 +141,9 @@
 
 </dt>
 <dd>
-  
+  <p>A hexagon-shaped mask.</p>
+<p>Creates a six-sided polygon shape,
+using the CSS classes 'mask mask-hexagon'.</p>
   
 
     <div>
@@ -144,7 +158,9 @@
 
 </dt>
 <dd>
-  
+  <p>A triangle-shaped mask.</p>
+<p>Creates a three-sided polygon shape,
+using the CSS classes 'mask mask-triangle'.</p>
   
 
     <div>
@@ -168,7 +184,7 @@
 
 </dt>
 <dd>
-  
+  The CSS class names associated with this mask shape.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>

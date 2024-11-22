@@ -1,4 +1,14 @@
-/// Background colors
+/// Represents available background color classes.
+/// 
+/// This enum provides a set of predefined background colors that can be used
+/// throughout the application for consistent styling. Each enum value corresponds
+/// to a specific CSS class name.
+/// 
+/// Example usage:
+/// ```dart
+/// final bgColor = BackgroundColor.primary;
+/// print(bgColor.className); // Outputs: 'bg-primary'
+/// ```
 enum BackgroundColor {
   primary('bg-primary'),
   secondary('bg-secondary'),
@@ -259,9 +269,14 @@ enum BackgroundColor {
   rose900('bg-rose-900'),
   rose950('bg-rose-950');
 
+  /// Creates a [BackgroundColor] with the specified CSS class name.
   const BackgroundColor(this._className);
 
+  /// The CSS class name associated with this background color.
   final String _className;
 
+  /// Returns the CSS class name for this background color.
+  /// 
+  /// This getter provides access to the private [_className] field.
   String get className => _className;
 }

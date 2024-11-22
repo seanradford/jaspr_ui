@@ -67,7 +67,14 @@
 
     
 <section class="desc markdown">
-  <p>Background colors</p>
+  <p>Represents available background color classes.</p>
+<p>This enum provides a set of predefined background colors that can be used
+throughout the application for consistent styling. Each enum value corresponds
+to a specific CSS class name.</p>
+<p>Example usage:</p>
+<pre class="language-dart"><code class="language-dart">final bgColor = BackgroundColor.primary;
+print(bgColor.className); // Outputs: 'bg-primary'
+</code></pre>
 </section>
 
 
@@ -100,7 +107,7 @@
           <span class="name"><a href="../jaspr_ui/BackgroundColor/BackgroundColor.html">BackgroundColor</a></span><span class="signature">(<span class="parameter" id="-param-_className"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">_className</span></span>)</span>
         </dt>
         <dd>
-          
+          Creates a <a href="../jaspr_ui/BackgroundColor.html">BackgroundColor</a> with the specified CSS class name.
             <div class="constructor-modifier features">const</div>
         </dd>
     </dl>
@@ -3996,7 +4003,7 @@
 
 </dt>
 <dd>
-  
+  Returns the CSS class name for this background color.
   <div class="features"><span class="feature">no setter</span></div>
 
 </dd>

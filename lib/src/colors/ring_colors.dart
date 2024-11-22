@@ -1,4 +1,14 @@
-/// Ring colors
+/// Represents ring (outline) color values for element styling in a design system.
+/// 
+/// Each enum value corresponds to a CSS class name for ring/outline styling.
+/// Ring colors are commonly used for focus states, borders, and outlines
+/// around elements.
+/// 
+/// Example usage:
+/// ```dart
+/// final ringColor = RingColor.current;
+/// print(ringColor.className); // Outputs: 'ring-current'
+/// ```
 enum RingColor {
   inherit('ring-inherit'),
   current('ring-current'),
@@ -248,9 +258,12 @@ enum RingColor {
   rose900('ring-rose-900'),
   rose950('ring-rose-950');
 
-  const RingColor(this._className);
+ /// Creates a new [RingColor] with the associated CSS class name
+ const RingColor(this._className);
 
-  final String _className;
+ /// The CSS class name for this ring color
+ final String _className;
 
-  String get className => _className;
+ /// Returns the CSS class name for this ring color
+ String get className => _className;
 }

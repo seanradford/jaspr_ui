@@ -1,4 +1,13 @@
-/// Via colors
+/// Represents valid color values for gradient "via" colors in a design system.
+/// 
+/// Each enum value corresponds to a CSS class name for styling gradients.
+/// The "via" color represents the middle color stop in a gradient.
+/// 
+/// Example usage:
+/// ```dart 
+/// final viaColor = ViaColor.rose950;
+/// print(viaColor.className); // Outputs: 'via-rose-950'
+/// ```
 enum ViaColor {
   inherit('via-inherit'),
   current('via-current'),
@@ -248,9 +257,12 @@ enum ViaColor {
   rose900('via-rose-900'),
   rose950('via-rose-950');
 
+  /// Creates a new [ViaColor] with the associated CSS class name
   const ViaColor(this._className);
 
+  /// The CSS class name for this via color
   final String _className;
 
+  /// Returns the CSS class name for this via color
   String get className => _className;
 }
