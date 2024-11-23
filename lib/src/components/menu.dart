@@ -48,6 +48,9 @@ class GroupMenu extends StatelessComponent {
 /// )
 /// ```
 class SubMenu extends StatelessComponent {
+  /// The icon class to be used (expects Font Awesome class names).
+  final String? icon;
+
   /// The text label for the parent menu item that contains the submenu.
   final String parent;
 
@@ -67,6 +70,7 @@ class SubMenu extends StatelessComponent {
   /// [open] is optional and defaults to true, controlling the initial expand state.
   /// [children] is required and contains the list of components to show in the submenu.
   SubMenu({
+    this.icon,
     required this.parent,
     this.open = true,
     required this.children,
@@ -82,7 +86,7 @@ class SubMenu extends StatelessComponent {
       details(
         open: true,
         [
-          summary([text(parent)]),
+          summary(classes: '${icon != null ? '$icon' : ''} ', [text(parent)]),
           ul(children)
         ],
       ),
