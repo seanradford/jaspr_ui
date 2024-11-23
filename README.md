@@ -21,7 +21,9 @@ dependencies:
       ref: daisyui # branch name
 ```
 
-Add Tailwindcss and Font Awesome Icon from CDN. If you want to build custom css file, you should use [jaspr_tailwind](https://pub.dev/packages/jaspr_tailwind) .
+### Use CDN for Tailwind and DaisyUI
+
+Add Tailwindcss and Font Awesome Icon from CDN. If you want to build custom css file, you should use [jaspr_tailwind](https://pub.dev/packages/jaspr_tailwind).
 
 ```dart
 runApp(Document(
@@ -32,7 +34,35 @@ runApp(Document(
 ));
 ```
 
-Edit App componet to return DaisyUI to insert `data-theme` attribute in html document.
+### Use `jaspr_tailwind` for Tailwind and DaisyUI
+
+Install `jaspr_tailwind` follow the [installation](https://pub.dev/packages/jaspr_tailwind) from package page.
+
+`jaspr_tailwind` utilizes Tailwind CSS CLI to compile your `web/styles.css`file. As it relies on DaisyUI, you'll need to install DaisyUI as well.
+
+```bash
+npm i -D daisyui@latest
+```
+
+Update `tailwind.config.js` to use DaisyUI as follow.
+
+```javascript
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./{lib,web}/**/*.dart"],
+  theme: {
+    extend: {},
+  },
+  // install daisyui
+  plugins: [require("daisyui")],
+  // daisy ui themes
+  daisyui: {
+    themes: ["light", "dark", "dracular", "cupcake"],
+  },
+};
+```
+
+Edit `app.dart` App componet to return DaisyUI to insert `data-theme` attribute in html document.
 
 ```dart
 import 'package:jaspr/jaspr.dart';
@@ -62,7 +92,7 @@ class App extends StatelessComponent {
 }
 ```
 
-Update home page to use a component.
+Update home page `home.dart` to use a component.
 
 ```dart
 import 'package:jaspr/jaspr.dart';

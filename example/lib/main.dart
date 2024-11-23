@@ -5,7 +5,6 @@
 
 // Server-specific jaspr import.
 import 'package:jaspr/server.dart';
-import 'package:jaspr_ui/jaspr_ui.dart';
 // Imports the [App] component.
 import 'app.dart';
 
@@ -22,7 +21,9 @@ void main() {
   runApp(Document(
     lang: 'en',
     title: 'example',
-    head: daisyUiStyles,
+    head: [
+      link(href: 'styles.css', rel: 'stylesheet'),
+    ],
     styles: [
       // Special import rule to include to another css file.
       css.import('https://fonts.googleapis.com/css?family=Roboto'),
