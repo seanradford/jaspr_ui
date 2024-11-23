@@ -57,7 +57,7 @@ class TitleGradient extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield h1(
       classes:
-          'bg-gradient-to-r ${fromColor.className} ${viaColor.className} ${toColor.className} bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl',
+          'bg-gradient-to-r ${fromColor.className} ${viaColor.className} ${toColor.className} bg-clip-text font-extrabold text-transparent p-4 text-3xl',
       [
         text(title),
       ],

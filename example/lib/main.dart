@@ -5,6 +5,7 @@
 
 // Server-specific jaspr import.
 import 'package:jaspr/server.dart';
+import 'package:jaspr_ui/jaspr_ui.dart';
 // Imports the [App] component.
 import 'app.dart';
 
@@ -21,19 +22,19 @@ void main() {
   runApp(Document(
     lang: 'en',
     title: 'example',
-    head: [
-      link(href: 'styles.css', rel: 'stylesheet'),
-    ],
+    head: daisyUiStyles,
+    // head: [
+    //   link(href: 'styles.css', rel: 'stylesheet'),
+    // ],
     styles: [
       // Special import rule to include to another css file.
       css.import('https://fonts.googleapis.com/css?family=Roboto'),
       // Each style rule takes a valid css selector and a set of styles.
       // Styles are defined using type-safe css bindings and can be freely chained and nested.
-      css('html, body')
-          .text(
-              fontFamily: const FontFamily.list(
-                  [FontFamily('Roboto'), FontFamilies.sansSerif]))
-          .box(margin: EdgeInsets.zero, padding: EdgeInsets.zero),
+      css('html, body').text(
+          fontFamily: const FontFamily.list(
+              [FontFamily('Roboto'), FontFamilies.sansSerif]))
+      // .box(margin: EdgeInsets.zero, padding: EdgeInsets.zero),
       // css('h1').text(fontSize: 4.rem).box(margin: EdgeInsets.unset),
       // css('h2').text(fontSize: 1.rem).box(margin: EdgeInsets.unset),
       // css('h3').text(fontSize: 0.5.rem).box(margin: EdgeInsets.unset),
