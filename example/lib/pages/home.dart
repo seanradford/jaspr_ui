@@ -31,22 +31,6 @@ class HomeState extends State<Home> {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield TwoPane(sidebar: [
-      div(classes: 'pt-4 pb-4', [
-        TitleGradient(title: 'title'),
-      ]),
-      p([
-        text(
-            'Veniam exercitation sunt duis aute cillum aute nostrud sunt cillum reprehenderit voluptate laboris qui. Laborum ipsum dolor in non eiusmod aliquip labore aute sit fugiat nulla. Veniam id eu et ea adipisicing velit aliqua sunt id qui cupidatat laboris nulla. Dolor veniam sit sunt consectetur dolor dolor do laborum incididunt. Exercitation ad enim adipisicing cupidatat nisi esse sunt. Cupidatat occaecat dolor ea do ut. Ad duis consectetur ut adipisicing sunt pariatur veniam commodo reprehenderit.')
-      ])
-    ], content: [
-      div(classes: 'pt-4 pb-4', [
-        TitleGradient(title: 'title'),
-      ]),
-      p([
-        text(
-            'Veniam exercitation sunt duis aute cillum aute nostrud sunt cillum reprehenderit voluptate laboris qui. Laborum ipsum dolor in non eiusmod aliquip labore aute sit fugiat nulla. Veniam id eu et ea adipisicing velit aliqua sunt id qui cupidatat laboris nulla. Dolor veniam sit sunt consectetur dolor dolor do laborum incididunt. Exercitation ad enim adipisicing cupidatat nisi esse sunt. Cupidatat occaecat dolor ea do ut. Ad duis consectetur ut adipisicing sunt pariatur veniam commodo reprehenderit.')
-      ])
-    ]);
+    yield TitleGradient(title: 'title');
   }
 }
