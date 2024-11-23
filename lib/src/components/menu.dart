@@ -86,8 +86,7 @@ class SubMenu extends StatelessComponent {
       details(
         open: true,
         [
-          if (icon != null) div(classes: '$icon ', []),
-          summary([text(parent)]),
+          summary([if (icon != null) div(classes: '$icon ', []), text(parent)]),
           ul(children)
         ],
       ),
