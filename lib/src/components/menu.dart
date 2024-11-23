@@ -5,13 +5,9 @@ import 'package:jaspr_ui/jaspr_ui.dart';
 /// A component that renders a group of menu items as a list.
 ///
 /// The [GroupMenu] component creates an unordered list with customizable alignment
-/// and highlights the currently selected item based on [currentIndex].
 class GroupMenu extends StatelessComponent {
   /// The list of child components to be rendered as menu items.
   final List<Component> children;
-
-  /// The index of the currently selected menu item.
-  final int? currentIndex;
 
   /// Optional alignment for the menu (vertical or horizontal).
   final MenuAlign? align;
@@ -19,11 +15,9 @@ class GroupMenu extends StatelessComponent {
   /// Creates a [GroupMenu] instance.
   ///
   /// [children] - The list of components to be rendered as menu items.
-  /// [currentIndex] - Index of the currently selected item.
   /// [align] - Optional alignment setting for the menu.
   GroupMenu({
     required this.children,
-    this.currentIndex,
     required this.align,
   });
 
@@ -104,9 +98,6 @@ class GroupMenuItem extends StatelessComponent {
   /// The list of menu items to be rendered.
   final List<MenuItem> children;
 
-  /// The index of the currently selected menu item.
-  final int? currentIndex;
-
   /// Optional alignment for the menu (vertical or horizontal).
   final MenuAlign? align;
 
@@ -116,7 +107,6 @@ class GroupMenuItem extends StatelessComponent {
   /// [align] - Optional alignment setting for the menu.
   GroupMenuItem({
     required this.children,
-    this.currentIndex,
     required this.align,
   });
 
@@ -162,21 +152,28 @@ class MenuItem extends StatelessComponent {
   /// Set Badge for the menu item
   final Badge? badge;
 
+  /// set active style for the menu item
+  final bool active;
+
   MenuItem({
     required this.title,
     required this.href,
     this.disable = false,
     this.badge,
+    this.active = false,
   });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield li(classes: '${disable ? 'disabled' : ''} ', [
-      a([
-        text(title),
-        if (badge != null) badge!,
-      ], href: href),
-    ]);
+    yield li(
+        classes: '${disable ? 'disabled' : ''} '
+            '${active ? 'active' : ''} ',
+        [
+          a([
+            text(title),
+            if (badge != null) badge!,
+          ], href: href),
+        ]);
   }
 }
 
@@ -188,9 +185,6 @@ class GroupMenuIcon extends StatelessComponent {
   /// The list of menu items with icons to be rendered.
   final List<MenuIcon> children;
 
-  /// The index of the currently selected menu item.
-  final int? currentIndex;
-
   /// Optional alignment for the menu (vertical or horizontal).
   final MenuAlign? align;
 
@@ -200,7 +194,6 @@ class GroupMenuIcon extends StatelessComponent {
   /// [align] - Optional alignment setting for the menu.
   GroupMenuIcon({
     required this.children,
-    required this.currentIndex,
     required this.align,
   });
 
@@ -231,6 +224,9 @@ class MenuIcon extends StatelessComponent {
   /// Set Badge for the menu item
   final Badge? badge;
 
+  /// set active style for the menu item
+  final bool active;
+
   /// Creates a [MenuIcon] instance.
   ///
   /// [icon] - The Font Awesome icon class name.
@@ -242,16 +238,20 @@ class MenuIcon extends StatelessComponent {
     required this.href,
     this.disable = false,
     this.badge,
+    this.active = false,
   });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield li(classes: '${disable ? 'disabled' : ''} ', [
-      a([
-        div(classes: '$icon ', []),
-        text(title),
-        if (badge != null) badge!,
-      ], href: href),
-    ]);
+    yield li(
+        classes: '${disable ? 'disabled' : ''} '
+            '${active ? 'active' : ''} ',
+        [
+          a([
+            div(classes: '$icon ', []),
+            text(title),
+            if (badge != null) badge!,
+          ], href: href),
+        ]);
   }
 }
