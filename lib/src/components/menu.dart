@@ -165,15 +165,15 @@ class MenuItem extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield li(
-        classes: '${disable ? 'disabled' : ''} '
-            '${active ? 'active' : ''} ',
-        [
-          a([
+    yield li(classes: '${disable ? 'disabled' : ''} ', [
+      a(
+          classes: '${active ? 'active' : ''} ',
+          [
             text(title),
             if (badge != null) badge!,
-          ], href: href),
-        ]);
+          ],
+          href: href),
+    ]);
   }
 }
 
@@ -243,15 +243,15 @@ class MenuIcon extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield li(
-        classes: '${disable ? 'disabled' : ''} '
-            '${active ? 'active' : ''} ',
-        [
-          a([
+    yield li(classes: '${disable ? 'disabled' : ''} ', [
+      a(
+          classes: '${active ? 'active' : ''} ',
+          [
             div(classes: '$icon ', []),
             text(title),
             if (badge != null) badge!,
-          ], href: href),
-        ]);
+          ],
+          href: href),
+    ]);
   }
 }
