@@ -83,6 +83,67 @@ class SubMenu extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield li([
+      a([
+        summary([if (icon != null) div(classes: '$icon ', []), text(parent)]),
+        ul(children)
+      ], href: ''),
+    ]);
+  }
+}
+
+/// A component that creates a submenu with expandable/collapsible functionality.
+///
+/// The [ColasibleSubMenu] component creates a nested menu structure using HTML-like elements
+/// (li, details, summary, ul). It can be used to build hierarchical navigation or
+/// content structures.
+///
+/// Example usage:
+/// ```dart
+/// ColasibleSubMenu(
+///   parent: "Settings",
+///   open: true,
+///   children: [
+///     MenuItem("General"),
+///     MenuItem("Security"),
+///   ],
+/// )
+/// ```
+class CollapsibleSubMenu extends StatelessComponent {
+  /// The icon class to be used (expects Font Awesome class names).
+  final String? icon;
+
+  /// The text label for the parent menu item that contains the submenu.
+  final String parent;
+
+  /// Controls whether the submenu is initially expanded (true) or collapsed (false).
+  ///
+  /// Defaults to true.
+  final bool open;
+
+  /// The list of child components to be displayed within the submenu when expanded.
+  ///
+  /// These components typically represent the submenu items.
+  final List<Component> children;
+
+  /// Creates a new [SubMenu] instance.
+  ///
+  /// [parent] is required and specifies the label for the submenu.
+  /// [open] is optional and defaults to true, controlling the initial expand state.
+  /// [children] is required and contains the list of components to show in the submenu.
+  CollapsibleSubMenu({
+    this.icon,
+    required this.parent,
+    this.open = true,
+    required this.children,
+  });
+
+  /// Builds the submenu structure using HTML-like components.
+  ///
+  /// Returns an [Iterable] of components that create a nested list structure with
+  /// expandable/collapsible functionality using the details/summary HTML elements.
+  @override
+  Iterable<Component> build(BuildContext context) sync* {
+    yield li([
       details(
         open: true,
         [
