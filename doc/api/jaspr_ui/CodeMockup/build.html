@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the className property from the ButtonColor enum, for the Dart programming language.">
-  <title>className property - ButtonColor enum - jaspr_ui library - Dart API</title>
+  <meta name="description" content="API docs for the build method from the CodeMockup class, for the Dart programming language.">
+  <title>build method - CodeMockup class - jaspr_ui library - Dart API</title>
 
 
   
@@ -30,10 +30,10 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">jaspr_ui</a></li>
     <li><a href="../../jaspr_ui/jaspr_ui-library.html">jaspr_ui.dart</a></li>
-    <li><a href="../../jaspr_ui/ButtonColor.html">ButtonColor</a></li>
-    <li class="self-crumb">className property</li>
+    <li><a href="../../jaspr_ui/CodeMockup-class.html">CodeMockup</a></li>
+    <li class="self-crumb">build method</li>
   </ol>
-  <div class="self-name">className</div>
+  <div class="self-name">build</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -54,39 +54,49 @@
 <div
     id="dartdoc-main-content"
     class="main-content"
-    data-above-sidebar="jaspr_ui&#47;ButtonColor-enum-sidebar.html"
+    data-above-sidebar="jaspr_ui&#47;CodeMockup-class-sidebar.html"
     data-below-sidebar="">
     <div>
-<h1><span class="kind-property">className</span> property 
+<h1><span class="kind-method">build</span> method 
 </h1></div>
-
-
-        
-  <section id="getter">
 
     <section class="multi-line-signature">
       
-      <span class="returntype"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span>
-      <span class="name ">className</span>
-      
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="https://api.dart.dev/stable/3.5.3/dart-core/override-constant.html">override</a></li>
+    </ol>
+  </div>
+
+<span class="returntype"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span>&gt;</span></span>
+<span class="name ">build</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span></li>
+</ol>)
+
+      <div class="features"><span class="feature">override</span></div>
 
     </section>
-
     
+<section class="desc markdown">
+  <p>Builds the code mockup container with the specified children.</p>
+<p>Returns an <a href="https://api.dart.dev/stable/3.5.3/dart-core/Iterable-class.html">Iterable</a> containing a div with the 'mockup-code' class
+and the provided children.</p>
+</section>
+
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">String get className =&gt; _className;</code></pre>
+  <pre class="language-dart"><code class="language-dart">@override
+Iterable&lt;Component&gt; build(BuildContext context) sync* {
+  yield div(classes: &#39;mockup-code&#39;, children);
+}</code></pre>
 </section>
 
-  </section>
 
+  </div> <!-- /.main-content -->
 
-</div> <!-- /.main-content -->
-
-<div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-  <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
   <form class="search-sidebar" role="search">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
@@ -96,16 +106,16 @@
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">jaspr_ui</a></li>
     <li><a href="../../jaspr_ui/jaspr_ui-library.html">jaspr_ui</a></li>
-    <li><a href="../../jaspr_ui/ButtonColor.html">ButtonColor</a></li>
-    <li class="self-crumb">className property</li>
+    <li><a href="../../jaspr_ui/CodeMockup-class.html">CodeMockup</a></li>
+    <li class="self-crumb">build method</li>
 </ol>
 
 
-  <h5>ButtonColor enum</h5>
-  <div id="dartdoc-sidebar-left-content"></div>
-</div><!--/.sidebar-offcanvas-->
+    <h5>CodeMockup class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
 
-<div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
 
 </main>

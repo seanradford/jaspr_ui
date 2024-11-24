@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the build method from the Countdown class, for the Dart programming language.">
-  <title>build method - Countdown class - jaspr_ui library - Dart API</title>
+  <meta name="description" content="API docs for the build method from the PhoneMockup class, for the Dart programming language.">
+  <title>build method - PhoneMockup class - jaspr_ui library - Dart API</title>
 
 
   
@@ -30,7 +30,7 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">jaspr_ui</a></li>
     <li><a href="../../jaspr_ui/jaspr_ui-library.html">jaspr_ui.dart</a></li>
-    <li><a href="../../jaspr_ui/Countdown-class.html">Countdown</a></li>
+    <li><a href="../../jaspr_ui/PhoneMockup-class.html">PhoneMockup</a></li>
     <li class="self-crumb">build method</li>
   </ol>
   <div class="self-name">build</div>
@@ -54,7 +54,7 @@
 <div
     id="dartdoc-main-content"
     class="main-content"
-    data-above-sidebar="jaspr_ui&#47;Countdown-class-sidebar.html"
+    data-above-sidebar="jaspr_ui&#47;PhoneMockup-class-sidebar.html"
     data-below-sidebar="">
     <div>
 <h1><span class="kind-method">build</span> method 
@@ -77,38 +77,14 @@
     </section>
     
 <section class="desc markdown">
-  <p>Describes the part of the user interface represented by this component.</p>
-<p>The framework calls this method when this component is inserted into the tree
-in a given <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a> and when the dependencies of this component change
-(e.g., an <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/InheritedComponent-class.html">InheritedComponent</a> referenced by this component changes). This
-method can potentially be called in every frame and should not have any side
-effects beyond building a component.</p>
-<p>The framework replaces the subtree below this component with the component
-returned by this method, either by updating the existing subtree or by
-removing the subtree and inflating a new subtree, depending on whether the
-component returned by this method can update the root of the existing
-subtree, as determined by calling <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component/canUpdate.html">Component.canUpdate</a>.</p>
-<p>Typically implementations return a newly created constellation of components
-that are configured with information from this component's constructor and
-from the given <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a>.</p>
-<p>The given <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a> contains information about the location in the
-tree at which this component is being built. For example, the context
-provides the set of inherited components for this location in the tree. A
-given component might be built with multiple different <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a>
-arguments over time if the component is moved around the tree or if the
-component is inserted into the tree in multiple places at once.</p>
-<p>The implementation of this method must only depend on:</p>
+  <p>Builds the phone mockup UI structure.</p>
+<p>Returns an <a href="https://api.dart.dev/stable/3.5.3/dart-core/Iterable-class.html">Iterable</a> of components that make up the phone mockup,
+including:</p>
 <ul>
-<li>the fields of the component, which themselves must not change over time,
-and</li>
-<li>any ambient state obtained from the <code>context</code> using
-<a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext/dependOnInheritedComponentOfExactType.html">BuildContext.dependOnInheritedComponentOfExactType</a>.</li>
-</ul>
-<p>If a component's <a href="../../jaspr_ui/Countdown/build.html">build</a> method is to depend on anything else, use a
-<a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/StatefulComponent-class.html">StatefulComponent</a> instead.</p>
-<p>See also:</p>
-<ul>
-<li><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/StatelessComponent-class.html">StatelessComponent</a>, which contains the discussion on performance considerations.</li>
+<li>An outer container with the phone device frame</li>
+<li>A camera cutout element at the top</li>
+<li>A display area containing the provided child components</li>
+<li>An artboard container for proper scaling and positioning of content</li>
 </ul>
 </section>
 
@@ -118,9 +94,18 @@ and</li>
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
-  yield span(classes: &#39;countdown font-mono&#39;, [
-    span(styles: Styles.raw({&#39;--value&#39;: &#39;$counter&#39;}), []),
-  ]);
+  yield div(
+    classes: &#39;mockup-phone&#39;,
+    [
+      div(classes: &#39;camera&#39;, []), &#47;&#47; Camera cutout element
+      div(
+        classes: &#39;display&#39;,
+        [
+          div(classes: &#39;artboard artboard-demo phone-1&#39;, children),
+        ],
+      ),
+    ],
+  );
 }</code></pre>
 </section>
 
@@ -138,12 +123,12 @@ Iterable&lt;Component&gt; build(BuildContext context) sync* {
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">jaspr_ui</a></li>
     <li><a href="../../jaspr_ui/jaspr_ui-library.html">jaspr_ui</a></li>
-    <li><a href="../../jaspr_ui/Countdown-class.html">Countdown</a></li>
+    <li><a href="../../jaspr_ui/PhoneMockup-class.html">PhoneMockup</a></li>
     <li class="self-crumb">build method</li>
 </ol>
 
 
-    <h5>Countdown class</h5>
+    <h5>PhoneMockup class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
 

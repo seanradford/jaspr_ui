@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the build method from the Countdown class, for the Dart programming language.">
-  <title>build method - Countdown class - jaspr_ui library - Dart API</title>
+  <meta name="description" content="API docs for the build method from the Modal class, for the Dart programming language.">
+  <title>build method - Modal class - jaspr_ui library - Dart API</title>
 
 
   
@@ -30,7 +30,7 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">jaspr_ui</a></li>
     <li><a href="../../jaspr_ui/jaspr_ui-library.html">jaspr_ui.dart</a></li>
-    <li><a href="../../jaspr_ui/Countdown-class.html">Countdown</a></li>
+    <li><a href="../../jaspr_ui/Modal-class.html">Modal</a></li>
     <li class="self-crumb">build method</li>
   </ol>
   <div class="self-name">build</div>
@@ -54,7 +54,7 @@
 <div
     id="dartdoc-main-content"
     class="main-content"
-    data-above-sidebar="jaspr_ui&#47;Countdown-class-sidebar.html"
+    data-above-sidebar="jaspr_ui&#47;Modal-class-sidebar.html"
     data-below-sidebar="">
     <div>
 <h1><span class="kind-method">build</span> method 
@@ -104,7 +104,7 @@ and</li>
 <li>any ambient state obtained from the <code>context</code> using
 <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext/dependOnInheritedComponentOfExactType.html">BuildContext.dependOnInheritedComponentOfExactType</a>.</li>
 </ul>
-<p>If a component's <a href="../../jaspr_ui/Countdown/build.html">build</a> method is to depend on anything else, use a
+<p>If a component's <a href="../../jaspr_ui/Modal/build.html">build</a> method is to depend on anything else, use a
 <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/StatefulComponent-class.html">StatefulComponent</a> instead.</p>
 <p>See also:</p>
 <ul>
@@ -118,9 +118,18 @@ and</li>
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
-  yield span(classes: &#39;countdown font-mono&#39;, [
-    span(styles: Styles.raw({&#39;--value&#39;: &#39;$counter&#39;}), []),
-  ]);
+  yield dialog(
+      classes: &#39;modal modal-bottom sm:modal-middle&#39;,
+      id: &#39;${modalId}&#39;,
+      [
+        div(classes: &#39;modal-box&#39;, [
+          h3(classes: &#39;text-lg font-bold&#39;, [text(title)]),
+          p(classes: &#39;py-4&#39;, [text(content)])
+        ]),
+        form(classes: &#39;modal-backdrop&#39;, method: FormMethod.dialog, [
+          button([text(buttonTitle)])
+        ])
+      ]);
 }</code></pre>
 </section>
 
@@ -138,12 +147,12 @@ Iterable&lt;Component&gt; build(BuildContext context) sync* {
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">jaspr_ui</a></li>
     <li><a href="../../jaspr_ui/jaspr_ui-library.html">jaspr_ui</a></li>
-    <li><a href="../../jaspr_ui/Countdown-class.html">Countdown</a></li>
+    <li><a href="../../jaspr_ui/Modal-class.html">Modal</a></li>
     <li class="self-crumb">build method</li>
 </ol>
 
 
-    <h5>Countdown class</h5>
+    <h5>Modal class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
 
