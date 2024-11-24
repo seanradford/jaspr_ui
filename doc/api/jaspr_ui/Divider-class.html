@@ -62,19 +62,22 @@
 
     
 <section class="desc markdown">
-  <p>A component that creates a horizontal divider with centered text.</p>
-<p>The <a href="../jaspr_ui/Divider-class.html">Divider</a> component creates a visual separation between content sections
-with an optional title text centered within the divider line. It uses Tailwind CSS
-classes for styling and layout.</p>
-<p>The divider spans the full width of its container and centers the title text
-both horizontally and vertically.</p>
+  <p>A customizable divider component that can be used to visually separate content
+either horizontally or vertically with an optional title text.</p>
+<p>The divider can be customized with:</p>
+<ul>
+<li>A title text that appears in the middle of the divider</li>
+<li>Position alignment (start or end)</li>
+<li>Color variations using the DividerColor enum</li>
+<li>Orientation (horizontal or vertical)</li>
+</ul>
 <p>Example usage:</p>
 <pre class="language-dart"><code class="language-dart">Divider(
-  title: 'Section Title',
+  title: 'Section',
+  position: DividerPosition.start,
+  color: DividerColor.primary,
+  horizontal: true,
 )
-</code></pre>
-<p>Visual representation:</p>
-<pre class="language-dart"><code>─────────── Section Title ───────────
 </code></pre>
 </section>
 
@@ -109,10 +112,10 @@ both horizontally and vertically.</p>
 
     <dl class="constructor-summary-list">
         <dt id="Divider" class="callable">
-          <span class="name"><a href="../jaspr_ui/Divider/Divider.html">Divider</a></span><span class="signature">({<span class="parameter" id="-param-title"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">title</span></span>})</span>
+          <span class="name"><a href="../jaspr_ui/Divider/Divider.html">Divider</a></span><span class="signature">({<span class="parameter" id="-param-title"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">title</span>, </span><span class="parameter" id="-param-position"><span class="type-annotation"><a href="../jaspr_ui/DividerPosition.html">DividerPosition</a>?</span> <span class="parameter-name">position</span>, </span><span class="parameter" id="-param-color"><span class="type-annotation"><a href="../jaspr_ui/DividerColor.html">DividerColor</a>?</span> <span class="parameter-name">color</span>, </span><span class="parameter" id="-param-horizontal"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">horizontal</span> = <span class="default-value">false</span></span>})</span>
         </dt>
         <dd>
-          Creates a new <a href="../jaspr_ui/Divider-class.html">Divider</a> with the specified <a href="../jaspr_ui/Divider/title.html">title</a>.
+          Creates a new <a href="../jaspr_ui/Divider-class.html">Divider</a> instance
             <div class="constructor-modifier features">const</div>
         </dd>
     </dl>
@@ -123,6 +126,19 @@ both horizontally and vertically.</p>
       id="instance-properties">
     <h2>Properties</h2>
     <dl class="properties">
+        <dt id="color" class="property">
+  <span class="name"><a href="../jaspr_ui/Divider/color.html">color</a></span>
+  <span class="signature">&#8594; <a href="../jaspr_ui/DividerColor.html">DividerColor</a>?</span>
+  
+
+</dt>
+<dd>
+  The color theme of the divider
+See <a href="../jaspr_ui/DividerColor.html">DividerColor</a> for available options
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
         <dt id="hashCode" class="property inherited">
   <span class="name"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object/hashCode.html">hashCode</a></span>
   <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span>
@@ -135,6 +151,18 @@ both horizontally and vertically.</p>
 
 </dd>
 
+        <dt id="horizontal" class="property">
+  <span class="name"><a href="../jaspr_ui/Divider/horizontal.html">horizontal</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd>
+  Whether the divider should be horizontal
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
         <dt id="key" class="property inherited">
   <span class="name"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component/key.html">key</a></span>
   <span class="signature">&#8594; <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Key-class.html">Key</a>?</span>
@@ -144,6 +172,19 @@ both horizontally and vertically.</p>
 <dd class="inherited">
   Controls how one component replaces another component in the tree.
   <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="position" class="property">
+  <span class="name"><a href="../jaspr_ui/Divider/position.html">position</a></span>
+  <span class="signature">&#8594; <a href="../jaspr_ui/DividerPosition.html">DividerPosition</a>?</span>
+  
+
+</dt>
+<dd>
+  Controls the alignment of the divider's content
+Can be <a href="../jaspr_ui/DividerPosition.html">DividerPosition.start</a> or <a href="../jaspr_ui/DividerPosition.html">DividerPosition.end</a>
+  <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
@@ -166,7 +207,7 @@ both horizontally and vertically.</p>
 
 </dt>
 <dd>
-  The text to display in the center of the divider.
+  The text to display in the divider
   <div class="features"><span class="feature">final</span></div>
 
 </dd>

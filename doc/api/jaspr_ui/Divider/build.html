@@ -118,14 +118,20 @@ and</li>
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
-  yield div(classes: &quot;flex w-full flex-col&quot;, [
-    div(
-      classes: &quot;divider&quot;,
+  yield div(
+      classes: &#39;flex &#39;
+          &#39;${horizontal == true ? &#39;w-full flex-col &#39; : &#39;h-full &#39;}&#39;,
       [
-        text(title),
-      ],
-    )
-  ]);
+        div(
+          classes: &#39;divider &#39;
+              &#39;${horizontal != true ? &#39;divider-horizontal&#39; : &#39;&#39;} &#39;
+              &#39;${color != null ? &#39;${color!.className}&#39; : &#39;&#39;} &#39;
+              &#39;${position != null ? &#39;${position!.className}&#39; : &#39;&#39;} &#39;,
+          [
+            text(title),
+          ],
+        )
+      ]);
 }</code></pre>
 </section>
 

@@ -1,49 +1,114 @@
 import 'package:jaspr/jaspr.dart';
 
-/// A component that creates a horizontal divider with centered text.
+/// A customizable divider component that can be used to visually separate content
+/// either horizontally or vertically with an optional title text.
 ///
-/// The [Divider] component creates a visual separation between content sections
-/// with an optional title text centered within the divider line. It uses Tailwind CSS
-/// classes for styling and layout.
-///
-/// The divider spans the full width of its container and centers the title text
-/// both horizontally and vertically.
+/// The divider can be customized with:
+/// * A title text that appears in the middle of the divider
+/// * Position alignment (start or end)
+/// * Color variations using the DividerColor enum
+/// * Orientation (horizontal or vertical)
 ///
 /// Example usage:
 /// ```dart
 /// Divider(
-///   title: 'Section Title',
+///   title: 'Section',
+///   position: DividerPosition.start,
+///   color: DividerColor.primary,
+///   horizontal: true,
 /// )
 /// ```
-///
-/// Visual representation:
-/// ```
-/// ─────────── Section Title ───────────
-/// ```
 class Divider extends StatelessComponent {
-  /// The text to display in the center of the divider.
-  ///
-  /// This text will be centered both horizontally and vertically
-  /// within the divider line.
+  /// The text to display in the divider
   final String title;
 
-  /// Creates a new [Divider] with the specified [title].
+  /// Controls the alignment of the divider's content
+  /// Can be [DividerPosition.start] or [DividerPosition.end]
+  final DividerPosition? position;
+
+  /// The color theme of the divider
+  /// See [DividerColor] for available options
+  final DividerColor? color;
+
+  /// Whether the divider should be horizontal
+  /// * true - renders a horizontal divider
+  /// * false - renders a vertical divider
+  final bool horizontal;
+
+  /// Creates a new [Divider] instance
   ///
-  /// The [title] parameter is required and will be displayed
-  /// in the center of the divider line.
+  /// [title] is required and specifies the text to display in the divider
+  /// [position] optionally controls the content alignment
+  /// [color] optionally sets the divider's color theme
+  /// [horizontal] defaults to false (vertical divider)
   const Divider({
     required this.title,
+    this.position,
+    this.color,
+    this.horizontal = false,
   });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(classes: "flex w-full flex-col", [
-      div(
-        classes: "divider",
+    yield div(
+        classes: 'flex '
+            '${horizontal == true ? 'w-full flex-col ' : 'h-full '}',
         [
-          text(title),
-        ],
-      )
-    ]);
+          div(
+            classes: 'divider '
+                '${horizontal != true ? 'divider-horizontal' : ''} '
+                '${color != null ? '${color!.className}' : ''} '
+                '${position != null ? '${position!.className}' : ''} ',
+            [
+              text(title),
+            ],
+          )
+        ]);
   }
+}
+
+/// Defines the possible positions for the divider's content
+enum DividerPosition {
+  /// Aligns the content to the start of the divider
+  start('divider-start'),
+
+  /// Aligns the content to the end of the divider
+  end('divider-end');
+
+  const DividerPosition(this._className);
+  final String _className;
+  String get className => _className;
+}
+
+/// Defines the available color themes for the divider
+enum DividerColor {
+  /// Primary theme color
+  primary('divider-primary'),
+
+  /// Secondary theme color
+  secondary('divider-secondary'),
+
+  /// Accent theme color
+  accent('divider-accent'),
+
+  /// Neutral theme color
+  neutral('divider-neutral'),
+
+  /// Info theme color, typically blue
+  info('divider-info'),
+
+  /// Success theme color, typically green
+  success('divider-success'),
+
+  /// Warning theme color, typically yellow/orange
+  warning('divider-warning'),
+
+  /// Error theme color, typically red
+  error('divider-error');
+
+  const DividerColor(this._className);
+
+  final String _className;
+
+  String get className => _className;
 }
