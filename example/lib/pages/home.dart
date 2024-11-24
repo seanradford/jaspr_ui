@@ -12,6 +12,6 @@ class Home extends StatefulComponent {
 class HomeState extends State<Home> {
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield Countdown(counter: 99);
+    yield TitleGradient(title: 'title');
   }
 }
