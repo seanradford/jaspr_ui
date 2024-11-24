@@ -69,7 +69,7 @@ class Modal extends StatelessComponent {
 /// Example usage:
 /// ```dart
 /// DialogModal(
-///   modalId: 'confirm-dialog',
+///   modalId: 'my-modal',
 ///   title: 'Confirm Action',
 ///   content: 'Are you sure you want to proceed?',
 ///   buttonTitle: 'Confirm'
