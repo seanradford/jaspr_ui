@@ -10,6 +10,17 @@
 /// print(color.className); // Outputs: 'text-current'
 /// ```
 enum TextColor {
+  primary('text-primary'),
+  secondary('text-secondary'),
+  accent('text-accent'),
+  neutral('text-neutral'),
+  base100('text-base-100'),
+  base200('text-base-200'),
+  base300('text-base-300'),
+  info('text-info'),
+  success('text-success'),
+  warning('text-warning'),
+  error('text-error'),
   inherit('text-inherit'),
   current('text-current'),
   transparent('text-transparent'),
