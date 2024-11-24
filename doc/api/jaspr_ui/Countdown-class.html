@@ -61,6 +61,17 @@
 </h1></div>
 
     
+<section class="desc markdown">
+  <p>A component that displays a countdown value using CSS counters.</p>
+<p>This component creates a span element with a nested structure to display
+the countdown value using CSS styling. The counter value is passed through
+CSS custom properties.</p>
+<p>Example usage:</p>
+<pre class="language-dart"><code class="language-dart">Countdown(counter: 42)
+</code></pre>
+<p>The component expects CSS styles to be defined that handle the <code>countdown</code>
+class and the <code>--value</code> custom property for proper rendering.</p>
+</section>
 
 
     <section>
@@ -96,7 +107,7 @@
           <span class="name"><a href="../jaspr_ui/Countdown/Countdown.html">Countdown</a></span><span class="signature">({<span class="parameter" id="-param-key"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-counter"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span> <span class="parameter-name">counter</span></span>})</span>
         </dt>
         <dd>
-          
+          Creates a new <a href="../jaspr_ui/Countdown-class.html">Countdown</a> component.
         </dd>
     </dl>
   </section>
@@ -113,7 +124,7 @@
 
 </dt>
 <dd>
-  
+  The numeric value to display in the countdown.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
