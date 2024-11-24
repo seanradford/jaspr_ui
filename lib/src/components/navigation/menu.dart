@@ -32,7 +32,7 @@ class GroupMenu extends StatelessComponent {
   }
 }
 
-/// A component that creates a submenu with expandable/collapsible functionality.
+/// A component that creates a submenu.
 ///
 /// The [SubMenu] component creates a nested menu structure using HTML-like elements
 /// (li, details, summary, ul). It can be used to build hierarchical navigation or
@@ -95,13 +95,13 @@ class SubMenu extends StatelessComponent {
 
 /// A component that creates a submenu with expandable/collapsible functionality.
 ///
-/// The [ColasibleSubMenu] component creates a nested menu structure using HTML-like elements
+/// The [CollapsibleSubMenu] component creates a nested menu structure using HTML-like elements
 /// (li, details, summary, ul). It can be used to build hierarchical navigation or
 /// content structures.
 ///
 /// Example usage:
 /// ```dart
-/// ColasibleSubMenu(
+/// CollapsibleSubMenu(
 ///   parent: "Settings",
 ///   open: true,
 ///   children: [
