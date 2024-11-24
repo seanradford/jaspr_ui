@@ -119,17 +119,9 @@ and</li>
   <pre class="language-dart"><code class="language-dart">@override
 Iterable&lt;Component&gt; build(Object context) sync* {
   yield ul(
-    classes: &#39;menu&#39;
-        &#39;${align != null ? &#39; ${align!.className}&#39; : &#39;&#39;} &#39;,
-    List.generate(children.length, (index) {
-      final item = children[index];
-      final title = item.title;
-      final href = item.href;
-      return li(classes: index == currentIndex ? &#39;active&#39; : &#39;&#39;, [
-        a([text(title)], href: href)
-      ]);
-    }),
-  );
+      classes: &#39;menu&#39;
+          &#39;${align != null ? &#39; ${align!.className}&#39; : &#39;&#39;} &#39;,
+      children);
 }</code></pre>
 </section>
 

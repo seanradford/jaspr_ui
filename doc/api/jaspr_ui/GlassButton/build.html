@@ -118,14 +118,15 @@ and</li>
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
+  &#47;&#47; Build the button with a glass effect style
   yield button(
     classes: &quot;btn glass &quot;
-        &#39;${size != null ? &#39; ${size!.className} &#39; : &#39;&#39;}&#39;,
+        &#39;${size != null ? &#39; ${size!.className} &#39; : &#39;&#39;}&#39;, &#47;&#47; Add size class if provided
     [
-      text(title),
+      text(title), &#47;&#47; Add the button text
     ],
-    onClick: () =&gt; onPressed?.call(),
-    attributes: attributes,
+    onClick: () =&gt; onPressed?.call(), &#47;&#47; Trigger the callback on click
+    attributes: attributes, &#47;&#47; Include additional HTML attributes
   );
 }</code></pre>
 </section>

@@ -1,12 +1,12 @@
 /// Represents text color values for typography styling in a design system.
-/// 
+///
 /// Each enum value corresponds to a CSS class name for text color styling.
 /// These colors can be applied to any text element like paragraphs, headings,
 /// or inline text.
-/// 
+///
 /// Example usage:
 /// ```dart
-/// final color = TextColor.current; 
+/// final color = TextColor.current;
 /// print(color.className); // Outputs: 'text-current'
 /// ```
 enum TextColor {
@@ -258,12 +258,12 @@ enum TextColor {
   rose900('text-rose-900'),
   rose950('text-rose-950');
 
- /// Creates a new [TextColor] with the associated CSS class name
- const TextColor(this._className);
+  /// Creates a new [TextColor] with the associated CSS class name
+  const TextColor(this._className);
 
- /// The CSS class name for this text color
- final String _className;
+  /// The CSS class name for this text color
+  final String _className;
 
- /// Returns the CSS class name for this text color
- String get className => _className;
+  /// Returns the CSS class name for this text color
+  String get className => _className;
 }

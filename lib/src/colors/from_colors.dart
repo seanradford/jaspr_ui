@@ -258,15 +258,15 @@ enum FromColor {
   rose900('from-rose-900'),
   rose950('from-rose-950');
 
- /// Creates a [FromColor] with the specified CSS class name.
- const FromColor(this._className);
+  /// Creates a [FromColor] with the specified CSS class name.
+  const FromColor(this._className);
 
- /// The CSS class name associated with this gradient starting color.
- final String _className;
+  /// The CSS class name associated with this gradient starting color.
+  final String _className;
 
- /// Returns the CSS class name for this gradient starting color.
- /// 
- /// This getter provides access to the private [_className] field
- /// that contains the actual CSS class name.
- String get className => _className;
+  /// Returns the CSS class name for this gradient starting color.
+  ///
+  /// This getter provides access to the private [_className] field
+  /// that contains the actual CSS class name.
+  String get className => _className;
 }

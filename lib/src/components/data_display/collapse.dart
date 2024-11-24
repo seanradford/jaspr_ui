@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+
 import 'package:jaspr_ui/jaspr_ui.dart';
 
 /// A collapsible component that can be expanded or collapsed

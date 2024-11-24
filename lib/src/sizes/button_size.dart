@@ -24,9 +24,14 @@ enum ButtonSize {
   /// A full-width button that occupies the entire container
   block('btn-block');
 
-  /// Creates a const constructor with an associated CSS class name
-  const ButtonSize(this.className);
+  /// Creates a [ButtonSize] with the specified CSS class name.
+  const ButtonSize(this._className);
 
-  /// The CSS class name associated with this button size
-  final String className;
+  /// The CSS class name associated with this button size.
+  final String _className;
+
+  /// Returns the CSS class name for this button size.
+  ///
+  /// This getter provides access to the private [_className] field.
+  String get className => _className;
 }

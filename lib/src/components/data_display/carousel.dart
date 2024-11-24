@@ -1,6 +1,6 @@
-// ignore_for_file: unnecessary_string_interpolations
-
 import 'package:jaspr/jaspr.dart';
+
+// ignore_for_file: unnecessary_string_interpolations
 
 /// A responsive and customizable carousel component for displaying a series of images.
 ///

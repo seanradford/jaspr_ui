@@ -1,9 +1,9 @@
 /// Represents available background color classes.
-/// 
+///
 /// This enum provides a set of predefined background colors that can be used
 /// throughout the application for consistent styling. Each enum value corresponds
 /// to a specific CSS class name.
-/// 
+///
 /// Example usage:
 /// ```dart
 /// final bgColor = BackgroundColor.primary;
@@ -276,7 +276,7 @@ enum BackgroundColor {
   final String _className;
 
   /// Returns the CSS class name for this background color.
-  /// 
+  ///
   /// This getter provides access to the private [_className] field.
   String get className => _className;
 }

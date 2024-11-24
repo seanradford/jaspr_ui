@@ -1,6 +1,8 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:jaspr/jaspr.dart';
+
 import 'package:jaspr_ui/jaspr_ui.dart';
+
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 
 /// A component that renders a group of menu items as a list.
 ///

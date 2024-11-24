@@ -258,15 +258,15 @@ enum BorderColor {
   rose900('border-rose-900'),
   rose950('border-rose-950');
 
- /// Creates a [BorderColor] with the specified CSS class name.
- const BorderColor(this._className);
+  /// Creates a [BorderColor] with the specified CSS class name.
+  const BorderColor(this._className);
 
- /// The CSS class name associated with this border color.
- final String _className;
+  /// The CSS class name associated with this border color.
+  final String _className;
 
- /// Returns the CSS class name for this border color.
- /// 
- /// This getter provides access to the private [_className] field
- /// that contains the actual CSS class name.
- String get className => _className;
+  /// Returns the CSS class name for this border color.
+  ///
+  /// This getter provides access to the private [_className] field
+  /// that contains the actual CSS class name.
+  String get className => _className;
 }

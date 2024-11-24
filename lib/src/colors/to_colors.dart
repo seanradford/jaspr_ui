@@ -1,8 +1,8 @@
 /// Represents the end color values for gradients in a design system.
-/// 
+///
 /// Each enum value corresponds to a CSS class name for styling gradients.
 /// The "to" color represents the final color stop in a gradient transition.
-/// 
+///
 /// Example usage:
 /// ```dart
 /// final endColor = ToColor.black;
