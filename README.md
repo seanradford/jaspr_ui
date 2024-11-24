@@ -21,7 +21,7 @@ dependencies:
       ref: daisyui # branch name
 ```
 
-### Use CDN for Tailwind and DaisyUI
+<!-- ### Use CDN for Tailwind and DaisyUI -->
 
 Add Tailwindcss and Font Awesome Icon from CDN. If you want to build custom css file, you should use [jaspr_tailwind](https://pub.dev/packages/jaspr_tailwind).
 
@@ -34,6 +34,7 @@ runApp(Document(
 ));
 ```
 
+<!--
 ### Use `jaspr_tailwind` for Tailwind and DaisyUI
 
 Install `jaspr_tailwind` follow the [installation](https://pub.dev/packages/jaspr_tailwind) from package page.
@@ -60,7 +61,7 @@ module.exports = {
     themes: ["light", "dark", "dracular", "cupcake"],
   },
 };
-```
+``` -->
 
 Edit `app.dart` App componet to return DaisyUI to insert `data-theme` attribute in html document.
 

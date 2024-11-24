@@ -10,7 +10,7 @@ class App extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield DaisyUI(
-      theme: 'light',
+      theme: 'dracular',
       [
         Router(routes: [
           Route(

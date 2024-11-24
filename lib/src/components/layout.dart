@@ -8,9 +8,15 @@ class TwoPane extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(classes: 'flex flex-row gap-4', [
-      div(classes: 'flex-none w-[250px] h-screen overflow-auto', sidebar),
-      div(classes: 'grow h-screen h-screen overflow-auto', content),
+    yield div(classes: 'flex flex-row gap-0 lg:gap-4', [
+      div(
+        classes: 'flex-none w-[250px] h-screen overflow-auto ',
+        sidebar,
+      ),
+      div(
+        classes: 'grow h-screen overflow-auto container mx-auto',
+        content,
+      ),
     ]);
   }
 }
