@@ -16,6 +16,5 @@ enum ButtonColor {
 
   final String _className;
 
-  /// Returns the CSS class name associated with this button color
   String get className => _className;
 }
