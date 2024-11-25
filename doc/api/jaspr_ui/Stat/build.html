@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the build method from the Diff class, for the Dart programming language.">
-  <title>build method - Diff class - jaspr_ui library - Dart API</title>
+  <meta name="description" content="API docs for the build method from the Stat class, for the Dart programming language.">
+  <title>build method - Stat class - jaspr_ui library - Dart API</title>
 
 
   
@@ -30,7 +30,7 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">jaspr_ui</a></li>
     <li><a href="../../jaspr_ui/jaspr_ui-library.html">jaspr_ui.dart</a></li>
-    <li><a href="../../jaspr_ui/Diff-class.html">Diff</a></li>
+    <li><a href="../../jaspr_ui/Stat-class.html">Stat</a></li>
     <li class="self-crumb">build method</li>
   </ol>
   <div class="self-name">build</div>
@@ -54,7 +54,7 @@
 <div
     id="dartdoc-main-content"
     class="main-content"
-    data-above-sidebar="jaspr_ui&#47;Diff-class-sidebar.html"
+    data-above-sidebar="jaspr_ui&#47;Stat-class-sidebar.html"
     data-below-sidebar="">
     <div>
 <h1><span class="kind-method">build</span> method 
@@ -104,7 +104,7 @@ and</li>
 <li>any ambient state obtained from the <code>context</code> using
 <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext/dependOnInheritedComponentOfExactType.html">BuildContext.dependOnInheritedComponentOfExactType</a>.</li>
 </ul>
-<p>If a component's <a href="../../jaspr_ui/Diff/build.html">build</a> method is to depend on anything else, use a
+<p>If a component's <a href="../../jaspr_ui/Stat/build.html">build</a> method is to depend on anything else, use a
 <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/StatefulComponent-class.html">StatefulComponent</a> instead.</p>
 <p>See also:</p>
 <ul>
@@ -118,15 +118,22 @@ and</li>
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
-  &#47;&#47; Create a container with a 16:9 aspect ratio to hold the diff items.
-  yield div(classes: &#39;diff aspect-[16&#47;9]&#39;, [
-    &#47;&#47; Display the first item in a container with the `diff-item-1` class.
-    div(classes: &#39;diff-item-1&#39;, [item1]),
-    &#47;&#47; Display the second item in a container with the `diff-item-2` class.
-    div(classes: &#39;diff-item-2&#39;, [item2]),
-    &#47;&#47; Display a resizable divider in a container with the `diff-resizer` class.
-    div(classes: &#39;diff-resizer&#39;, []),
-  ]);
+  yield div(
+      classes: &#39;stat &#39;
+          &#39;${isCenter == true ? &#39;place-items-center&#39; : &#39;&#39;} &#39;,
+      [
+        &#47;&#47; figure
+        div(classes: &quot;stat-figure text-secondary&quot;, [
+          if (icon != null) div(classes: &#39;${icon}&#39;, []),
+        ]),
+        &#47;&#47; stats
+        div(classes: &#39;stat-title &#39;, [text(title)]),
+        div(classes: &#39;stat-value ${valueColor.className}&#39;, [text(value)]),
+        div(
+            classes: &#39;stat-desc &#39;
+                &#39;${desColor != null ? &#39;${desColor!.className}&#39; : &#39;&#39;} &#39;,
+            [text(desc)]),
+      ]);
 }</code></pre>
 </section>
 
@@ -144,12 +151,12 @@ Iterable&lt;Component&gt; build(BuildContext context) sync* {
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">jaspr_ui</a></li>
     <li><a href="../../jaspr_ui/jaspr_ui-library.html">jaspr_ui</a></li>
-    <li><a href="../../jaspr_ui/Diff-class.html">Diff</a></li>
+    <li><a href="../../jaspr_ui/Stat-class.html">Stat</a></li>
     <li class="self-crumb">build method</li>
 </ol>
 
 
-    <h5>Diff class</h5>
+    <h5>Stat class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
 

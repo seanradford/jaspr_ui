@@ -33,9 +33,9 @@ void main() {
 
       /// Each style rule takes a valid css selector and a set of styles.
       /// Styles are defined using type-safe css bindings and can be freely chained and nested.
-      css('html, body').text(
-          fontFamily: const FontFamily.list(
-              [FontFamily('Roboto'), FontFamilies.sansSerif]))
+      // css('html, body').text(
+      //     fontFamily: const FontFamily.list(
+      //         [FontFamily('Roboto'), FontFamilies.sansSerif]))
       // .box(margin: EdgeInsets.zero, padding: EdgeInsets.zero),
       // css('h1').text(fontSize: 4.rem).box(margin: EdgeInsets.unset),
       // css('h2').text(fontSize: 1.rem).box(margin: EdgeInsets.unset),

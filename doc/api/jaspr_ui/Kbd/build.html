@@ -118,10 +118,10 @@ and</li>
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
+  &#47;&#47; Create a DOM `kbd` element with the specified size class and the `title` text.
   yield DomComponent(
     tag: &#39;kbd&#39;,
-    classes: &#39;kbd &#39;
-        &#39;${size != null ? size!.className : &#39;&#39;} &#39;,
+    classes: &#39;kbd ${size?.className ?? &#39;&#39;}&#39;,
     child: text(title),
   );
 }</code></pre>
