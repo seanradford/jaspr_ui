@@ -25,7 +25,7 @@ class Avatar extends StatelessComponent {
   final String url;
   final int size;
   final Mask? mask;
-  final Rounded rounded;
+  final Rounded? rounded;
   final bool? online;
   final bool placeholder;
   final String? title;
@@ -37,7 +37,7 @@ class Avatar extends StatelessComponent {
     required this.url,
     this.size = 24,
     this.mask,
-    this.rounded = Rounded.full,
+    this.rounded,
     this.online,
     this.placeholder = false,
     this.title,
@@ -59,14 +59,14 @@ class Avatar extends StatelessComponent {
         [
           (placeholder)
               ? div(
-                  classes: 'bg-neutral text-neutral-content w-24 rounded-full',
+                  classes: 'bg-neutral text-neutral-content w-24',
                   [
                     span(classes: 'text-xl', [text('$title')]),
                   ],
                 )
               : div(
                   classes: 'w-$size '
-                      '${rounded.className} '
+                      '${rounded != null ? '${rounded!.className} ' : ''} '
                       '${mask != null ? '${mask!.className} ' : ''} ',
                   [
                     img(src: url),

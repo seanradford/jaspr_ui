@@ -106,14 +106,14 @@ Iterable&lt;Component&gt; build(BuildContext context) sync* {
       [
         (placeholder)
             ? div(
-                classes: &#39;bg-neutral text-neutral-content w-24 rounded-full&#39;,
+                classes: &#39;bg-neutral text-neutral-content w-24&#39;,
                 [
                   span(classes: &#39;text-xl&#39;, [text(&#39;$title&#39;)]),
                 ],
               )
             : div(
                 classes: &#39;w-$size &#39;
-                    &#39;${rounded.className} &#39;
+                    &#39;${rounded != null ? &#39;${rounded!.className} &#39; : &#39;&#39;} &#39;
                     &#39;${mask != null ? &#39;${mask!.className} &#39; : &#39;&#39;} &#39;,
                 [
                   img(src: url),

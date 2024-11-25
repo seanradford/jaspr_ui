@@ -72,14 +72,17 @@ class Carousel extends StatelessComponent {
           );
         }));
 
-    yield div(
+    if (showIndicator) {
+      yield div(
         classes: 'flex w-full justify-center gap-2 py-2',
         List.generate(children.length, (index) {
           return a(
               href: '#item${(index + 1)}',
               classes: 'btn btn-xs',
               [text('${(index + 1)}')]);
-        }));
+        }),
+      );
+    }
   }
 }
 

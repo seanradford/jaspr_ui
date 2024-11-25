@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the build method from the Carousel class, for the Dart programming language.">
-  <title>build method - Carousel class - jaspr_ui library - Dart API</title>
+  <meta name="description" content="API docs for the build method from the Alert class, for the Dart programming language.">
+  <title>build method - Alert class - jaspr_ui library - Dart API</title>
 
 
   
@@ -30,7 +30,7 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">jaspr_ui</a></li>
     <li><a href="../../jaspr_ui/jaspr_ui-library.html">jaspr_ui.dart</a></li>
-    <li><a href="../../jaspr_ui/Carousel-class.html">Carousel</a></li>
+    <li><a href="../../jaspr_ui/Alert-class.html">Alert</a></li>
     <li class="self-crumb">build method</li>
   </ol>
   <div class="self-name">build</div>
@@ -54,7 +54,7 @@
 <div
     id="dartdoc-main-content"
     class="main-content"
-    data-above-sidebar="jaspr_ui&#47;Carousel-class-sidebar.html"
+    data-above-sidebar="jaspr_ui&#47;Alert-class-sidebar.html"
     data-below-sidebar="">
     <div>
 <h1><span class="kind-method">build</span> method 
@@ -104,7 +104,7 @@ and</li>
 <li>any ambient state obtained from the <code>context</code> using
 <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext/dependOnInheritedComponentOfExactType.html">BuildContext.dependOnInheritedComponentOfExactType</a>.</li>
 </ul>
-<p>If a component's <a href="../../jaspr_ui/Carousel/build.html">build</a> method is to depend on anything else, use a
+<p>If a component's <a href="../../jaspr_ui/Alert/build.html">build</a> method is to depend on anything else, use a
 <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/StatefulComponent-class.html">StatefulComponent</a> instead.</p>
 <p>See also:</p>
 <ul>
@@ -119,37 +119,17 @@ and</li>
   <pre class="language-dart"><code class="language-dart">@override
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
   yield div(
-      classes: &#39;carousel &#39;
-          &#39;${roundedBox ? &#39;rounded-box &#39; : &#39;&#39;}&#39;
-          &#39;${widthFull ? &#39;w-full &#39; : &#39;&#39;}&#39;,
-      List.generate(children.length, (index) {
-        final item = children[index];
+    attributes: {&#39;role&#39;: &#39;alert&#39;},
+    classes: &#39;alert &#39;
+        &#39;${type != null ? &#39;${type!.className}&#39; : &#39;&#39;}&#39;,
+    [
+      &#47;&#47; icon
+      div(classes: &#39;$icon&#39;, []),
 
-        return div(
-          id: &#39;item${(index + 1)}&#39;,
-          classes: &#39;carousel-item &#39;
-              &#39;${widthFull ? &#39;w-full&#39; : &#39;&#39;}&#39;,
-          [
-            img(
-              classes: widthFull ? &#39;w-full&#39; : &#39;&#39;,
-              src: &#39;${item.imageUrl}&#39;,
-              alt: &#39;${item.alt}&#39;,
-            ),
-          ],
-        );
-      }));
-
-  if (showIndicator) {
-    yield div(
-      classes: &#39;flex w-full justify-center gap-2 py-2&#39;,
-      List.generate(children.length, (index) {
-        return a(
-            href: &#39;#item${(index + 1)}&#39;,
-            classes: &#39;btn btn-xs&#39;,
-            [text(&#39;${(index + 1)}&#39;)]);
-      }),
-    );
-  }
+      &#47;&#47; content
+      span([text(message)])
+    ],
+  );
 }</code></pre>
 </section>
 
@@ -167,12 +147,12 @@ Iterable&lt;Component&gt; build(BuildContext context) sync* {
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">jaspr_ui</a></li>
     <li><a href="../../jaspr_ui/jaspr_ui-library.html">jaspr_ui</a></li>
-    <li><a href="../../jaspr_ui/Carousel-class.html">Carousel</a></li>
+    <li><a href="../../jaspr_ui/Alert-class.html">Alert</a></li>
     <li class="self-crumb">build method</li>
 </ol>
 
 
-    <h5>Carousel class</h5>
+    <h5>Alert class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
 

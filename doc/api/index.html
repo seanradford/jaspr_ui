@@ -115,18 +115,16 @@ class App extends StatelessComponent {
   @override
   Iterable&lt;Component&gt; build(BuildContext context) sync* {
     yield DaisyUI(
-      theme: 'dracular',
-      [
-        Router(routes: [
-          Route(
-              path: '/',
-              title: 'Home',
-              builder: (context, state) =&gt; const Home()),
-        ]),
+      theme: 'dark',
+      routes: [
+        Route(
+          path: '/',
+          title: 'Home',
+          builder: (context, state) =&gt; const Home(),
+        )
       ],
     );
   }
-
 }
 </code></pre>
 <p>Update home page <code>home.dart</code> to use a component.</p>

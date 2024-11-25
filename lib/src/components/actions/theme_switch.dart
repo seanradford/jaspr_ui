@@ -32,8 +32,8 @@ class ThemeSwitch extends StatelessComponent {
           classes: 'theme-controller',
           attributes: {'value': theme},
           []),
-      div(classes: 'far fa-moon swap-on fill-current', []),
-      div(classes: 'far fa-sun swap-off fill-current', []),
+      div(classes: 'far fa-sun swap-on fill-current', []),
+      div(classes: 'far fa-moon swap-off fill-current', []),
     ]);
   }
 }

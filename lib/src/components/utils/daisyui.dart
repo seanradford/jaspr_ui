@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr_router/jaspr_router.dart';
 
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
@@ -14,42 +15,39 @@ import 'package:jaspr/jaspr.dart';
 ///   const App({super.key});
 ///   @override
 ///   Iterable<Component> build(BuildContext context) sync* {
-///     yield DaisyUI(theme: 'dark', [
-///       Router(routes: [
+///     yield DaisyUI(
+///       theme: 'dark',
+///       routes: [
 ///         Route(
 ///           path: '/',
 ///           title: 'Home',
 ///           builder: (context, state) => const Home(),
 ///         )
-///       ])
-///     ]);
+///       ],
+///     );
 ///   }
 /// }
 /// ```
 class DaisyUI extends StatelessComponent {
-  /// The child components to be rendered within the DaisyUI wrapper.
-  final List<Component> children;
-
   /// The DaisyUI theme to be applied.
   ///
   /// This value will be set as the 'data-theme' attribute on the document.
   /// Common values include 'light', 'dark', 'cupcake', etc.
   final String theme;
+  final List<Route> routes;
+
+  DaisyUI({super.key, required this.theme, required this.routes});
 
   /// Creates a new DaisyUI component.
   ///
-  /// [children] is a list of components to be rendered within the DaisyUI wrapper.
+  /// [routes] is a list of route.
   /// [theme] is required and specifies the DaisyUI theme to be applied.
-  DaisyUI(
-    this.children, {
-    required this.theme,
-  });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield Document.html(
       attributes: {"data-theme": theme},
     );
-    yield div(classes: 'main', children);
+    yield Router(routes: routes);
   }
 }

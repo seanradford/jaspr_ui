@@ -10,6 +10,7 @@ environment:
 # path: ^1.8.0
 dependencies:
   jaspr: ^0.16.1
+  jaspr_router: ^0.6.0
 
 dev_dependencies:
   jaspr_lints: ^0.1.2

@@ -11,14 +11,12 @@ class App extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield DaisyUI(
       theme: 'dark',
-      [
-        Router(routes: [
-          Route(
-            path: '/',
-            title: 'Home',
-            builder: (context, state) => const Home(),
-          )
-        ])
+      routes: [
+        Route(
+          path: '/',
+          title: 'Home',
+          builder: (context, state) => const Home(),
+        )
       ],
     );
   }

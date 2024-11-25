@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the DaisyUI class from the jaspr_ui library, for the Dart programming language.">
-  <title>DaisyUI class - jaspr_ui library - Dart API</title>
+  <meta name="description" content="API docs for the Alert class from the jaspr_ui library, for the Dart programming language.">
+  <title>Alert class - jaspr_ui library - Dart API</title>
 
 
   
@@ -30,9 +30,9 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">jaspr_ui</a></li>
     <li><a href="../jaspr_ui/jaspr_ui-library.html">jaspr_ui.dart</a></li>
-    <li class="self-crumb">DaisyUI class</li>
+    <li class="self-crumb">Alert class</li>
   </ol>
-  <div class="self-name">DaisyUI</div>
+  <div class="self-name">Alert</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -54,35 +54,23 @@
     id="dartdoc-main-content"
     class="main-content"
     data-above-sidebar="jaspr_ui&#47;jaspr_ui-library-sidebar.html"
-    data-below-sidebar="jaspr_ui&#47;DaisyUI-class-sidebar.html">
+    data-below-sidebar="jaspr_ui&#47;Alert-class-sidebar.html">
     <div>
-<h1><span class="kind-class">DaisyUI</span> class 
+<h1><span class="kind-class">Alert</span> class 
  
 </h1></div>
 
     
 <section class="desc markdown">
-  <p>A component that wraps content with DaisyUI theming capabilities.</p>
-<p>This component provides a way to apply DaisyUI themes to a collection of child
-components. It creates a document structure with the specified theme and wraps
-the children in a div with the 'main' class.</p>
+  <p>A customizable alert component that displays a message with an icon and optional type styling.</p>
+<p>The <a href="../jaspr_ui/Alert-class.html">Alert</a> component renders a div with ARIA role="alert" for accessibility,
+containing an icon and message. It supports different visual styles through <a href="../jaspr_ui/AlertType.html">AlertType</a>.</p>
 <p>Example usage:</p>
-<pre class="language-dart"><code class="language-dart">class App extends StatelessComponent {
-  const App({super.key});
-  @override
-  Iterable&lt;Component&gt; build(BuildContext context) sync* {
-    yield DaisyUI(
-      theme: 'dark',
-      routes: [
-        Route(
-          path: '/',
-          title: 'Home',
-          builder: (context, state) =&gt; const Home(),
-        )
-      ],
-    );
-  }
-}
+<pre class="language-dart"><code class="language-dart">Alert(
+  message: "Operation successful",
+  icon: "check-circle",
+  type: AlertType.success,
+)
 </code></pre>
 </section>
 
@@ -96,7 +84,7 @@ the children in a div with the 'main' class.</p>
       <li><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object-class.html">Object</a></li>
         <li><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></li>
         <li><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/StatelessComponent-class.html">StatelessComponent</a></li>
-      <li>DaisyUI</li>
+      <li>Alert</li>
     </ul>
   </dd>
 
@@ -116,11 +104,11 @@ the children in a div with the 'main' class.</p>
     <h2>Constructors</h2>
 
     <dl class="constructor-summary-list">
-        <dt id="DaisyUI" class="callable">
-          <span class="name"><a href="../jaspr_ui/DaisyUI/DaisyUI.html">DaisyUI</a></span><span class="signature">({<span class="parameter" id="-param-key"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-theme"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">theme</span>, </span><span class="parameter" id="-param-routes"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr_router/0.6.0/jaspr_router/Route-class.html">Route</a></span>&gt;</span></span> <span class="parameter-name">routes</span></span>})</span>
+        <dt id="Alert" class="callable">
+          <span class="name"><a href="../jaspr_ui/Alert/Alert.html">Alert</a></span><span class="signature">({<span class="parameter" id="-param-key"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-message"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">message</span>, </span><span class="parameter" id="-param-icon"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">icon</span>, </span><span class="parameter" id="-param-type"><span class="type-annotation"><a href="../jaspr_ui/AlertType.html">AlertType</a>?</span> <span class="parameter-name">type</span></span>})</span>
         </dt>
         <dd>
-          
+          Creates an <a href="../jaspr_ui/Alert-class.html">Alert</a> component.
         </dd>
     </dl>
   </section>
@@ -142,6 +130,18 @@ the children in a div with the 'main' class.</p>
 
 </dd>
 
+        <dt id="icon" class="property">
+  <span class="name"><a href="../jaspr_ui/Alert/icon.html">icon</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  The CSS class name for the icon to display.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
         <dt id="key" class="property inherited">
   <span class="name"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component/key.html">key</a></span>
   <span class="signature">&#8594; <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Key-class.html">Key</a>?</span>
@@ -154,14 +154,14 @@ the children in a div with the 'main' class.</p>
 
 </dd>
 
-        <dt id="routes" class="property">
-  <span class="name"><a href="../jaspr_ui/DaisyUI/routes.html">routes</a></span>
-  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr_router/0.6.0/jaspr_router/Route-class.html">Route</a></span>&gt;</span></span>
+        <dt id="message" class="property">
+  <span class="name"><a href="../jaspr_ui/Alert/message.html">message</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span>
   
 
 </dt>
 <dd>
-  
+  The message text to display in the alert.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -178,14 +178,15 @@ the children in a div with the 'main' class.</p>
 
 </dd>
 
-        <dt id="theme" class="property">
-  <span class="name"><a href="../jaspr_ui/DaisyUI/theme.html">theme</a></span>
-  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span>
+        <dt id="type" class="property">
+  <span class="name"><a href="../jaspr_ui/Alert/type.html">type</a></span>
+  <span class="signature">&#8594; <a href="../jaspr_ui/AlertType.html">AlertType</a>?</span>
   
 
 </dt>
 <dd>
-  The DaisyUI theme to be applied.
+  Optional type that determines the alert's visual style.
+If null, no additional styling class will be applied.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -199,14 +200,14 @@ the children in a div with the 'main' class.</p>
     <h2>Methods</h2>
     <dl class="callables">
         <dt id="build" class="callable">
-  <span class="name"><a href="../jaspr_ui/DaisyUI/build.html">build</a></span><span class="signature">(<wbr><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span>)
+  <span class="name"><a href="../jaspr_ui/Alert/build.html">build</a></span><span class="signature">(<wbr><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span>)
     <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  Creates a new DaisyUI component.
+  Describes the part of the user interface represented by this component.
   <div class="features"><span class="feature">override</span></div>
 
 </dd>
@@ -304,7 +305,7 @@ the children in a div with the 'main' class.</p>
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">jaspr_ui</a></li>
     <li><a href="../jaspr_ui/jaspr_ui-library.html">jaspr_ui</a></li>
-    <li class="self-crumb">DaisyUI class</li>
+    <li class="self-crumb">Alert class</li>
 </ol>
 
 
