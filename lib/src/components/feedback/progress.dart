@@ -34,7 +34,7 @@ class Progress extends StatelessComponent {
     this.color,
     this.size = 'w-45',
     this.max = 100,
-    required this.value,
+    this.value,
   });
 
   @override
