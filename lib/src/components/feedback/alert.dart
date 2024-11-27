@@ -8,6 +8,7 @@ import 'package:jaspr/jaspr.dart';
 /// Example usage:
 /// ```dart
 /// Alert(
+///   title: "Successful",
 ///   message: "Operation successful",
 ///   icon: "check-circle",
 ///   type: AlertType.success,
@@ -15,6 +16,9 @@ import 'package:jaspr/jaspr.dart';
 /// ```
 
 class Alert extends StatelessComponent {
+  /// The title text to display in the alert.
+  final String? title;
+
   /// The message text to display in the alert.
   final String message;
 
@@ -30,7 +34,12 @@ class Alert extends StatelessComponent {
   /// [message] is required and contains the alert text to display.
   /// [icon] is required and should be a valid CSS class name for the icon.
   /// [type] is optional and determines the alert's visual styling.
-  Alert({super.key, required this.message, required this.icon, this.type});
+  Alert(
+      {super.key,
+      this.title,
+      required this.message,
+      required this.icon,
+      this.type});
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
@@ -43,7 +52,13 @@ class Alert extends StatelessComponent {
         div(classes: '$icon', []),
 
         // content
-        span([text(message)])
+        if (title != null)
+          div([
+            h3(classes: 'font-bold', [text('$title')]),
+            div(classes: 'text-xs', [text('$message')])
+          ])
+        else
+          span([text(message)])
       ],
     );
   }
