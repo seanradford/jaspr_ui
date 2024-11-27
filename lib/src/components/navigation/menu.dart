@@ -86,9 +86,14 @@ class SubMenu extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield li([
       a([
-        summary([if (icon != null) div(classes: '$icon ', []), text(parent)]),
-        ul(children)
+        summary(
+          [
+            if (icon != null) div(classes: '$icon ', []),
+            text(parent),
+          ],
+        ),
       ], href: ''),
+      ul(children),
     ]);
   }
 }
@@ -234,12 +239,13 @@ class MenuItem extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield li(classes: '${disable ? 'disabled' : ''} ', [
       a(
-          classes: '${active ? 'active' : ''} ',
-          [
-            text(title),
-            if (badge != null) badge!,
-          ],
-          href: href),
+        classes: '${active ? 'active' : ''} ',
+        [
+          text(title),
+          if (badge != null) badge!,
+        ],
+        href: href,
+      ),
     ]);
   }
 }
