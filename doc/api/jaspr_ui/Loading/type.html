@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the build method from the SubMenu class, for the Dart programming language.">
-  <title>build method - SubMenu class - jaspr_ui library - Dart API</title>
+  <meta name="description" content="API docs for the type property from the Loading class, for the Dart programming language.">
+  <title>type property - Loading class - jaspr_ui library - Dart API</title>
 
 
   
@@ -30,10 +30,10 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">jaspr_ui</a></li>
     <li><a href="../../jaspr_ui/jaspr_ui-library.html">jaspr_ui.dart</a></li>
-    <li><a href="../../jaspr_ui/SubMenu-class.html">SubMenu</a></li>
-    <li class="self-crumb">build method</li>
+    <li><a href="../../jaspr_ui/Loading-class.html">Loading</a></li>
+    <li class="self-crumb">type property</li>
   </ol>
-  <div class="self-name">build</div>
+  <div class="self-name">type</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -54,59 +54,35 @@
 <div
     id="dartdoc-main-content"
     class="main-content"
-    data-above-sidebar="jaspr_ui&#47;SubMenu-class-sidebar.html"
+    data-above-sidebar="jaspr_ui&#47;Loading-class-sidebar.html"
     data-below-sidebar="">
     <div>
-<h1><span class="kind-method">build</span> method 
+<h1><span class="kind-property">type</span> property 
 </h1></div>
 
-    <section class="multi-line-signature">
+      <section class="multi-line-signature">
+        
+        <a href="../../jaspr_ui/LoadingType.html">LoadingType</a>
+        <span class="name ">type</span>
+        <div class="features"><span class="feature">final</span></div>
+
+      </section>
       
-  <div>
-    <ol class="annotation-list">
-        <li>@<a href="https://api.dart.dev/stable/3.5.3/dart-core/override-constant.html">override</a></li>
-    </ol>
-  </div>
-
-<span class="returntype"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span>&gt;</span></span>
-<span class="name ">build</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span></li>
-</ol>)
-
-      <div class="features"><span class="feature">override</span></div>
-
-    </section>
-    
 <section class="desc markdown">
-  <p>Builds the submenu structure using HTML-like components.</p>
-<p>Returns an <a href="https://api.dart.dev/stable/3.5.3/dart-core/Iterable-class.html">Iterable</a> of components that create a nested list structure with
-expandable/collapsible functionality using the details/summary HTML elements.</p>
+  <p>The type of loading animation to display.</p>
 </section>
 
-
-    
+      
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">@override
-Iterable&lt;Component&gt; build(BuildContext context) sync* {
-  yield li([
-    a([
-      summary(
-        [
-          if (icon != null) div(classes: &#39;$icon &#39;, []),
-          text(parent),
-        ],
-      ),
-    ], href: &#39;&#39;),
-    ul(children),
-  ]);
-}</code></pre>
+  <pre class="language-dart"><code class="language-dart">final LoadingType type;</code></pre>
 </section>
 
 
-  </div> <!-- /.main-content -->
+</div> <!-- /.main-content -->
 
-  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+  <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
   <form class="search-sidebar" role="search">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
@@ -116,16 +92,16 @@ Iterable&lt;Component&gt; build(BuildContext context) sync* {
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">jaspr_ui</a></li>
     <li><a href="../../jaspr_ui/jaspr_ui-library.html">jaspr_ui</a></li>
-    <li><a href="../../jaspr_ui/SubMenu-class.html">SubMenu</a></li>
-    <li class="self-crumb">build method</li>
+    <li><a href="../../jaspr_ui/Loading-class.html">Loading</a></li>
+    <li class="self-crumb">type property</li>
 </ol>
 
 
-    <h5>SubMenu class</h5>
-    <div id="dartdoc-sidebar-left-content"></div>
-  </div><!--/.sidebar-offcanvas-->
+  <h5>Loading class</h5>
+  <div id="dartdoc-sidebar-left-content"></div>
+</div><!--/.sidebar-offcanvas-->
 
-  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+<div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
 
 </main>

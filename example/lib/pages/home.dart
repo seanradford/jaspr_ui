@@ -13,13 +13,7 @@ class HomeState extends State<Home> {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield div(classes: 'p-4', [
-      //
-      Alert(
-        title: 'title',
-        message: 'message',
-        icon: 'fas fa-circle-info',
-        type: AlertType.success,
-      )
+      TitleGradient(title: 'title'),
     ]);
   }
 }

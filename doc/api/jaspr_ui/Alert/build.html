@@ -127,7 +127,13 @@ Iterable&lt;Component&gt; build(BuildContext context) sync* {
       div(classes: &#39;$icon&#39;, []),
 
       &#47;&#47; content
-      span([text(message)])
+      if (title != null)
+        div([
+          h3(classes: &#39;font-bold&#39;, [text(&#39;$title&#39;)]),
+          div(classes: &#39;text-xs&#39;, [text(&#39;$message&#39;)])
+        ])
+      else
+        span([text(message)])
     ],
   );
 }</code></pre>

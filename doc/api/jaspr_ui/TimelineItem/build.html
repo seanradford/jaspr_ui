@@ -131,16 +131,17 @@ Iterable&lt;Component&gt; build(BuildContext context) sync* {
         text(startTitle),
       ],
     ),
-    div(
-      classes: &#39;timeline-middle&#39;,
-      [
-        div(
-          classes: &#39;$middleIcon w-4 &#39;
-              &#39;${iconColor != null ? &#39;${iconColor!.className}&#39; : &#39;&#39;}&#39;,
-          [],
-        )
-      ],
-    ),
+    if (middleIcon != null)
+      div(
+        classes: &#39;timeline-middle&#39;,
+        [
+          div(
+            classes: &#39;$middleIcon w-4 &#39;
+                &#39;${iconColor != null ? &#39;${iconColor!.className}&#39; : &#39;&#39;}&#39;,
+            [],
+          )
+        ],
+      ),
     if (endTitle != null)
       div(
         classes: &#39;timeline-end &#39;

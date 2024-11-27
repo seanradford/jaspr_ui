@@ -67,6 +67,7 @@
 containing an icon and message. It supports different visual styles through <a href="../jaspr_ui/AlertType.html">AlertType</a>.</p>
 <p>Example usage:</p>
 <pre class="language-dart"><code class="language-dart">Alert(
+  title: "Successful",
   message: "Operation successful",
   icon: "check-circle",
   type: AlertType.success,
@@ -105,7 +106,7 @@ containing an icon and message. It supports different visual styles through <a h
 
     <dl class="constructor-summary-list">
         <dt id="Alert" class="callable">
-          <span class="name"><a href="../jaspr_ui/Alert/Alert.html">Alert</a></span><span class="signature">({<span class="parameter" id="-param-key"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-message"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">message</span>, </span><span class="parameter" id="-param-icon"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">icon</span>, </span><span class="parameter" id="-param-type"><span class="type-annotation"><a href="../jaspr_ui/AlertType.html">AlertType</a>?</span> <span class="parameter-name">type</span></span>})</span>
+          <span class="name"><a href="../jaspr_ui/Alert/Alert.html">Alert</a></span><span class="signature">({<span class="parameter" id="-param-key"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-title"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">title</span>, </span><span class="parameter" id="-param-message"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">message</span>, </span><span class="parameter" id="-param-icon"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">icon</span>, </span><span class="parameter" id="-param-type"><span class="type-annotation"><a href="../jaspr_ui/AlertType.html">AlertType</a>?</span> <span class="parameter-name">type</span></span>})</span>
         </dt>
         <dd>
           Creates an <a href="../jaspr_ui/Alert-class.html">Alert</a> component.
@@ -175,6 +176,18 @@ containing an icon and message. It supports different visual styles through <a h
 <dd class="inherited">
   A representation of the runtime type of the object.
   <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="title" class="property">
+  <span class="name"><a href="../jaspr_ui/Alert/title.html">title</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  The title text to display in the alert.
+  <div class="features"><span class="feature">final</span></div>
 
 </dd>
 

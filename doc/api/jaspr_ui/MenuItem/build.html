@@ -120,12 +120,13 @@ and</li>
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
   yield li(classes: &#39;${disable ? &#39;disabled&#39; : &#39;&#39;} &#39;, [
     a(
-        classes: &#39;${active ? &#39;active&#39; : &#39;&#39;} &#39;,
-        [
-          text(title),
-          if (badge != null) badge!,
-        ],
-        href: href),
+      classes: &#39;${active ? &#39;active&#39; : &#39;&#39;} &#39;,
+      [
+        text(title),
+        if (badge != null) badge!,
+      ],
+      href: href,
+    ),
   ]);
 }</code></pre>
 </section>

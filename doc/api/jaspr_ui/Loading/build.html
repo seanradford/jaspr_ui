@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the build method from the SubMenu class, for the Dart programming language.">
-  <title>build method - SubMenu class - jaspr_ui library - Dart API</title>
+  <meta name="description" content="API docs for the build method from the Loading class, for the Dart programming language.">
+  <title>build method - Loading class - jaspr_ui library - Dart API</title>
 
 
   
@@ -30,7 +30,7 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">jaspr_ui</a></li>
     <li><a href="../../jaspr_ui/jaspr_ui-library.html">jaspr_ui.dart</a></li>
-    <li><a href="../../jaspr_ui/SubMenu-class.html">SubMenu</a></li>
+    <li><a href="../../jaspr_ui/Loading-class.html">Loading</a></li>
     <li class="self-crumb">build method</li>
   </ol>
   <div class="self-name">build</div>
@@ -54,7 +54,7 @@
 <div
     id="dartdoc-main-content"
     class="main-content"
-    data-above-sidebar="jaspr_ui&#47;SubMenu-class-sidebar.html"
+    data-above-sidebar="jaspr_ui&#47;Loading-class-sidebar.html"
     data-below-sidebar="">
     <div>
 <h1><span class="kind-method">build</span> method 
@@ -77,9 +77,39 @@
     </section>
     
 <section class="desc markdown">
-  <p>Builds the submenu structure using HTML-like components.</p>
-<p>Returns an <a href="https://api.dart.dev/stable/3.5.3/dart-core/Iterable-class.html">Iterable</a> of components that create a nested list structure with
-expandable/collapsible functionality using the details/summary HTML elements.</p>
+  <p>Describes the part of the user interface represented by this component.</p>
+<p>The framework calls this method when this component is inserted into the tree
+in a given <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a> and when the dependencies of this component change
+(e.g., an <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/InheritedComponent-class.html">InheritedComponent</a> referenced by this component changes). This
+method can potentially be called in every frame and should not have any side
+effects beyond building a component.</p>
+<p>The framework replaces the subtree below this component with the component
+returned by this method, either by updating the existing subtree or by
+removing the subtree and inflating a new subtree, depending on whether the
+component returned by this method can update the root of the existing
+subtree, as determined by calling <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component/canUpdate.html">Component.canUpdate</a>.</p>
+<p>Typically implementations return a newly created constellation of components
+that are configured with information from this component's constructor and
+from the given <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a>.</p>
+<p>The given <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a> contains information about the location in the
+tree at which this component is being built. For example, the context
+provides the set of inherited components for this location in the tree. A
+given component might be built with multiple different <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a>
+arguments over time if the component is moved around the tree or if the
+component is inserted into the tree in multiple places at once.</p>
+<p>The implementation of this method must only depend on:</p>
+<ul>
+<li>the fields of the component, which themselves must not change over time,
+and</li>
+<li>any ambient state obtained from the <code>context</code> using
+<a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext/dependOnInheritedComponentOfExactType.html">BuildContext.dependOnInheritedComponentOfExactType</a>.</li>
+</ul>
+<p>If a component's <a href="../../jaspr_ui/Loading/build.html">build</a> method is to depend on anything else, use a
+<a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/StatefulComponent-class.html">StatefulComponent</a> instead.</p>
+<p>See also:</p>
+<ul>
+<li><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/StatelessComponent-class.html">StatelessComponent</a>, which contains the discussion on performance considerations.</li>
+</ul>
 </section>
 
 
@@ -88,17 +118,12 @@ expandable/collapsible functionality using the details/summary HTML elements.</p
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
-  yield li([
-    a([
-      summary(
-        [
-          if (icon != null) div(classes: &#39;$icon &#39;, []),
-          text(parent),
-        ],
-      ),
-    ], href: &#39;&#39;),
-    ul(children),
-  ]);
+  yield span(
+      classes: &#39;loading &#39;
+          &#39;${type.className} &#39;
+          &#39;${size != null ? &#39;${size!.className}&#39; : &#39;&#39;} &#39;
+          &#39;${color != null ? &#39;${color!.className}&#39; : &#39;&#39;} &#39;,
+      []);
 }</code></pre>
 </section>
 
@@ -116,12 +141,12 @@ Iterable&lt;Component&gt; build(BuildContext context) sync* {
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">jaspr_ui</a></li>
     <li><a href="../../jaspr_ui/jaspr_ui-library.html">jaspr_ui</a></li>
-    <li><a href="../../jaspr_ui/SubMenu-class.html">SubMenu</a></li>
+    <li><a href="../../jaspr_ui/Loading-class.html">Loading</a></li>
     <li class="self-crumb">build method</li>
 </ol>
 
 
-    <h5>SubMenu class</h5>
+    <h5>Loading class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
 
