@@ -10,10 +10,23 @@ class Home extends StatefulComponent {
 }
 
 class HomeState extends State<Home> {
+  int currentIndex = 0;
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(classes: 'p-4', [
-      TitleGradient(title: 'title'),
+    yield Breadcrumbs(children: [
+      BreadcrumbItem(
+        title: 'title',
+        href: '#',
+        icon: 'fas fa-house',
+      ),
+      BreadcrumbItem(
+        title: 'title',
+        href: '#',
+      ),
+      BreadcrumbItem(
+        title: 'title',
+        href: '#',
+      ),
     ]);
   }
 }
