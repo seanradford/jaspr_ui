@@ -118,18 +118,17 @@ and</li>
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
-  &#47;&#47; Build the button element with appropriate CSS classes and attributes
   yield button(
-    &#47;&#47; Define the CSS classes dynamically based on the button&#39;s properties
     classes: &#39;btn &#39;
-        &#39;${size != null ? &#39; ${size!.className} &#39; : &#39;&#39;}&#39; &#47;&#47; Add size class if provided
-        &#39;${color != null ? &#39; ${color!.className} &#39; : &#39;&#39;}&#39;, &#47;&#47; Add color class if provided
+        &#39;${isGhost == true ? &#39;btn-ghost &#39; : &#39;&#39;}&#39;
+        &#39;${isCircle == true ? &#39;btn-circle &#39; : &#39;&#39;}&#39;
+        &#39;${size != null ? &#39; ${size!.className} &#39; : &#39;&#39;}&#39;
+        &#39;${color != null ? &#39; ${color!.className} &#39; : &#39;&#39;}&#39;,
     [
-      text(title), &#47;&#47; Add the button text as the child component
+      text(title),
     ],
-    &#47;&#47; Bind the onClick event to the onPressed callback if provided
     onClick: () =&gt; onPressed?.call(),
-    attributes: attributes, &#47;&#47; Include any additional HTML attributes
+    attributes: attributes,
   );
 }</code></pre>
 </section>

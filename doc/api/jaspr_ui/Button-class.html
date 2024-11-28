@@ -62,15 +62,15 @@
 
     
 <section class="desc markdown">
-  <p>A collection of button components for building user interfaces with Jaspr.
-These components provide different button styles while maintaining a consistent API.
-A standard button component that renders a basic button with customizable styling.
-Example usage:</p>
+  <p>A standard button component with multiple configuration options.</p>
+<p><a href="../jaspr_ui/Button-class.html">Button</a> provides a versatile button with customizable color, size,
+and additional styling options like ghost and circle variants.</p>
+<p>Example usage:</p>
 <pre class="language-dart"><code class="language-dart">Button(
-  title: 'Submit',
+  title: 'Click me',
   color: ButtonColor.primary,
-  size: ButtonSize.large,
-  onPressed: () =&gt; handleSubmit(),
+  size: ButtonSize.md,
+  onPressed: () =&gt; print('Button clicked')
 )
 </code></pre>
 </section>
@@ -106,12 +106,10 @@ Example usage:</p>
 
     <dl class="constructor-summary-list">
         <dt id="Button" class="callable">
-          <span class="name"><a href="../jaspr_ui/Button/Button.html">Button</a></span><span class="signature">({<span class="parameter" id="-param-title"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">title</span>, </span><span class="parameter" id="-param-color"><span class="type-annotation"><a href="../jaspr_ui/ButtonColor.html">ButtonColor</a>?</span> <span class="parameter-name">color</span>, </span><span class="parameter" id="-param-size"><span class="type-annotation">ButtonSize?</span> <span class="parameter-name">size</span>, </span><span class="parameter" id="-param-onPressed"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onPressed</span>, </span><span class="parameter" id="-param-attributes"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">attributes</span></span>})</span>
+          <span class="name"><a href="../jaspr_ui/Button/Button.html">Button</a></span><span class="signature">({<span class="parameter" id="-param-title"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">title</span>, </span><span class="parameter" id="-param-color"><span class="type-annotation"><a href="../jaspr_ui/ButtonColor.html">ButtonColor</a>?</span> <span class="parameter-name">color</span>, </span><span class="parameter" id="-param-size"><span class="type-annotation"><a href="../jaspr_ui/ButtonSize.html">ButtonSize</a>?</span> <span class="parameter-name">size</span>, </span><span class="parameter" id="-param-onPressed"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onPressed</span>, </span><span class="parameter" id="-param-attributes"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">attributes</span>, </span><span class="parameter" id="-param-isGhost"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">isGhost</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-isCircle"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">isCircle</span> = <span class="default-value">false</span></span>})</span>
         </dt>
         <dd>
-          Creates a new <a href="../jaspr_ui/Button-class.html">Button</a> instance.
-The <a href="../jaspr_ui/Button/title.html">title</a> parameter is required and specifies the button's text.
-All other parameters are optional.
+          Creates a <a href="../jaspr_ui/Button-class.html">Button</a> with the specified properties.
             <div class="constructor-modifier features">const</div>
         </dd>
     </dl>
@@ -129,7 +127,7 @@ All other parameters are optional.
 
 </dt>
 <dd>
-  Optional map of additional HTML attributes to apply to the button element
+  Optional additional HTML attributes to be applied to the button.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -141,7 +139,7 @@ All other parameters are optional.
 
 </dt>
 <dd>
-  Optional color theme for the button from <a href="../jaspr_ui/ButtonColor.html">ButtonColor</a>
+  Optional color theme for the button.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -155,6 +153,30 @@ All other parameters are optional.
 <dd class="inherited">
   The hash code for this object.
   <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="isCircle" class="property">
+  <span class="name"><a href="../jaspr_ui/Button/isCircle.html">isCircle</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  Determines if the button should be rendered as a circular shape.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="isGhost" class="property">
+  <span class="name"><a href="../jaspr_ui/Button/isGhost.html">isGhost</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  Determines if the button should have a ghost (transparent) style.
+  <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
@@ -177,7 +199,7 @@ All other parameters are optional.
 
 </dt>
 <dd>
-  Optional callback function triggered when the button is clicked
+  Callback function triggered when the button is pressed.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -196,12 +218,12 @@ All other parameters are optional.
 
         <dt id="size" class="property">
   <span class="name"><a href="../jaspr_ui/Button/size.html">size</a></span>
-  <span class="signature">&#8594; ButtonSize?</span>
+  <span class="signature">&#8594; <a href="../jaspr_ui/ButtonSize.html">ButtonSize</a>?</span>
   
 
 </dt>
 <dd>
-  The size of the button from <code>ButtonSize</code>, defaults to <code>ButtonSize.normal</code>
+  Optional size configuration for the button.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -213,7 +235,7 @@ All other parameters are optional.
 
 </dt>
 <dd>
-  The text to display on the button
+  The text displayed on the button.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>

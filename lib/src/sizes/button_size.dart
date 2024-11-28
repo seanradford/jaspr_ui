@@ -1,22 +1,36 @@
-/// Represents the size variants for buttons in the application.
+/// Represents different size variations for buttons.
 ///
-/// Each [ButtonSize] corresponds to a specific CSS class that defines
-/// the button's dimensions and layout behavior.
+/// This enum provides predefined button sizes that can be used to control
+/// the dimensions and layout of buttons in a consistent manner. Each size
+/// is associated with a specific CSS class name for easy styling.
 ///
-/// The available sizes are:
-/// - [small]: A small-sized button with minimal padding
-/// - [large]: A large-sized button with increased padding
-/// - [wide]: A button with extended horizontal width
-/// - [block]: A full-width button that spans its container
+/// Available sizes include:
+/// - [xs]: Extra small button
+/// - [sm]: Small button
+/// - [md]: Medium small button
+/// - [lg]: Large button
+/// - [wide]: Button with extended horizontal width
+/// - [block]: Full-width button
+///
+/// Example usage:
+/// ```dart
+/// Button(
+///   size: ButtonSize.lg,
+///   child: Text('Large Button'),
+/// )
+/// ```
 enum ButtonSize {
-  /// A small button with reduced dimensions
-  small('btn-sm'),
+  /// A extra small button with reduced dimensions
+  xs('btn-xs'),
 
-  /// A normal button with reduced dimensions
-  normal(''),
+  /// A small button with reduced dimensions
+  sm('btn-sm'),
+
+  /// A medium small button with reduced dimensions
+  md('btn-md'),
 
   /// A large button with increased dimensions
-  large('btn-lg'),
+  lg('btn-lg'),
 
   /// A button with extended horizontal width
   wide('btn-wide'),

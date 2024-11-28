@@ -1,192 +1,256 @@
 import 'package:jaspr/jaspr.dart';
-
 import '../../../jaspr_ui.dart';
-import '../../sizes/sizes.dart';
 
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-
-/// A collection of button components for building user interfaces with Jaspr.
-/// These components provide different button styles while maintaining a consistent API.
-
-/// A standard button component that renders a basic button with customizable styling.
+/// A standard button component with multiple configuration options.
+///
+/// [Button] provides a versatile button with customizable color, size,
+/// and additional styling options like ghost and circle variants.
+///
 /// Example usage:
 /// ```dart
 /// Button(
-///   title: 'Submit',
+///   title: 'Click me',
 ///   color: ButtonColor.primary,
-///   size: ButtonSize.large,
-///   onPressed: () => handleSubmit(),
+///   size: ButtonSize.md,
+///   onPressed: () => print('Button clicked')
 /// )
 /// ```
 class Button extends StatelessComponent {
-  /// The text to display on the button
+  /// The text displayed on the button.
   final String title;
 
-  /// Optional color theme for the button from [ButtonColor]
+  /// Optional color theme for the button.
   final ButtonColor? color;
 
-  /// The size of the button from [ButtonSize], defaults to [ButtonSize.normal]
+  /// Optional size configuration for the button.
   final ButtonSize? size;
 
-  /// Optional callback function triggered when the button is clicked
+  /// Callback function triggered when the button is pressed.
   final VoidCallback? onPressed;
 
-  /// Optional map of additional HTML attributes to apply to the button element
+  /// Optional additional HTML attributes to be applied to the button.
   final Map<String, String>? attributes;
 
-  /// Creates a new [Button] instance.
-  /// The [title] parameter is required and specifies the button's text.
-  /// All other parameters are optional.
+  /// Determines if the button should have a ghost (transparent) style.
+  final bool? isGhost;
+
+  /// Determines if the button should be rendered as a circular shape.
+  final bool? isCircle;
+
+  /// Creates a [Button] with the specified properties.
+  ///
+  /// [title] is the required text displayed on the button.
+  /// [color] sets the button's color theme.
+  /// [size] configures the button's size.
+  /// [onPressed] defines the action when the button is clicked.
   const Button({
     required this.title,
     this.color,
     this.size,
     this.onPressed,
     this.attributes,
+    this.isGhost = false,
+    this.isCircle = false,
   });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    // Build the button element with appropriate CSS classes and attributes
     yield button(
-      // Define the CSS classes dynamically based on the button's properties
       classes: 'btn '
-          '${size != null ? ' ${size!.className} ' : ''}' // Add size class if provided
-          '${color != null ? ' ${color!.className} ' : ''}', // Add color class if provided
+          '${isGhost == true ? 'btn-ghost ' : ''}'
+          '${isCircle == true ? 'btn-circle ' : ''}'
+          '${size != null ? ' ${size!.className} ' : ''}'
+          '${color != null ? ' ${color!.className} ' : ''}',
       [
-        text(title), // Add the button text as the child component
+        text(title),
       ],
-      // Bind the onClick event to the onPressed callback if provided
       onClick: () => onPressed?.call(),
-      attributes: attributes, // Include any additional HTML attributes
+      attributes: attributes,
     );
   }
 }
 
-/// An outline-styled button component with a transparent background.
+/// A button variant with an outline style.
+///
+/// [OutLineButton] provides a button with an outline appearance,
+/// similar to the standard [Button] but with an additional outline class.
+///
 /// Example usage:
 /// ```dart
 /// OutLineButton(
-///   title: 'Cancel',
+///   title: 'Outline Button',
 ///   color: ButtonColor.secondary,
-///   onPressed: () => handleCancel(),
+///   isCircle: true
 /// )
 /// ```
 class OutLineButton extends StatelessComponent {
-  /// The text to display on the button
+  /// The text displayed on the button.
   final String title;
 
-  /// Optional color theme for the button's outline from [ButtonColor]
+  /// Optional color theme for the button.
   final ButtonColor? color;
 
-  /// The size of the button from [ButtonSize], defaults to [ButtonSize.normal]
+  /// Optional size configuration for the button.
   final ButtonSize? size;
 
-  /// Optional callback function triggered when the button is clicked
+  /// Callback function triggered when the button is pressed.
   final VoidCallback? onPressed;
 
-  /// Optional map of additional HTML attributes to apply to the button element
+  /// Optional additional HTML attributes to be applied to the button.
   final Map<String, String>? attributes;
 
+  /// Determines if the button should have a ghost (transparent) style.
+  final bool? isGhost;
+
+  /// Determines if the button should be rendered as a circular shape.
+  final bool? isCircle;
+
+  /// Creates an [OutLineButton] with the specified properties.
   const OutLineButton({
     required this.title,
     this.color,
     this.size,
     this.onPressed,
     this.attributes,
+    this.isGhost = false,
+    this.isCircle = false,
   });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    // Build the button with outline-specific CSS class
     yield button(
       classes: 'btn btn-outline '
-          '${size != null ? ' ${size!.className} ' : ''}' // Add size class if provided
-          '${color != null ? ' ${color!.className} ' : ''}', // Add color class if provided
+          '${isGhost == true ? 'btn-ghost ' : ''}'
+          '${isCircle == true ? 'btn-circle ' : ''}'
+          '${size != null ? ' ${size!.className} ' : ''}'
+          '${color != null ? ' ${color!.className} ' : ''}',
       [
-        text(title), // Add the button text
+        text(title),
       ],
-      onClick: () => onPressed?.call(), // Trigger the callback on click
-      attributes: attributes, // Include additional HTML attributes
+      onClick: () => onPressed?.call(),
+      attributes: attributes,
     );
   }
 }
 
-/// A glass-styled button component with a semi-transparent look.
+/// A button with a glass (translucent) appearance.
+///
+/// [GlassButton] provides a button with a translucent, glass-like styling.
+///
+/// Example usage:
+/// ```dart
+/// GlassButton(
+///   title: 'Glass Button',
+///   size: ButtonSize.md,
+///   isCircle: true
+/// )
+/// ```
 class GlassButton extends StatelessComponent {
-  /// The text to display on the button
+  /// The text displayed on the button.
   final String title;
 
-  /// The size of the button from [ButtonSize], defaults to [ButtonSize.normal]
+  /// Optional size configuration for the button.
   final ButtonSize? size;
 
-  /// Optional callback function triggered when the button is clicked
+  /// Callback function triggered when the button is pressed.
   final VoidCallback? onPressed;
 
-  /// Optional map of additional HTML attributes to apply to the button element
+  /// Optional additional HTML attributes to be applied to the button.
   final Map<String, String>? attributes;
 
+  /// Determines if the button should have a ghost (transparent) style.
+  final bool? isGhost;
+
+  /// Determines if the button should be rendered as a circular shape.
+  final bool? isCircle;
+
+  /// Creates a [GlassButton] with the specified properties.
   const GlassButton({
     required this.title,
     this.size,
     this.onPressed,
     this.attributes,
+    this.isGhost = false,
+    this.isCircle = false,
   });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    // Build the button with a glass effect style
     yield button(
       classes: "btn glass "
-          '${size != null ? ' ${size!.className} ' : ''}', // Add size class if provided
+          '${isGhost == true ? 'btn-ghost ' : ''}'
+          '${isCircle == true ? 'btn-circle ' : ''}'
+          '${size != null ? ' ${size!.className} ' : ''}',
       [
-        text(title), // Add the button text
+        text(title),
       ],
-      onClick: () => onPressed?.call(), // Trigger the callback on click
-      attributes: attributes, // Include additional HTML attributes
+      onClick: () => onPressed?.call(),
+      attributes: attributes,
     );
   }
 }
 
-/// A button component that includes an icon alongside text.
-/// This button variant combines an icon with text, using Font Awesome icons.
+/// A button that includes an icon alongside text or as its primary content.
+///
+/// [IconButton] allows creating buttons with an integrated icon.
+///
+/// Example usage:
+/// ```dart
+/// IconButton(
+///   title: 'Edit',
+///   icon: 'edit-icon',
+///   size: ButtonSize.small,
+///   onPressed: () => print('Edit clicked')
+/// )
+/// ```
 class IconButton extends StatelessComponent {
-  /// The text to display on the button
+  /// The text displayed on the button (for accessibility).
   final String title;
 
-  /// The size of the button from [ButtonSize], defaults to [ButtonSize.normal]
+  /// Optional size configuration for the button.
   final ButtonSize? size;
 
-  /// Optional callback function triggered when the button is clicked
+  /// Callback function triggered when the button is pressed.
   final VoidCallback? onPressed;
 
-  /// Optional map of additional HTML attributes to apply to the button element
+  /// Optional additional HTML attributes to be applied to the button.
   final Map<String, String>? attributes;
 
-  /// The name of the Font Awesome icon to display (without the 'fa-' prefix)
+  /// The icon to be displayed on the button.
   final String icon;
 
+  /// Determines if the button should have a ghost (transparent) style.
+  final bool? isGhost;
+
+  /// Determines if the button should be rendered as a circular shape.
+  final bool? isCircle;
+
+  /// Creates an [IconButton] with the specified properties.
+  ///
+  /// [title] provides text for accessibility.
+  /// [icon] is the icon class or identifier to be displayed.
   const IconButton({
     required this.title,
     this.size,
     this.onPressed,
     this.attributes,
     required this.icon,
+    this.isGhost = false,
+    this.isCircle = false,
   });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    // Build the button with an icon element and text
     yield button(
       classes: 'btn '
-          '${size != null ? ' ${size!.className} ' : ''}', // Add size class if provided
+          '${isGhost == true ? 'btn-ghost ' : ''}'
+          '${isCircle == true ? 'btn-circle ' : ''}'
+          '${size != null ? ' ${size!.className} ' : ''}',
       [
-        // Create an icon element with the Font Awesome class
-        span(classes: 'icon', [i(classes: 'far fa-$icon', [])]),
-        text(title), // Add the button text
+        span(classes: 'icon', [i(classes: '$icon', [])]),
       ],
-      onClick: () => onPressed?.call(), // Trigger the callback on click
-      attributes: attributes, // Include additional HTML attributes
+      onClick: () => onPressed?.call(),
+      attributes: attributes,
     );
   }
 }

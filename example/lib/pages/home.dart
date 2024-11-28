@@ -13,20 +13,12 @@ class HomeState extends State<Home> {
   int currentIndex = 0;
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield Breadcrumbs(children: [
-      BreadcrumbItem(
-        title: 'title',
-        href: '#',
-        icon: 'fas fa-house',
+    yield Pagination(
+      currentIndex: currentIndex,
+      children: List.generate(
+        5,
+        (i) => PaginationItem(href: '#'),
       ),
-      BreadcrumbItem(
-        title: 'title',
-        href: '#',
-      ),
-      BreadcrumbItem(
-        title: 'title',
-        href: '#',
-      ),
-    ]);
+    );
   }
 }
