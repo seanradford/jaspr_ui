@@ -12,6 +12,8 @@ class Home extends StatefulComponent {
 class HomeState extends State<Home> {
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(classes: 'm-4', [TitleGradient(title: 'title')]);
+    yield div(classes: 'm-4', [
+      TitleGradient(title: 'title'),
+    ]);
   }
 }
