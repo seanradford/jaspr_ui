@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_string_interpolations
+
 import 'package:jaspr/jaspr.dart';
 
 /// Represents a breadcrumb navigation component that renders a list of clickable items.

@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_string_interpolations
+
 import 'package:jaspr/jaspr.dart';
 
 /// A customizable alert component that displays a message with an icon and optional type styling.

@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_brace_in_string_interps, unnecessary_string_interpolations
+
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_ui/jaspr_ui.dart';
 
