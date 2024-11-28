@@ -2,36 +2,40 @@ import 'package:jaspr/jaspr.dart';
 
 /// Represents a container for a series of sequential steps.
 ///
-/// The [Step] component renders a list of [StepItem] components
+/// The [Steps] component renders a list of [StepItem] components
 /// with a unified styling and layout. It allows for creating
 /// step-by-step progress indicators or process visualizations.
 ///
 /// Example usage:
 /// ```dart
-/// Step(
+/// Steps(
 ///   children: [
 ///     StepItem(title: 'First Step', color: StepColor.primary),
 ///     StepItem(title: 'Second Step', color: StepColor.secondary),
 ///   ],
 /// )
 /// ```
-class Step extends StatelessComponent {
+class Steps extends StatelessComponent {
   /// A list of step items to be displayed in sequence.
   final List<StepItem> children;
 
-  /// Creates a new [Step] component.
+  /// A steps position
+  final StepPosition? position;
+
+  /// Creates a new [Steps] component.
   ///
   /// [key] is an optional key for this component.
   /// [children] is a required list of [StepItem] to be rendered.
-  Step({super.key, required this.children});
+  /// [position] is a optional for step position.
+  Steps({super.key, required this.children, this.position});
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield ul(classes: 'steps', children);
+    yield ul(classes: 'steps ${position?.className ?? ''}', children);
   }
 }
 
-/// Represents an individual step within a [Step] component.
+/// Represents an individual step within a [Steps] component.
 ///
 /// [StepItem] defines a single step with a title and optional
 /// color styling. It can be used to create detailed
@@ -48,6 +52,9 @@ class StepItem extends StatelessComponent {
   /// The text displayed for this step.
   final String title;
 
+  /// The content displayed for this step.
+  final String? content;
+
   /// Optional color styling for the step.
   final StepColor? color;
 
@@ -58,13 +65,19 @@ class StepItem extends StatelessComponent {
   /// [color] is an optional [StepColor] to style the step.
   StepItem({
     super.key,
+    this.content,
     required this.title,
     this.color,
   });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield li(classes: 'step ${color?.className ?? ''}', [text(title)]);
+    final kcontent = (content != null) ? {'data-content': '$content'} : null;
+
+    yield li(
+        classes: 'step ${color?.className ?? ''}',
+        attributes: kcontent,
+        [text(title)]);
   }
 }
 
@@ -123,6 +136,42 @@ enum StepColor {
   final String _className;
 
   /// Returns the CSS class name for this step color.
+  ///
+  /// Provides access to the private [_className] field.
+  String get className => _className;
+}
+
+/// Defines the layout orientation for step components.
+///
+/// [StepPosition] allows you to specify whether steps
+/// should be displayed vertically or horizontally,
+/// providing flexibility in step visualization.
+///
+/// Available positions include:
+/// - [vertical]: Steps are arranged in a vertical column
+/// - [horizontal]: Steps are arranged in a horizontal row
+///
+/// Example usage:
+/// ```dart
+/// Step(
+///   position: StepPosition.horizontal,
+///   children: [ ... ]
+/// )
+/// ```
+enum StepPosition {
+  /// Vertical layout where steps are stacked on top of each other
+  vertical('steps-vertical'),
+
+  /// Horizontal layout where steps are arranged side by side
+  horizontal('steps-horizontal');
+
+  /// Creates a [StepPosition] with the specified CSS class name.
+  const StepPosition(this._className);
+
+  /// The CSS class name associated with this step position.
+  final String _className;
+
+  /// Returns the CSS class name for this step position.
   ///
   /// Provides access to the private [_className] field.
   String get className => _className;

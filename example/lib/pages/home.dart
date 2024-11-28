@@ -10,7 +10,6 @@ class Home extends StatefulComponent {
 }
 
 class HomeState extends State<Home> {
-  int currentIndex = 0;
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield TitleGradient(title: 'title');

@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the StepItem class from the jaspr_ui library, for the Dart programming language.">
-  <title>StepItem class - jaspr_ui library - Dart API</title>
+  <meta name="description" content="API docs for the Steps class from the jaspr_ui library, for the Dart programming language.">
+  <title>Steps class - jaspr_ui library - Dart API</title>
 
 
   
@@ -30,9 +30,9 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">jaspr_ui</a></li>
     <li><a href="../jaspr_ui/jaspr_ui-library.html">jaspr_ui.dart</a></li>
-    <li class="self-crumb">StepItem class</li>
+    <li class="self-crumb">Steps class</li>
   </ol>
-  <div class="self-name">StepItem</div>
+  <div class="self-name">Steps</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -54,22 +54,24 @@
     id="dartdoc-main-content"
     class="main-content"
     data-above-sidebar="jaspr_ui&#47;jaspr_ui-library-sidebar.html"
-    data-below-sidebar="jaspr_ui&#47;StepItem-class-sidebar.html">
+    data-below-sidebar="jaspr_ui&#47;Steps-class-sidebar.html">
     <div>
-<h1><span class="kind-class">StepItem</span> class 
+<h1><span class="kind-class">Steps</span> class 
  
 </h1></div>
 
     
 <section class="desc markdown">
-  <p>Represents an individual step within a <a href="../jaspr_ui/Steps-class.html">Steps</a> component.</p>
-<p><a href="../jaspr_ui/StepItem-class.html">StepItem</a> defines a single step with a title and optional
-color styling. It can be used to create detailed
-step-by-step progress indicators.</p>
+  <p>Represents a container for a series of sequential steps.</p>
+<p>The <a href="../jaspr_ui/Steps-class.html">Steps</a> component renders a list of <a href="../jaspr_ui/StepItem-class.html">StepItem</a> components
+with a unified styling and layout. It allows for creating
+step-by-step progress indicators or process visualizations.</p>
 <p>Example usage:</p>
-<pre class="language-dart"><code class="language-dart">StepItem(
-  title: 'Complete Profile',
-  color: StepColor.success
+<pre class="language-dart"><code class="language-dart">Steps(
+  children: [
+    StepItem(title: 'First Step', color: StepColor.primary),
+    StepItem(title: 'Second Step', color: StepColor.secondary),
+  ],
 )
 </code></pre>
 </section>
@@ -84,7 +86,7 @@ step-by-step progress indicators.</p>
       <li><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object-class.html">Object</a></li>
         <li><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></li>
         <li><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/StatelessComponent-class.html">StatelessComponent</a></li>
-      <li>StepItem</li>
+      <li>Steps</li>
     </ul>
   </dd>
 
@@ -104,11 +106,11 @@ step-by-step progress indicators.</p>
     <h2>Constructors</h2>
 
     <dl class="constructor-summary-list">
-        <dt id="StepItem" class="callable">
-          <span class="name"><a href="../jaspr_ui/StepItem/StepItem.html">StepItem</a></span><span class="signature">({<span class="parameter" id="-param-key"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-content"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">content</span>, </span><span class="parameter" id="-param-title"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">title</span>, </span><span class="parameter" id="-param-color"><span class="type-annotation"><a href="../jaspr_ui/StepColor.html">StepColor</a>?</span> <span class="parameter-name">color</span></span>})</span>
+        <dt id="Steps" class="callable">
+          <span class="name"><a href="../jaspr_ui/Steps/Steps.html">Steps</a></span><span class="signature">({<span class="parameter" id="-param-key"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-children"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../jaspr_ui/StepItem-class.html">StepItem</a></span>&gt;</span></span> <span class="parameter-name">children</span>, </span><span class="parameter" id="-param-position"><span class="type-annotation"><a href="../jaspr_ui/StepPosition.html">StepPosition</a>?</span> <span class="parameter-name">position</span></span>})</span>
         </dt>
         <dd>
-          Creates a new <a href="../jaspr_ui/StepItem-class.html">StepItem</a>.
+          Creates a new <a href="../jaspr_ui/Steps-class.html">Steps</a> component.
         </dd>
     </dl>
   </section>
@@ -118,26 +120,14 @@ step-by-step progress indicators.</p>
       id="instance-properties">
     <h2>Properties</h2>
     <dl class="properties">
-        <dt id="color" class="property">
-  <span class="name"><a href="../jaspr_ui/StepItem/color.html">color</a></span>
-  <span class="signature">&#8594; <a href="../jaspr_ui/StepColor.html">StepColor</a>?</span>
+        <dt id="children" class="property">
+  <span class="name"><a href="../jaspr_ui/Steps/children.html">children</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../jaspr_ui/StepItem-class.html">StepItem</a></span>&gt;</span></span>
   
 
 </dt>
 <dd>
-  Optional color styling for the step.
-  <div class="features"><span class="feature">final</span></div>
-
-</dd>
-
-        <dt id="content" class="property">
-  <span class="name"><a href="../jaspr_ui/StepItem/content.html">content</a></span>
-  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a>?</span>
-  
-
-</dt>
-<dd>
-  The content displayed for this step.
+  A list of step items to be displayed in sequence.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -166,6 +156,18 @@ step-by-step progress indicators.</p>
 
 </dd>
 
+        <dt id="position" class="property">
+  <span class="name"><a href="../jaspr_ui/Steps/position.html">position</a></span>
+  <span class="signature">&#8594; <a href="../jaspr_ui/StepPosition.html">StepPosition</a>?</span>
+  
+
+</dt>
+<dd>
+  A steps position
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
         <dt id="runtimeType" class="property inherited">
   <span class="name"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object/runtimeType.html">runtimeType</a></span>
   <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/Type-class.html">Type</a></span>
@@ -178,18 +180,6 @@ step-by-step progress indicators.</p>
 
 </dd>
 
-        <dt id="title" class="property">
-  <span class="name"><a href="../jaspr_ui/StepItem/title.html">title</a></span>
-  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span>
-  
-
-</dt>
-<dd>
-  The text displayed for this step.
-  <div class="features"><span class="feature">final</span></div>
-
-</dd>
-
     </dl>
   </section>
     
@@ -199,7 +189,7 @@ step-by-step progress indicators.</p>
     <h2>Methods</h2>
     <dl class="callables">
         <dt id="build" class="callable">
-  <span class="name"><a href="../jaspr_ui/StepItem/build.html">build</a></span><span class="signature">(<wbr><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span>)
+  <span class="name"><a href="../jaspr_ui/Steps/build.html">build</a></span><span class="signature">(<wbr><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span>)
     <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span>&gt;</span></span>
   </span>
   
@@ -304,7 +294,7 @@ step-by-step progress indicators.</p>
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">jaspr_ui</a></li>
     <li><a href="../jaspr_ui/jaspr_ui-library.html">jaspr_ui</a></li>
-    <li class="self-crumb">StepItem class</li>
+    <li class="self-crumb">Steps class</li>
 </ol>
 
 
