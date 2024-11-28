@@ -13,12 +13,6 @@ class HomeState extends State<Home> {
   int currentIndex = 0;
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield Pagination(
-      currentIndex: currentIndex,
-      children: List.generate(
-        5,
-        (i) => PaginationItem(href: '#'),
-      ),
-    );
+    yield TitleGradient(title: 'title');
   }
 }
