@@ -1,69 +1,74 @@
-# Jaspr UI
+`THIS WORK UNDER DEVELOPMENT, FEEL FREE TO CONTRIBUTE.`
 
-A simple component for Jaspr.
+# Jaspr UI Component Library: A Powerful Design Toolkit
 
-`This work under development, feel free to contribute.`
+Jaspr UI delivers an advanced component library engineered for modern web development, seamlessly integrating Tailwind CSS and Daisy UI. Our comprehensive solution offers developers a robust toolkit for creating dynamic digital interfaces.
 
-Add dependency in pubspec.yaml
+Key Features
+
+- 50+ Pre-built UI Components
+- Organized into 7 Functional Groups
+- Full Support for Websites and Web Applications
+- Powered by Tailwind CSS and Daisy UI
+- Rapid Development Capabilities
+
+## Design Philosophy
+
+Meticulously crafted to provide seamless integration, responsive design, and a consistent user experience across digital platforms. Developers can quickly build sophisticated interfaces with minimal effort and maximum efficiency.
+Core Benefits
+
+- Accelerated Development Workflow
+- Consistent Design Language
+- Flexible Implementation
+- High-Performance UI Elements
+
+Transform your web projects with a comprehensive, ready-to-use component ecosystem designed for modern developers.
+
+## Getting Started with Jaspr UI
+
+Implementing Jaspr UI in your project involves a systematic approach that seamlessly integrates powerful UI components into your web application. This guide will walk you through the essential steps of setting up and utilizing Jaspr UI effectively.
+
+### Step 1: Dependency Installation
+
+Integrating Jaspr UI begins with adding the library to your project's dependencies. You have two primary methods of installation:
+
+#### Standard Package Installation
+
+When using the official published package, update your `pubspec.yaml` with:
 
 ```yaml
 dependencies:
   jaspr_ui: ^1.0.0
 ```
 
-Or using git repository
+#### Git Repository Installation
+
+For developers wanting the latest development version, you can reference the GitHub repository directly:
 
 ```yaml
 dependencies:
   jaspr_ui:
     git:
       url: https://github.com/anoochit/jaspr_ui.git
-      ref: daisyui # branch name
+      ref: daisyui # Specify the branch you want to use
 ```
 
-<!-- ### Use CDN for Tailwind and DaisyUI -->
+### Step 2: Stylesheet and Styling Configuration
 
-Add Tailwindcss and Font Awesome Icon from CDN. If you want to build custom css file, you should use [jaspr_tailwind](https://pub.dev/packages/jaspr_tailwind).
+To ensure your application has the necessary styling, incorporate the required CSS frameworks and stylesheets:
 
 ```dart
 runApp(Document(
   lang: 'en',
-  title: 'example',
-  head: daisyUiStyles,
+  title: 'Your Application',
+  head: daisyUiStyles,  // Includes Tailwind CSS and DaisyUI styles
   body: App(),
 ));
 ```
 
-<!--
-### Use `jaspr_tailwind` for Tailwind and DaisyUI
+### Step 3: Application Component Setup
 
-Install `jaspr_tailwind` follow the [installation](https://pub.dev/packages/jaspr_tailwind) from package page.
-
-`jaspr_tailwind` utilizes Tailwind CSS CLI to compile your `web/styles.css`file. As it relies on DaisyUI, you'll need to install DaisyUI as well.
-
-```bash
-npm i -D daisyui@latest
-```
-
-Update `tailwind.config.js` to use DaisyUI as follow.
-
-```javascript
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./{lib,web}/**/*.dart"],
-  theme: {
-    extend: {},
-  },
-  // install daisyui
-  plugins: [require("daisyui")],
-  // daisy ui themes
-  daisyui: {
-    themes: ["light", "dark", "dracular", "cupcake"],
-  },
-};
-``` -->
-
-Edit `app.dart` App componet to return DaisyUI to insert `data-theme` attribute in html document.
+Configure your main application component to leverage Jaspr UI's routing and theming capabilities:
 
 ```dart
 import 'package:jaspr/jaspr.dart';
@@ -78,7 +83,7 @@ class App extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield DaisyUI(
-      theme: 'dark',
+      theme: 'dark',  // Choose between light and dark themes
       routes: [
         Route(
           path: '/',
@@ -91,7 +96,9 @@ class App extends StatelessComponent {
 }
 ```
 
-Update home page `home.dart` to use a component.
+### Step 4: Component Implementation
+
+Demonstrate component usage in your page implementations. Here's an example of integrating a gradient title component:
 
 ```dart
 import 'package:jaspr/jaspr.dart';
@@ -100,6 +107,7 @@ import 'package:jaspr_ui/jaspr_ui.dart';
 @client
 class Home extends StatefulComponent {
   const Home({super.key});
+
   @override
   State<Home> createState() => HomeState();
 }
@@ -108,9 +116,26 @@ class HomeState extends State<Home> {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield TitleGradient(
-      title: 'Pariatur veniam reprehenderit tempor fugiat.',
+      title: 'Welcome to Our Dynamic Web Application',
     );
   }
 }
-
 ```
+
+## Best Practices and Recommendations
+
+1. **Dependency Management**: Regularly update your Jaspr UI dependency to access the latest features and bug fixes.
+
+2. **Theme Customization**: Experiment with different themes to match your application's design language.
+
+3. **Responsive Design**: Leverage Tailwind CSS's utility classes to create responsive layouts.
+
+4. **Performance**: Minimize unnecessary component renders and optimize your application's performance.
+
+## Troubleshooting
+
+- Ensure all dependencies are correctly installed
+- Verify CDN stylesheet loading
+- Check browser console for any configuration warnings
+
+By following these steps, you'll be well-equipped to integrate Jaspr UI into your web application, creating dynamic and visually appealing interfaces with ease.

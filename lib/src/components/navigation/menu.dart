@@ -173,6 +173,9 @@ class GroupMenuItem extends StatelessComponent {
   /// Optional alignment for the menu (vertical or horizontal).
   final MenuAlign? align;
 
+  // Optional additional style
+  final String? style;
+
   /// Creates a [GroupMenuItem] instance.
   ///
   /// [children] - The list of menu items to be rendered.
@@ -180,12 +183,13 @@ class GroupMenuItem extends StatelessComponent {
   GroupMenuItem({
     required this.children,
     required this.align,
+    this.style,
   });
 
   @override
   Iterable<Component> build(Object context) sync* {
     yield ul(
-        classes: 'menu'
+        classes: 'menu ${style ?? ''} '
             '${align != null ? ' ${align!.className}' : ''} ',
         children);
   }
