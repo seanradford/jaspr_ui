@@ -77,39 +77,16 @@
     </section>
     
 <section class="desc markdown">
-  <p>Describes the part of the user interface represented by this component.</p>
-<p>The framework calls this method when this component is inserted into the tree
-in a given <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a> and when the dependencies of this component change
-(e.g., an <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/InheritedComponent-class.html">InheritedComponent</a> referenced by this component changes). This
-method can potentially be called in every frame and should not have any side
-effects beyond building a component.</p>
-<p>The framework replaces the subtree below this component with the component
-returned by this method, either by updating the existing subtree or by
-removing the subtree and inflating a new subtree, depending on whether the
-component returned by this method can update the root of the existing
-subtree, as determined by calling <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component/canUpdate.html">Component.canUpdate</a>.</p>
-<p>Typically implementations return a newly created constellation of components
-that are configured with information from this component's constructor and
-from the given <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a>.</p>
-<p>The given <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a> contains information about the location in the
-tree at which this component is being built. For example, the context
-provides the set of inherited components for this location in the tree. A
-given component might be built with multiple different <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a>
-arguments over time if the component is moved around the tree or if the
-component is inserted into the tree in multiple places at once.</p>
-<p>The implementation of this method must only depend on:</p>
-<ul>
-<li>the fields of the component, which themselves must not change over time,
-and</li>
-<li>any ambient state obtained from the <code>context</code> using
-<a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext/dependOnInheritedComponentOfExactType.html">BuildContext.dependOnInheritedComponentOfExactType</a>.</li>
-</ul>
-<p>If a component's <a href="../../jaspr_ui/NavBar/build.html">build</a> method is to depend on anything else, use a
-<a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/StatefulComponent-class.html">StatefulComponent</a> instead.</p>
-<p>See also:</p>
-<ul>
-<li><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/StatelessComponent-class.html">StatelessComponent</a>, which contains the discussion on performance considerations.</li>
-</ul>
+  <p>Builds the navigation bar component with dynamic layout and styling.</p>
+<p>Constructs the navbar by:</p>
+<ol>
+<li>Applying background and foreground color classes</li>
+<li>Conditionally rendering lead section</li>
+<li>Positioning title based on <a href="../../jaspr_ui/NavBar/centerTitle.html">centerTitle</a></li>
+<li>Conditionally rendering actions section</li>
+</ol>
+<p>The layout adapts to the provided configuration, allowing
+for flexible and responsive navigation designs.</p>
 </section>
 
 
@@ -119,18 +96,19 @@ and</li>
   <pre class="language-dart"><code class="language-dart">@override
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
   yield div(
+      &#47;&#47; Combine background and foreground color classes
       classes: &#39;navbar ${backgroundColor?.className ?? &#39;&#39;} &#39;
           &#39; ${foregroundColor?.className ?? &#39;&#39;}&#39;,
       [
-        &#47;&#47;
+        &#47;&#47; Lead section (optional)
         if (lead != null) div(classes: &#39;navbar-start&#39;, lead ?? []),
 
-        &#47;&#47;
+        &#47;&#47; Title section with conditional positioning
         (centerTitle == true)
             ? div(classes: &#39;navbar-center&#39;, title)
             : div(classes: &#39;flex-1&#39;, title),
 
-        &#47;&#47;
+        &#47;&#47; Actions section (optional)
         if (actions != null) div(classes: &#39;navbar-end&#39;, actions ?? [])
       ]);
 }</code></pre>
