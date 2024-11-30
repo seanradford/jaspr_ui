@@ -61,24 +61,6 @@
 </h1></div>
 
     
-<section class="desc markdown">
-  <p>A responsive grid layout component that arranges children in a grid pattern with configurable columns
-for different screen sizes.</p>
-<p>The grid uses CSS Grid layout with Tailwind classes to create a responsive design that can adjust
-the number of columns based on screen size breakpoints (mobile, tablet, desktop).</p>
-<p>Example usage:</p>
-<pre class="language-dart"><code class="language-dart">GridView(
-  cols: 2,
-  mdCols: 3,
-  lgCols: 4,
-  [
-    Component1(),
-    Component2(),
-    Component3(),
-  ],
-)
-</code></pre>
-</section>
 
 
     <section>
@@ -111,11 +93,10 @@ the number of columns based on screen size breakpoints (mobile, tablet, desktop)
 
     <dl class="constructor-summary-list">
         <dt id="GridView" class="callable">
-          <span class="name"><a href="../jaspr_ui/GridView/GridView.html">GridView</a></span><span class="signature">(<span class="parameter" id="-param-children"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span>&gt;</span></span> <span class="parameter-name">children</span>, {</span><span class="parameter" id="-param-cols"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span> <span class="parameter-name">cols</span> = <span class="default-value">1</span>, </span><span class="parameter" id="-param-mdCols"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">mdCols</span>, </span><span class="parameter" id="-param-lgCols"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">lgCols</span></span>})</span>
+          <span class="name"><a href="../jaspr_ui/GridView/GridView.html">GridView</a></span><span class="signature">({<span class="parameter" id="-param-key"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-type"><span class="type-annotation"><a href="../jaspr_ui/GridType.html">GridType</a></span> <span class="parameter-name">type</span> = <span class="default-value">GridType.column</span>, </span><span class="parameter" id="-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="-param-sizeSM"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">sizeSM</span>, </span><span class="parameter" id="-param-sizeMD"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">sizeMD</span>, </span><span class="parameter" id="-param-sizeLG"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">sizeLG</span>, </span><span class="parameter" id="-param-gap"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span> <span class="parameter-name">gap</span> = <span class="default-value">4</span>, </span><span class="parameter" id="-param-children"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span>&gt;</span></span> <span class="parameter-name">children</span></span>})</span>
         </dt>
         <dd>
-          Creates a GridView with the specified configuration.
-            <div class="constructor-modifier features">const</div>
+          
         </dd>
     </dl>
   </section>
@@ -132,19 +113,19 @@ the number of columns based on screen size breakpoints (mobile, tablet, desktop)
 
 </dt>
 <dd>
-  The child components to display in the grid
+  
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
-        <dt id="cols" class="property">
-  <span class="name"><a href="../jaspr_ui/GridView/cols.html">cols</a></span>
+        <dt id="gap" class="property">
+  <span class="name"><a href="../jaspr_ui/GridView/gap.html">gap</a></span>
   <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span>
   
 
 </dt>
 <dd>
-  The number of columns to display on mobile screens
+  
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -173,32 +154,6 @@ the number of columns based on screen size breakpoints (mobile, tablet, desktop)
 
 </dd>
 
-        <dt id="lgCols" class="property">
-  <span class="name"><a href="../jaspr_ui/GridView/lgCols.html">lgCols</a></span>
-  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a>?</span>
-  
-
-</dt>
-<dd>
-  The number of columns to display on large screens (desktop)
-If null, will maintain the previous breakpoint's value
-  <div class="features"><span class="feature">final</span></div>
-
-</dd>
-
-        <dt id="mdCols" class="property">
-  <span class="name"><a href="../jaspr_ui/GridView/mdCols.html">mdCols</a></span>
-  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a>?</span>
-  
-
-</dt>
-<dd>
-  The number of columns to display on medium-sized screens (tablet)
-If null, will maintain the <a href="../jaspr_ui/GridView/cols.html">cols</a> value
-  <div class="features"><span class="feature">final</span></div>
-
-</dd>
-
         <dt id="runtimeType" class="property inherited">
   <span class="name"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object/runtimeType.html">runtimeType</a></span>
   <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/Type-class.html">Type</a></span>
@@ -208,6 +163,66 @@ If null, will maintain the <a href="../jaspr_ui/GridView/cols.html">cols</a> val
 <dd class="inherited">
   A representation of the runtime type of the object.
   <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="size" class="property">
+  <span class="name"><a href="../jaspr_ui/GridView/size.html">size</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="sizeLG" class="property">
+  <span class="name"><a href="../jaspr_ui/GridView/sizeLG.html">sizeLG</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="sizeMD" class="property">
+  <span class="name"><a href="../jaspr_ui/GridView/sizeMD.html">sizeMD</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="sizeSM" class="property">
+  <span class="name"><a href="../jaspr_ui/GridView/sizeSM.html">sizeSM</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="type" class="property">
+  <span class="name"><a href="../jaspr_ui/GridView/type.html">type</a></span>
+  <span class="signature">&#8594; <a href="../jaspr_ui/GridType.html">GridType</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">final</span></div>
 
 </dd>
 

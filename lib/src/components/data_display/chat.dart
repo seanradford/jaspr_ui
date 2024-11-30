@@ -6,21 +6,21 @@ import 'package:jaspr/jaspr.dart';
 /// It supports displaying a message with an optional avatar image.
 ///
 /// Parameters:
-/// - [start] - Controls the alignment of the bubble. True for left alignment, false for right.
+/// - [position] - Controls the alignment of the bubble.
 /// - [message] - The text content to display inside the bubble.
 /// - [avatarUrl] - Optional URL for the sender's avatar image.
 ///
 /// Example usage:
 /// ```dart
 /// ChatBubble(
-///   start: true,
+///   position: ChatPosition.left,
 ///   message: "Hello!",
 ///   avatarUrl: "https://example.com/avatar.png",
 /// )
 /// ```
 class ChatBubble extends StatelessComponent {
-  /// Whether to align the bubble to the start (left) of the container.
-  final bool start;
+  /// Whether to align the bubble to the start (left) or end (right) of its container.
+  final ChatPosition? position;
 
   /// The message text to display in the bubble.
   final String message;
@@ -31,11 +31,12 @@ class ChatBubble extends StatelessComponent {
 
   /// Creates a chat bubble component.
   ///
-  /// The [start] and [message] parameters are required.
+  /// The [message] parameters are required.
+  /// The [position] parameter is optional.
   /// The [avatarUrl] parameter is optional.
   ChatBubble({
     super.key,
-    required this.start,
+    this.position,
     required this.message,
     this.avatarUrl,
   });
@@ -44,7 +45,7 @@ class ChatBubble extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield div(
         classes: 'chat m-4 '
-            '${(start) ? 'chat-start' : 'chat-end'}',
+            '${position?.className ?? 'chat-end'}',
         [
           if (avatarUrl != null)
             div(
@@ -63,4 +64,23 @@ class ChatBubble extends StatelessComponent {
           ),
         ]);
   }
+}
+
+/// An enum that defines the different positions for an item on the screen.
+///
+/// Each position corresponds to a specific CSS class that can be used to style
+/// the item accordingly.
+enum ChatPosition {
+  /// Positions the item at the start of the screen (platform-specific).
+  left('chat-start'),
+
+  /// Positions the item at the center of the screen (platform-specific).
+  right('chat-end');
+
+  const ChatPosition(this._className);
+
+  final String _className;
+
+  /// Gets the CSS class name for this item position.
+  String get className => _className;
 }

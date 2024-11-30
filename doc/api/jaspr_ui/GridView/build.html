@@ -119,10 +119,11 @@ and</li>
   <pre class="language-dart"><code class="language-dart">@override
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
   yield div(
-    classes: &#39;grid &#39;
-        &#39; grid-cols-$cols&#39;
-        &#39;${mdCols != null ? &#39; md:grid-cols-$mdCols&#39; : &#39;&#39;}&#39;
-        &#39;${lgCols != null ? &#39; lg:grid-cols-$lgCols&#39; : &#39;&#39;}&#39;,
+    classes: &#39;grid gap-$gap &#39;
+        &#39;${type.className}-$size &#39;
+        &#39;${sizeSM != null ? &#39;sm:${type.className}-$sizeSM&#39; : &#39;&#39;} &#39;
+        &#39;${sizeMD != null ? &#39;md:${type.className}-$sizeMD&#39; : &#39;&#39;} &#39;
+        &#39;${sizeLG != null ? &#39;lg:${type.className}-$sizeLG&#39; : &#39;&#39;} &#39;,
     children,
   );
 }</code></pre>

@@ -31,7 +31,7 @@
     <li><a href="../../index.html">jaspr_ui</a></li>
     <li><a href="../../jaspr_ui/jaspr_ui-library.html">jaspr_ui.dart</a></li>
     <li><a href="../../jaspr_ui/GridView-class.html">GridView</a></li>
-    <li class="self-crumb">GridView const constructor</li>
+    <li class="self-crumb">GridView constructor</li>
   </ol>
   <div class="self-name">GridView</div>
   <form class="search navbar-right" role="search">
@@ -61,35 +61,33 @@
 </h1></div>
 
     <section class="multi-line-signature">
-      const
-      <span class="name ">GridView</span>(<wbr><ol class="parameter-list"> <li><span class="parameter" id="-param-children"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span>&gt;</span></span> <span class="parameter-name">children</span>, {</span></li>
-<li><span class="parameter" id="-param-cols"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span> <span class="parameter-name">cols</span> = <span class="default-value">1</span>, </span></li>
-<li><span class="parameter" id="-param-mdCols"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">mdCols</span>, </span></li>
-<li><span class="parameter" id="-param-lgCols"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">lgCols</span>, </span></li>
+      
+      <span class="name ">GridView</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="-param-key"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span></li>
+<li><span class="parameter" id="-param-type"><span class="type-annotation"><a href="../../jaspr_ui/GridType.html">GridType</a></span> <span class="parameter-name">type</span> = <span class="default-value">GridType.column</span>, </span></li>
+<li><span class="parameter" id="-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span> <span class="parameter-name">size</span>, </span></li>
+<li><span class="parameter" id="-param-sizeSM"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">sizeSM</span>, </span></li>
+<li><span class="parameter" id="-param-sizeMD"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">sizeMD</span>, </span></li>
+<li><span class="parameter" id="-param-sizeLG"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">sizeLG</span>, </span></li>
+<li><span class="parameter" id="-param-gap"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/int-class.html">int</a></span> <span class="parameter-name">gap</span> = <span class="default-value">4</span>, </span></li>
+<li><span class="parameter" id="-param-children"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span>&gt;</span></span> <span class="parameter-name">children</span>, </span></li>
 </ol>})
     </section>
 
     
-<section class="desc markdown">
-  <p>Creates a GridView with the specified configuration.</p>
-<p>Parameters:</p>
-<ul>
-<li><a href="../../jaspr_ui/GridView/children.html">children</a>: The list of components to display in the grid</li>
-<li><a href="../../jaspr_ui/GridView/cols.html">cols</a>: Number of columns for mobile screens (default: 1)</li>
-<li><a href="../../jaspr_ui/GridView/mdCols.html">mdCols</a>: Optional number of columns for medium-sized screens (tablet)</li>
-<li><a href="../../jaspr_ui/GridView/lgCols.html">lgCols</a>: Optional number of columns for large screens (desktop)</li>
-</ul>
-</section>
 
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">const GridView(
-  this.children, {
-  this.cols = 1,
-  this.mdCols,
-  this.lgCols,
+  <pre class="language-dart"><code class="language-dart">GridView({
+  super.key,
+  this.type = GridType.column,
+  required this.size,
+  this.sizeSM,
+  this.sizeMD,
+  this.sizeLG,
+  this.gap = 4,
+  required this.children,
 });</code></pre>
 </section>
 
@@ -108,7 +106,7 @@
     <li><a href="../../index.html">jaspr_ui</a></li>
     <li><a href="../../jaspr_ui/jaspr_ui-library.html">jaspr_ui</a></li>
     <li><a href="../../jaspr_ui/GridView-class.html">GridView</a></li>
-    <li class="self-crumb">GridView const constructor</li>
+    <li class="self-crumb">GridView constructor</li>
 </ol>
 
 

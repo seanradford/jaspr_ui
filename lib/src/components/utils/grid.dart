@@ -1,61 +1,47 @@
 import 'package:jaspr/jaspr.dart';
 
-/// A responsive grid layout component that arranges children in a grid pattern with configurable columns
-/// for different screen sizes.
-///
-/// The grid uses CSS Grid layout with Tailwind classes to create a responsive design that can adjust
-/// the number of columns based on screen size breakpoints (mobile, tablet, desktop).
-///
-/// Example usage:
-/// ```dart
-/// GridView(
-///   cols: 2,
-///   mdCols: 3,
-///   lgCols: 4,
-///   [
-///     Component1(),
-///     Component2(),
-///     Component3(),
-///   ],
-/// )
-/// ```
+// FIXME : need better design
+
 class GridView extends StatelessComponent {
-  /// Creates a GridView with the specified configuration.
-  ///
-  /// Parameters:
-  /// - [children]: The list of components to display in the grid
-  /// - [cols]: Number of columns for mobile screens (default: 1)
-  /// - [mdCols]: Optional number of columns for medium-sized screens (tablet)
-  /// - [lgCols]: Optional number of columns for large screens (desktop)
-  const GridView(
-    this.children, {
-    this.cols = 1,
-    this.mdCols,
-    this.lgCols,
-  });
-
-  /// The number of columns to display on mobile screens
-  final int cols;
-
-  /// The number of columns to display on medium-sized screens (tablet)
-  /// If null, will maintain the [cols] value
-  final int? mdCols;
-
-  /// The number of columns to display on large screens (desktop)
-  /// If null, will maintain the previous breakpoint's value
-  final int? lgCols;
-
-  /// The child components to display in the grid
   final List<Component> children;
+  final GridType type;
+  final int size;
+  final int? sizeSM;
+  final int? sizeMD;
+  final int? sizeLG;
+  final int gap;
+
+  GridView({
+    super.key,
+    this.type = GridType.column,
+    required this.size,
+    this.sizeSM,
+    this.sizeMD,
+    this.sizeLG,
+    this.gap = 4,
+    required this.children,
+  });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield div(
-      classes: 'grid '
-          ' grid-cols-$cols'
-          '${mdCols != null ? ' md:grid-cols-$mdCols' : ''}'
-          '${lgCols != null ? ' lg:grid-cols-$lgCols' : ''}',
+      classes: 'grid gap-$gap '
+          '${type.className}-$size '
+          '${sizeSM != null ? 'sm:${type.className}-$sizeSM' : ''} '
+          '${sizeMD != null ? 'md:${type.className}-$sizeMD' : ''} '
+          '${sizeLG != null ? 'lg:${type.className}-$sizeLG' : ''} ',
       children,
     );
   }
+}
+
+enum GridType {
+  row('grid-rows'),
+  column('grid-cols');
+
+  const GridType(this._className);
+
+  final String _className;
+
+  String get className => _className;
 }
