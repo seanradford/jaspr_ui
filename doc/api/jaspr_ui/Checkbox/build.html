@@ -93,7 +93,7 @@ Iterable&lt;Component&gt; build(BuildContext context) sync* {
     name: name,
     &#47;&#47; Dynamically apply color and size classes
     classes: &#39;checkbox ${color?.className ?? &#39;&#39;} ${size?.className ?? &#39;&#39;}&#39;,
-    disabled: false,
+    disabled: disabled,
     type: InputType.checkbox,
     &#47;&#47; Add &#39;checked&#39; attribute if checked is true
     attributes: (checked == true) ? {&#39;checked&#39;: &#39;&#39;} : null,
@@ -101,7 +101,6 @@ Iterable&lt;Component&gt; build(BuildContext context) sync* {
     onChange: (value) =&gt; onChange?.call(value),
     &#47;&#47; Trigger onInput callback with the input value
     onInput: (value) =&gt; onInput?.call(value),
-    value: value,
     [],
   );
 }</code></pre>

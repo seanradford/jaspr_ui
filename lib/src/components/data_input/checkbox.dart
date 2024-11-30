@@ -9,7 +9,6 @@ import 'package:jaspr/jaspr.dart';
 /// Example usage:
 /// ```dart
 /// Checkbox(
-///   value: 'option1',
 ///   name: 'myCheckbox',
 ///   color: CheckboxColor.primary,
 ///   size: CheckboxSize.md,
@@ -52,7 +51,6 @@ class Checkbox extends StatelessComponent {
   /// Constructs a [Checkbox] with optional configuration parameters.
   ///
   /// [key] is used for widget identification in the component tree.
-  /// [value] sets the value attribute of the checkbox.
   /// [name] sets the name attribute for form submissions.
   /// [color] determines the visual color scheme of the checkbox.
   /// [size] determines the size of the checkbox.
