@@ -170,3 +170,64 @@ enum FileInputSize {
   /// Getter to access the CSS class name
   String get className => _className;
 }
+
+class FileInputWithLabel extends StatelessComponent {
+  final String? value;
+  final String? name;
+  final FileInputColor? color;
+  final FileInputSize? size;
+  final ValueChanged? onChange;
+  final ValueChanged? onInput;
+  final String? topLeftTitle;
+  final String? topRightTitle;
+  final String? bottomLeftTitle;
+  final String? bottomRightTitle;
+
+  FileInputWithLabel({
+    super.key,
+    this.topLeftTitle,
+    this.topRightTitle,
+    this.bottomLeftTitle,
+    this.bottomRightTitle,
+    this.value,
+    this.name,
+    this.color,
+    this.size,
+    this.onChange,
+    this.onInput,
+  });
+
+  @override
+  Iterable<Component> build(BuildContext context) sync* {
+    yield div(classes: 'form-control', [
+      div(classes: 'label', [
+        span(
+          classes: 'label-text',
+          [text('${topLeftTitle ?? ''} ')],
+        ),
+        span(
+          classes: 'label-text-alt',
+          [text('${topRightTitle ?? ''} ')],
+        ),
+      ]),
+      FileInput(
+        name: name,
+        value: value,
+        color: color,
+        size: size,
+        onChange: (value) => onChange?.call(value),
+        onInput: (value) => onInput?.call(value),
+      ),
+      div(classes: 'label', [
+        span(
+          classes: 'label-text-alt',
+          [text('${bottomLeftTitle ?? ''} ')],
+        ),
+        span(
+          classes: 'label-text-alt',
+          [text('${bottomRightTitle ?? ''} ')],
+        ),
+      ]),
+    ]);
+  }
+}

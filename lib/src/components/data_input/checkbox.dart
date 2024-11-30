@@ -19,7 +19,7 @@ import 'package:jaspr/jaspr.dart';
 /// ```
 class Checkbox extends StatelessComponent {
   /// The value associated with the checkbox when submitted in a form.
-  final String? value;
+  // final String? value;
 
   /// The name attribute for the checkbox input, used in form submissions.
   final String? name;
@@ -47,6 +47,8 @@ class Checkbox extends StatelessComponent {
   /// Provides the current input value.
   final ValueChanged? onInput;
 
+  final bool? disabled;
+
   /// Constructs a [Checkbox] with optional configuration parameters.
   ///
   /// [key] is used for widget identification in the component tree.
@@ -59,13 +61,14 @@ class Checkbox extends StatelessComponent {
   /// [onInput] is called during input interactions.
   Checkbox({
     super.key,
-    this.value,
+    // this.value,
     this.name,
     this.color,
     this.size,
     this.checked,
     this.onChange,
     this.onInput,
+    this.disabled,
   });
 
   /// Builds the checkbox input component.
@@ -80,7 +83,7 @@ class Checkbox extends StatelessComponent {
       name: name,
       // Dynamically apply color and size classes
       classes: 'checkbox ${color?.className ?? ''} ${size?.className ?? ''}',
-      disabled: false,
+      disabled: disabled,
       type: InputType.checkbox,
       // Add 'checked' attribute if checked is true
       attributes: (checked == true) ? {'checked': ''} : null,
@@ -88,7 +91,6 @@ class Checkbox extends StatelessComponent {
       onChange: (value) => onChange?.call(value),
       // Trigger onInput callback with the input value
       onInput: (value) => onInput?.call(value),
-      value: value,
       [],
     );
   }
@@ -158,4 +160,44 @@ enum CheckboxSize {
 
   /// Getter to access the CSS class name
   String get className => _className;
+}
+
+class CheckboxWithLabel extends StatelessComponent {
+  final String title;
+  final String? name;
+  final ValueChanged? onChange;
+  final ValueChanged? onInput;
+  final CheckboxColor? color;
+  final CheckboxSize? size;
+  final bool? checked;
+  final bool? disabled;
+
+  CheckboxWithLabel(
+      {super.key,
+      required this.title,
+      this.name,
+      this.onChange,
+      this.onInput,
+      this.color,
+      this.size,
+      this.checked,
+      this.disabled});
+
+  @override
+  Iterable<Component> build(BuildContext context) sync* {
+    yield div(classes: 'form-control', [
+      label(classes: 'cursor-pointer label', [
+        span(classes: 'label-text', [text(title)]),
+        Checkbox(
+          name: name,
+          color: color,
+          size: size,
+          checked: true,
+          disabled: disabled,
+          onChange: (value) => onChange?.call(value),
+          onInput: (value) => onInput?.call(value),
+        )
+      ]),
+    ]);
+  }
 }
