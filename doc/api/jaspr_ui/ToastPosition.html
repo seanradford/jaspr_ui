@@ -67,9 +67,9 @@
 
     
 <section class="desc markdown">
-  <p>Enum defining possible toast notification positions.</p>
-<p>Provides predefined positions for placing toast notifications
-on different parts of the screen.</p>
+  <p>An enum that defines the different positions for a toast on the screen.</p>
+<p>Each position corresponds to a specific CSS class that can be used to style
+the toast accordingly.</p>
 </section>
 
 
@@ -102,7 +102,7 @@ on different parts of the screen.</p>
           <span class="name"><a href="../jaspr_ui/ToastPosition/ToastPosition.html">ToastPosition</a></span><span class="signature">(<span class="parameter" id="-param-_className"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">_className</span></span>)</span>
         </dt>
         <dd>
-          Constructs a ToastPosition with its corresponding CSS class name.
+          
             <div class="constructor-modifier features">const</div>
         </dd>
     </dl>
@@ -112,14 +112,14 @@ on different parts of the screen.</p>
         <h2>Values</h2>
 
         <dl class="properties">
-            <dt id="start" class="constant">
-    <span class="name ">start</span>
+            <dt id="left" class="constant">
+    <span class="name ">left</span>
   <span class="signature">&#8594; const <a href="../jaspr_ui/ToastPosition.html">ToastPosition</a></span>
   
 
 </dt>
 <dd>
-  <p>Positions the toast at the start of the screen.</p>
+  <p>Positions the toast at the start of the screen (platform-specific).</p>
   
 
     <div>
@@ -134,7 +134,7 @@ on different parts of the screen.</p>
 
 </dt>
 <dd>
-  <p>Centers the toast horizontally.</p>
+  <p>Positions the toast at the center of the screen (platform-specific).</p>
   
 
     <div>
@@ -142,14 +142,14 @@ on different parts of the screen.</p>
     </div>
 </dd>
 
-            <dt id="end" class="constant">
-    <span class="name ">end</span>
+            <dt id="right" class="constant">
+    <span class="name ">right</span>
   <span class="signature">&#8594; const <a href="../jaspr_ui/ToastPosition.html">ToastPosition</a></span>
   
 
 </dt>
 <dd>
-  <p>Positions the toast at the end of the screen.</p>
+  <p>Positions the toast at the end of the screen (platform-specific).</p>
   
 
     <div>
@@ -172,6 +172,36 @@ on different parts of the screen.</p>
     </div>
 </dd>
 
+            <dt id="topLeft" class="constant">
+    <span class="name ">topLeft</span>
+  <span class="signature">&#8594; const <a href="../jaspr_ui/ToastPosition.html">ToastPosition</a></span>
+  
+
+</dt>
+<dd>
+  <p>Positions the toast at the top left corner of the screen.</p>
+  
+
+    <div>
+      <span class="signature"><code>const ToastPosition(&#39;toast-top toast-start&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="topRight" class="constant">
+    <span class="name ">topRight</span>
+  <span class="signature">&#8594; const <a href="../jaspr_ui/ToastPosition.html">ToastPosition</a></span>
+  
+
+</dt>
+<dd>
+  <p>Positions the toast at the top right corner of the screen.</p>
+  
+
+    <div>
+      <span class="signature"><code>const ToastPosition(&#39;toast-top toast-end&#39;)</code></span>
+    </div>
+</dd>
+
             <dt id="middle" class="constant">
     <span class="name ">middle</span>
   <span class="signature">&#8594; const <a href="../jaspr_ui/ToastPosition.html">ToastPosition</a></span>
@@ -179,11 +209,41 @@ on different parts of the screen.</p>
 
 </dt>
 <dd>
-  <p>Centers the toast vertically.</p>
+  <p>Positions the toast at the middle of the screen (vertically).</p>
   
 
     <div>
       <span class="signature"><code>const ToastPosition(&#39;toast-middle&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="middleLeft" class="constant">
+    <span class="name ">middleLeft</span>
+  <span class="signature">&#8594; const <a href="../jaspr_ui/ToastPosition.html">ToastPosition</a></span>
+  
+
+</dt>
+<dd>
+  <p>Positions the toast at the middle left corner of the screen.</p>
+  
+
+    <div>
+      <span class="signature"><code>const ToastPosition(&#39;toast-start toast-middle&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="middleRight" class="constant">
+    <span class="name ">middleRight</span>
+  <span class="signature">&#8594; const <a href="../jaspr_ui/ToastPosition.html">ToastPosition</a></span>
+  
+
+</dt>
+<dd>
+  <p>Positions the toast at the middle right corner of the screen.</p>
+  
+
+    <div>
+      <span class="signature"><code>const ToastPosition(&#39;toast-end toast-middle&#39;)</code></span>
     </div>
 </dd>
 
@@ -199,6 +259,36 @@ on different parts of the screen.</p>
 
     <div>
       <span class="signature"><code>const ToastPosition(&#39;toast-bottom&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="bottomLeft" class="constant">
+    <span class="name ">bottomLeft</span>
+  <span class="signature">&#8594; const <a href="../jaspr_ui/ToastPosition.html">ToastPosition</a></span>
+  
+
+</dt>
+<dd>
+  <p>Positions the toast at the bottom left corner of the screen.</p>
+  
+
+    <div>
+      <span class="signature"><code>const ToastPosition(&#39;toast-bottom toast-start&#39;)</code></span>
+    </div>
+</dd>
+
+            <dt id="bottomRight" class="constant">
+    <span class="name ">bottomRight</span>
+  <span class="signature">&#8594; const <a href="../jaspr_ui/ToastPosition.html">ToastPosition</a></span>
+  
+
+</dt>
+<dd>
+  <p>Positions the toast at the bottom right corner of the screen.</p>
+  
+
+    <div>
+      <span class="signature"><code>const ToastPosition(&#39;toast-bottom toast-end&#39;)</code></span>
     </div>
 </dd>
 
@@ -218,7 +308,7 @@ on different parts of the screen.</p>
 
 </dt>
 <dd>
-  Getter to access the CSS class name associated with the position.
+  Gets the CSS class name for this toast position.
   <div class="features"><span class="feature">no setter</span></div>
 
 </dd>

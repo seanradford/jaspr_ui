@@ -65,14 +65,14 @@
   <p>A component that displays a group of statistics in either vertical or horizontal layout.</p>
 <p>The <a href="../jaspr_ui/StatGroup-class.html">StatGroup</a> component arranges multiple <a href="../jaspr_ui/Stat-class.html">Stat</a> components in a consistent layout
 with an optional shadow effect. It can display stats either horizontally (default)
-or vertically based on the <a href="../jaspr_ui/StatGroup/vertical.html">vertical</a> parameter.</p>
+or position based on the <a href="../jaspr_ui/StatGroup/position.html">position</a> parameter.</p>
 <p>Example usage:</p>
 <pre class="language-dart"><code class="language-dart">StatGroup(
   children: [
     Stat(title: 'Downloads', value: '31K', desc: 'Jan 1st - Feb 1st'),
     Stat(title: 'Users', value: '4,200', desc: '↗︎ 40 (2%)')
   ],
-  vertical: false,
+  position: StatPosition.vertical,
 )
 </code></pre>
 </section>
@@ -108,7 +108,7 @@ or vertically based on the <a href="../jaspr_ui/StatGroup/vertical.html">vertica
 
     <dl class="constructor-summary-list">
         <dt id="StatGroup" class="callable">
-          <span class="name"><a href="../jaspr_ui/StatGroup/StatGroup.html">StatGroup</a></span><span class="signature">({<span class="parameter" id="-param-key"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-children"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../jaspr_ui/Stat-class.html">Stat</a></span>&gt;</span></span> <span class="parameter-name">children</span>, </span><span class="parameter" id="-param-vertical"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">vertical</span> = <span class="default-value">false</span></span>})</span>
+          <span class="name"><a href="../jaspr_ui/StatGroup/StatGroup.html">StatGroup</a></span><span class="signature">({<span class="parameter" id="-param-key"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-children"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../jaspr_ui/Stat-class.html">Stat</a></span>&gt;</span></span> <span class="parameter-name">children</span>, </span><span class="parameter" id="-param-position"><span class="type-annotation"><a href="../jaspr_ui/StatPosition.html">StatPosition</a>?</span> <span class="parameter-name">position</span></span>})</span>
         </dt>
         <dd>
           
@@ -157,6 +157,18 @@ or vertically based on the <a href="../jaspr_ui/StatGroup/vertical.html">vertica
 
 </dd>
 
+        <dt id="position" class="property">
+  <span class="name"><a href="../jaspr_ui/StatGroup/position.html">position</a></span>
+  <span class="signature">&#8594; <a href="../jaspr_ui/StatPosition.html">StatPosition</a>?</span>
+  
+
+</dt>
+<dd>
+  Whether to arrange the stats positon
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
         <dt id="runtimeType" class="property inherited">
   <span class="name"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object/runtimeType.html">runtimeType</a></span>
   <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/Type-class.html">Type</a></span>
@@ -166,18 +178,6 @@ or vertically based on the <a href="../jaspr_ui/StatGroup/vertical.html">vertica
 <dd class="inherited">
   A representation of the runtime type of the object.
   <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
-
-</dd>
-
-        <dt id="vertical" class="property">
-  <span class="name"><a href="../jaspr_ui/StatGroup/vertical.html">vertical</a></span>
-  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a></span>
-  
-
-</dt>
-<dd>
-  Whether to arrange the stats vertically (<code>true</code>) or horizontally (<code>false</code>)
-  <div class="features"><span class="feature">final</span></div>
 
 </dd>
 

@@ -7,7 +7,7 @@ import 'package:jaspr_ui/jaspr_ui.dart';
 ///
 /// The [StatGroup] component arranges multiple [Stat] components in a consistent layout
 /// with an optional shadow effect. It can display stats either horizontally (default)
-/// or vertically based on the [vertical] parameter.
+/// or position based on the [position] parameter.
 ///
 /// Example usage:
 /// ```dart
@@ -16,7 +16,7 @@ import 'package:jaspr_ui/jaspr_ui.dart';
 ///     Stat(title: 'Downloads', value: '31K', desc: 'Jan 1st - Feb 1st'),
 ///     Stat(title: 'Users', value: '4,200', desc: '↗︎ 40 (2%)')
 ///   ],
-///   vertical: false,
+///   position: StatPosition.vertical,
 /// )
 /// ```
 
@@ -24,17 +24,18 @@ class StatGroup extends StatelessComponent {
   /// The list of [Stat] components to display in the group
   final List<Stat> children;
 
-  /// Whether to arrange the stats vertically (`true`) or horizontally (`false`)
-  final bool vertical;
+  /// Whether to arrange the stats positon
+  final StatPosition? position;
 
-  StatGroup({super.key, required this.children, this.vertical = false});
+  StatGroup({super.key, required this.children, this.position});
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield div(
-        classes: 'stats shadow '
-            '${vertical == true ? 'stats-vertical ' : ''}',
-        children);
+      classes: 'stats shadow '
+          '${position?.className ?? ''}',
+      children,
+    );
   }
 }
 
@@ -106,4 +107,23 @@ class Stat extends StatelessComponent {
               [text(desc)]),
         ]);
   }
+}
+
+/// An enum that defines the different positions for an item on the screen.
+///
+/// Each position corresponds to a specific CSS class that can be used to style
+/// the item accordingly.
+enum StatPosition {
+  /// Positions the item at the start of the screen (platform-specific).
+  vertical('stats-vertical'),
+
+  /// Positions the item at the center of the screen (platform-specific).
+  horizontal('stats-horizontal');
+
+  const StatPosition(this._className);
+
+  final String _className;
+
+  /// Gets the CSS class name for this item position.
+  String get className => _className;
 }

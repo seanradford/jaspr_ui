@@ -118,11 +118,7 @@ and</li>
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
-  String kposition = &#39;&#39;;
-  for (var p in positions) {
-    kposition = &#39;$kposition ${p.className} &#39;;
-  }
-  yield div(classes: &#39;toast $kposition&#39;, children);
+  yield div(classes: &#39;toast ${positions ?? &#39;&#39;}&#39;, children);
 }</code></pre>
 </section>
 

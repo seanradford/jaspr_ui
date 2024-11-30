@@ -121,7 +121,7 @@ Iterable&lt;Component&gt; build(BuildContext context) sync* {
   yield ul(
     classes: &#39;timeline &#39;
         &#39;${snapIcon == true ? &#39;timeline-snap-icon &#39; : &#39;&#39;}&#39;
-        &#39;${vertical == true ? &#39;timeline-vertical &#39; : &#39;&#39;}&#39;,
+        &#39;${position?.className ?? &#39;&#39;}&#39;,
     children,
   );
 }</code></pre>

@@ -10,22 +10,18 @@ class Toast extends StatelessComponent {
   final List<ToastItem> children;
 
   /// Positions where the toast notifications will be displayed.
-  final List<ToastPosition> positions;
+  final ToastPosition? positions;
 
   /// Constructor for creating a Toast component.
   ///
   /// [key] Optional key for identifying the component.
   /// [children] Required list of toast items to display.
-  /// [positions] Required list of positions for the toast notifications.
+  /// [positions] Optional positions for the toast notifications.
   Toast({super.key, required this.children, required this.positions});
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    String kposition = '';
-    for (var p in positions) {
-      kposition = '$kposition ${p.className} ';
-    }
-    yield div(classes: 'toast $kposition', children);
+    yield div(classes: 'toast ${positions ?? ''}', children);
   }
 }
 
@@ -61,35 +57,51 @@ class ToastItem extends StatelessComponent {
   }
 }
 
-/// Enum defining possible toast notification positions.
+/// An enum that defines the different positions for a toast on the screen.
 ///
-/// Provides predefined positions for placing toast notifications
-/// on different parts of the screen.
+/// Each position corresponds to a specific CSS class that can be used to style
+/// the toast accordingly.
 enum ToastPosition {
-  /// Positions the toast at the start of the screen.
-  start('toast-start'),
+  /// Positions the toast at the start of the screen (platform-specific).
+  left('toast-start'),
 
-  /// Centers the toast horizontally.
+  /// Positions the toast at the center of the screen (platform-specific).
   center('toast-center'),
 
-  /// Positions the toast at the end of the screen.
-  end('toast-end'),
+  /// Positions the toast at the end of the screen (platform-specific).
+  right('toast-end'),
 
   /// Positions the toast at the top of the screen.
   top('toast-top'),
 
-  /// Centers the toast vertically.
+  /// Positions the toast at the top left corner of the screen.
+  topLeft('toast-top toast-start'),
+
+  /// Positions the toast at the top right corner of the screen.
+  topRight('toast-top toast-end'),
+
+  /// Positions the toast at the middle of the screen (vertically).
   middle('toast-middle'),
 
-  /// Positions the toast at the bottom of the screen.
-  bottom('toast-bottom');
+  /// Positions the toast at the middle left corner of the screen.
+  middleLeft('toast-start toast-middle'),
 
-  /// Constructs a ToastPosition with its corresponding CSS class name.
+  /// Positions the toast at the middle right corner of the screen.
+  middleRight('toast-end toast-middle'),
+
+  /// Positions the toast at the bottom of the screen.
+  bottom('toast-bottom'),
+
+  /// Positions the toast at the bottom left corner of the screen.
+  bottomLeft('toast-bottom toast-start'),
+
+  /// Positions the toast at the bottom right corner of the screen.
+  bottomRight('toast-bottom toast-end');
+
   const ToastPosition(this._className);
 
-  /// Internal storage for the CSS class name.
   final String _className;
 
-  /// Getter to access the CSS class name associated with the position.
+  /// Gets the CSS class name for this toast position.
   String get className => _className;
 }

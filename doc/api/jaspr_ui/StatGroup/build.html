@@ -119,9 +119,10 @@ and</li>
   <pre class="language-dart"><code class="language-dart">@override
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
   yield div(
-      classes: &#39;stats shadow &#39;
-          &#39;${vertical == true ? &#39;stats-vertical &#39; : &#39;&#39;}&#39;,
-      children);
+    classes: &#39;stats shadow &#39;
+        &#39;${position?.className ?? &#39;&#39;}&#39;,
+    children,
+  );
 }</code></pre>
 </section>
 

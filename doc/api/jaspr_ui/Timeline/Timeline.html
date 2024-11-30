@@ -64,7 +64,7 @@
       
       <span class="name ">Timeline</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="-param-key"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span></li>
 <li><span class="parameter" id="-param-children"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../jaspr_ui/TimelineItem-class.html">TimelineItem</a></span>&gt;</span></span> <span class="parameter-name">children</span>, </span></li>
-<li><span class="parameter" id="-param-vertical"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">vertical</span> = <span class="default-value">false</span>, </span></li>
+<li><span class="parameter" id="-param-position"><span class="type-annotation"><a href="../../jaspr_ui/TimelinePosition.html">TimelinePosition</a>?</span> <span class="parameter-name">position</span>, </span></li>
 <li><span class="parameter" id="-param-snapIcon"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">snapIcon</span> = <span class="default-value">false</span>, </span></li>
 </ol>})
     </section>
@@ -74,7 +74,7 @@
   <p>Constructs a <a href="../../jaspr_ui/Timeline-class.html">Timeline</a> component</p>
 <p><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component/key.html">key</a> is an optional key for the component
 <a href="../../jaspr_ui/Timeline/children.html">children</a> is the list of <a href="../../jaspr_ui/TimelineItem-class.html">TimelineItem</a> to display (required)
-<a href="../../jaspr_ui/Timeline/vertical.html">vertical</a> sets the timeline orientation (optional, default is false)
+<a href="../../jaspr_ui/Timeline/position.html">position</a> sets the timeline orientation (optional, default is horizontal)
 <a href="../../jaspr_ui/Timeline/snapIcon.html">snapIcon</a> enables icon snapping (optional, default is false)</p>
 </section>
 
@@ -85,7 +85,7 @@
   <pre class="language-dart"><code class="language-dart">Timeline({
   super.key,
   required this.children,
-  this.vertical = false,
+  this.position,
   this.snapIcon = false,
 });</code></pre>
 </section>

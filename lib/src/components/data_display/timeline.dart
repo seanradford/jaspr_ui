@@ -9,7 +9,7 @@ import 'package:jaspr_ui/jaspr_ui.dart';
 /// customizable orientation and icon behavior.
 ///
 /// [children] is a required list of [TimelineItem] to display in the timeline.
-/// [vertical] determines if the timeline is displayed vertically or horizontally.
+/// [position] determines if the timeline is displayed vertically or horizontally.
 /// [snapIcon] controls whether icons are snapped to a specific position.
 class Timeline extends StatelessComponent {
   /// List of timeline items to be displayed
@@ -19,7 +19,7 @@ class Timeline extends StatelessComponent {
   ///
   /// When true, the timeline will be displayed vertically.
   /// Default is false (horizontal).
-  final bool vertical;
+  final TimelinePosition? position;
 
   /// Controls whether icons are snapped to a specific position
   ///
@@ -31,12 +31,12 @@ class Timeline extends StatelessComponent {
   ///
   /// [key] is an optional key for the component
   /// [children] is the list of [TimelineItem] to display (required)
-  /// [vertical] sets the timeline orientation (optional, default is false)
+  /// [position] sets the timeline orientation (optional, default is horizontal)
   /// [snapIcon] enables icon snapping (optional, default is false)
   Timeline({
     super.key,
     required this.children,
-    this.vertical = false,
+    this.position,
     this.snapIcon = false,
   });
 
@@ -45,7 +45,7 @@ class Timeline extends StatelessComponent {
     yield ul(
       classes: 'timeline '
           '${snapIcon == true ? 'timeline-snap-icon ' : ''}'
-          '${vertical == true ? 'timeline-vertical ' : ''}',
+          '${position?.className ?? ''}',
       children,
     );
   }
@@ -153,4 +153,23 @@ class TimelineItem extends StatelessComponent {
         ),
     ]);
   }
+}
+
+/// An enum that defines the different positions for an item on the screen.
+///
+/// Each position corresponds to a specific CSS class that can be used to style
+/// the item accordingly.
+enum TimelinePosition {
+  /// Positions the item at the start of the screen (platform-specific).
+  vertical('timeline-vertical'),
+
+  /// Positions the item at the center of the screen (platform-specific).
+  horizontal('timeline-horizontal');
+
+  const TimelinePosition(this._className);
+
+  final String _className;
+
+  /// Gets the CSS class name for this item position.
+  String get className => _className;
 }
