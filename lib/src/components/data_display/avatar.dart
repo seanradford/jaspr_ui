@@ -24,7 +24,7 @@ class Avatar extends StatelessComponent {
   /// within the circular avatar container.
   final String url;
   final int size;
-  final Mask? mask;
+  final MaskShape? mask;
   final Rounded? rounded;
   final bool? online;
   final bool placeholder;
