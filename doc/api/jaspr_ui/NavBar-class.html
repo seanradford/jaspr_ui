@@ -68,7 +68,7 @@ layout, colors, and content sections. It provides three main areas:</p>
 <ul>
 <li>Lead section (typically for logos or left-side controls)</li>
 <li>Title section (center or left-aligned)</li>
-<li>Actions section (right-side controls or buttons)</li>
+<li>tails section (right-side controls or buttons)</li>
 </ul>
 <p>This component is designed to be highly adaptable, allowing developers
 to create consistent navigation experiences across different pages
@@ -83,8 +83,8 @@ and application sections.</p>
   <dd>
     <ul class="gt-separated dark clazz-relationships">
       <li><a href="https://api.dart.dev/stable/3.5.3/dart-core/Object-class.html">Object</a></li>
-        <li><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></li>
-        <li><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/StatelessComponent-class.html">StatelessComponent</a></li>
+        <li><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/Component-class.html">Component</a></li>
+        <li><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/StatelessComponent-class.html">StatelessComponent</a></li>
       <li>NavBar</li>
     </ul>
   </dd>
@@ -106,7 +106,7 @@ and application sections.</p>
 
     <dl class="constructor-summary-list">
         <dt id="NavBar" class="callable">
-          <span class="name"><a href="../jaspr_ui/NavBar/NavBar.html">NavBar</a></span><span class="signature">({<span class="parameter" id="-param-backgroundColor"><span class="type-annotation"><a href="../jaspr_ui/BackgroundColor.html">BackgroundColor</a>?</span> <span class="parameter-name">backgroundColor</span> = <span class="default-value">BackgroundColor.base100</span>, </span><span class="parameter" id="-param-foregroundColor"><span class="type-annotation"><a href="../jaspr_ui/TextColor.html">TextColor</a>?</span> <span class="parameter-name">foregroundColor</span>, </span><span class="parameter" id="-param-lead"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span>&gt;</span>?</span> <span class="parameter-name">lead</span>, </span><span class="parameter" id="-param-actions"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span>&gt;</span>?</span> <span class="parameter-name">actions</span>, </span><span class="parameter" id="-param-title"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span>&gt;</span></span> <span class="parameter-name">title</span>, </span><span class="parameter" id="-param-centerTitle"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">centerTitle</span> = <span class="default-value">false</span></span>})</span>
+          <span class="name"><a href="../jaspr_ui/NavBar/NavBar.html">NavBar</a></span><span class="signature">({<span class="parameter" id="-param-backgroundColor"><span class="type-annotation"><a href="../jaspr_ui/BackgroundColor.html">BackgroundColor</a>?</span> <span class="parameter-name">backgroundColor</span> = <span class="default-value">BackgroundColor.base100</span>, </span><span class="parameter" id="-param-foregroundColor"><span class="type-annotation"><a href="../jaspr_ui/TextColor.html">TextColor</a>?</span> <span class="parameter-name">foregroundColor</span>, </span><span class="parameter" id="-param-lead"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/Component-class.html">Component</a></span>&gt;</span>?</span> <span class="parameter-name">lead</span>, </span><span class="parameter" id="-param-tails"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/Component-class.html">Component</a></span>&gt;</span>?</span> <span class="parameter-name">tails</span>, </span><span class="parameter" id="-param-title"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/Component-class.html">Component</a></span>&gt;</span></span> <span class="parameter-name">title</span>, </span><span class="parameter" id="-param-centerTitle"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">centerTitle</span> = <span class="default-value">false</span></span>})</span>
         </dt>
         <dd>
           Constructs a <a href="../jaspr_ui/NavBar-class.html">NavBar</a> with comprehensive configuration options.
@@ -119,18 +119,6 @@ and application sections.</p>
       id="instance-properties">
     <h2>Properties</h2>
     <dl class="properties">
-        <dt id="actions" class="property">
-  <span class="name"><a href="../jaspr_ui/NavBar/actions.html">actions</a></span>
-  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span>&gt;</span>?</span>
-  
-
-</dt>
-<dd>
-  Components to be placed in the actions section of the navbar.
-  <div class="features"><span class="feature">final</span></div>
-
-</dd>
-
         <dt id="backgroundColor" class="property">
   <span class="name"><a href="../jaspr_ui/NavBar/backgroundColor.html">backgroundColor</a></span>
   <span class="signature">&#8594; <a href="../jaspr_ui/BackgroundColor.html">BackgroundColor</a>?</span>
@@ -180,8 +168,8 @@ and application sections.</p>
 </dd>
 
         <dt id="key" class="property inherited">
-  <span class="name"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component/key.html">key</a></span>
-  <span class="signature">&#8594; <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Key-class.html">Key</a>?</span>
+  <span class="name"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/Component/key.html">key</a></span>
+  <span class="signature">&#8594; <a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/Key-class.html">Key</a>?</span>
   
 
 </dt>
@@ -193,7 +181,7 @@ and application sections.</p>
 
         <dt id="lead" class="property">
   <span class="name"><a href="../jaspr_ui/NavBar/lead.html">lead</a></span>
-  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span>&gt;</span>?</span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/Component-class.html">Component</a></span>&gt;</span>?</span>
   
 
 </dt>
@@ -215,9 +203,21 @@ and application sections.</p>
 
 </dd>
 
+        <dt id="tails" class="property">
+  <span class="name"><a href="../jaspr_ui/NavBar/tails.html">tails</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/Component-class.html">Component</a></span>&gt;</span>?</span>
+  
+
+</dt>
+<dd>
+  Components to be placed in the tails section of the navbar.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
         <dt id="title" class="property">
   <span class="name"><a href="../jaspr_ui/NavBar/title.html">title</a></span>
-  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span>&gt;</span></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/Component-class.html">Component</a></span>&gt;</span></span>
   
 
 </dt>
@@ -236,8 +236,8 @@ and application sections.</p>
     <h2>Methods</h2>
     <dl class="callables">
         <dt id="build" class="callable">
-  <span class="name"><a href="../jaspr_ui/NavBar/build.html">build</a></span><span class="signature">(<wbr><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span>&gt;</span></span>
+  <span class="name"><a href="../jaspr_ui/NavBar/build.html">build</a></span><span class="signature">(<wbr><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/Component-class.html">Component</a></span>&gt;</span></span>
   </span>
   
 
@@ -249,14 +249,14 @@ and application sections.</p>
 </dd>
 
         <dt id="createElement" class="callable inherited">
-  <span class="name"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/StatelessComponent/createElement.html">createElement</a></span><span class="signature">(<wbr>)
-    <span class="returntype parameter">&#8594; <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Element-class.html">Element</a></span>
+  <span class="name"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/StatelessComponent/createElement.html">createElement</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/Element-class.html">Element</a></span>
   </span>
   
 
 </dt>
 <dd class="inherited">
-  Creates a <a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/StatelessElement-class.html">StatelessElement</a> to manage this component's location in the tree.
+  Creates a <a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/StatelessElement-class.html">StatelessElement</a> to manage this component's location in the tree.
   <div class="features"><span class="feature">inherited</span></div>
 
 </dd>
@@ -275,7 +275,7 @@ and application sections.</p>
 </dd>
 
         <dt id="shouldRebuild" class="callable inherited">
-  <span class="name"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/StatelessComponent/shouldRebuild.html">shouldRebuild</a></span><span class="signature">(<wbr><span class="parameter" id="shouldRebuild-param-newComponent"><span>covariant</span> <span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span> <span class="parameter-name">newComponent</span></span>)
+  <span class="name"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/StatelessComponent/shouldRebuild.html">shouldRebuild</a></span><span class="signature">(<wbr><span class="parameter" id="shouldRebuild-param-newComponent"><span>covariant</span> <span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/Component-class.html">Component</a></span> <span class="parameter-name">newComponent</span></span>)
     <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a></span>
   </span>
   

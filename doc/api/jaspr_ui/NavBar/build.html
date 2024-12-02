@@ -68,8 +68,8 @@
     </ol>
   </div>
 
-<span class="returntype"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span>&gt;</span></span>
-<span class="name ">build</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span></li>
+<span class="returntype"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/Component-class.html">Component</a></span>&gt;</span></span>
+<span class="name ">build</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span></li>
 </ol>)
 
       <div class="features"><span class="feature">override</span></div>
@@ -83,7 +83,7 @@
 <li>Applying background and foreground color classes</li>
 <li>Conditionally rendering lead section</li>
 <li>Positioning title based on <a href="../../jaspr_ui/NavBar/centerTitle.html">centerTitle</a></li>
-<li>Conditionally rendering actions section</li>
+<li>Conditionally rendering tails section</li>
 </ol>
 <p>The layout adapts to the provided configuration, allowing
 for flexible and responsive navigation designs.</p>
@@ -97,19 +97,23 @@ for flexible and responsive navigation designs.</p>
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
   yield div(
       &#47;&#47; Combine background and foreground color classes
-      classes: &#39;navbar ${backgroundColor?.className ?? &#39;&#39;} &#39;
+      classes: &#39;navbar {backgroundColor?.className ?? &#39;
+          &#39;} &#39;
           &#39; ${foregroundColor?.className ?? &#39;&#39;}&#39;,
       [
         &#47;&#47; Lead section (optional)
-        if (lead != null) div(classes: &#39;navbar-start&#39;, lead ?? []),
+        if (lead != null)
+          div(
+              classes: (centerTitle == true) ? &#39;navbar-start&#39; : &#39;flex-none&#39;,
+              lead ?? []),
 
         &#47;&#47; Title section with conditional positioning
         (centerTitle == true)
             ? div(classes: &#39;navbar-center&#39;, title)
             : div(classes: &#39;flex-1&#39;, title),
 
-        &#47;&#47; Actions section (optional)
-        if (actions != null) div(classes: &#39;navbar-end&#39;, actions ?? [])
+        &#47;&#47; tails section (optional)
+        if (tails != null) div(classes: &#39;navbar-end&#39;, tails ?? [])
       ]);
 }</code></pre>
 </section>

@@ -68,8 +68,8 @@
     </ol>
   </div>
 
-<span class="returntype"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/Component-class.html">Component</a></span>&gt;</span></span>
-<span class="name ">build</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.1/jaspr/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span></li>
+<span class="returntype"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/Component-class.html">Component</a></span>&gt;</span></span>
+<span class="name ">build</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span></li>
 </ol>)
 
       <div class="features"><span class="feature">override</span></div>
@@ -94,7 +94,8 @@
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
   yield label(
       &#47;&#47; Styling and responsive visibility classes
-      classes: &#39;btn btn-circle btn-ghost drawer-button lg:hidden&#39;,
+      classes:
+          &#39;btn btn-circle btn-ghost drawer-button ${lgHidden == true ? &#39;lg:hidden&#39; : &#39;&#39;}&#39;,
       attributes: {
         &#39;type&#39;: &#39;checkbox&#39;,
         &#39;for&#39;: &#39;$id&#39;,
@@ -102,7 +103,7 @@ Iterable&lt;Component&gt; build(BuildContext context) sync* {
       },
       [
         &#47;&#47; Render the icon using the provided icon class
-        div(classes: &#39;$icon&#39;, []),
+        icon
       ]);
 }</code></pre>
 </section>
