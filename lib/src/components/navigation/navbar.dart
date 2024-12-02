@@ -11,7 +11,7 @@ import 'package:jaspr_ui/jaspr_ui.dart';
 /// layout, colors, and content sections. It provides three main areas:
 /// - Lead section (typically for logos or left-side controls)
 /// - Title section (center or left-aligned)
-/// - Actions section (right-side controls or buttons)
+/// - tails section (right-side controls or buttons)
 ///
 /// This component is designed to be highly adaptable, allowing developers
 /// to create consistent navigation experiences across different pages
@@ -41,15 +41,15 @@ class NavBar extends StatelessComponent {
   /// Optional parameter that can be omitted if no lead content is needed.
   final List<Component>? lead;
 
-  /// Components to be placed in the actions section of the navbar.
+  /// Components to be placed in the tails section of the navbar.
   ///
   /// Commonly used for:
   /// - Search buttons
   /// - User profile menus
   /// - Additional navigation or action controls
   ///
-  /// Optional parameter that can be omitted if no actions are required.
-  final List<Component>? actions;
+  /// Optional parameter that can be omitted if no tails are required.
+  final List<Component>? tails;
 
   /// The primary title or content of the navigation bar.
   ///
@@ -66,14 +66,14 @@ class NavBar extends StatelessComponent {
   /// - [backgroundColor]: Sets the overall background color (defaults to base100)
   /// - [foregroundColor]: Optional text color override
   /// - [lead]: Optional leading section components
-  /// - [actions]: Optional action section components
+  /// - [tails]: Optional action section components
   /// - [title]: Required title/content components
   /// - [centerTitle]: Controls title alignment
   NavBar({
     this.backgroundColor = BackgroundColor.base100,
     this.foregroundColor,
     this.lead,
-    this.actions,
+    this.tails,
     required this.title,
     this.centerTitle = false,
   });
@@ -84,7 +84,7 @@ class NavBar extends StatelessComponent {
   /// 1. Applying background and foreground color classes
   /// 2. Conditionally rendering lead section
   /// 3. Positioning title based on [centerTitle]
-  /// 4. Conditionally rendering actions section
+  /// 4. Conditionally rendering tails section
   ///
   /// The layout adapts to the provided configuration, allowing
   /// for flexible and responsive navigation designs.
@@ -92,19 +92,23 @@ class NavBar extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield div(
         // Combine background and foreground color classes
-        classes: 'navbar ${backgroundColor?.className ?? ''} '
+        classes: 'navbar {backgroundColor?.className ?? '
+            '} '
             ' ${foregroundColor?.className ?? ''}',
         [
           // Lead section (optional)
-          if (lead != null) div(classes: 'navbar-start', lead ?? []),
+          if (lead != null)
+            div(
+                classes: (centerTitle == true) ? 'navbar-start' : 'flex-none',
+                lead ?? []),
 
           // Title section with conditional positioning
           (centerTitle == true)
               ? div(classes: 'navbar-center', title)
               : div(classes: 'flex-1', title),
 
-          // Actions section (optional)
-          if (actions != null) div(classes: 'navbar-end', actions ?? [])
+          // tails section (optional)
+          if (tails != null) div(classes: 'navbar-end', tails ?? [])
         ]);
   }
 }

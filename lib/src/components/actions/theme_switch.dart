@@ -1,4 +1,6 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr_ui/jaspr_ui.dart';
+import 'package:jaspr_ui/src/components/utils/icon.dart';
 
 /// A component that renders a theme switch toggle button between light and dark modes.
 ///
@@ -32,8 +34,10 @@ class ThemeSwitch extends StatelessComponent {
           classes: 'theme-controller',
           attributes: {'value': theme},
           []),
-      div(classes: 'far fa-sun swap-on fill-current', []),
-      div(classes: 'far fa-moon swap-off fill-current', []),
+      // div(classes: 'far fa-sun swap-on fill-current', []),
+      // div(classes: 'far fa-moon swap-off fill-current', []),
+      Icon(icon: FaRegular.sun, classes: 'swap-on fill-current'),
+      Icon(icon: FaRegular.moon, classes: 'swap-off fill-current'),
     ]);
   }
 }
@@ -62,7 +66,7 @@ class ThemeSwitchOptions extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield raw('''
-<div class="dropdown mb-72">
+<div class="dropdown dropdown-end">
   <div tabindex="0" role="button" class="btn m-1">
     Theme
     <svg

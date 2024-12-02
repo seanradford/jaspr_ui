@@ -231,7 +231,11 @@ class MenuItem extends StatelessComponent {
   /// set active style for the menu item
   final bool active;
 
+  /// set icon for the menu item
+  final Icon? icon;
+
   MenuItem({
+    this.icon,
     required this.title,
     required this.href,
     this.disable = false,
@@ -245,6 +249,7 @@ class MenuItem extends StatelessComponent {
       a(
         classes: '${active ? 'active' : ''} ',
         [
+          if (icon != null) icon!,
           text(title),
           if (badge != null) badge!,
         ],

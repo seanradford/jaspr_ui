@@ -1,4 +1,4 @@
-// TODO : text input component
+// ignore_for_file: unnecessary_string_interpolations
 
 import 'package:jaspr/jaspr.dart';
 

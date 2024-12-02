@@ -1,7 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_ui/jaspr_ui.dart';
 
-@client
 class About extends StatefulComponent {
   const About({super.key});
 

@@ -119,7 +119,7 @@ class FooterNav extends StatelessComponent {
         return TextLink(
           title: item.title,
           href: item.href,
-          type: LinkType.hove,
+          type: LinkType.hover,
         );
       }),
     ]);

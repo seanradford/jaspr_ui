@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr_ui/src/components/utils/heading.dart';
 
 /// A custom link component that provides flexible styling and configuration.
 ///
@@ -26,15 +27,18 @@ class TextLink extends StatelessComponent {
   final bool isGhost;
   final bool isButton;
   final bool isCircle;
+  final TextSize? size;
 
   /// Creates an [TextLink] with the specified properties.
   ///
   /// [title] is the text to display (required).
   /// [href] is the destination link (required).
   /// [type] is an optional link style type.
+  /// [size] is an optional link size type.
   TextLink({
     required this.title,
     required this.href,
+    this.size,
     this.type,
     this.isGhost = false,
     this.isButton = false,
@@ -44,10 +48,11 @@ class TextLink extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield a(
-      classes: '${isButton == true ? 'btn' : 'link'} '
-          '${isGhost == true ? 'btn-ghost' : ''} '
-          '${isCircle == true ? 'btn-circle' : ''} '
-          '${type?.className ?? ''}',
+      classes: '${isButton == true ? 'btn ' : 'link '}'
+          '${isGhost == true ? 'btn-ghost ' : ''}'
+          '${isCircle == true ? 'btn-circle ' : ''}'
+          '${size != null ? '${size!.className} ' : ''}'
+          '${type?.className ?? ' '}',
       href: href,
       [text(title)],
     );
@@ -120,7 +125,7 @@ enum LinkType {
   error('link-error'),
 
   /// Link style applied on hover state
-  hove('link-hover');
+  hover('link-hover');
 
   /// Creates a [LinkType] with an associated CSS class name.
   const LinkType(this._className);

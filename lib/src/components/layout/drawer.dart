@@ -16,7 +16,7 @@ import 'package:jaspr_ui/jaspr_ui.dart';
 ///
 class Drawer extends StatelessComponent {
   /// Determines the positioning of the drawer.
-  final bool end;
+  final bool drawerEnd;
 
   /// Controls the initial open state of the drawer.
   final bool open;
@@ -38,19 +38,23 @@ class Drawer extends StatelessComponent {
   /// Can include navigation menus, additional controls, or any custom components.
   final List<Component> sidebar;
 
+  final bool lgOpen;
+
   /// Constructs a [Drawer] with required configuration parameters.
   ///
-  /// [end] determines the drawer's side positioning.
+  /// [drawerEnd] determines the drawer's side positioning.
   /// [open] sets the initial open/closed state.
   /// [id] provides a unique identifier for the drawer.
   /// [content] defines the main page content.
   /// [sidebar] specifies the sidebar content.
+  ///  [lgOpen] specifies open drawer in large screen.
   Drawer({
-    this.end = false,
+    this.drawerEnd = false,
     this.open = false,
     required this.id,
     required this.content,
     required this.sidebar,
+    this.lgOpen = true,
   });
 
   /// Builds the drawer component with all its interactive elements.
@@ -65,8 +69,8 @@ class Drawer extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield div(
       // Combine drawer classes with conditional positioning and state classes
-      classes: 'drawer lg:drawer-open'
-          '${end == true ? 'drawer-end' : ''} '
+      classes: 'drawer ${lgOpen == true ? 'lg:drawer-open' : ''} '
+          '${drawerEnd == true ? 'drawer-end' : ''} '
           '${open == true ? 'drawer-open' : ''} ',
       [
         // Checkbox input for drawer toggle (hidden)
@@ -74,7 +78,7 @@ class Drawer extends StatelessComponent {
             id: '$id', type: InputType.checkbox, classes: 'drawer-toggle', []),
 
         // Main content area
-        div(classes: 'drawer-content', content),
+        div(classes: 'drawer-content m-4', content),
 
         // Sidebar and overlay
         div(
@@ -109,13 +113,21 @@ class DrawerButton extends StatelessComponent {
   /// CSS class for the icon to be displayed in the button.
   ///
   /// Allows for flexible icon customization through CSS classes.
-  final String icon;
+  final Component icon;
+
+  // Hide item on large screem
+  final bool lgHidden;
 
   /// Constructs a [DrawerButton] to toggle a specific drawer.
   ///
   /// [id] links the button to a specific drawer.
   /// [icon] defines the visual icon for the button.
-  DrawerButton({super.key, required this.id, required this.icon});
+  DrawerButton({
+    super.key,
+    required this.id,
+    required this.icon,
+    this.lgHidden = true,
+  });
 
   /// Builds the drawer toggle button.
   ///
@@ -127,7 +139,8 @@ class DrawerButton extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield label(
         // Styling and responsive visibility classes
-        classes: 'btn btn-circle btn-ghost drawer-button lg:hidden',
+        classes:
+            'btn btn-circle btn-ghost drawer-button ${lgHidden == true ? 'lg:hidden' : ''}',
         attributes: {
           'type': 'checkbox',
           'for': '$id',
@@ -135,7 +148,7 @@ class DrawerButton extends StatelessComponent {
         },
         [
           // Render the icon using the provided icon class
-          div(classes: '$icon', []),
+          icon
         ]);
   }
 }

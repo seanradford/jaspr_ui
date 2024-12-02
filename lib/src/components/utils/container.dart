@@ -37,6 +37,6 @@ class Container extends StatelessComponent {
   /// Returns an [Iterable] of components representing the container structure.
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(classes: "container ${padding!.className}", children);
+    yield div(classes: 'container ${padding!.className}', children);
   }
 }

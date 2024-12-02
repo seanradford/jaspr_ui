@@ -2,8 +2,7 @@
 // Generated with jaspr_builder
 
 import 'package:jaspr/jaspr.dart';
-import 'package:example/pages/about.dart' as prefix0;
-import 'package:example/pages/home.dart' as prefix1;
+import 'package:example/components/counter.dart' as prefix0;
 
 /// Default [JasprOptions] for use with your jaspr project.
 ///
@@ -23,7 +22,6 @@ import 'package:example/pages/home.dart' as prefix1;
 /// ```
 final defaultJasprOptions = JasprOptions(
   clients: {
-    prefix0.About: ClientTarget<prefix0.About>('pages/about'),
-    prefix1.Home: ClientTarget<prefix1.Home>('pages/home'),
+    prefix0.Counter: ClientTarget<prefix0.Counter>('components/counter'),
   },
 );
