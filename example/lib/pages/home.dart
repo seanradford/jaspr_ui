@@ -19,7 +19,6 @@ class HomeState extends State<Home> {
       backgroundColor: BackgroundColor.base300,
       lead: [
         DrawerButton(
-          id: 'drawer',
           icon: Icon(icon: Lucide.menu),
         ),
       ],
@@ -45,7 +44,6 @@ class HomeState extends State<Home> {
 
     // drawer
     yield Drawer(
-      id: 'drawer',
       sidebar: [
         SidebarMenu(
           items: List.generate(

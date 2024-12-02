@@ -51,7 +51,7 @@ class Drawer extends StatelessComponent {
   Drawer({
     this.drawerEnd = false,
     this.open = false,
-    required this.id,
+    this.id = 'drawer',
     required this.content,
     required this.sidebar,
     this.lgOpen = true,
@@ -124,7 +124,7 @@ class DrawerButton extends StatelessComponent {
   /// [icon] defines the visual icon for the button.
   DrawerButton({
     super.key,
-    required this.id,
+    this.id = 'drawer',
     required this.icon,
     this.lgHidden = true,
   });
