@@ -62,10 +62,10 @@
 
     <section class="multi-line-signature">
       
-      <span class="name ">Flexible</span>(<wbr><ol class="parameter-list"> <li><span class="parameter" id="-param-children"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/Component-class.html">Component</a></span>&gt;</span></span> <span class="parameter-name">children</span>, {</span></li>
-<li><span class="parameter" id="-param-key"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span></li>
+      <span class="name ">Flexible</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="-param-key"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span></li>
 <li><span class="parameter" id="-param-direction"><span class="type-annotation"><a href="../../jaspr_ui/FlexibleDirection.html">FlexibleDirection</a>?</span> <span class="parameter-name">direction</span>, </span></li>
 <li><span class="parameter" id="-param-gap"><span class="type-annotation"><a href="../../jaspr_ui/GapSize.html">GapSize</a>?</span> <span class="parameter-name">gap</span>, </span></li>
+<li><span class="parameter" id="-param-children"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/Component-class.html">Component</a></span>&gt;</span></span> <span class="parameter-name">children</span>, </span></li>
 </ol>})
     </section>
 
@@ -75,7 +75,12 @@
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">Flexible(this.children, {super.key, this.direction, this.gap});</code></pre>
+  <pre class="language-dart"><code class="language-dart">Flexible({
+  super.key,
+  this.direction,
+  this.gap,
+  required this.children,
+});</code></pre>
 </section>
 
 

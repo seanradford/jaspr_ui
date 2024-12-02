@@ -118,18 +118,18 @@ and</li>
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
-  yield div(classes: &quot;dropdown dropdown-hover&quot;, [
+  yield div(classes: &#39;dropdown dropdown-hover&#39;, [
     div(
-      attributes: {&quot;role&quot;: &quot;button&quot;, &quot;tabindex&quot;: &quot;0&quot;},
-      classes: &quot;btn m-1&quot;,
+      attributes: {&#39;role&#39;: &#39;button&#39;, &#39;tabindex&#39;: &#39;0&#39;},
+      classes: &#39;btn m-1&#39;,
       [
         text(title),
       ],
     ),
     ul(
-      attributes: {&quot;tabindex&quot;: &quot;0&quot;},
+      attributes: {&#39;tabindex&#39;: &#39;0&#39;},
       classes:
-          &quot;dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow&quot;,
+          &#39;dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow&#39;,
       items,
     )
   ]);

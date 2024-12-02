@@ -119,8 +119,8 @@ and</li>
   <pre class="language-dart"><code class="language-dart">@override
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
   yield footer(
-    classes: &#39;footer p-10 &#39;
-        &#39;${backgroundColor?.className ?? &#39;&#39;}&#39;,
+    classes: &#39;footer text-base-content p-10 &#39;
+        &#39;${backgroundColor.className} &#39;,
     children,
   );
 }</code></pre>

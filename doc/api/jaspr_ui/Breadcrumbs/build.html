@@ -127,7 +127,7 @@ Iterable&lt;Component&gt; build(BuildContext context) sync* {
 
       return li([
         a([
-          if (icon != null) div(classes: &#39;$icon pr-2 &#39;, []),
+          if (icon != null) icon,
           text(&#39;$title&#39;),
         ], href: href)
       ]);

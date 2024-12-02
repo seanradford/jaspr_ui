@@ -97,8 +97,7 @@ for flexible and responsive navigation designs.</p>
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
   yield div(
       &#47;&#47; Combine background and foreground color classes
-      classes: &#39;navbar {backgroundColor?.className ?? &#39;
-          &#39;} &#39;
+      classes: &#39;navbar w-full ${backgroundColor.className} &#39;
           &#39; ${foregroundColor?.className ?? &#39;&#39;}&#39;,
       [
         &#47;&#47; Lead section (optional)

@@ -95,7 +95,11 @@
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
   yield h1(
     classes:
-        &#39;bg-gradient-to-r ${fromColor.className} ${viaColor.className} ${toColor.className} bg-clip-text font-bold text-transparent text-2xl&#39;,
+        &#39;bg-gradient-to-r &#39;
+        &#39;${fromColor.className} &#39;
+        &#39;${viaColor.className} &#39;
+        &#39;${toColor.className} &#39;
+        &#39;bg-clip-text font-bold text-transparent text-2xl&#39;,
     [
       text(title),
     ],

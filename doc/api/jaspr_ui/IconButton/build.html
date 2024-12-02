@@ -123,9 +123,7 @@ Iterable&lt;Component&gt; build(BuildContext context) sync* {
         &#39;${isGhost == true ? &#39;btn-ghost &#39; : &#39;&#39;}&#39;
         &#39;${isCircle == true ? &#39;btn-circle &#39; : &#39;&#39;}&#39;
         &#39;${size != null ? &#39; ${size!.className} &#39; : &#39;&#39;}&#39;,
-    [
-      span(classes: &#39;icon&#39;, [i(classes: &#39;$icon&#39;, [])]),
-    ],
+    [icon],
     onClick: () =&gt; onPressed?.call(),
     attributes: attributes,
   );

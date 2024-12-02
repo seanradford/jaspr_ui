@@ -63,7 +63,7 @@
     <section class="multi-line-signature">
       
       <span class="name ">DrawerButton</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="-param-key"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span></li>
-<li><span class="parameter" id="-param-id"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">id</span>, </span></li>
+<li><span class="parameter" id="-param-id"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">id</span> = <span class="default-value">&#39;drawer&#39;</span>, </span></li>
 <li><span class="parameter" id="-param-icon"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/Component-class.html">Component</a></span> <span class="parameter-name">icon</span>, </span></li>
 <li><span class="parameter" id="-param-lgHidden"><span class="type-annotation"><a href="https://api.dart.dev/stable/3.5.3/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">lgHidden</span> = <span class="default-value">true</span>, </span></li>
 </ol>})
@@ -82,7 +82,7 @@
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">DrawerButton({
   super.key,
-  required this.id,
+  this.id = &#39;drawer&#39;,
   required this.icon,
   this.lgHidden = true,
 });</code></pre>

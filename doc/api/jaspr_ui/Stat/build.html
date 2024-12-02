@@ -123,9 +123,7 @@ Iterable&lt;Component&gt; build(BuildContext context) sync* {
           &#39;${isCenter == true ? &#39;place-items-center&#39; : &#39;&#39;} &#39;,
       [
         &#47;&#47; figure
-        div(classes: &quot;stat-figure text-secondary&quot;, [
-          if (icon != null) div(classes: &#39;${icon}&#39;, []),
-        ]),
+        div(classes: &quot;stat-figure text-secondary&quot;, [if (icon != null) icon!]),
         &#47;&#47; stats
         div(classes: &#39;stat-title &#39;, [text(title)]),
         div(classes: &#39;stat-value ${valueColor.className}&#39;, [text(value)]),

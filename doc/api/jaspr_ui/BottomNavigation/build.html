@@ -128,7 +128,7 @@ Iterable&lt;Component&gt; build(BuildContext context) sync* {
             classes: &#39;${index == currentIndex ? &#39;active&#39; : &#39;&#39;}&#39;,
             onClick: () =&gt; onChanged.call(index),
             [
-              div(classes: &#39;$icon&#39;, []),
+              if (icon != null) icon,
               span(classes: &#39;btm-nav-label&#39;, [text(title)])
             ]);
       }));

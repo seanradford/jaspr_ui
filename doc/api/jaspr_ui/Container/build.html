@@ -119,8 +119,11 @@ and</li>
   <pre class="language-dart"><code class="language-dart">@override
 Iterable&lt;Component&gt; build(BuildContext context) sync* {
   yield div(
-    classes:
-        &#39;container mx-auto ${padding?.className ?? &#39;&#39;} ${backgroundColor?.className ?? &#39;&#39;}&#39;,
+    classes: &#39;container &#39;
+        &#39;${center == true ? &#39;justify-items-center content-center&#39; : &#39;&#39;} &#39;
+        &#39; ${padding?.className ?? &#39;&#39;} &#39;
+        &#39; ${margin?.className ?? &#39;&#39;} &#39;
+        &#39; ${backgroundColor?.className ?? &#39;&#39;} &#39;,
     children,
   );
 }</code></pre>
