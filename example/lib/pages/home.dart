@@ -16,7 +16,6 @@ class HomeState extends State<Home> {
   Iterable<Component> build(BuildContext context) sync* {
     // navbar
     yield NavBar(
-      backgroundColor: BackgroundColor.base300,
       lead: [
         DrawerButton(
           icon: Icon(icon: Lucide.menu),

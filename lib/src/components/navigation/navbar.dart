@@ -29,7 +29,7 @@ class NavBar extends StatelessComponent {
   ///
   /// Provides a way to integrate the navbar with the overall
   /// design system of the application. Defaults to a neutral base color.
-  final BackgroundColor? backgroundColor;
+  final BackgroundColor backgroundColor;
 
   /// Components to be placed in the leading section of the navbar.
   ///
@@ -70,12 +70,12 @@ class NavBar extends StatelessComponent {
   /// - [title]: Required title/content components
   /// - [centerTitle]: Controls title alignment
   NavBar({
-    this.backgroundColor = BackgroundColor.base100,
-    this.foregroundColor,
     this.lead,
-    this.tails,
     required this.title,
     this.centerTitle = false,
+    this.tails,
+    this.backgroundColor = BackgroundColor.base300,
+    this.foregroundColor,
   });
 
   /// Builds the navigation bar component with dynamic layout and styling.
@@ -92,7 +92,7 @@ class NavBar extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield div(
         // Combine background and foreground color classes
-        classes: 'navbar w-full ${backgroundColor?.className ?? ''} '
+        classes: 'navbar w-full ${backgroundColor.className} '
             ' ${foregroundColor?.className ?? ''}',
         [
           // Lead section (optional)
