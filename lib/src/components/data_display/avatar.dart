@@ -67,7 +67,7 @@ class Avatar extends StatelessComponent {
               : div(
                   classes: 'w-$size '
                       '${rounded != null ? '${rounded!.className} ' : ''} '
-                      '${mask != null ? '${mask!.className} ' : ''} ',
+                      '${mask != null ? 'mask ${mask!.className} ' : ''} ',
                   [
                     img(src: url),
                   ],

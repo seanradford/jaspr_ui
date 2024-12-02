@@ -56,6 +56,10 @@ class HomeState extends State<Home> {
           TitleGradient(
             title: 'Welcome to Our Dynamic Web Application',
           ),
+          Avatar(
+            url: 'https://avatars.githubusercontent.com/u/1182518?v=4',
+            mask: MaskShape.circle,
+          ),
           Counter(),
         ],
       ),
