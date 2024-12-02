@@ -1,7 +1,8 @@
-import 'package:example/components/counter.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_router/jaspr_router.dart';
 import 'package:jaspr_ui/jaspr_ui.dart';
+
+import '../components/counter.dart';
 
 class Home extends StatefulComponent {
   const Home({super.key});
@@ -96,7 +97,10 @@ class HomeState extends State<Home> {
             title: 'Title',
             items: List.generate(
               3,
-              (j) => FooterNavItem(title: 'title', href: '#'),
+              (j) => FooterNavItem(
+                title: 'title',
+                href: '#',
+              ),
             ),
           ),
         )
