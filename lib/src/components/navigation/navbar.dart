@@ -92,8 +92,7 @@ class NavBar extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield div(
         // Combine background and foreground color classes
-        classes: 'navbar {backgroundColor?.className ?? '
-            '} '
+        classes: 'navbar ${backgroundColor?.className ?? ''} '
             ' ${foregroundColor?.className ?? ''}',
         [
           // Lead section (optional)

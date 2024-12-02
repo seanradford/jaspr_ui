@@ -9,11 +9,11 @@ class Column extends StatelessComponent {
 
   final List<Component> children;
 
-  Column(
-    this.children, {
+  Column({
     super.key,
     required this.size,
     this.gap,
+    required this.children,
   });
 
   @override

@@ -21,7 +21,7 @@ class HomeState extends State<Home> {
           lead: [
             DrawerButton(
               id: 'drawer',
-              icon: Icon(icon: FaSolid.bars),
+              icon: Icon(icon: Lucide.menu),
             ),
           ],
           title: [
@@ -53,7 +53,12 @@ class HomeState extends State<Home> {
                 icon: (i == 0)
                     ? Icon(icon: Ic.round_home)
                     : Icon(icon: Ic.description),
-                badge: (i == 0) ? Badge(title: '+99') : null,
+                badge: (i == 0)
+                    ? Badge(
+                        title: '+99',
+                        color: BadgeColor.secondary,
+                      )
+                    : null,
                 title: 'Menu ${i + 1}',
                 href: '#',
               ),

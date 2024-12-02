@@ -14,7 +14,7 @@ class _CounterState extends State<Counter> {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield Card(
+    yield Container(
       children: [
         TextHeading(
           title: '$counter',
@@ -29,7 +29,6 @@ class _CounterState extends State<Counter> {
           [text('Count')],
         ),
       ],
-      shadowSize: ShadowSize.xl,
     );
   }
 }

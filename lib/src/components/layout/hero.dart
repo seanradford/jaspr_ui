@@ -2,6 +2,22 @@
 
 import 'package:jaspr/jaspr.dart';
 
+class BasicHero extends StatelessComponent {
+  final List<Component> children;
+  BasicHero({
+    required this.children,
+  });
+
+  @override
+  Iterable<Component> build(BuildContext context) sync* {
+    yield div(classes: 'hero bg-base-200 min-h-screen', [
+      div(classes: 'hero-content text-center', [
+        div(classes: 'max-w-md', children),
+      ])
+    ]);
+  }
+}
+
 class CenteredHero extends StatelessComponent {
   final String title;
   final String content;

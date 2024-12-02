@@ -1,5 +1,7 @@
 import 'package:jaspr/jaspr.dart';
 
+import '../utils/icon.dart';
+
 /// A collection of dropdown components that provide different ways to display
 /// dropdown menus and content. These components use Tailwind CSS and DaisyUI
 /// for styling.
@@ -25,26 +27,33 @@ class Dropdown extends StatelessComponent {
 
   /// List of items to be displayed in the dropdown menu
   final List<DropdownItem> items;
+  final Icon? icon;
+  final DropdownPosition position;
+  final bool ghost;
 
   /// Creates a new [Dropdown] with the specified [title] and [items].
   const Dropdown({
     required this.title,
     required this.items,
+    this.icon,
+    this.position = DropdownPosition.end,
+    this.ghost = false,
   });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(classes: "dropdown", [
+    yield div(classes: 'dropdown ${position.className}', [
       div(
-          attributes: {"role": "button", "tabindex": "0"},
-          classes: "btn m-1",
+          attributes: {'role': 'button', 'tabindex': '0'},
+          classes: 'btn ${ghost == true ? 'btn-ghost' : ''} m-1',
           [
             text(title),
+            if (icon != null) icon!,
           ]),
       ul(
-        attributes: {"tabindex": "0"},
+        attributes: {'tabindex': '0'},
         classes:
-            "dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow",
+            'dropdown-content menu bg-base-300 rounded-box z-[1] w-52 p-2 shadow-2xl',
         items,
       )
     ]);
@@ -56,19 +65,17 @@ class Dropdown extends StatelessComponent {
 /// Each [DropdownItem] is rendered as a clickable link within the dropdown menu.
 class DropdownItem extends StatelessComponent {
   /// The text to display for this dropdown item
-  final String title;
+  final Component child;
 
-  /// Creates a new [DropdownItem] with the specified [title].
+  /// Creates a new [DropdownItem] with the specified [child].
   const DropdownItem({
-    required this.title,
+    required this.child,
   });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield li([
-      a([
-        text(title),
-      ], href: '')
+      child,
     ]);
   }
 }
@@ -103,18 +110,18 @@ class DropdownHover extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(classes: "dropdown dropdown-hover", [
+    yield div(classes: 'dropdown dropdown-hover', [
       div(
-        attributes: {"role": "button", "tabindex": "0"},
-        classes: "btn m-1",
+        attributes: {'role': 'button', 'tabindex': '0'},
+        classes: 'btn m-1',
         [
           text(title),
         ],
       ),
       ul(
-        attributes: {"tabindex": "0"},
+        attributes: {'tabindex': '0'},
         classes:
-            "dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow",
+            'dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow',
         items,
       )
     ]);
@@ -154,21 +161,21 @@ class DropdownCard extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(classes: "dropdown", [
+    yield div(classes: 'dropdown', [
       div(
-          attributes: {"role": "button", "tabindex": "0"},
-          classes: "btn m-1",
+          attributes: {'role': 'button', 'tabindex': '0'},
+          classes: 'btn m-1',
           [
             text(title),
           ]),
       div(
-        attributes: {"tabindex": "0"},
+        attributes: {'tabindex': '0'},
         classes:
-            "dropdown-content card card-compact bg-primary text-primary-content z-[1] w-64 p-2 shadow",
+            'dropdown-content card card-compact bg-primary text-primary-content z-[1] w-64 p-2 shadow',
         [
-          div(classes: "card-body", [
+          div(classes: 'card-body', [
             h3(
-              classes: "card-title",
+              classes: 'card-title',
               [
                 text(cardTitle),
               ],
@@ -183,4 +190,19 @@ class DropdownCard extends StatelessComponent {
       )
     ]);
   }
+}
+
+enum DropdownPosition {
+  end('dropdown-end'),
+  top('dropdown-top'),
+  bottom('dropdown-bottom'),
+  left('dropdown-left'),
+  right('dropdown-right'),
+  hover('dropdown-hover');
+
+  const DropdownPosition(this._className);
+
+  final String _className;
+
+  String get className => _className;
 }
