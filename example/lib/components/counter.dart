@@ -14,15 +14,18 @@ class _CounterState extends State<Counter> {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield Card(children: [
-      TextHeading(
-        title: '${counter}',
-        bold: true,
-        size: TextSize.size1,
-      ),
-      button(classes: 'btn max-w-24', onClick: () {
-        setState(() => counter++);
-      }, [text('Count')]),
-    ]);
+    yield Card(
+      children: [
+        TextHeading(
+          title: '${counter}',
+          bold: true,
+          size: TextSize.size1,
+        ),
+        button(classes: 'btn max-w-24', onClick: () {
+          setState(() => counter++);
+        }, [text('Count')]),
+      ],
+      shadowSize: ShadowSize.xl,
+    );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:jaspr/jaspr.dart';
-import 'package:jaspr_ui/src/sizes/shadow.dart';
+
+import '../../sizes/sizes.dart';
 
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
@@ -39,8 +40,8 @@ class Card extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield div(
-        classes: 'card'
-            '${shadowSize.className}',
+        classes: 'card '
+            '${shadowSize.className} ',
         [
           div(classes: 'card-body', children),
         ]);

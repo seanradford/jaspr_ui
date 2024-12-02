@@ -13,8 +13,9 @@ class Home extends StatefulComponent {
 class HomeState extends State<Home> {
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield Screen([
+    yield Screen(type: ScreenType.scrollable, [
       NavBar(
+        backgroundColor: BackgroundColor.base300,
         lead: [
           DrawerButton(
             id: 'drawer',
