@@ -53,7 +53,7 @@ import 'package:jaspr_ui/jaspr_ui.dart';
 /// ```
 class Footer extends StatelessComponent {
   /// Optional background color for the footer.
-  final BackgroundColor? backgroundColor;
+  final BackgroundColor backgroundColor;
 
   /// List of child components to be rendered inside the footer.
   final List<Component> children;
@@ -65,15 +65,15 @@ class Footer extends StatelessComponent {
   /// [children] are the components to be displayed in the footer.
   Footer({
     super.key,
-    this.backgroundColor,
+    this.backgroundColor = BackgroundColor.base300,
     required this.children,
   });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield footer(
-      classes: 'footer p-10 '
-          '${backgroundColor?.className ?? ''}',
+      classes: 'footer text-base-content p-10 '
+          '${backgroundColor.className} ',
       children,
     );
   }

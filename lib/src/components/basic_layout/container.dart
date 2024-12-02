@@ -13,7 +13,7 @@ class Container extends StatelessComponent {
   final bool center;
 
   Container({
-    this.padding = PaddingSize.p4,
+    this.padding = PaddingSize.p0,
     this.backgroundColor,
     this.center = false,
     required this.children,

@@ -78,7 +78,7 @@ class Drawer extends StatelessComponent {
             id: '$id', type: InputType.checkbox, classes: 'drawer-toggle', []),
 
         // Main content area
-        div(classes: 'drawer-content m-4', content),
+        div(classes: 'drawer-content m-4 min-h-screen', content),
 
         // Sidebar and overlay
         div(
