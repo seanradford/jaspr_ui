@@ -2,6 +2,8 @@
 
 import 'package:jaspr/jaspr.dart';
 
+import '../utils/icon.dart';
+
 /// A customizable alert component that displays a message with an icon and optional type styling.
 ///
 /// The [Alert] component renders a div with ARIA role="alert" for accessibility,
@@ -25,7 +27,7 @@ class Alert extends StatelessComponent {
   final String message;
 
   /// The CSS class name for the icon to display.
-  final String icon;
+  final Icon icon;
 
   /// Optional type that determines the alert's visual style.
   /// If null, no additional styling class will be applied.
@@ -51,7 +53,7 @@ class Alert extends StatelessComponent {
           '${type != null ? '${type!.className}' : ''}',
       [
         // icon
-        div(classes: '$icon', []),
+        icon,
 
         // content
         if (title != null)

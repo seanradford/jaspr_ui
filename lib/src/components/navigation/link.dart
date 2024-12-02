@@ -1,5 +1,6 @@
 import 'package:jaspr/jaspr.dart';
-import 'package:jaspr_ui/src/components/utils/heading.dart';
+
+import '../utils/heading.dart';
 
 /// A custom link component that provides flexible styling and configuration.
 ///

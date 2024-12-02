@@ -2,7 +2,7 @@ import 'package:jaspr/jaspr.dart';
 
 import '../../colors/background_colors.dart';
 import '../../sizes/margin_size.dart';
-import '../../sizes/sizes.dart';
+import '../../sizes/padding_size.dart';
 
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 

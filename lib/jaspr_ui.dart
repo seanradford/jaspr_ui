@@ -1,20 +1,16 @@
 library;
 
 // color
-export 'src/colors/colors.dart';
+export 'src/colors.dart';
 
 // component
-export 'src/components/component.dart';
+export 'src/component.dart';
 
 // sizes
-export 'src/sizes/sizes.dart';
+export 'src/sizes.dart';
 
 // style
-export 'src/styles/styles.dart';
+export 'src/styles.dart';
 
 // icon
-export 'src/icons/ic.dart';
-export 'src/icons/lucide.dart';
-export 'src/icons/fa_brands.dart';
-export 'src/icons/fa_regular.dart';
-export 'src/icons/fa_solid.dart';
+export 'src/icons.dart';

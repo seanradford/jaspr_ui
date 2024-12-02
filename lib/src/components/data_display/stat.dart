@@ -75,7 +75,7 @@ class Stat extends StatelessComponent {
   final bool isCenter;
 
   /// Optional CSS class name for an icon to display
-  final String? icon;
+  final Icon? icon;
 
   Stat({
     super.key,
@@ -95,9 +95,7 @@ class Stat extends StatelessComponent {
             '${isCenter == true ? 'place-items-center' : ''} ',
         [
           // figure
-          div(classes: "stat-figure text-secondary", [
-            if (icon != null) div(classes: '${icon}', []),
-          ]),
+          div(classes: "stat-figure text-secondary", [if (icon != null) icon!]),
           // stats
           div(classes: 'stat-title ', [text(title)]),
           div(classes: 'stat-value ${valueColor.className}', [text(value)]),

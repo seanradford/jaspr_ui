@@ -2,6 +2,8 @@
 
 import 'package:jaspr/jaspr.dart';
 
+import '../utils/icon.dart';
+
 class BottomNavigation extends StatelessComponent {
   final List<BottomNavigationItem> children;
   final int currentIndex;
@@ -25,7 +27,7 @@ class BottomNavigation extends StatelessComponent {
               classes: '${index == currentIndex ? 'active' : ''}',
               onClick: () => onChanged.call(index),
               [
-                div(classes: '$icon', []),
+                if (icon != null) icon,
                 span(classes: 'btm-nav-label', [text(title)])
               ]);
         }));
@@ -34,7 +36,7 @@ class BottomNavigation extends StatelessComponent {
 
 class BottomNavigationItem {
   final String title;
-  final String? icon;
+  final Icon? icon;
 
-  BottomNavigationItem({required this.title, this.icon = ''});
+  BottomNavigationItem({required this.title, this.icon});
 }

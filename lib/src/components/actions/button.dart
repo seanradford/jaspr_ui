@@ -219,7 +219,7 @@ class IconButton extends StatelessComponent {
   final Map<String, String>? attributes;
 
   /// The icon to be displayed on the button.
-  final String icon;
+  final Icon icon;
 
   /// Determines if the button should have a ghost (transparent) style.
   final bool? isGhost;
@@ -248,9 +248,7 @@ class IconButton extends StatelessComponent {
           '${isGhost == true ? 'btn-ghost ' : ''}'
           '${isCircle == true ? 'btn-circle ' : ''}'
           '${size != null ? ' ${size!.className} ' : ''}',
-      [
-        span(classes: 'icon', [i(classes: '$icon', [])]),
-      ],
+      [icon],
       onClick: () => onPressed?.call(),
       attributes: attributes,
     );

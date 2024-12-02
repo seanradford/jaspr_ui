@@ -1,7 +1,10 @@
 // ignore_for_file: unnecessary_string_interpolations
 
 import 'package:jaspr/jaspr.dart';
-import 'package:jaspr_ui/jaspr_ui.dart';
+
+import '../../colors/background_colors.dart';
+import '../../icons/ic.dart';
+import '../utils/icon.dart';
 
 /// A flexible timeline component for creating horizontal or vertical timelines.
 ///
@@ -84,7 +87,7 @@ class TimelineItem extends StatelessComponent {
   final BackgroundColor? endLineColor;
 
   /// Color of the middle icon
-  final TextColor? iconColor;
+  final Color? iconColor;
 
   /// Constructs a [TimelineItem]
   ///
@@ -106,8 +109,8 @@ class TimelineItem extends StatelessComponent {
     this.startLineColor = BackgroundColor.base300,
     this.startBox = true,
     required this.startTitle,
-    this.middleIcon = 'fas fa-circle-check',
-    this.iconColor = TextColor.base300,
+    this.middleIcon = Ic.check_circle,
+    this.iconColor,
     this.endBox = true,
     this.endTitle,
     this.endLine = true,
@@ -133,11 +136,10 @@ class TimelineItem extends StatelessComponent {
         div(
           classes: 'timeline-middle',
           [
-            div(
-              classes: '$middleIcon w-4 '
-                  '${iconColor != null ? '${iconColor!.className}' : ''}',
-              [],
-            )
+            Icon(
+              icon: middleIcon!,
+              color: iconColor!,
+            ),
           ],
         ),
       if (endTitle != null)

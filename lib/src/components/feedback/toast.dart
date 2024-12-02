@@ -1,6 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 
-import '../component.dart';
+import 'alert.dart';
 
 /// Represents a toast notification container with configurable positions.
 ///

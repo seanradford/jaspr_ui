@@ -2,6 +2,8 @@
 
 import 'package:jaspr/jaspr.dart';
 
+import '../utils/icon.dart';
+
 /// Represents a breadcrumb navigation component that renders a list of clickable items.
 ///
 /// The [Breadcrumbs] widget generates a breadcrumb trail with optional icons,
@@ -37,7 +39,7 @@ class Breadcrumbs extends StatelessComponent {
 
         return li([
           a([
-            if (icon != null) div(classes: '$icon pr-2 ', []),
+            if (icon != null) icon,
             text('$title'),
           ], href: href)
         ]);
@@ -56,7 +58,7 @@ class BreadcrumbItem {
   /// An optional CSS class or icon identifier for the breadcrumb item.
   ///
   /// This can be used to display an icon before the title text.
-  String? icon;
+  Icon? icon;
 
   /// The destination URL or route for this breadcrumb item.
   String href;

@@ -1,6 +1,7 @@
 import 'package:jaspr/jaspr.dart';
-import 'package:jaspr_ui/jaspr_ui.dart';
-import 'package:jaspr_ui/src/components/utils/icon.dart';
+
+import '../../icons/ic.dart';
+import '../utils/icon.dart';
 
 /// A component that renders a theme switch toggle button between light and dark modes.
 ///

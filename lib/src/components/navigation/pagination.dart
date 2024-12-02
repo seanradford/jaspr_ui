@@ -1,7 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 // TODO : pagination component
 import 'package:jaspr/jaspr.dart';
-import '../../sizes/sizes.dart';
+
+import '../../sizes/button_size.dart';
 
 class Pagination extends StatelessComponent {
   final int start;
