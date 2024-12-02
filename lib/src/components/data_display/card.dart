@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr_ui/src/sizes/shadow.dart';
 
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
@@ -24,19 +25,25 @@ class Card extends StatelessComponent {
   /// This can be any valid Component that will be rendered within the card's
   /// body section.
   final List<Component> children;
+  final ShadowSize shadowSize;
 
   /// Creates a new [Card] instance.
   ///
   /// Requires [children] to be provided, which will be displayed inside the card body.
   Card({
+    super.key,
     required this.children,
+    this.shadowSize = ShadowSize.xl,
   });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(classes: 'card m-4 shadow', [
-      div(classes: 'card-body', children),
-    ]);
+    yield div(
+        classes: 'card'
+            '${shadowSize.className}',
+        [
+          div(classes: 'card-body', children),
+        ]);
   }
 }
 

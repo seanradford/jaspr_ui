@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr_ui/jaspr_ui.dart';
 
 @client
 class Counter extends StatefulComponent {
@@ -13,13 +14,15 @@ class _CounterState extends State<Counter> {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(classes: '', [
-      div(classes: 'text-3xl', [
-        text('$counter'),
-      ]),
-      button(classes: 'btn', onClick: () {
+    yield Card(children: [
+      TextHeading(
+        title: '${counter}',
+        bold: true,
+        size: TextSize.size1,
+      ),
+      button(classes: 'btn max-w-24', onClick: () {
         setState(() => counter++);
-      }, [text('count')])
+      }, [text('Count')]),
     ]);
   }
 }
