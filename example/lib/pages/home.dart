@@ -68,10 +68,15 @@ class HomeState extends State<Home> {
       ],
       // body content
       content: [
-        TitleGradient(
-          title: 'Welcome to Our Dynamic Web Application',
-        ),
-        Counter(),
+        Container(
+          margin: MarginSize.mxAuto,
+          children: [
+            TitleGradient(
+              title: 'Welcome to Our Dynamic Web Application',
+            ),
+            Counter(),
+          ],
+        )
       ],
     );
 
