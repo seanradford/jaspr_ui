@@ -64,7 +64,7 @@ class Scaffold extends StatelessComponent {
         lead: [
           DrawerButton(
             id: 'drawer',
-            icon: Icon(icon: FaSolid.bars),
+            icon: Icon(icon: Ic.menu),
           ),
         ],
         title: [

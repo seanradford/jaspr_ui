@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr_ui/jaspr_ui.dart';
 
 // FIXME : need better design
 
@@ -9,23 +10,23 @@ class GridView extends StatelessComponent {
   final int? sizeSM;
   final int? sizeMD;
   final int? sizeLG;
-  final int gap;
+  final GapSize gap;
 
-  GridView({
+  GridView(
+    this.children, {
     super.key,
     this.type = GridType.column,
     required this.size,
     this.sizeSM,
     this.sizeMD,
     this.sizeLG,
-    this.gap = 4,
-    required this.children,
+    this.gap = GapSize.g4,
   });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield div(
-      classes: 'grid gap-$gap '
+      classes: 'grid ${gap} '
           '${type.className}-$size '
           '${sizeSM != null ? 'sm:${type.className}-$sizeSM' : ''} '
           '${sizeMD != null ? 'md:${type.className}-$sizeMD' : ''} '

@@ -17,13 +17,17 @@ class _CounterState extends State<Counter> {
     yield Card(
       children: [
         TextHeading(
-          title: '${counter}',
+          title: '$counter',
           bold: true,
           size: TextSize.size1,
         ),
-        button(classes: 'btn max-w-24', onClick: () {
-          setState(() => counter++);
-        }, [text('Count')]),
+        button(
+          classes: 'btn max-w-24',
+          onClick: () {
+            setState(() => counter++);
+          },
+          [text('Count')],
+        ),
       ],
       shadowSize: ShadowSize.xl,
     );

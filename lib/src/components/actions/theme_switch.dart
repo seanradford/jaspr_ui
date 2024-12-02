@@ -36,8 +36,8 @@ class ThemeSwitch extends StatelessComponent {
           []),
       // div(classes: 'far fa-sun swap-on fill-current', []),
       // div(classes: 'far fa-moon swap-off fill-current', []),
-      Icon(icon: FaRegular.sun, classes: 'swap-on fill-current'),
-      Icon(icon: FaRegular.moon, classes: 'swap-off fill-current'),
+      Icon(icon: Ic.outline_light_mode, classes: 'swap-on fill-current'),
+      Icon(icon: Ic.outline_dark_mode, classes: 'swap-off fill-current'),
     ]);
   }
 }
