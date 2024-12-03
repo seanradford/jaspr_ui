@@ -27,11 +27,11 @@ class GridView extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield div(
-      classes: 'grid ${gap} '
+      classes: 'grid ${gap.className} '
           '${type.className}-$size '
-          '${sizeSM != null ? 'sm:${type.className}-$sizeSM' : ''} '
-          '${sizeMD != null ? 'md:${type.className}-$sizeMD' : ''} '
-          '${sizeLG != null ? 'lg:${type.className}-$sizeLG' : ''} ',
+          '${sizeSM != null ? 'sm:${type.className}-$sizeSM ' : ''}'
+          '${sizeMD != null ? 'md:${type.className}-$sizeMD ' : ''}'
+          '${sizeLG != null ? 'lg:${type.className}-$sizeLG ' : ''}',
       children,
     );
   }

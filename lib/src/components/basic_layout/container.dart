@@ -26,7 +26,7 @@ class Container extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield div(
       classes: 'container '
-          '${center == true ? 'justify-items-center content-center' : ''} '
+          '${center == true ? 'justify-items-center content-center ' : ''} '
           ' ${padding?.className ?? ''} '
           ' ${margin?.className ?? ''} '
           ' ${backgroundColor?.className ?? ''} ',
