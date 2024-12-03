@@ -1,6 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 
-import 'package:jaspr_ui/jaspr_ui.dart';
+import '../../colors.dart';
 
 /// A component that renders a title with a gradient background color effect.
 ///
@@ -56,11 +56,10 @@ class TitleGradient extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield h1(
-      classes:
-          'bg-gradient-to-r '
+      classes: 'bg-gradient-to-r '
           '${fromColor.className} '
           '${viaColor.className} '
-          '${toColor.className} ' 
+          '${toColor.className} '
           'bg-clip-text font-bold text-transparent text-2xl',
       [
         text(title),

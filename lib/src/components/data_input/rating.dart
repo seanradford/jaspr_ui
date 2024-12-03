@@ -1,5 +1,7 @@
 import 'package:jaspr/jaspr.dart';
-import 'package:jaspr_ui/jaspr_ui.dart';
+
+import '../../colors/background_colors.dart';
+import '../layout/mask.dart';
 
 class Rating extends StatelessComponent {
   final String name;

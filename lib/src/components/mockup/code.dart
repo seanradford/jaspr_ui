@@ -1,7 +1,8 @@
 // ignore_for_file: unnecessary_string_interpolations
 
 import 'package:jaspr/jaspr.dart';
-import 'package:jaspr_ui/jaspr_ui.dart';
+
+import '../../colors/text_colors.dart';
 
 /// A component that renders a code mockup interface.
 ///

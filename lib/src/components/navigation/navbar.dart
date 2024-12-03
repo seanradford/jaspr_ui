@@ -3,7 +3,9 @@
 // TODO : navbar component
 
 import 'package:jaspr/jaspr.dart';
-import 'package:jaspr_ui/jaspr_ui.dart';
+
+import '../../colors/background_colors.dart';
+import '../../colors/text_colors.dart';
 
 /// A flexible and customizable navigation bar component for web applications.
 ///

@@ -1,6 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 
-import 'package:jaspr_ui/jaspr_ui.dart';
+import '../../colors/background_colors.dart';
 
 /// A collapsible component that can be expanded or collapsed
 ///

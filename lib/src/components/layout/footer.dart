@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
 import 'package:jaspr/jaspr.dart';
+
 import 'package:jaspr_ui/jaspr_ui.dart';
 
 /// A customizable footer component that allows setting background color and child components.
@@ -248,19 +249,141 @@ class FooterSidebarSocial extends StatelessComponent {
         if (facebook != null)
           a(
             href: 'https://www.facebook.com/$facebook',
-            [div(classes: 'fa-brands fa-facebook-f text-2xl', [])],
+            [Icon(icon: FaBrands.facebook_f)],
           ),
         if (twitter != null)
           a(
             href: 'https://x.com/$twitter',
-            [div(classes: 'fa-brands fa-x-twitter text-2xl', [])],
+            [Icon(icon: FaBrands.twitter)],
           ),
         if (youtube != null)
           a(
             href: 'https://www.youtube.com/@$youtube',
-            [div(classes: 'fa-brands fa-youtube text-2xl', [])],
+            [Icon(icon: FaBrands.youtube)],
           )
       ]),
     ]);
+  }
+}
+
+class FooterWithCopyrightText extends StatelessComponent {
+  final String company;
+
+  FooterWithCopyrightText({
+    required this.company,
+  });
+
+  @override
+  Iterable<Component> build(BuildContext context) sync* {
+    yield footer(classes: 'footer footer-center bg-base-300 p-4', [
+      aside([
+        p([
+          text(
+              'Copyright © ${DateTime.now().year} - All right reserved by $company')
+        ])
+      ])
+    ]);
+  }
+}
+
+class FooterWithCopyrightSocialIcons extends StatelessComponent {
+  final String company;
+  final Icon icon;
+  final String? facebook;
+  final String? twitter;
+  final String? youtube;
+  final String? tiktok;
+
+  FooterWithCopyrightSocialIcons({
+    required this.company,
+    required this.icon,
+    this.facebook,
+    this.twitter,
+    this.youtube,
+    this.tiktok,
+  });
+
+  @override
+  Iterable<Component> build(BuildContext context) sync* {
+    yield footer(classes: 'footer p-10 bg-base-300 items-center', [
+      aside(classes: 'grid-flow-col items-center', [
+        icon,
+        p([
+          text(
+              'Copyright © ${DateTime.now().year} - All right reserved by $company')
+        ])
+      ]),
+      nav(
+          classes:
+              'grid-flow-col gap-4 md:place-self-center md:justify-self-end',
+          [
+            if (facebook != null)
+              a(
+                href: 'https://www.facebook.com/$facebook',
+                [Icon(icon: FaBrands.facebook_f)],
+              ),
+            if (twitter != null)
+              a(
+                href: 'https://x.com/$twitter',
+                [Icon(icon: FaBrands.twitter)],
+              ),
+            if (youtube != null)
+              a(
+                href: 'https://www.youtube.com/@$youtube',
+                [Icon(icon: FaBrands.youtube)],
+              )
+          ])
+    ]);
+  }
+}
+
+class FooterCenteredWithCopyrightSocialIcons extends StatelessComponent {
+  final String company;
+  final Icon icon;
+  final String? facebook;
+  final String? twitter;
+  final String? youtube;
+  final String? tiktok;
+
+  FooterCenteredWithCopyrightSocialIcons({
+    required this.company,
+    required this.icon,
+    this.facebook,
+    this.twitter,
+    this.youtube,
+    this.tiktok,
+  });
+
+  @override
+  Iterable<Component> build(BuildContext context) sync* {
+    yield footer(
+      classes: 'footer footer-center p-10 bg-base-300',
+      [
+        aside([
+          icon,
+          p(classes: 'font-bold', [text('$company')]),
+          p([text('Copyright © ${DateTime.now().year} - All right reserved.')])
+        ]),
+        nav([
+          div(classes: 'grid grid-flow-col gap-4', [
+            if (facebook != null)
+              a(
+                href: 'https://www.facebook.com/$facebook',
+                [Icon(icon: FaBrands.facebook_f)],
+              ),
+            if (twitter != null)
+              a(
+                href: 'https://x.com/$twitter',
+                [Icon(icon: FaBrands.twitter)],
+              ),
+            if (youtube != null)
+              a(
+                href: 'https://www.youtube.com/@$youtube',
+                [Icon(icon: FaBrands.youtube)],
+              )
+          ])
+        ])
+      ],
+    );
   }
 }

@@ -1,7 +1,10 @@
 // ignore_for_file: unnecessary_string_interpolations
 
 import 'package:jaspr/jaspr.dart';
-import '../../../jaspr_ui.dart';
+
+import '../../colors/button_colors.dart';
+import '../../sizes/button_size.dart';
+import '../utils/icon.dart';
 
 /// A standard button component with multiple configuration options.
 ///

@@ -1,6 +1,9 @@
 // ignore_for_file: unnecessary_brace_in_string_interps
 import 'package:jaspr/jaspr.dart';
-import 'package:jaspr_ui/jaspr_ui.dart';
+
+import '../../colors/background_colors.dart';
+import '../../colors/border_colors.dart';
+import '../../colors/text_colors.dart';
 
 /// A stateless component for rendering a radial progress indicator.
 ///

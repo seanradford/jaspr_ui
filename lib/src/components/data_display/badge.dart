@@ -1,6 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 
-import 'package:jaspr_ui/jaspr_ui.dart';
+import '../../colors/badge_colors.dart';
 
 /// A badge component that displays a label with a count/total.
 ///

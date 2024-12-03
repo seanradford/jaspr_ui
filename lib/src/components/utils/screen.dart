@@ -1,6 +1,12 @@
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_router/jaspr_router.dart';
-import 'package:jaspr_ui/jaspr_ui.dart';
+
+import '../../colors/background_colors.dart';
+import '../../icons/ic.dart';
+import '../layout/drawer.dart';
+import '../navigation/menu.dart';
+import '../navigation/navbar.dart';
+import 'icon.dart';
 
 /// Base Screen component with flexible configuration
 class Screen extends StatelessComponent {

@@ -59,7 +59,6 @@ export 'components/basic_layout/column.dart';
 export 'components/basic_layout/row.dart';
 export 'components/basic_layout/flex.dart';
 export 'components/utils/grid.dart';
-export 'components/utils/layout.dart';
 export 'components/utils/title_gradient.dart';
 export 'components/utils/daisyui.dart';
 export 'components/utils/icon.dart';

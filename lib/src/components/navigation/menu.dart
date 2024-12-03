@@ -1,6 +1,7 @@
 import 'package:jaspr/jaspr.dart';
 
-import 'package:jaspr_ui/jaspr_ui.dart';
+import '../data_display/badge.dart';
+import '../utils/icon.dart';
 
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 

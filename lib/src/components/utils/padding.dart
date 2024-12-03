@@ -1,5 +1,6 @@
 import 'package:jaspr/jaspr.dart';
-import 'package:jaspr_ui/jaspr_ui.dart';
+
+import '../../sizes/padding_size.dart';
 
 // FIXME : need better design
 

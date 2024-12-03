@@ -1,5 +1,6 @@
 import 'package:jaspr/jaspr.dart';
-import 'package:jaspr_ui/jaspr_ui.dart';
+
+import '../../sizes/gap_size.dart';
 
 // FIXME : need better design
 
