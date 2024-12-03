@@ -64,11 +64,11 @@
       
   <div>
     <ol class="annotation-list">
-        <li>@<a href="https://api.dart.dev/stable/3.5.3/dart-core/override-constant.html">override</a></li>
+        <li>@<a href="https://api.flutter.dev/flutter/dart-core/override-constant.html">override</a></li>
     </ol>
   </div>
 
-<span class="returntype"><a href="https://api.dart.dev/stable/3.5.3/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/Component-class.html">Component</a></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/Component-class.html">Component</a></span>&gt;</span></span>
 <span class="name ">build</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://pub.dev/documentation/jaspr/0.16.2/jaspr/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span></li>
 </ol>)
 
@@ -126,17 +126,17 @@ Iterable&lt;Component&gt; build(BuildContext context) sync* {
       if (facebook != null)
         a(
           href: &#39;https:&#47;&#47;www.facebook.com&#47;$facebook&#39;,
-          [div(classes: &#39;fa-brands fa-facebook-f text-2xl&#39;, [])],
+          [Icon(icon: FaBrands.facebook_f)],
         ),
       if (twitter != null)
         a(
           href: &#39;https:&#47;&#47;x.com&#47;$twitter&#39;,
-          [div(classes: &#39;fa-brands fa-x-twitter text-2xl&#39;, [])],
+          [Icon(icon: FaBrands.twitter)],
         ),
       if (youtube != null)
         a(
           href: &#39;https:&#47;&#47;www.youtube.com&#47;@$youtube&#39;,
-          [div(classes: &#39;fa-brands fa-youtube text-2xl&#39;, [])],
+          [Icon(icon: FaBrands.youtube)],
         )
     ]),
   ]);
