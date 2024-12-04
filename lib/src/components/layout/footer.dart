@@ -2,7 +2,10 @@
 
 import 'package:jaspr/jaspr.dart';
 
-import 'package:jaspr_ui/jaspr_ui.dart';
+import '../../colors/background_colors.dart';
+import '../../icons/fa_brands.dart';
+import '../navigation/link.dart';
+import '../utils/icon.dart';
 
 /// A customizable footer component that allows setting background color and child components.
 ///

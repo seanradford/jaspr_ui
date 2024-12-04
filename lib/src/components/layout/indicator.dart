@@ -1,5 +1,6 @@
 import 'package:jaspr/jaspr.dart';
-import 'package:jaspr_ui/jaspr_ui.dart';
+
+import '../../colors/badge_colors.dart';
 
 /// A reusable indicator component that can be positioned around a child component
 /// with optional coloring and a title.

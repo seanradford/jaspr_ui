@@ -3,6 +3,8 @@
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_ui/jaspr_ui.dart';
 
+import '../navigation/menu.dart';
+
 /// A flexible and customizable drawer component for web applications using Jaspr.
 ///
 /// The [Drawer] class creates an interactive sidebar navigation system with
