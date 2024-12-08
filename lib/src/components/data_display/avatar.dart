@@ -70,7 +70,7 @@ class Avatar extends StatelessComponent {
                       '${rounded != null ? '${rounded!.className} ' : ''} '
                       '${mask != null ? 'mask ${mask!.className} ' : ''} ',
                   [
-                    img(src: url),
+                    img(src: url, alt: '$title'),
                   ],
                 )
         ]);
