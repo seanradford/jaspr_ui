@@ -228,6 +228,9 @@ class FooterSidebarSocial extends StatelessComponent {
   /// TikTok username (optional, not used in current implementation).
   final String? tiktok;
 
+  /// Github name.
+  final String? github;
+
   /// Constructs a [FooterSidebarSocial] with optional social media links.
   ///
   /// [key] is an optional identifier for the component.
@@ -240,6 +243,7 @@ class FooterSidebarSocial extends StatelessComponent {
     this.twitter,
     this.youtube,
     this.tiktok,
+    this.github,
   });
 
   @override
@@ -263,6 +267,11 @@ class FooterSidebarSocial extends StatelessComponent {
           a(
             href: 'https://www.youtube.com/@$youtube',
             [Icon(icon: FaBrands.youtube)],
+          ),
+        if (github != null)
+          a(
+            href: 'https://github.com/$github',
+            [Icon(icon: FaBrands.github)],
           )
       ]),
     ]);
@@ -296,6 +305,7 @@ class FooterWithCopyrightSocialIcons extends StatelessComponent {
   final String? twitter;
   final String? youtube;
   final String? tiktok;
+  final String? github;
 
   FooterWithCopyrightSocialIcons({
     required this.company,
@@ -304,6 +314,7 @@ class FooterWithCopyrightSocialIcons extends StatelessComponent {
     this.twitter,
     this.youtube,
     this.tiktok,
+    this.github,
   });
 
   @override
@@ -334,6 +345,11 @@ class FooterWithCopyrightSocialIcons extends StatelessComponent {
               a(
                 href: 'https://www.youtube.com/@$youtube',
                 [Icon(icon: FaBrands.youtube)],
+              ),
+            if (github != null)
+              a(
+                href: 'https://github.com/$github',
+                [Icon(icon: FaBrands.github)],
               )
           ])
     ]);
@@ -347,6 +363,7 @@ class FooterCenteredWithCopyrightSocialIcons extends StatelessComponent {
   final String? twitter;
   final String? youtube;
   final String? tiktok;
+  final String? github;
 
   FooterCenteredWithCopyrightSocialIcons({
     required this.company,
@@ -355,6 +372,7 @@ class FooterCenteredWithCopyrightSocialIcons extends StatelessComponent {
     this.twitter,
     this.youtube,
     this.tiktok,
+    this.github,
   });
 
   @override
@@ -383,6 +401,11 @@ class FooterCenteredWithCopyrightSocialIcons extends StatelessComponent {
               a(
                 href: 'https://www.youtube.com/@$youtube',
                 [Icon(icon: FaBrands.youtube)],
+              ),
+            if (github != null)
+              a(
+                href: 'https://github.com/$github',
+                [Icon(icon: FaBrands.github)],
               )
           ])
         ])

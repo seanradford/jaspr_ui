@@ -2,6 +2,7 @@ name: jaspr_ui
 description: A starting point for Dart libraries or applications.
 version: 1.1.0
 repository: https://github.com/anoochit/jaspr_ui
+publish_to: none
 
 environment:
   sdk: ^3.5.3
@@ -12,7 +13,8 @@ environment:
 dependencies:
   jaspr: ^0.16.1
   jaspr_router: ^0.6.0
-  universal_io: ^2.2.2
+  jaspr_svg:
+    path: packages/jaspr_svg/
 
 dev_dependencies:
   jaspr_lints: ^0.1.2

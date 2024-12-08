@@ -1,5 +1,5 @@
 import 'package:jaspr/jaspr.dart';
-import '../../utils/jaspr_svg.dart';
+import 'package:jaspr_svg/jaspr_svg.dart';
 
 class Icon extends StatelessComponent {
   final String? classes;
