@@ -67,6 +67,7 @@ class HomeState extends State<Home> {
       // body content
       content: [
         Container(
+          padding: PaddingSize.p4,
           margin: MarginSize.mxAuto,
           children: [
             TitleGradient(

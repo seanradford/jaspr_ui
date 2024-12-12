@@ -166,7 +166,7 @@ class SidebarMenu extends StatelessComponent {
   ///
   /// Each [MenuItem] represents a clickable navigation option
   /// with a label and optional action.
-  final List<MenuItem> items;
+  final List<Component> items;
 
   /// Constructs a [SidebarMenu] with a list of menu items.
   ///
@@ -181,7 +181,7 @@ class SidebarMenu extends StatelessComponent {
   /// - Vertical menu alignment
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield GroupMenuItem(
+    yield GroupMenu(
       children: items,
       // Vertical alignment with base styling
       align: MenuAlign.vertical,
