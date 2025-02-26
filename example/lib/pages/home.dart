@@ -37,7 +37,7 @@ class HomeState extends State<Home> {
         ),
       ],
       tails: [
-        ThemeSwitch(theme: 'light'),
+        ju.ThemeSwitch(),
       ],
     );
 

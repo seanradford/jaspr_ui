@@ -3,28 +3,44 @@ import 'package:jaspr/jaspr.dart';
 import '../../icons/ic.dart';
 import '../utils/icon.dart';
 
-/// A component that renders a theme switch toggle button between light and dark modes.
+/// A component that renders a theme switch toggle button between the default app
+/// theme (as per DaisyUI#theme) and an alternative.
 ///
-/// This component creates an animated switch with sun and moon icons to toggle between
-/// light and dark themes. It uses DaisyUI's swap component for the animation effect.
+/// By default this component creates an animated switch with sun and moon icons to toggle between
+/// the app default and 'dark' theme. It uses DaisyUI's swap component for the animation effect.
 ///
 /// Example usage:
 /// ```dart
-/// ThemeSwitch(theme: "dark")
+/// ThemeSwitch(isOn: true, theme: 'dark')
 /// ```
 ///
 /// Properties:
-/// * [theme] - The initial theme value. Defaults to "light".
-///   Possible values are "light" or "dark".
+/// * [isOn] - Is the component in the 'on' (checked) state.
+/// * [theme] - The theme when the component is 'on'. Defaults to 'dark'.
+/// * [iconOff] - Icon to display when in the 'off' state. Defaults to 'outline_dark_mode'.
+/// * [iconOn] - Icon to display when in the 'on' state. Defaults to 'outline_light_mode'.
+///
 class ThemeSwitch extends StatelessComponent {
-  /// The current theme value. Controls the initial state of the switch.
+
+  final bool isOn;
+
   final String theme;
+
+  final String iconOff;
+
+  final String iconOn;
 
   /// Creates a [ThemeSwitch] component.
   ///
-  /// [theme] defaults to "light" if not specified.
+  /// [isOn] defaults to false.
+  /// [theme] defaults to 'dark'.
+  /// [iconOff] defaults to Ic.outline_dark_mode.
+  /// [iconOn] defaults to Ic.outline_light_mode
   const ThemeSwitch({
-    this.theme = "light",
+    this.isOn = false,
+    this.theme = "dark",
+    this.iconOff = Ic.outline_dark_mode,
+    this.iconOn = Ic.outline_light_mode
   });
 
   @override
@@ -33,12 +49,15 @@ class ThemeSwitch extends StatelessComponent {
       input(
           type: InputType.checkbox,
           classes: 'theme-controller',
-          attributes: {'value': theme},
-          []),
-      // div(classes: 'far fa-sun swap-on fill-current', []),
-      // div(classes: 'far fa-moon swap-off fill-current', []),
-      Icon(icon: Ic.outline_light_mode, classes: 'swap-on fill-current'),
-      Icon(icon: Ic.outline_dark_mode, classes: 'swap-off fill-current'),
+          attributes: {
+            'value': theme,
+            if (isOn == true) ...{
+              'checked': ''
+            }
+          },
+          [],),
+      Icon(icon: iconOn, classes: 'swap-on fill-current',),
+      Icon(icon: iconOff, classes: 'swap-off fill-current',),
     ]);
   }
 }
