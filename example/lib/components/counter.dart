@@ -26,7 +26,7 @@ class _CounterState extends State<Counter> {
           onClick: () {
             setState(() => counter++);
           },
-          [text('Count')],
+          [text('Increase')],
         ),
       ],
     );
