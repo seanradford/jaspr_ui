@@ -1,6 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_router/jaspr_router.dart';
-import 'package:jaspr_ui/jaspr_ui.dart';
+import 'package:jaspr_ui/jaspr_ui.dart' as ju;
 
 import '../components/counter.dart';
 
@@ -15,22 +15,22 @@ class HomeState extends State<Home> {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     // navbar
-    yield NavBar(
+    yield ju.NavBar(
       lead: [
-        DrawerButton(
-          icon: Icon(icon: Lucide.menu),
+        ju.DrawerButton(
+          icon: ju.Icon(icon: ju.Lucide.menu),
         ),
       ],
       title: [
-        Padding(
+        ju.Padding(
           sizes: [
-            PaddingSize.pl4,
+            ju.PaddingSize.pl4,
           ],
           child: Link(
             to: '/',
-            child: TextHeading(
+            child: ju.TextHeading(
               title: 'Jaspr UI',
-              size: TextSize.size3,
+              size: ju.TextSize.size3,
               bold: true,
             ),
           ),
@@ -42,19 +42,19 @@ class HomeState extends State<Home> {
     );
 
     // drawer
-    yield Drawer(
+    yield ju.Drawer(
       sidebar: [
-        SidebarMenu(
+        ju.SidebarMenu(
           items: List.generate(
             10,
-            (i) => MenuItem(
+            (i) => ju.MenuItem(
               icon: (i == 0)
-                  ? Icon(icon: Ic.round_home)
-                  : Icon(icon: Ic.description),
+                  ? ju.Icon(icon: ju.Ic.round_home)
+                  : ju.Icon(icon: ju.Ic.description),
               badge: (i == 0)
-                  ? Badge(
+                  ? ju.Badge(
                       title: '+99',
-                      color: BadgeColor.secondary,
+                      color: ju.BadgeColor.secondary,
                     )
                   : null,
               title: 'Menu ${i + 1}',
@@ -66,25 +66,26 @@ class HomeState extends State<Home> {
 
       // body content
       content: [
-        Container(
-          padding: PaddingSize.p4,
-          margin: MarginSize.mxAuto,
+        ju.Container(
+          padding: ju.PaddingSize.p4,
+          margin: ju.MarginSize.mxAuto,
           children: [
-            TitleGradient(
+            ju.TitleGradient(
               title: 'Welcome to Our Dynamic Web Application',
             ),
             Counter(),
+            //ju.ThemeSwitchOptions()
           ],
         )
       ],
     );
 
     // footer
-    yield Footer(
+    yield ju.Footer(
       children: [
-        FooterSidebarLogo(
-          logo: Icon(
-            icon: FaBrands.slack,
+        ju.FooterSidebarLogo(
+          logo: ju.Icon(
+            icon: ju.FaBrands.slack,
             width: 48.0,
             height: 48.0,
           ),
@@ -97,11 +98,11 @@ class HomeState extends State<Home> {
         ),
         ...List.generate(
           2,
-          (i) => FooterNav(
+          (i) => ju.FooterNav(
             title: 'Title',
             items: List.generate(
               3,
-              (j) => FooterNavItem(
+              (j) => ju.FooterNavItem(
                 title: 'title',
                 href: '#',
               ),
